@@ -1,0 +1,1580 @@
+{
+    "attribution": {
+        "description": "Data provided by https://temadagar.se. For full calendar, see https://temadagar.se/kop-temadagar-kalender/",
+        "link": "https://temadagar.se/kop-temadagar-kalender/"
+    },
+    "themeDays": {
+        "20190709": [
+            {
+                "event": "Internationella dagen för oskadliggörande av handeldvapen"
+            }
+        ],
+        "20190710": [
+            {
+                "event": "Hoya - Porslinsblommans dag"
+            }
+        ],
+        "20190711": [
+            {
+                "event": "FN:s befolkningsdag",
+                "link": "https://temadagar.se/fns-befolkningsdag/"
+            },
+            {
+                "event": "Internationella råkostdagen"
+            }
+        ],
+        "20190712": [
+            {
+                "event": "Fulhetens dag"
+            }
+        ],
+        "20190713": [
+            {
+                "event": "Paltdagen"
+            },
+            {
+                "event": "Internationella Rock 'N Roll-dagen"
+            }
+        ],
+        "20190715": [
+            {
+                "event": "Tornedalingarnas dag"
+            }
+        ],
+        "20190716": [
+            {
+                "event": "Nationella orgasmdagen"
+            }
+        ],
+        "20190717": [
+            {
+                "event": "Dagen för världsomfattande rättvisa"
+            },
+            {
+                "event": "Ölets dag",
+                "link": "https://temadagar.se/olets-dag/"
+            },
+            {
+                "event": "Emojins dag",
+                "link": "https://temadagar.se/emojins-dag/"
+            }
+        ],
+        "20190718": [
+            {
+                "event": "Internationella Nelson Mandela-dagen"
+            }
+        ],
+        "20190721": [
+            {
+                "event": "Skånska flaggans dag"
+            },
+            {
+                "event": "Baddräktsfria dagen",
+                "link": "https://temadagar.se/baddraktsfria-dagen/"
+            }
+        ],
+        "20190722": [
+            {
+                "event": "Approximativa pi-dagen"
+            }
+        ],
+        "20190723": [
+            {
+                "event": "Varmkorvens dag"
+            }
+        ],
+        "20190724": [
+            {
+                "event": "Internationella BDSM-dagen"
+            },
+            {
+                "event": "Drive-thru dagen"
+            }
+        ],
+        "20190725": [
+            {
+                "event": "Trä nålen-dagen"
+            }
+        ],
+        "20190726": [
+            {
+                "event": "Bellmandagen"
+            },
+            {
+                "event": "SysAdminDay",
+                "link": "https://temadagar.se/sysadminday/"
+            }
+        ],
+        "20190727": [
+            {
+                "event": "Sjusovardagen",
+                "link": "https://temadagar.se/sjusovardagen/"
+            },
+            {
+                "event": "Gå på styltor-dagen"
+            }
+        ],
+        "20190728": [
+            {
+                "event": "Jakttornets dag"
+            },
+            {
+                "event": "Världshepatitdagen",
+                "link": "https://temadagar.se/varldshepatitdagen/"
+            }
+        ],
+        "20190729": [
+            {
+                "event": "Internationella tigerdagen"
+            },
+            {
+                "event": "Lasagnens dag"
+            }
+        ],
+        "20190730": [
+            {
+                "event": "Världsbroderidagen"
+            },
+            {
+                "event": "Pocketbokens dag"
+            }
+        ],
+        "20190731": [
+            {
+                "event": "Dagen för ovanliga instrument"
+            }
+        ],
+        "20190801": [
+            {
+                "event": "International IPAday"
+            },
+            {
+                "event": "Alla flickvänners dag",
+                "link": "https://temadagar.se/alla-flickvanners-dag/"
+            }
+        ],
+        "20190802": [
+            {
+                "event": "Internationella öldagen",
+                "link": "https://temadagar.se/internationella-oldagen/"
+            }
+        ],
+        "20190803": [
+            {
+                "event": "Internationella fyrdagen"
+            },
+            {
+                "event": "Örtens dag",
+                "link": "https://temadagar.se/ortens-dag/"
+            },
+            {
+                "event": "Senapens dag"
+            },
+            {
+                "event": "Vattenmelonens dag"
+            },
+            {
+                "event": "Hattens dag",
+                "link": "https://temadagar.se/hattens-dag/"
+            }
+        ],
+        "20190804": [
+            {
+                "event": "Hembygdsgårdarnas dag"
+            },
+            {
+                "event": "Världsvänskapsdagen"
+            },
+            {
+                "event": "Alla systrars dag"
+            }
+        ],
+        "20190806": [
+            {
+                "event": "Hiroshimadagen"
+            },
+            {
+                "event": "Internationella dagen för frisk andedräkt"
+            }
+        ],
+        "20190808": [
+            {
+                "event": "Internationella orgasmdagen",
+                "link": "https://temadagar.se/internationella-orgasmdagen/"
+            },
+            {
+                "event": "Kräftpremiären",
+                "link": "https://temadagar.se/kraftpremiaren/"
+            },
+            {
+                "event": "Lyckans dag"
+            },
+            {
+                "event": "Internationella kattdagen"
+            }
+        ],
+        "20190809": [
+            {
+                "event": "Internationella dagen för världens ursprungsfolk",
+                "link": "https://temadagar.se/internationella-dagen-for-varldens-ursprungsfolk/"
+            },
+            {
+                "event": "Rulltårtans dag"
+            }
+        ],
+        "20190810": [
+            {
+                "event": "Larsdagen",
+                "link": "https://temadagar.se/larsdagen/"
+            },
+            {
+                "event": "Loppmarknadens dag"
+            },
+            {
+                "event": "Lejonets dag"
+            }
+        ],
+        "20190812": [
+            {
+                "event": "Internationella ungdomsdagen",
+                "link": "https://temadagar.se/internationella-ungdomsdagen/"
+            }
+        ],
+        "20190813": [
+            {
+                "event": "Vänsterhäntas dag",
+                "link": "https://temadagar.se/vansterhantas-dag/"
+            }
+        ],
+        "20190815": [
+            {
+                "event": "Surströmmingspremiär",
+                "link": "https://temadagar.se/surstrommingspremiar/"
+            }
+        ],
+        "20190816": [
+            {
+                "event": "Berätta ett skämt-dagen"
+            }
+        ],
+        "20190817": [
+            {
+                "event": "Hemlösa djurs dag"
+            },
+            {
+                "event": "Internationella geocachingdagen"
+            }
+        ],
+        "20190819": [
+            {
+                "event": "Internationella dagen för humanitärt arbete"
+            },
+            {
+                "event": "Luftfartsdagen"
+            }
+        ],
+        "20190820": [
+            {
+                "event": "Honungens Dag",
+                "link": "https://temadagar.se/honungens-dag/"
+            }
+        ],
+        "20190821": [
+            {
+                "event": "World entrepreneurship day"
+            },
+            {
+                "event": "Alla pensionärers dag"
+            }
+        ],
+        "20190822": [
+            {
+                "event": "Internationella müslidagen",
+                "link": "https://temadagar.se/internationella-muslidagen/"
+            }
+        ],
+        "20190823": [
+            {
+                "event": "Internationella dagen till minne av slaveriet och dess avskaffande",
+                "link": "https://temadagar.se/internationella-dagen-till-minne-av-slaveriet-och-dess-avskaffande/"
+            },
+            {
+                "event": "Köttbullens dag"
+            }
+        ],
+        "20190824": [
+            {
+                "event": "Årsdagen av Plutos degradering"
+            }
+        ],
+        "20190825": [
+            {
+                "event": "Arkeologidagen",
+                "link": "https://temadagar.se/arkeologidagen/"
+            },
+            {
+                "event": "Porslinets dag"
+            }
+        ],
+        "20190826": [
+            {
+                "event": "Alla hundars dag"
+            },
+            {
+                "event": "Jämställdhetsdagen"
+            }
+        ],
+        "20190827": [
+            {
+                "event": "Sveriges Raoul Wallenbergdag"
+            }
+        ],
+        "20190829": [
+            {
+                "event": "Internationella dagen mot kärnvapenprov",
+                "link": "https://temadagar.se/internationella-dagen-mot-karnvapenprov/"
+            },
+            {
+                "event": "Polisens dag",
+                "link": "https://temadagar.se/polisens-dag/"
+            }
+        ],
+        "20190831": [
+            {
+                "event": "Squaredansens dag"
+            },
+            {
+                "event": "Internationella bacondagen"
+            },
+            {
+                "event": "Internationella förebildsdagen"
+            }
+        ],
+        "20190901": [
+            {
+                "event": "Dansbandens dag"
+            },
+            {
+                "event": "Fluortantens dag"
+            },
+            {
+                "event": "Svampens dag"
+            }
+        ],
+        "20190902": [
+            {
+                "event": "Labor day"
+            }
+        ],
+        "20190903": [
+            {
+                "event": "Skolledarnas dag"
+            }
+        ],
+        "20190904": [
+            {
+                "event": "Dagen för ungas psykiska hälsa",
+                "link": "https://temadagar.se/dagen-for-ungas-psykiska-halsa/"
+            }
+        ],
+        "20190907": [
+            {
+                "event": "Ostronets dag",
+                "link": "https://temadagar.se/ostronets-dag/"
+            },
+            {
+                "event": "Salamins dag"
+            },
+            {
+                "event": "Skäggets dag"
+            },
+            {
+                "event": "Stora duchennesdagen"
+            },
+            {
+                "event": "Hemslöjdens dag"
+            },
+            {
+                "event": "Scooterns dag"
+            }
+        ],
+        "20190908": [
+            {
+                "event": "Internationella läskunnighetsdagen",
+                "link": "https://temadagar.se/internationella-laskunnighetsdagen/"
+            },
+            {
+                "event": "Internationella fysioterapins dag",
+                "link": "https://temadagar.se/internationella-fysioterapins-dag/"
+            },
+            {
+                "event": "Kulturarvsdagen",
+                "link": "https://temadagar.se/kulturarvsdagen/"
+            },
+            {
+                "event": "National Grandparents Day"
+            }
+        ],
+        "20190909": [
+            {
+                "event": "Yrkesförarens dag",
+                "link": "https://temadagar.se/yrkesforarens-dag/"
+            }
+        ],
+        "20190910": [
+            {
+                "event": "Internationella suicidpreventiva dagen"
+            },
+            {
+                "event": "Skolans dag",
+                "link": "https://temadagar.se/skolans-dag/"
+            },
+            {
+                "event": "Världsdagen för teckenspråk"
+            }
+        ],
+        "20190911": [
+            {
+                "event": "Kebabens dag"
+            }
+        ],
+        "20190912": [
+            {
+                "event": "TV-spelsdagen"
+            },
+            {
+                "event": "Europeiska Migrändagen"
+            }
+        ],
+        "20190913": [
+            {
+                "event": "Programmer day",
+                "link": "https://temadagar.se/programmer-day/"
+            }
+        ],
+        "20190914": [
+            {
+                "event": "Geologins dag",
+                "link": "https://temadagar.se/geologins-dag/"
+            }
+        ],
+        "20190915": [
+            {
+                "event": "Internationella dagen för demokrati"
+            },
+            {
+                "event": "Internationella lymfomdagen"
+            },
+            {
+                "event": "Brunchens dag",
+                "link": "https://temadagar.se/brunchens-dag/"
+            }
+        ],
+        "20190916": [
+            {
+                "event": "Internationella dagen för bevarande av ozonskiktet",
+                "link": "https://temadagar.se/internationella-dagen-for-bevarande-av-ozonskiktet/"
+            }
+        ],
+        "20190917": [
+            {
+                "event": "Höga klackars dag"
+            }
+        ],
+        "20190918": [
+            {
+                "event": "E-bokens dag"
+            },
+            {
+                "event": "Surkålens dag"
+            }
+        ],
+        "20190919": [
+            {
+                "event": "Internationella piratdagen",
+                "link": "https://temadagar.se/internationella-piratdagen/"
+            },
+            {
+                "event": "Messmörets dag"
+            }
+        ],
+        "20190920": [
+            {
+                "event": "Bålens dag"
+            }
+        ],
+        "20190921": [
+            {
+                "event": "4H-dagen"
+            },
+            {
+                "event": "Internationella Alzheimerdagen",
+                "link": "https://temadagar.se/internationella-alzheimerdagen/"
+            },
+            {
+                "event": "Internationella fredsdagen",
+                "link": "https://temadagar.se/internationella-fredsdagen/"
+            },
+            {
+                "event": "Software freedom day"
+            },
+            {
+                "event": "Minigolfdagen"
+            },
+            {
+                "event": "Strandens dag",
+                "link": "https://temadagar.se/strandens-dag/"
+            },
+            {
+                "event": "World Gratitude Day"
+            },
+            {
+                "event": "Worldwide spin in public day"
+            },
+            {
+                "event": "Internationella röd panda-dagen"
+            }
+        ],
+        "20190922": [
+            {
+                "event": "Internationella bilfria dagen"
+            },
+            {
+                "event": "Hobbitdagen"
+            }
+        ],
+        "20190923": [
+            {
+                "event": "Hummerpremiären"
+            },
+            {
+                "event": "D-vitaminens dag",
+                "link": "https://temadagar.se/d-vitaminens-dag/"
+            },
+            {
+                "event": "Hjälpmedelsdagen"
+            },
+            {
+                "event": "Bisexualitetens dag"
+            },
+            {
+                "event": "Höstdagjämningen"
+            }
+        ],
+        "20190924": [
+            {
+                "event": "Skiljetecknets dag"
+            }
+        ],
+        "20190925": [
+            {
+                "event": "Skolmjölkens dag",
+                "link": "https://temadagar.se/skolmjolkens-dag/"
+            },
+            {
+                "event": "Äpplets dag",
+                "link": "https://temadagar.se/applets-dag/"
+            },
+            {
+                "event": "Internationella farmaceutdagen"
+            }
+        ],
+        "20190926": [
+            {
+                "event": "Europeiska språkdagen",
+                "link": "https://temadagar.se/europeiska-sprakdagen/"
+            }
+        ],
+        "20190927": [
+            {
+                "event": "Janssons-dagen",
+                "link": "https://temadagar.se/janssons-dagen/"
+            },
+            {
+                "event": "Tjänstepensionens dag"
+            },
+            {
+                "event": "Världsturismdagen"
+            }
+        ],
+        "20190928": [
+            {
+                "event": "Astronomins dag och natt"
+            },
+            {
+                "event": "Internationella rabiesdagen ",
+                "link": "https://temadagar.se/internationella-rabiesdagen-/"
+            },
+            {
+                "event": "Neurodagen",
+                "link": "https://temadagar.se/neurodagen/"
+            },
+            {
+                "event": "Lösgodisets dag",
+                "link": "https://temadagar.se/losgodisets-dag/"
+            }
+        ],
+        "20190929": [
+            {
+                "event": "Den helige Mikaels dag"
+            },
+            {
+                "event": "Dövas dag"
+            },
+            {
+                "event": "Kaffets Dag",
+                "link": "https://temadagar.se/kaffets-dag/"
+            },
+            {
+                "event": "Internationella hjärtdagen"
+            },
+            {
+                "event": "Alla soffpotatisars dag"
+            },
+            {
+                "event": "Återvinningens dag",
+                "link": "https://temadagar.se/atervinningens-dag/"
+            },
+            {
+                "event": "Resandefolkets dag"
+            },
+            {
+                "event": "Internationella pussdagen"
+            }
+        ],
+        "20190930": [
+            {
+                "event": "International Blasphemy Rights Day"
+            }
+        ],
+        "20191001": [
+            {
+                "event": "Bröstcancerdagen"
+            },
+            {
+                "event": "Internationella dagen för äldre",
+                "link": "https://temadagar.se/internationella-dagen-for-aldre/"
+            },
+            {
+                "event": "Vegetariska världsdagen",
+                "link": "https://temadagar.se/vegetariska-varldsdagen/"
+            }
+        ],
+        "20191002": [
+            {
+                "event": "Internationella ickevåldsdagen"
+            },
+            {
+                "event": "Lantbruksdjurens dag"
+            }
+        ],
+        "20191003": [
+            {
+                "event": "Alla pojkvänners dag",
+                "link": "https://temadagar.se/alla-pojkvanners-dag/"
+            }
+        ],
+        "20191004": [
+            {
+                "event": "Djurens dag",
+                "link": "https://temadagar.se/djurens-dag/"
+            },
+            {
+                "event": "Internationella vodkadagen",
+                "link": "https://temadagar.se/internationella-vodkadagen/"
+            },
+            {
+                "event": "Kanelbullens dag",
+                "link": "https://temadagar.se/kanelbullens-dag/"
+            }
+        ],
+        "20191005": [
+            {
+                "event": "Internationella dagen för lärare",
+                "link": "https://temadagar.se/internationella-dagen-for-larare/"
+            }
+        ],
+        "20191006": [
+            {
+                "event": "Gräddtårtans dag"
+            },
+            {
+                "event": "Nationella anhörigdagen",
+                "link": "https://temadagar.se/nationella-anhorigdagen/"
+            },
+            {
+                "event": "Internationella CP-dagen"
+            }
+        ],
+        "20191007": [
+            {
+                "event": "Internationella dagen för boende- och bebyggelsefrågor",
+                "link": "https://temadagar.se/internationella-dagen-for-boende-och-bebyggelsefragor/"
+            },
+            {
+                "event": "Skolfotografiets dag",
+                "link": "https://temadagar.se/skolfotografiets-dag/"
+            }
+        ],
+        "20191008": [
+            {
+                "event": "Vägledningens dag",
+                "link": "https://temadagar.se/vagledningens-dag/"
+            }
+        ],
+        "20191009": [
+            {
+                "event": "Internationella dagen för begränsning av naturkatastrofer",
+                "link": "https://temadagar.se/internationella-dagen-for-begransning-av-naturkatastrofer/"
+            },
+            {
+                "event": "Världspostunionens dag",
+                "link": "https://temadagar.se/varldspostunionens-dag/"
+            },
+            {
+                "event": "Minnesdag för avskaffandet av Sveriges transatlantiska slavhandel"
+            },
+            {
+                "event": "PANDAS/PANS Awareness Day"
+            }
+        ],
+        "20191010": [
+            {
+                "event": "Världsdagen för mental hälsa",
+                "link": "https://temadagar.se/varldsdagen-for-mental-halsa/"
+            },
+            {
+                "event": "Grötens dag"
+            },
+            {
+                "event": "Internationella dagen mot dödsstraff"
+            },
+            {
+                "event": "Nordiska afasidagen"
+            },
+            {
+                "event": "Världssyndagen",
+                "link": "https://temadagar.se/varldssyndagen/"
+            },
+            {
+                "event": "Världsdyslexidagen"
+            }
+        ],
+        "20191011": [
+            {
+                "event": "Äggets dag",
+                "link": "https://temadagar.se/aggets-dag/"
+            },
+            {
+                "event": "Äpplemustens Dag",
+                "link": "https://temadagar.se/applemustens-dag/"
+            },
+            {
+                "event": "Internationella flickdagen",
+                "link": "https://temadagar.se/internationella-flickdagen/"
+            },
+            {
+                "event": "Internationella komma-ut-dagen"
+            }
+        ],
+        "20191012": [
+            {
+                "event": "Civilkuragets dag",
+                "link": "https://temadagar.se/civilkuragets-dag/"
+            },
+            {
+                "event": "Internationella reumatikerdagen"
+            },
+            {
+                "event": "Musikens dag",
+                "link": "https://temadagar.se/musikens-dag/"
+            }
+        ],
+        "20191013": [
+            {
+                "event": "International Suit Up Day",
+                "link": "https://temadagar.se/international-suit-up-day/"
+            },
+            {
+                "event": "Världstrombosdagen"
+            },
+            {
+                "event": "Internationella klarspråksdagen"
+            },
+            {
+                "event": "No Bra Day"
+            }
+        ],
+        "20191014": [
+            {
+                "event": "Räkmackans dag",
+                "link": "https://temadagar.se/rakmackans-dag/"
+            },
+            {
+                "event": "Världsdagen för synskadade"
+            }
+        ],
+        "20191015": [
+            {
+                "event": "Fetaostens dag",
+                "link": "https://temadagar.se/fetaostens-dag/"
+            },
+            {
+                "event": "Internationella beröringsdagen"
+            },
+            {
+                "event": "Internationella dagen för att tvätta händerna",
+                "link": "https://temadagar.se/internationella-dagen-for-att-tvatta-handerna/"
+            },
+            {
+                "event": "Vita käppens dag"
+            },
+            {
+                "event": "Internationella landsbygdskvinnors dag"
+            },
+            {
+                "event": "Brösthälsodagen",
+                "link": "https://temadagar.se/brosthalsodagen/"
+            },
+            {
+                "event": "Metoo-dagen",
+                "link": "https://temadagar.se/metoo-dagen/"
+            }
+        ],
+        "20191016": [
+            {
+                "event": "Steve Jobs Day"
+            },
+            {
+                "event": "Världslivsmedelsdagen",
+                "link": "https://temadagar.se/varldslivsmedelsdagen/"
+            },
+            {
+                "event": "Lexikonens dag"
+            },
+            {
+                "event": "Alla chefers dag"
+            }
+        ],
+        "20191017": [
+            {
+                "event": "Grynkorvens dag",
+                "link": "https://temadagar.se/grynkorvens-dag/"
+            },
+            {
+                "event": "Internationella dagen för utrotande av fattigdom",
+                "link": "https://temadagar.se/internationella-dagen-for-utrotande-av-fattigdom/"
+            },
+            {
+                "event": "Måltidens dag",
+                "link": "https://temadagar.se/maltidens-dag/"
+            }
+        ],
+        "20191018": [
+            {
+                "event": "Internationella klimakteriedagen",
+                "link": "https://temadagar.se/internationella-klimakteriedagen/"
+            },
+            {
+                "event": "Chokladmuffins dag"
+            },
+            {
+                "event": "Internationella slipsdagen",
+                "link": "https://temadagar.se/internationella-slipsdagen/"
+            },
+            {
+                "event": "Internationella champagnedagen"
+            },
+            {
+                "event": "Kemins dag"
+            }
+        ],
+        "20191019": [
+            {
+                "event": "Hörselskadades dag",
+                "link": "https://temadagar.se/horselskadades-dag/"
+            },
+            {
+                "event": "Alla broars dag"
+            },
+            {
+                "event": "Nationella dagen för Strävhårig Foxterrier"
+            }
+        ],
+        "20191020": [
+            {
+                "event": "Internationella flygledardagen"
+            },
+            {
+                "event": "Världsdagen för statistik"
+            },
+            {
+                "event": "Internationella osteoporosdagen"
+            }
+        ],
+        "20191022": [
+            {
+                "event": "INTERNATIONELLA CAPS LOCK-DAGEN",
+                "link": "https://temadagar.se/internationella-caps-lock-dagen/"
+            },
+            {
+                "event": "Internationella stamningsdagen"
+            }
+        ],
+        "20191023": [
+            {
+                "event": "Internationella moldagen",
+                "link": "https://temadagar.se/internationella-moldagen/"
+            }
+        ],
+        "20191024": [
+            {
+                "event": "FN-dagen",
+                "link": "https://temadagar.se/fn-dagen/"
+            },
+            {
+                "event": "Världsdagen för information om utvecklingsfrågor",
+                "link": "https://temadagar.se/varldsdagen-for-information-om-utvecklingsfragor/"
+            },
+            {
+                "event": "Montessorilärardagen",
+                "link": "https://temadagar.se/montessorilarardagen/"
+            },
+            {
+                "event": "Raggsockans dag",
+                "link": "https://temadagar.se/raggsockans-dag/"
+            }
+        ],
+        "20191025": [
+            {
+                "event": "Världspastadagen"
+            }
+        ],
+        "20191026": [
+            {
+                "event": "Hackkorvens dag",
+                "link": "https://temadagar.se/hackkorvens-dag/"
+            },
+            {
+                "event": "Potatisens dag",
+                "link": "https://temadagar.se/potatisens-dag/"
+            },
+            {
+                "event": "Unik butik-dagen",
+                "link": "https://temadagar.se/unik-butik-dagen/"
+            },
+            {
+                "event": "Hjärnskadedagen",
+                "link": "https://temadagar.se/hjarnskadedagen/"
+            }
+        ],
+        "20191027": [
+            {
+                "event": "Internationella nalledagen",
+                "link": "https://temadagar.se/internationella-nalledagen/"
+            },
+            {
+                "event": "Internationella religionsfrihetsdagen"
+            },
+            {
+                "event": "Internationella skolbiblioteksdagen",
+                "link": "https://temadagar.se/internationella-skolbiblioteksdagen/"
+            },
+            {
+                "event": "Alla svärmödrars dag"
+            }
+        ],
+        "20191028": [
+            {
+                "event": "Bilens dag",
+                "link": "https://temadagar.se/bilens-dag/"
+            },
+            {
+                "event": "Internationella animationens dag"
+            }
+        ],
+        "20191029": [
+            {
+                "event": "Internationella psoriasisdagen",
+                "link": "https://temadagar.se/internationella-psoriasisdagen/"
+            },
+            {
+                "event": "Internets dag"
+            }
+        ],
+        "20191030": [
+            {
+                "event": "Dennis Ritchie Day"
+            }
+        ],
+        "20191031": [
+            {
+                "event": "Grannens dag",
+                "link": "https://temadagar.se/grannens-dag/"
+            },
+            {
+                "event": "Halloween",
+                "link": "https://temadagar.se/halloween/"
+            },
+            {
+                "event": "Världsspardagen"
+            },
+            {
+                "event": "Magins dag"
+            }
+        ],
+        "20191101": [
+            {
+                "event": "Internationella vegandagen",
+                "link": "https://temadagar.se/internationella-vegandagen/"
+            },
+            {
+                "event": "Lutfiskens dag",
+                "link": "https://temadagar.se/lutfiskens-dag/"
+            },
+            {
+                "event": "Allhelgonadagen"
+            }
+        ],
+        "20191102": [
+            {
+                "event": "Alla helgons dag",
+                "link": "https://temadagar.se/alla-helgons-dag/"
+            },
+            {
+                "event": "De dödas dag"
+            }
+        ],
+        "20191103": [
+            {
+                "event": "Alla Själars dag"
+            }
+        ],
+        "20191104": [
+            {
+                "event": "Frysrättens dag",
+                "link": "https://temadagar.se/frysrattens-dag/"
+            },
+            {
+                "event": "No hate day"
+            }
+        ],
+        "20191105": [
+            {
+                "event": "Guy Fawkes Day"
+            },
+            {
+                "event": "Kaninköttets dag",
+                "link": "https://temadagar.se/kaninkottets-dag/"
+            },
+            {
+                "event": "Internationella frivilligsamordnardagen"
+            }
+        ],
+        "20191106": [
+            {
+                "event": "Gustav Adolfsdagen",
+                "link": "https://temadagar.se/gustav-adolfsdagen/"
+            },
+            {
+                "event": "Internationella dagen för att förhindra exploatering av miljön i krig och väpnade konflikter",
+                "link": "https://temadagar.se/internationella-dagen-for-att-forhindra-exploatering-av-miljon-i-krig-och-vapnade-konflikter/"
+            }
+        ],
+        "20191107": [
+            {
+                "event": "Internationella stoutdagen"
+            },
+            {
+                "event": "Kladdkakans dag",
+                "link": "https://temadagar.se/kladdkakans-dag/"
+            }
+        ],
+        "20191108": [
+            {
+                "event": "Infraservicedagen"
+            }
+        ],
+        "20191109": [
+            {
+                "event": "Arkivens dag"
+            },
+            {
+                "event": "Frimärkets dag",
+                "link": "https://temadagar.se/frimarkets-dag/"
+            }
+        ],
+        "20191110": [
+            {
+                "event": "Fars dag",
+                "link": "https://temadagar.se/fars-dag/"
+            },
+            {
+                "event": "Mårtensafton"
+            },
+            {
+                "event": "Världsdagen för vetenskap för fred och utveckling",
+                "link": "https://temadagar.se/varldsdagen-for-vetenskap-for-fred-och-utveckling/"
+            }
+        ],
+        "20191111": [
+            {
+                "event": "Chokladens dag",
+                "link": "https://temadagar.se/chokladens-dag/"
+            },
+            {
+                "event": "Nordiska klimatdagen"
+            },
+            {
+                "event": "Hågkomstens dag",
+                "link": "https://temadagar.se/hagkomstens-dag/"
+            },
+            {
+                "event": "Alla singlars Dag"
+            },
+            {
+                "event": "Grön flagg-dagen",
+                "link": "https://temadagar.se/gron-flagg-dagen/"
+            }
+        ],
+        "20191112": [
+            {
+                "event": "Alla krossade hjärtans dag"
+            },
+            {
+                "event": "Dödshälsningsdagen"
+            },
+            {
+                "event": "Miniatyrrävens dag"
+            },
+            {
+                "event": "Globala lunginflammationsdagen",
+                "link": "https://temadagar.se/globala-lunginflammationsdagen/"
+            }
+        ],
+        "20191113": [
+            {
+                "event": "Smörgåstårtans dag"
+            }
+        ],
+        "20191114": [
+            {
+                "event": "Internationella diabetesdagen",
+                "link": "https://temadagar.se/internationella-diabetesdagen/"
+            },
+            {
+                "event": "Ostkakans dag",
+                "link": "https://temadagar.se/ostkakans-dag/"
+            },
+            {
+                "event": "World Quality Day"
+            },
+            {
+                "event": "World Usability Day",
+                "link": "https://temadagar.se/world-usability-day/"
+            }
+        ],
+        "20191115": [
+            {
+                "event": "Fängslade författares dag",
+                "link": "https://temadagar.se/fangslade-forfattares-dag/"
+            },
+            {
+                "event": "Musikterapins dag",
+                "link": "https://temadagar.se/musikterapins-dag/"
+            }
+        ],
+        "20191116": [
+            {
+                "event": "Internationella dagen för tolerans",
+                "link": "https://temadagar.se/internationella-dagen-for-tolerans/"
+            },
+            {
+                "event": "Mångkulturella matdagen",
+                "link": "https://temadagar.se/mangkulturella-matdagen/"
+            }
+        ],
+        "20191117": [
+            {
+                "event": "Internationella prematurdagen"
+            },
+            {
+                "event": "Världsdagen till minne av trafikoffer",
+                "link": "https://temadagar.se/varldsdagen-till-minne-av-trafikoffer/"
+            },
+            {
+                "event": "Napoleonbakelsens dag"
+            },
+            {
+                "event": "De prestigelösas dag"
+            },
+            {
+                "event": "Internationella elevdagen"
+            }
+        ],
+        "20191118": [
+            {
+                "event": "Adoptionernas Dag"
+            },
+            {
+                "event": "Europeiska Antibiotikadagen"
+            },
+            {
+                "event": "Benbuljongens dag"
+            }
+        ],
+        "20191119": [
+            {
+                "event": "Internationella mansdagen",
+                "link": "https://temadagar.se/internationella-mansdagen/"
+            },
+            {
+                "event": "Internationella toalettdagen",
+                "link": "https://temadagar.se/internationella-toalettdagen/"
+            },
+            {
+                "event": "Världsdagen mot barnmisshandel",
+                "link": "https://temadagar.se/varldsdagen-mot-barnmisshandel/"
+            },
+            {
+                "event": "Amaryllisens dag"
+            },
+            {
+                "event": "Internationella iktyosdagen"
+            },
+            {
+                "event": "Womens Entrepreneurship Day"
+            },
+            {
+                "event": "Raggmunkens dag"
+            }
+        ],
+        "20191120": [
+            {
+                "event": "Barnkonventionsdagen",
+                "link": "https://temadagar.se/barnkonventionsdagen/"
+            },
+            {
+                "event": "Industrialiseringsdagen för Afrika",
+                "link": "https://temadagar.se/industrialiseringsdagen-for-afrika/"
+            },
+            {
+                "event": "Internationella barndagen"
+            },
+            {
+                "event": "Internationella KOL-dagen"
+            },
+            {
+                "event": "Internationella GIS-dagen",
+                "link": "https://temadagar.se/internationella-gis-dagen/"
+            },
+            {
+                "event": "Transgender Day of Remembrance",
+                "link": "https://temadagar.se/transgender-day-of-remembrance/"
+            }
+        ],
+        "20191121": [
+            {
+                "event": "Världsfilosofidagen",
+                "link": "https://temadagar.se/varldsfilosofidagen/"
+            },
+            {
+                "event": "Musikfri dag",
+                "link": "https://temadagar.se/musikfri-dag/"
+            },
+            {
+                "event": "Världsdagen för TV",
+                "link": "https://temadagar.se/varldsdagen-for-tv/"
+            },
+            {
+                "event": "Världshejardagen"
+            },
+            {
+                "event": "Thanksgiving",
+                "link": "https://temadagar.se/thanksgiving/"
+            }
+        ],
+        "20191122": [
+            {
+                "event": "Wienerbrödets dag"
+            },
+            {
+                "event": "E-handelns dag",
+                "link": "https://temadagar.se/e-handelns-dag/"
+            },
+            {
+                "event": "Black Friday"
+            }
+        ],
+        "20191123": [
+            {
+                "event": "Sankt Clements dag"
+            },
+            {
+                "event": "Internationella hattdagen"
+            }
+        ],
+        "20191125": [
+            {
+                "event": "Internationella dagen för bekämpning av våld mot kvinnor",
+                "link": "https://temadagar.se/internationella-dagen-for-bekampning-av-vald-mot-kvinnor/"
+            },
+            {
+                "event": "Cyber Monday"
+            }
+        ],
+        "20191128": [
+            {
+                "event": "Flaskmatardagen",
+                "link": "https://temadagar.se/flaskmatardagen/"
+            }
+        ],
+        "20191129": [
+            {
+                "event": "Internationella solidaritetsdagen med det palestinska folket"
+            },
+            {
+                "event": "Pälsfria fredagen",
+                "link": "https://temadagar.se/palsfria-fredagen/"
+            },
+            {
+                "event": "Vinylskivans dag"
+            }
+        ],
+        "20191130": [
+            {
+                "event": "En köpfri dag",
+                "link": "https://temadagar.se/en-kopfri-dag/"
+            },
+            {
+                "event": "Guldsmedens dag"
+            },
+            {
+                "event": "Kåldolmens dag"
+            },
+            {
+                "event": "Volontärdagen",
+                "link": "https://temadagar.se/volontardagen/"
+            },
+            {
+                "event": "Andersdagen"
+            }
+        ],
+        "20191201": [
+            {
+                "event": "Brandvarnardagen"
+            },
+            {
+                "event": "Kattens dag",
+                "link": "https://temadagar.se/kattens-dag/"
+            },
+            {
+                "event": "Internationella AIDS-dagen",
+                "link": "https://temadagar.se/internationella-aids-dagen/"
+            },
+            {
+                "event": "Första advent",
+                "link": "https://temadagar.se/forsta-advent/"
+            },
+            {
+                "event": "Glöggens dag",
+                "link": "https://temadagar.se/gloggens-dag/"
+            }
+        ],
+        "20191202": [
+            {
+                "event": "Internationella dagen för avskaffande av slaveri",
+                "link": "https://temadagar.se/internationella-dagen-for-avskaffande-av-slaveri/"
+            }
+        ],
+        "20191203": [
+            {
+                "event": "Drick en öl-dagen"
+            },
+            {
+                "event": "Internationella dagen för handikappade",
+                "link": "https://temadagar.se/internationella-dagen-for-handikappade/"
+            },
+            {
+                "event": "Städarnas dag"
+            },
+            {
+                "event": "Giving Tuesday"
+            }
+        ],
+        "20191204": [
+            {
+                "event": "Armbandsklockans dag"
+            }
+        ],
+        "20191205": [
+            {
+                "event": "Internationella dagen för frivilligas arbete för ekonomisk och social utveckling",
+                "link": "https://temadagar.se/internationella-dagen-for-frivilligas-arbete-for-ekonomisk-och-social-utveckling/"
+            }
+        ],
+        "20191206": [
+            {
+                "event": "Saint Nicholas Day",
+                "link": "https://temadagar.se/saint-nicholas-day/"
+            }
+        ],
+        "20191207": [
+            {
+                "event": "Internationella dagen för civil luftfart",
+                "link": "https://temadagar.se/internationella-dagen-for-civil-luftfart/"
+            }
+        ],
+        "20191208": [
+            {
+                "event": "Andra advent",
+                "link": "https://temadagar.se/andra-advent/"
+            }
+        ],
+        "20191209": [
+            {
+                "event": "Internationella dagen mot korruption",
+                "link": "https://temadagar.se/internationella-dagen-mot-korruption/"
+            },
+            {
+                "event": "Pepparkakans dag",
+                "link": "https://temadagar.se/pepparkakans-dag/"
+            },
+            {
+                "event": "Annadagen"
+            },
+            {
+                "event": "Läkarsekreterarens dag"
+            }
+        ],
+        "20191210": [
+            {
+                "event": "Internationella djurrättsdagen"
+            },
+            {
+                "event": "Mänskliga rättigheternas dag",
+                "link": "https://temadagar.se/manskliga-rattigheternas-dag/"
+            },
+            {
+                "event": "Nobeldagen",
+                "link": "https://temadagar.se/nobeldagen/"
+            },
+            {
+                "event": "Terra Madre day",
+                "link": "https://temadagar.se/terra-madre-day/"
+            }
+        ],
+        "20191211": [
+            {
+                "event": "Internationella dagen för världens berg",
+                "link": "https://temadagar.se/internationella-dagen-for-varldens-berg/"
+            },
+            {
+                "event": "Tangons dag"
+            }
+        ],
+        "20191212": [
+            {
+                "event": "Julstjärnans dag"
+            }
+        ],
+        "20191213": [
+            {
+                "event": "Luciadagen",
+                "link": "https://temadagar.se/luciadagen/"
+            }
+        ],
+        "20191214": [
+            {
+                "event": "Internationella ap-dagen"
+            }
+        ],
+        "20191215": [
+            {
+                "event": "Tredje advent",
+                "link": "https://temadagar.se/tredje-advent/"
+            },
+            {
+                "event": "Internationella tedagen"
+            }
+        ],
+        "20191218": [
+            {
+                "event": "Internationella migrationsdagen",
+                "link": "https://temadagar.se/internationella-migrationsdagen/"
+            },
+            {
+                "event": "Kakans dag"
+            }
+        ],
+        "20191220": [
+            {
+                "event": "Internationella mänskliga solidaritetens dag",
+                "link": "https://temadagar.se/internationella-manskliga-solidaritetens-dag/"
+            },
+            {
+                "event": "Jultröjans dag"
+            }
+        ],
+        "20191221": [
+            {
+                "event": "Tomasdagen"
+            },
+            {
+                "event": "Kortfilmens dag",
+                "link": "https://temadagar.se/kortfilmens-dag/"
+            },
+            {
+                "event": "Skumtomtens dag ",
+                "link": "https://temadagar.se/skumtomtens-dag-/"
+            }
+        ],
+        "20191222": [
+            {
+                "event": "Fjärde advent",
+                "link": "https://temadagar.se/fjarde-advent/"
+            },
+            {
+                "event": "Vintersolståendet"
+            }
+        ],
+        "20191224": [
+            {
+                "event": "Julafton",
+                "link": "https://temadagar.se/julafton/"
+            }
+        ],
+        "20191225": [
+            {
+                "event": "Juldagen"
+            }
+        ],
+        "20191226": [
+            {
+                "event": "Annandag jul"
+            }
+        ],
+        "20191227": [
+            {
+                "event": "Nationella regifting-dagen"
+            }
+        ],
+        "20191228": [
+            {
+                "event": "Värnlösa barns dag"
+            }
+        ],
+        "20191229": [
+            {
+                "event": "Statisternas dag",
+                "link": "https://temadagar.se/statisternas-dag/"
+            }
+        ],
+        "20191231": [
+            {
+                "event": "Nyårsafton",
+                "link": "https://temadagar.se/nyarsafton/"
+            }
+        ]
+    }
+}
