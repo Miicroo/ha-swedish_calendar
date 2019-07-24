@@ -1,7 +1,7 @@
 {
-    "domain": "calendar",
+    "domain": "swedish_calendar",
     "name": "Swedish calendar",
-    "documentation": "https://github.com/Miicroo/homeassistant-custom-components/tree/master/swedish_calendar",
+    "documentation": "https://github.com/Miicroo/ha-swedish_calendar",
     "dependencies": [],
     "codeowners": ["@Miicroo"],
     "requirements": []
