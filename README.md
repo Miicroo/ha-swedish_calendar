@@ -51,7 +51,8 @@ flag_day
 ~~~~
 
 ### Special themes
-If you would like to incude data about special themes/days, like Kanelbullens dag, you can add the directory where you downloaded the `specialThemes.json` to the config (usually `/home/homeassistant/.homeassistant/custom_components/swedish_calendar`). Example config:
+If you would like to incude data about special themes/days, like Kanelbullens dag, you can add the directory where you downloaded the `specialThemes.json` to the config (usually `/home/homeassistant/.homeassistant/custom_components/swedish_calendar`, for HASSIO it seems the path is `/config/custom_components/swedish_calendar`).
+Example config:
 ~~~~
 # Example configuration.yaml entry with exclusion
 sensor:
