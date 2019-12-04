@@ -124,12 +124,12 @@ I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns 
 
 Result in UI during holiday:
 <p>
-  <img src="https://raw.githubusercontent.com/Miicroo/homeassistant-custom-components/master/swedish_calendar/assets/holiday.png" alt="Swedish calendar during holiday" width="80%" height="80%"/>
+  <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/assets/holiday.png" alt="Swedish calendar during holiday" width="80%" height="80%"/>
 </p>
 
 Result in UI with special themes included:
 <p>
-  <img src="https://raw.githubusercontent.com/Miicroo/homeassistant-custom-components/master/swedish_calendar/assets/specialThemes.png" alt="Swedish calendar with special themes" width="80%" height="80%"/>
+  <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/assets/specialThemes.png" alt="Swedish calendar with special themes" width="80%" height="80%"/>
 </p>
 
 ## Push notification for celebrated names
