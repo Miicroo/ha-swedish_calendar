@@ -63,6 +63,8 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
             themeSensor = SpecialThemesSensor(hass, specialThemesPath)
             async_add_entities([themeSensor])
             await themeSensor.fetching_data()
+        else:
+            _LOGGER.warn("Special themes is configured but file cannot be found at %s, please check your config", specialThemesPath)
 
     included_sensor_types = [sensor_type for sensor_type in SENSOR_TYPES if sensor_type not in config[CONF_EXCLUDE]]
 
