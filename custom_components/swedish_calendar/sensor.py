@@ -267,7 +267,6 @@ class SpecialThemesSensor(Entity):
         except json.JSONDecodeError as err:
             retry(err)
             return
-        _LOGGER.warn(data)
 
         specialThemes = data['themeDays']
         date = dt_util.start_of_local_day()
@@ -280,5 +279,4 @@ class SpecialThemesSensor(Entity):
             tasks = [self.async_update_ha_state()]
             await asyncio.wait(tasks, loop=self.hass.loop)
 
-        _LOGGER.warn(self.hass)
         async_call_later(self.hass, get_seconds_until_midnight(), self.fetching_data)
