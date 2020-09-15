@@ -3,6 +3,14 @@ This is a HomeAssistant sensor for showing data about swedish holidays. It uses 
 
 ## Installation
 
+### HACS (recommended)
+1. Go to integrations
+2. Press the dotted menu in the top right corner
+3. Choose custom repositories
+4. Add the URL to this repository
+5. Choose category `Integration`
+6. Click add
+
 ### Manual
 1. In your homeassistant config directory, create a new directory. The path should look like this: **my-ha-config-dir/custom_components/swedish_calendar**
 2. Download the contents of the following files (from custom_components/swedish_calendar) to the new directory:
@@ -10,9 +18,6 @@ This is a HomeAssistant sensor for showing data about swedish holidays. It uses 
     * \_\_init\_\_.py
     * manifest.json
     * specialThemes.json
-
-### HACS
-TBD
 
 ## Configuration
 Set up the sensor in `configuration.yaml`:
@@ -51,13 +56,13 @@ flag_day
 ~~~~
 
 ### Special themes
-If you would like to incude data about special themes/days, like Kanelbullens dag, you can add the directory where you downloaded the `specialThemes.json` to the config (usually `/home/homeassistant/.homeassistant/custom_components/swedish_calendar`, for HASSIO it seems the path is `/config/custom_components/swedish_calendar`).
+If you would like to incude data about special themes/days, like Kanelbullens dag, you can add the directory where you downloaded the `specialThemes.json` to the config (for hassio/hassOS: `/config/custom_components/swedish_calendar`, for manual venv installation: `/home/homeassistant/.homeassistant/custom_components/swedish_calendar`).
 Example config:
 ~~~~
 # Example configuration.yaml entry with exclusion
 sensor:
   - platform: swedish_calendar
-    special_themes_dir: /home/homeassistant/.homeassistant/custom_components/swedish_calendar
+    special_themes_dir: /config/custom_components/swedish_calendar
 ~~~~
 
 ## Result

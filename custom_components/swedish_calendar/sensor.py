@@ -210,12 +210,11 @@ class SpecialThemesSensor(Entity):
     def __init__(self, hass, theme_path):
         self.hass = hass
         self._state = None
-        self.entity_id = 'sensor.swedish_calendar_theme_day'
         self._theme_path = theme_path
 
     @property
     def name(self):
-        return 'Special Themes'
+        return 'Swedish Calendar theme day'
 
     @property
     def state(self):
