@@ -135,7 +135,7 @@ class SwedishCalendarData:
 
     def __init__(self, hass, devices):
         """Initialize the data object."""
-        self._base_url = 'https://api.dryg.net/dagar/v2.1/'
+        self._base_url = 'https://sholiday.faboul.se/dagar/v2.1/'
         self.devices = devices
         self.data = {}
         self.hass = hass
