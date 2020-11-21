@@ -15,10 +15,10 @@ import os
 import voluptuous as vol
 
 import homeassistant.helpers.config_validation as cv
-from homeassistant.components.sensor import PLATFORM_SCHEMA, ENTITY_ID_FORMAT
+from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import ATTR_ATTRIBUTION
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from homeassistant.helpers.entity import Entity, async_generate_entity_id
+from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import async_call_later
 from homeassistant.util import dt as dt_util
 
@@ -211,9 +211,6 @@ class SpecialThemesSensor(Entity):
         self.hass = hass
         self._state = None
         self._theme_path = theme_path
-        self.entity_id = async_generate_entity_id(
-            ENTITY_ID_FORMAT, 'swedish_calendar_theme_day', hass=hass
-        )
 
     @property
     def name(self):
