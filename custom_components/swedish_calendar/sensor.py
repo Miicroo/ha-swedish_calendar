@@ -212,12 +212,12 @@ class SpecialThemesSensor(Entity):
         self.hass = hass
         self._state = None
         self._theme_path = theme_path
-        self.name = 'Swedish Calendar theme day'
-        self.entity_id = 'sensor.{}'.format(slugify(self.name))
+        self._name = 'Swedish Calendar theme day'
+        self.entity_id = 'sensor.{}'.format(slugify(self._name))
 
     @property
     def name(self):
-        return self.name
+        return self._name
 
     @property
     def state(self):
