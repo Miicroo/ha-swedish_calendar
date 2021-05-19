@@ -4,5 +4,6 @@
     "documentation": "https://github.com/Miicroo/ha-swedish_calendar",
     "dependencies": [],
     "codeowners": ["@Miicroo"],
-    "requirements": []
+    "requirements": [],
+    "version": "1.0.0"
 }
