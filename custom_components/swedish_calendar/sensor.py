@@ -274,8 +274,10 @@ class SpecialThemesSensor(Entity):
         if dateStr in specialThemes:
             events = map(lambda x: x['event'], specialThemes[dateStr])
             self._state = ",".join(events)
+        else:
+            self._state = None
 
-            tasks = [self.async_update_ha_state()]
-            await asyncio.wait(tasks, loop=self.hass.loop)
+        tasks = [self.async_update_ha_state()]
+        await asyncio.wait(tasks, loop=self.hass.loop)
 
         async_call_later(self.hass, get_seconds_until_midnight(), self.fetching_data)
