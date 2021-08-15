@@ -24,7 +24,7 @@ from homeassistant.util import dt as dt_util
 
 _LOGGER = logging.getLogger(__name__)
 
-CONF_ATTRIBUTION = 'Data provided by api.dryg.net'
+CONF_ATTRIBUTION = 'Data provided by sholiday.faboul.se'
 CONF_ATTRIBUTION_SPECIAL_THEMES = 'Data provided by https://temadagar.se. For full calendar, see https://temadagar.se/kop-temadagar-kalender/'
 CONF_EXCLUDE = 'exclude'
 CONF_SPECIAL_THEMES_DIR = 'special_themes_dir'

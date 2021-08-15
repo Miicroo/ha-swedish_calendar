@@ -1,5 +1,5 @@
 # Swedish calendar
-This is a HomeAssistant sensor for showing data about swedish holidays. It uses the api at *api.dryg.net* to generate statistics as sensors. The sensors are checked once per day (at midnight).
+This is a HomeAssistant sensor for showing data about swedish holidays. It uses the api at *sholiday.faboul.se* to generate statistics as sensors. The sensors are checked once per day (at midnight).
 
 ## Installation
 
@@ -148,7 +148,7 @@ To send a push when someone you know celebrates their name, you can use the foll
   condition:
     - condition: template
       value_template: >-
-        {% set names_of_today = states.sensor.swedish_calendar_name_day.state.split(",") %}
+        {% set names_of_today = states('sensor.swedish_calendar_name_day').split(",") %}
         {% set wanted_names = ['Lisa', 'Kalle', 'Johan', 'Anna'] %}
         {% for name in names_of_today %}
           {% if (name in wanted_names) %}
@@ -159,5 +159,5 @@ To send a push when someone you know celebrates their name, you can use the foll
     service: notify.pushbullet
     data_template:
       title: 'Namnsdag!'
-      message: "Idag firas {{ states.sensor.swedish_calendar_name_day.state }} "
+      message: "Idag firas {{ states('sensor.swedish_calendar_name_day') }} "
 ~~~
