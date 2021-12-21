@@ -114,7 +114,7 @@ class SwedishCalendarSensor(Entity):
         return self._icon
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes."""
         return {
             ATTR_ATTRIBUTION: CONF_ATTRIBUTION,
@@ -230,7 +230,7 @@ class SpecialThemesSensor(Entity):
         return None
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         return {
             ATTR_ATTRIBUTION: CONF_ATTRIBUTION_SPECIAL_THEMES
         }
