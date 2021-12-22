@@ -162,7 +162,7 @@ class SwedishCalendarData:
             return one_day_in_seconds - total_seconds_passed_today
         try:
             websession = async_get_clientsession(self.hass)
-            with async_timeout.timeout(10, loop=self.hass.loop):
+            with async_timeout.timeout(10):
                 resp = await websession.get(get_url(self._base_url))
             if resp.status != 200:
                 retry('{} returned {}'.format(resp.url, resp.status))
