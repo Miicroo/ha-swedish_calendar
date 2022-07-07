@@ -203,7 +203,7 @@ class SwedishCalendarData:
                 tasks.append(device.async_update_ha_state())
 
         if tasks:
-            await asyncio.wait(tasks, loop=self.hass.loop)
+            await asyncio.wait(tasks)
 
 class SpecialThemesSensor(Entity):
 
@@ -278,6 +278,6 @@ class SpecialThemesSensor(Entity):
             self._state = None
 
         tasks = [self.async_update_ha_state()]
-        await asyncio.wait(tasks, loop=self.hass.loop)
+        await asyncio.wait(tasks)
 
         async_call_later(self.hass, get_seconds_until_midnight(), self.fetching_data)
