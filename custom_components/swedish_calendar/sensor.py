@@ -5,6 +5,7 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.swedish_calendar/
 """
 import asyncio
+import json
 import logging
 
 from random import randrange
@@ -20,7 +21,7 @@ from homeassistant.const import ATTR_ATTRIBUTION
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import async_call_later
-from homeassistant.util import dt as dt_util
+from homeassistant.util import slugify, dt as dt_util
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -51,7 +52,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
         vol.All(cv.ensure_list, vol.Length(min=0), [vol.In(SENSOR_TYPES)]),
 })
 
-VERSION = '0.0.4'
+VERSION = '0.0.5'
 
 async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
     """Set up the calendar sensor."""
@@ -62,7 +63,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         if os.path.exists(specialThemesPath):
             themeSensor = SpecialThemesSensor(hass, specialThemesPath)
             async_add_entities([themeSensor])
-            await themeSensor.fetching_data()
+            await themeSensor.fetch_initial_data()
         else:
             _LOGGER.warn("Special themes is configured but file cannot be found at %s, please check your config", specialThemesPath)
 
@@ -98,7 +99,11 @@ class SwedishCalendarSensor(Entity):
     def name(self):
         """Return the name of the sensor."""
         return self._name
-
+    
+    @property
+    def unique_id(self):
+        return 'sensor.{}'.format(slugify(self._name))
+    
     @property
     def state(self):
         """Return the state of the device."""
@@ -215,6 +220,10 @@ class SpecialThemesSensor(Entity):
     @property
     def name(self):
         return 'Swedish Calendar theme day'
+        
+    @property
+    def unique_id(self):
+        return 'sensor.swedish_calendar_theme_day'
 
     @property
     def state(self):
@@ -244,9 +253,10 @@ class SpecialThemesSensor(Entity):
         """Return hidden if it should not be visible in GUI"""
         return self._state is None or self._state == ""
 
-    async def fetching_data(self, *_):
-        import json
+    async def fetch_initial_data(self, *_):
+        async_call_later(self.hass, 5, self.fetching_data)
 
+    async def fetching_data(self, *_):
         def retry(err: str):
             minutes = 60
             _LOGGER.error("Retrying in %i minutes: %s", minutes, err)
