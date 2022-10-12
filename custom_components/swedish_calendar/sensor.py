@@ -63,7 +63,6 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         if os.path.exists(specialThemesPath):
             themeSensor = SpecialThemesSensor(hass, specialThemesPath)
             async_add_entities([themeSensor])
-            await themeSensor.fetch_initial_data()
         else:
             _LOGGER.warn("Special themes is configured but file cannot be found at %s, please check your config", specialThemesPath)
 
@@ -253,8 +252,8 @@ class SpecialThemesSensor(Entity):
         """Return hidden if it should not be visible in GUI"""
         return self._state is None or self._state == ""
 
-    async def fetch_initial_data(self, *_):
-        async_call_later(self.hass, 5, self.fetching_data)
+    async def async_added_to_hass(self):
+        await self.fetching_data()
 
     async def fetching_data(self, *_):
         def retry(err: str):
