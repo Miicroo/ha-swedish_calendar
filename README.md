@@ -24,11 +24,13 @@ swedish_calendar:
 
 Restart homeassistant
 
----------------------------------------------------------------------------------------------------- ------------------------------------
-![Warning](https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/feature/v2.0.0/assets/warning.png)\ If you are migrating from v1 to v2,
-                                                                                                     note that you have to change from `sensor:` to `swedish_calendar`. To be able to tidily add more features and config, an own domain was required. The `platform`-key is also no longer required (but will be accepted/do nothing if it is left in the config). 
+<table>
+    <tr>
+        <td><img src="https://github.com/Miicroo/ha-swedish_calendar/blob/feature/v2.0.0/assets/warning.png?raw=true" alt="Warning!"></td>
+        <td>If you are migrating from v1 to v2, note that you have to change from `sensor:` to `swedish_calendar`. To be able to tidily add more features and config, an own domain was required. The `platform`-key is also no longer required (but will be accepted/do nothing if it is left in the config).</td>
+    </tr>
+</table>
 
---------------------------------------------------------------------------------------------------------------------------------
 
 ### Options
 All sensors are added per default. If a certain sensor isn't available, it will be hidden (for example: type of holiday will be hidden if there is no ongoing holiday). If you do not want a sensor at all, you can manually exclude it:
@@ -60,7 +62,7 @@ theme_day
 If you would like to incude data about special themes/days, like Kanelbullens dag, you can add the directory where you downloaded the `specialThemes.json` to the config (for hassio/hassOS: `/config/custom_components/swedish_calendar`, for manual venv installation: `/home/homeassistant/.homeassistant/custom_components/swedish_calendar`).
 Example config:
 ~~~~
-# Example configuration.yaml entry
+# Example configuration.yaml entry with special themes
 swedish_calendar:
   special_themes_dir: /config/custom_components/swedish_calendar
 ~~~~
