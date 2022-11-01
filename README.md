@@ -20,24 +20,28 @@ This is a HomeAssistant sensor for showing data about swedish holidays. It uses 
     * specialThemes.json
 
 ## Configuration
-Set up the sensor in `configuration.yaml`:
+Set up the domain sensor(s) in `configuration.yaml`:
 ~~~~
 # Example configuration.yaml entry
-sensor:
-  - platform: swedish_calendar
+swedish_calendar:
 ~~~~
 
 Restart homeassistant
+
+---------------------------------------------------------------------------------------------------- ------------------------------------
+![Warning](https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/assets/warning.png)\ If you are migrating from v1 to v2,
+                                                                                                     note that you have to change from `sensor:` to `swedish_calendar`. To be able to tidily add more features and config, an own domain was required. The `platform`-key is also no longer required (but will be accepted/do nothing if it is left in the config). 
+
+----------------------------------------------------------------
 
 ### Options
 All sensors are added per default. If a certain sensor isn't available, it will be hidden (for example: type of holiday will be hidden if there is no ongoing holiday). If you do not want a sensor at all, you can manually exclude it:
 ~~~~
 # Example configuration.yaml entry with exclusion
-sensor:
-  - platform: swedish_calendar
-    exclude:
-      - date
-      - day_before_workfree_holiday
+swedish_calendar:
+  exclude:
+    - date
+    - day_before_workfree_holiday
 ~~~~
 
 The following sensor types are supported/can be excluded:
@@ -60,9 +64,8 @@ If you would like to incude data about special themes/days, like Kanelbullens da
 Example config:
 ~~~~
 # Example configuration.yaml entry with exclusion
-sensor:
-  - platform: swedish_calendar
-    special_themes_dir: /config/custom_components/swedish_calendar
+swedish_calendar:
+  special_themes_dir: /config/custom_components/swedish_calendar
 ~~~~
 
 ## Result
