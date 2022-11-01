@@ -1,5 +1,5 @@
 DOMAIN = 'swedish_calendar'
-VERSION = '1.0.0'
+VERSION = '2.0.0'
 
 CONF_SPECIAL_THEMES_DIR = 'special_themes_dir'
 SPECIAL_THEMES_PATH = 'specialThemes.json'
