@@ -24,13 +24,12 @@ swedish_calendar:
 
 Restart homeassistant
 
-<table>
-    <tr>
-        <td><img src="https://github.com/Miicroo/ha-swedish_calendar/blob/feature/v2.0.0/assets/warning.png?raw=true" alt="Warning!"></td>
-        <td>If you are migrating from v1 to v2, note that you have to change from `sensor:` to `swedish_calendar`. To be able to tidily add more features and config, an own domain was required. The `platform`-key is also no longer required (but will be accepted/do nothing if it is left in the config).</td>
-    </tr>
-</table>
+---
+**IMPORTANT NOTE**
 
+If you are migrating from v1.0.0 to v2.x.x, note that you have to change from `sensor:` to `swedish_calendar:` in your configuration.yaml. This change was necessary to be able to add more features and an even more extensive config. The `platform`-key is also no longer required (but will be accepted/do nothing if it is left in the config).
+
+---
 
 ### Options
 All sensors are added per default. If a certain sensor isn't available, it will be hidden (for example: type of holiday will be hidden if there is no ongoing holiday). If you do not want a sensor at all, you can manually exclude it:
