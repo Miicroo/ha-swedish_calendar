@@ -12,7 +12,7 @@ class SwedishCalendar:
         if attr != 'themes':
             return getattr(self.api_data, attr)
         else:
-            return self.themes.themes
+            return self.themes.themes if self.themes is not None else None
 
 
 class ApiData:
@@ -22,7 +22,7 @@ class ApiData:
         self.work_free_day: bool = self._to_bool(json_data["arbetsfri dag"])
         self.red_day: bool = self._to_bool(json_data["röd dag"])
         self.week: int = int(json_data["vecka"])
-        self.day_of_week_index: int = int(json_data["dag i vecka"]) - 1  # data is 1-indexed adjust
+        self.day_of_week_index: int = int(json_data["dag i vecka"])
         self.name_day: List[str] = json_data["namnsdag"]
         self.reason_for_flagging: Optional[str] = self._to_optional(json_data, "flaggdag")
         self.eve: Optional[str] = self._to_optional(json_data, 'helgdagsafton')

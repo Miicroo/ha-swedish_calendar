@@ -51,7 +51,6 @@ class SwedishCalendarSensor(CoordinatorEntity):
         self._default_value = default_value
         self._attribution = attribution
         self.entity_id = 'sensor.swedish_calendar_{}'.format(sensor_type)
-        self._handle_coordinator_update()  # Set initial state
 
     @property
     def name(self):
@@ -89,6 +88,9 @@ class SwedishCalendarSensor(CoordinatorEntity):
         """Return hidden if it should not be visible in GUI"""
         return self._state is None or self._state == ""
 
+    async def async_added_to_hass(self):
+        self._handle_coordinator_update()  # Set initial state
+
     @callback
     def _handle_coordinator_update(self) -> None:
         """Handle updated data from the coordinator."""
@@ -97,4 +99,6 @@ class SwedishCalendarSensor(CoordinatorEntity):
             state = swedish_calendar.get_value_by_attribute(self.state_key)
             if isinstance(state, list):
                 state = ",".join(state)
+            elif isinstance(state, bool):
+                state = 'Ja' if state else 'Nej'
             self._state = state
