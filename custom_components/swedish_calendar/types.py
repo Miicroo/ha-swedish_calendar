@@ -27,7 +27,7 @@ class SwedishCalendar:
 
     def get_value_by_attribute(self, attr: str) -> Any:
         if attr != 'themes':
-            return getattr(self._api_data, attr)
+            return getattr(self._api_data, attr) if self._api_data is not None else None
         else:
             return self._themes.themes if self._themes is not None else None
 
