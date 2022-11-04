@@ -12,7 +12,7 @@ class SwedishCalendar:
         if attr != 'themes':
             return getattr(self.api_data, attr)
         else:
-            return self.themes.themes
+            return self.themes.themes if self.themes is not None else None
 
 
 class ApiData:
