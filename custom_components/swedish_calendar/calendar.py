@@ -45,7 +45,12 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
     @property
     def event(self) -> CalendarEvent:
         """Return the next upcoming event."""
-        return self._events[0].to_hass_calendar_event() if len(self._events) > 0 else None
+        sorted_events: List[SwedishCalendarEvent] = sorted(self._events, key=lambda e: e.date)
+        for event in sorted_events:
+            if not event.has_passed():
+                return event.to_hass_calendar_event()
+
+        return None
 
     async def async_get_events(
             self,
@@ -59,6 +64,7 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
                 ]
 
     async def async_added_to_hass(self):
+        await super().async_added_to_hass()  # Set up coordinator listener
         self._handle_coordinator_update()  # Set initial state
 
     @callback
@@ -106,3 +112,6 @@ class SwedishCalendarEvent:
     def to_hass_calendar_event(self) -> CalendarEvent:
         end = self.date + timedelta(days=1)
         return CalendarEvent(start=self.date, end=end, summary=self.description, description=self.description)
+
+    def has_passed(self) -> bool:
+        return self.date < date.today()
