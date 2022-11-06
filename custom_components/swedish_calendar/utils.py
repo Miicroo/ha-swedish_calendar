@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
 
 class DateUtils:
@@ -10,3 +10,10 @@ class DateUtils:
     @staticmethod
     def in_range(isodate: str, start: date, end: date) -> bool:
         return start <= date.fromisoformat(isodate) <= end
+
+    @staticmethod
+    def seconds_until_midnight(now: datetime) -> int:
+        tomorrow = date.today() + timedelta(days=1)
+        midnight = datetime.combine(tomorrow, datetime.min.time())
+        now = datetime.now()
+        return (midnight - now).seconds + 1
