@@ -12,7 +12,7 @@ class DateUtils:
         return start <= date.fromisoformat(isodate) <= end
 
     @staticmethod
-    def seconds_until_midnight(now: datetime) -> int:
+    def seconds_until_midnight() -> int:
         tomorrow = date.today() + timedelta(days=1)
         midnight = datetime.combine(tomorrow, datetime.min.time())
         now = datetime.now()

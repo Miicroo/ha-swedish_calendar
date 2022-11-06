@@ -1,7 +1,7 @@
 import asyncio
 import json
 import logging
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from typing import Any, Dict, List
 
 import aiohttp
@@ -33,7 +33,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
             hass,
             _LOGGER,
             name=DOMAIN_FRIENDLY_NAME,
-            update_interval=timedelta(seconds=DateUtils.seconds_until_midnight(datetime.now())),
+            update_interval=timedelta(seconds=DateUtils.seconds_until_midnight()),
             update_method=self.update_data,
         )
 
@@ -51,7 +51,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
                 _LOGGER.warning("Failed to fetch swedish calendar: %s", err)
 
         # Recalculate update interval in case of restart
-        self.update_interval = timedelta(seconds=DateUtils.seconds_until_midnight(datetime.now()))
+        self.update_interval = timedelta(seconds=DateUtils.seconds_until_midnight())
 
         return self._cache or {}
 
