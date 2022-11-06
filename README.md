@@ -16,24 +16,42 @@ This is a HomeAssistant sensor for showing data about swedish holidays. It uses 
 2. Download the contents (the raw files, NOT as HTML) of the files from **custom_components/swedish_calendar** to the new directory
 
 ## Configuration
-Set up the sensor(s) in `configuration.yaml`:
-~~~~
+| Name               | Required | Description                                                                                                                                                                            |
+|--------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| exclude            | no       | All sensor types are tracked by default, specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| special_themes_dir | no       | The path to the directory where you downloaded the specialThemes.json to. See [Special themes config](#special-themes).                                                                |
+
+### Example of minimal configuration
+~~~~yaml
 # Example configuration.yaml entry
 swedish_calendar:
 ~~~~
 
-Restart homeassistant
-
 ---
-**IMPORTANT NOTE**
+**⚠ IMPORTANT NOTE ⚠**
 
-If you are migrating from v1.0.0 to v2.x.x, note that you have to change from `sensor:` to `swedish_calendar:` in your configuration.yaml. This change was necessary to be able to add more features and an even more extensive config. The `platform`-key is also no longer required (but will be accepted/do nothing if it is left in the config).
+If you are migrating from v1.0.0 to v2.x.x, note that you have to change from `sensor:` to `swedish_calendar:` in your configuration.yaml. This change was necessary to be able to add more features and an even more extensive config. The `platform`-key is also no longer required.
 
 ---
 
-### Options
-All sensors are added per default. If a certain sensor isn't available, it will be hidden (for example: type of holiday will be hidden if there is no ongoing holiday). If you do not want a sensor at all, you can manually exclude it:
-~~~~
+### Supported sensor types
+| Sensor type                 | Swedish description        | Example value |
+|-----------------------------|----------------------------|---------------|
+| date                        | Datum                      | 2022-12-24    |
+| weekday                     | Veckodag                   | Lördag        |
+| workfree_day                | Arbetsfri dag              | Ja            |
+| red_day                     | Röd dag                    | Nej           |
+| week                        | Vecka                      | 51            |
+| day_of_week                 | Dag i vecka                | 6             |
+| eve                         | Helgdagsafton              | Julafton      |
+| holiday                     | Helgdag                    | unknown       |
+| day_before_workfree_holiday | Dag före arbetsfri helgdag | Nej           |
+| name_day                    | Namnsdag                   | Eva           |
+| flag_day                    | Flaggdag                   | unknown       |
+| theme_day                   | Temadag                    | Julafton      |
+
+
+~~~~yaml
 # Example configuration.yaml entry with exclusion
 swedish_calendar:
   exclude:
@@ -41,26 +59,16 @@ swedish_calendar:
     - day_before_workfree_holiday
 ~~~~
 
-The following sensor types are supported/can be excluded:
-~~~~
-date
-weekday
-workfree_day
-red_day
-week
-day_of_week
-eve
-holiday
-day_before_workfree_holiday
-name_day
-flag_day
-theme_day
-~~~~
-
 ### Special themes
-If you would like to incude data about special themes/days, like Kanelbullens dag, you can add the directory where you downloaded the `specialThemes.json` to the config (for hassio/hassOS: `/config/custom_components/swedish_calendar`, for manual venv installation: `/home/homeassistant/.homeassistant/custom_components/swedish_calendar`).
+If you would like to include data about special themes/days, like 🍪 Kanelbullens dag 🍪, you can configure the directory where you downloaded the `specialThemes.json`
+
+| HASS set up method | Path                                                                    |
+|--------------------|-------------------------------------------------------------------------|
+| Hassio/HassOS      | `/config/custom_components/swedish_calendar`                            |
+| Manual venv        | `/home/homeassistant/.homeassistant/custom_components/swedish_calendar` |
+
 Example config:
-~~~~
+~~~~yaml
 # Example configuration.yaml entry with special themes
 swedish_calendar:
   special_themes_dir: /config/custom_components/swedish_calendar
@@ -69,7 +77,7 @@ swedish_calendar:
 ## Result
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
 
-~~~
+~~~yaml
 - type: vertical-stack
   title: 'Swedish calendar'
   cards:
@@ -140,7 +148,7 @@ Result in UI with special themes included:
 
 ## Push notification for celebrated names
 To send a push when someone you know celebrates their name, you can use the following automation
-~~~
+~~~yaml
 - alias: 'Send push on important namnsdag'
   initial_state: 'on'
   trigger:
