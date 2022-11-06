@@ -71,7 +71,6 @@ If you would like to include data about special themes/days, like 🍪 Kanelbull
 | Hassio/HassOS      | `/config/custom_components/swedish_calendar`                            |
 | Manual venv        | `/home/homeassistant/.homeassistant/custom_components/swedish_calendar` |
 
-Example config:
 ~~~~yaml
 # Example configuration.yaml entry with special themes
 swedish_calendar:
@@ -85,7 +84,6 @@ swedish_calendar:
 | days_before_today | no       | 0            | Number of days prior to today that you want to show in calendar                                                               |
 | days_after_today  | no       | 0            | Number of days after today that you want to show in calendar                                                                  |
 
-Example config:
 ```yaml
 # Example configuration.yaml entry with special themes
 swedish_calendar:
