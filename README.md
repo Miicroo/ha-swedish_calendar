@@ -1,6 +1,9 @@
 # Swedish calendar
 This is a HomeAssistant sensor for showing data about swedish holidays. It uses the api at *sholiday.faboul.se* to generate statistics as sensors. The sensors are checked once per day (at midnight).
 
+## Requirements
+HomeAssistant 2022.5.1 or later
+
 ## Installation
 
 ### HACS (recommended)
