@@ -20,6 +20,7 @@ This is a HomeAssistant sensor for showing data about swedish holidays. It uses 
 |--------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | exclude            | no       | All sensor types are tracked by default, specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
 | special_themes_dir | no       | The path to the directory where you downloaded the specialThemes.json to. See [Special themes config](#special-themes).                                                                |
+| calendar_config    | no       | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                           |
 
 ### Example of minimal configuration
 ~~~~yaml
@@ -73,6 +74,28 @@ Example config:
 swedish_calendar:
   special_themes_dir: /config/custom_components/swedish_calendar
 ~~~~
+
+### Calendar
+| Name              | Required | Default      | Description                                                                                                                   |
+|-------------------|----------|--------------|-------------------------------------------------------------------------------------------------------------------------------|
+| include           | no       | *empty list* | All sensor types that you **want** to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| days_before_today | no       | 0            | Number of days prior to today that you want to show in calendar                                                               |
+| days_after_today  | no       | 0            | Number of days after today that you want to show in calendar                                                                  |
+
+Example config:
+```yaml
+# Example configuration.yaml entry with special themes
+swedish_calendar:
+  calendar_config:
+    days_before_today: 7
+    days_after_today: 31
+    include:
+      - eve
+      - holiday
+      - flag_day
+      - name_day
+      - theme_day
+```
 
 ## Result
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
