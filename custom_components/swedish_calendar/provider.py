@@ -6,6 +6,7 @@ from typing import Any, Dict, List
 
 import aiohttp
 import async_timeout
+from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
@@ -29,16 +30,25 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
             hass,
             _LOGGER,
             name="Swedish calendar update",
-            update_interval=timedelta(seconds=3600),
+            update_interval=timedelta(seconds=DateUtils.seconds_until_midnight(datetime.now())),
             update_method=self.fetching_data,
         )
 
+    @callback
+    def _schedule_refresh(self) -> None:
+        _LOGGER.debug("Scheduling refresh in %s at %s", self.update_interval, (datetime.now()+self.update_interval))
+        super()._schedule_refresh()
+
     async def fetching_data(self, *_) -> SwedishCalendar:
+        _LOGGER.debug("Fetching new data")
         if date.today() not in self._cache:
             try:
                 self._cache[date.today()] = await self._get_calendar()
             except Exception as err:
                 _LOGGER.warning("Failed to fetch swedish calendar: %s", err)
+        
+        # Recalculate update interval in case of restart
+        self.update_interval = timedelta(seconds=DateUtils.seconds_until_midnight(datetime.now()))
 
         return self._cache[date.today()]
 

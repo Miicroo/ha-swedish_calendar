@@ -51,6 +51,7 @@ class SwedishCalendarSensor(CoordinatorEntity):
         self._default_value = default_value
         self._attribution = attribution
         self.entity_id = 'sensor.swedish_calendar_{}'.format(sensor_type)
+        self._state = None
 
     @property
     def name(self):
@@ -89,7 +90,8 @@ class SwedishCalendarSensor(CoordinatorEntity):
         return self._state is None or self._state == ""
 
     async def async_added_to_hass(self):
-        self._handle_coordinator_update()  # Set initial state
+        await super().async_added_to_hass() # Set up coordintaor listener
+        self._handle_coordinator_update()   # Set initial state
 
     @callback
     def _handle_coordinator_update(self) -> None:
@@ -102,3 +104,4 @@ class SwedishCalendarSensor(CoordinatorEntity):
             elif isinstance(state, bool):
                 state = 'Ja' if state else 'Nej'
             self._state = state
+            super()._handle_coordinator_update()
