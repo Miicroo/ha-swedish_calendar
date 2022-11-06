@@ -6,7 +6,7 @@ https://github.com/Miicroo/ha-swedish_calendar
 """
 import logging
 from datetime import date
-from typing import Any, Dict, List
+from typing import Dict, List
 
 from homeassistant.const import ATTR_ATTRIBUTION
 from homeassistant.core import callback, HomeAssistant
@@ -26,8 +26,8 @@ async def async_setup_platform(hass: HomeAssistant, config, async_add_entities, 
     conf = hass.data[DOMAIN]["conf"]
 
     included_sensor_types: List[str] = [sensor_type
-                                                 for sensor_type in SENSOR_TYPES
-                                                 if sensor_type not in conf[CONF_EXCLUDE]]
+                                        for sensor_type in SENSOR_TYPES
+                                        if sensor_type not in conf[CONF_EXCLUDE]]
 
     devices = [SwedishCalendarSensor(sensor_type, SENSOR_TYPES[sensor_type], coordinator)
                for sensor_type in included_sensor_types]
@@ -79,8 +79,8 @@ class SwedishCalendarSensor(CoordinatorEntity):
         return self._state is None or self._state == ""
 
     async def async_added_to_hass(self):
-        await super().async_added_to_hass() # Set up coordintaor listener
-        self._handle_coordinator_update()   # Set initial state
+        await super().async_added_to_hass()  # Set up coordinator listener
+        self._handle_coordinator_update()  # Set initial state
 
     @callback
     def _handle_coordinator_update(self) -> None:

@@ -2,9 +2,9 @@ from .types import SensorConfig
 
 DOMAIN = 'swedish_calendar'
 DOMAIN_FRIENDLY_NAME = 'Swedish calendar'
-VERSION = '2.0.2'
+VERSION = '2.1.0'
 
-CONF_CALENDAR = 'calendarx'
+CONF_CALENDAR = 'calendar_config'
 CONF_SPECIAL_THEMES = 'special_themes'
 CONF_SPECIAL_THEMES_DIR = 'special_themes_dir'
 CONF_SPECIAL_THEMES_AUTO_UPDATE = 'autoupdate'
