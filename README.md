@@ -92,10 +92,11 @@ swedish_calendar:
     include:
       - eve
       - holiday
-      - flag_day
-      - name_day
-      - theme_day
 ```
+Result in calendar with above configuration for Dec 2022:
+<p>
+  <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/assets/calendar.png" alt="Swedish calendar view" width="80%" height="80%"/>
+</p>
 
 ## Result
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
