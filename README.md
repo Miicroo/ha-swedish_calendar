@@ -25,7 +25,7 @@ HomeAssistant 2022.5.1 or later
 | special_themes_dir | no       | *empty string* | The path to the directory where you downloaded the specialThemes.json to. See [Special themes config](#special-themes).                                                                |
 | calendar_config    | no       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                           |
 
-### Example of minimal configuration
+### Minimal configuration
 ~~~~yaml
 # Example configuration.yaml entry
 swedish_calendar:
@@ -99,7 +99,7 @@ Result in calendar with above configuration for Dec 2022:
   <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/feature/11-add-to-my-calendars/assets/calendar.png" alt="Swedish calendar view" width="80%" height="80%"/>
 </p>
 
-## Result
+## Example UI
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
 
 ~~~yaml
