@@ -19,11 +19,11 @@ HomeAssistant 2022.5.1 or later
 2. Download the contents (the raw files, NOT as HTML) of the files from **custom_components/swedish_calendar** to the new directory
 
 ## Configuration
-| Name               | Required | Description                                                                                                                                                                            |
-|--------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| exclude            | no       | All sensor types are tracked by default, specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
-| special_themes_dir | no       | The path to the directory where you downloaded the specialThemes.json to. See [Special themes config](#special-themes).                                                                |
-| calendar_config    | no       | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                           |
+| Name               | Required | Default | Description                                                                                                                                                                            |
+|--------------------|----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| exclude            | no       | *empty list* | All sensor types are tracked by default, this config lets you specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| special_themes_dir | no       | *empty string* | The path to the directory where you downloaded the specialThemes.json to. See [Special themes config](#special-themes).                                                                |
+| calendar_config    | no       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                           |
 
 ### Example of minimal configuration
 ~~~~yaml
