@@ -34,7 +34,8 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
 
     def __init__(self, sensor_configs: List[SensorConfig], coordinator: CalendarDataCoordinator) -> None:
         super().__init__(coordinator)
-        self._sensor_configs = sensor_configs
+        # Sort sensor_configs so that calendar events are always shown in the same order
+        self._sensor_configs = sorted(sensor_configs, key=lambda c: c.swedish_calendar_attribute)
         self._attr_name = DOMAIN_FRIENDLY_NAME
         self._events: List[SwedishCalendarEvent] = []
 
