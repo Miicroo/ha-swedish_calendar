@@ -44,7 +44,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
 
     async def update_data(self) -> Dict[date, SwedishCalendar]:
         _LOGGER.debug("Fetching new data")
-        if date.today() not in self._cache:
+        if self._get_start() not in self._cache or self._get_end() not in self._cache:
             try:
                 self._cache = await self._get_calendars()
             except Exception as err:
@@ -54,10 +54,16 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         self.update_interval = timedelta(seconds=DateUtils.seconds_until_midnight())
 
         return self._cache or {}
+    
+    def _get_start(self):
+        return date.today() - timedelta(days=self._fetch_days_before_today)
+    
+    def _get_end(self):
+        return date.today() + timedelta(days=self._fetch_days_after_today)
 
     async def _get_calendars(self) -> Dict[date, SwedishCalendar]:
-        start_date = date.today() - timedelta(days=self._fetch_days_before_today)
-        end_date = date.today() + timedelta(days=self._fetch_days_after_today)
+        start_date = self._get_start()
+        end_date = self._get_end()
 
         themes = []
         if self._themes_path:
