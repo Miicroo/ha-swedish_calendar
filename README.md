@@ -96,7 +96,7 @@ swedish_calendar:
 ```
 Result in calendar with above configuration for Dec 2022:
 <p>
-  <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/feature/11-add-to-my-calendars/assets/calendar.png" alt="Swedish calendar view" width="80%" height="80%"/>
+  <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/assets/calendar.png" alt="Swedish calendar view" width="80%" height="80%"/>
 </p>
 
 ## Example UI
