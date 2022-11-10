@@ -66,10 +66,10 @@ swedish_calendar:
 ### Special themes
 Special themes include data about common celebrations in Sweden, like 🍪 Kanelbullens dag or 🦢 Mårtensafton.
 
-| Name             | Required | Default        | Description                                                                                                                                                                               |
-|------------------|----------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dir              | no       | *empty string* | The path to the directory where you downloaded the specialThemes.json to. For full list of options, see [Path hints to find specialThemes.json](#path-hints-to-find-special-themes.json). |
-| auto_update      | no       | False          | If you want to enable automatic download of the latest themes every night.                                                                                                                |
+| Name        | Required | Default        | Description                                                                                                                                                                             |
+|-------------|----------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| dir         | no       | *empty string* | The path to the directory where you downloaded the specialThemes.json to. For full list of options, see [Path hints to find specialThemes.json](#path-hints-to-find-specialthemesjson). |
+| auto_update | no       | False          | If you want to enable automatic download of the latest themes every night.                                                                                                              |
 
 ---
 **⚠ IMPORTANT NOTE ⚠**
