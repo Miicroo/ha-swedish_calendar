@@ -3,16 +3,33 @@ from __future__ import annotations
 from typing import Optional, List, Dict, Any
 
 
-class SwedishCalendar:
-    def __init__(self, api_data: ApiData, themes: ThemeData):
-        self.api_data = api_data
-        self.themes = themes
+class SensorConfig:
+    def __init__(self,
+                 friendly_name: str,
+                 swedish_calendar_attribute: str,
+                 default_value: Any,
+                 icon: Optional[str] = None,
+                 attribution: Optional[str] = None):
+        self.friendly_name = friendly_name
+        self.icon = icon
+        self.swedish_calendar_attribute = swedish_calendar_attribute
+        self.default_value = default_value
+        self.attribution = attribution
 
-    def get_value_by_attribute(self, attr: str):
+    def get_value_from_calendar(self, calendar: SwedishCalendar) -> Any:
+        return calendar.get_value_by_attribute(self.swedish_calendar_attribute)
+
+
+class SwedishCalendar:
+    def __init__(self, api_data: Optional[ApiData], themes: Optional[ThemeData]):
+        self._api_data = api_data
+        self._themes = themes
+
+    def get_value_by_attribute(self, attr: str) -> Any:
         if attr != 'themes':
-            return getattr(self.api_data, attr)
+            return getattr(self._api_data, attr) if self._api_data is not None else None
         else:
-            return self.themes.themes if self.themes is not None else None
+            return self._themes.themes if self._themes is not None else None
 
 
 class ApiData:
@@ -46,3 +63,15 @@ class ThemeData:
     def __init__(self, date: str, themes: List[str]):
         self.date: str = date
         self.themes: List[str] = themes
+
+
+class SpecialThemesConfig:
+    def __init__(self, path: str):
+        self.path = path
+
+
+class CalendarConfig:
+    def __init__(self, includes: List[str], days_before_today: int, days_after_today: int):
+        self.includes = includes
+        self.days_before_today = days_before_today
+        self.days_after_today = days_after_today

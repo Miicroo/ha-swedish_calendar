@@ -1,7 +1,7 @@
 import asyncio
 import json
 import logging
-from datetime import datetime, date, timedelta
+from datetime import date, datetime, timedelta
 from typing import Any, Dict, List
 
 import aiohttp
@@ -10,7 +10,8 @@ from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
-from .types import ApiData, ThemeData, SwedishCalendar
+from .const import DOMAIN_FRIENDLY_NAME
+from .types import ApiData, ThemeData, SwedishCalendar, SpecialThemesConfig, CalendarConfig
 from .utils import DateUtils
 
 _LOGGER = logging.getLogger(__name__)
@@ -18,20 +19,22 @@ _LOGGER = logging.getLogger(__name__)
 
 class CalendarDataCoordinator(DataUpdateCoordinator):
 
-    def __init__(self, hass, themes_path):
+    def __init__(self, hass, special_themes_config: SpecialThemesConfig, calendar_config: CalendarConfig):
         """Initialize the data object."""
         self.hass = hass
-        self._themes_path: str = themes_path
+        self._themes_path: str = special_themes_config.path
         self._cache: Dict[date, SwedishCalendar] = {}
-        self._theme_provider = ThemeDataProvider(themes_path)
+        self._theme_provider = ThemeDataProvider(special_themes_config.path)
         self._api_data_provider = ApiDataProvider(async_get_clientsession(hass))
+        self._fetch_days_before_today = calendar_config.days_before_today
+        self._fetch_days_after_today = calendar_config.days_after_today
 
         super().__init__(
             hass,
             _LOGGER,
-            name="Swedish calendar update",
-            update_interval=timedelta(seconds=DateUtils.seconds_until_midnight(datetime.now())),
-            update_method=self.fetching_data,
+            name=DOMAIN_FRIENDLY_NAME,
+            update_interval=timedelta(seconds=DateUtils.seconds_until_midnight()),
+            update_method=self.update_data,
         )
 
     @callback
@@ -39,38 +42,58 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         _LOGGER.debug("Scheduling refresh in %s at %s", self.update_interval, (datetime.now()+self.update_interval))
         super()._schedule_refresh()
 
-    async def fetching_data(self, *_) -> SwedishCalendar:
+    async def update_data(self) -> Dict[date, SwedishCalendar]:
         _LOGGER.debug("Fetching new data")
-        if date.today() not in self._cache:
+        if self._get_start() not in self._cache or self._get_end() not in self._cache:
             try:
-                self._cache[date.today()] = await self._get_calendar()
+                self._cache = await self._get_calendars()
             except Exception as err:
                 _LOGGER.warning("Failed to fetch swedish calendar: %s", err)
-        
+
         # Recalculate update interval in case of restart
-        self.update_interval = timedelta(seconds=DateUtils.seconds_until_midnight(datetime.now()))
+        self.update_interval = timedelta(seconds=DateUtils.seconds_until_midnight())
 
-        return self._cache[date.today()]
+        return self._cache or {}
+    
+    def _get_start(self):
+        return date.today() - timedelta(days=self._fetch_days_before_today)
+    
+    def _get_end(self):
+        return date.today() + timedelta(days=self._fetch_days_after_today)
 
-    async def _get_calendar(self) -> SwedishCalendar:
+    async def _get_calendars(self) -> Dict[date, SwedishCalendar]:
+        start_date = self._get_start()
+        end_date = self._get_end()
+
         themes = []
         if self._themes_path:
-            themes = await self._theme_provider.fetch_data_for_today()
-        swedish_dates = await self._api_data_provider.fetch_data_for_today()
+            themes = await self._theme_provider.fetch_data(start_date, end_date)
+        swedish_dates = await self._api_data_provider.fetch_data(start_date, end_date)
 
-        theme: ThemeData = themes[0] if len(themes) > 0 else None
-        swedish_date: ApiData = swedish_dates[0] if len(swedish_dates) > 0 else None
+        return CalendarDataCoordinator._merge(swedish_dates, themes)
 
-        return SwedishCalendar(swedish_date, theme)
+    @staticmethod
+    def _merge(swedish_dates: List[ApiData], themes: List[ThemeData]) -> Dict[date, SwedishCalendar]:
+        all_calendars: Dict[date, SwedishCalendar] = {}
+        # Add all themes into the dict
+        for theme_data in themes:
+            all_calendars[date.fromisoformat(theme_data.date)] = SwedishCalendar(None, theme_data)
+
+        # Add all api data, merging with themes for dates where themes are present
+        for api_data in swedish_dates:
+            key = date.fromisoformat(api_data.date)
+            if key in all_calendars:
+                all_calendars[key]._api_data = api_data
+            else:
+                all_calendars[key] = SwedishCalendar(api_data, None)
+
+        return all_calendars
 
 
 class ApiDataProvider:
     def __init__(self, session: aiohttp.ClientSession):
         self._base_url: str = 'https://sholiday.faboul.se/dagar/v2.1/'
         self._session = session
-
-    async def fetch_data_for_today(self) -> List[ApiData]:
-        return await self.fetch_data(date.today(), date.today())
 
     async def fetch_data(self, start: date, end: date) -> List[ApiData]:
         urls: List[str] = self._get_urls(start, end)
@@ -138,9 +161,6 @@ class ThemeDataProvider:
             _LOGGER.error("Invalid json in special themes json, path: %s, %s", self._theme_path, err)
 
         return theme_dates
-
-    async def fetch_data_for_today(self) -> List[ThemeData]:
-        return await self.fetch_data(datetime.today(), datetime.today())
 
     @staticmethod
     def _map_to_theme_dates(json_data: Dict[str, Any], start: date, end: date) -> List[ThemeData]:
