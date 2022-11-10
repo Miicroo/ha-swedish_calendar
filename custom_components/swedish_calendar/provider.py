@@ -2,7 +2,7 @@ import asyncio
 import json
 import logging
 from datetime import date, datetime, timedelta
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 import aiohttp
 import async_timeout
@@ -24,10 +24,14 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         self.hass = hass
         self._themes_path: str = special_themes_config.path
         self._cache: Dict[date, SwedishCalendar] = {}
-        self._theme_provider = ThemeDataProvider(special_themes_config.path)
-        self._api_data_provider = ApiDataProvider(async_get_clientsession(hass))
         self._fetch_days_before_today = calendar_config.days_before_today
         self._fetch_days_after_today = calendar_config.days_after_today
+        self._first_update = True  # Keep track of first update so that we keep boot times down
+
+        session = async_get_clientsession(hass)
+        self._api_data_provider = ApiDataProvider(session=session)
+        self._theme_data_updater = ThemeDataUpdater(config=special_themes_config, session=session)
+        self._theme_provider = ThemeDataProvider(theme_path=special_themes_config.path)
 
         super().__init__(
             hass,
@@ -39,11 +43,15 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
 
     @callback
     def _schedule_refresh(self) -> None:
-        _LOGGER.debug("Scheduling refresh in %s at %s", self.update_interval, (datetime.now()+self.update_interval))
+        _LOGGER.debug("Scheduling refresh in %s at %s", self.update_interval, (datetime.now() + self.update_interval))
         super()._schedule_refresh()
 
     async def update_data(self) -> Dict[date, SwedishCalendar]:
         _LOGGER.debug("Fetching new data")
+
+        if self._theme_data_updater.can_update() and not self._first_update:
+            await self._theme_data_updater.update()
+
         if self._get_start() not in self._cache or self._get_end() not in self._cache:
             try:
                 self._cache = await self._get_calendars()
@@ -52,12 +60,13 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
 
         # Recalculate update interval in case of restart
         self.update_interval = timedelta(seconds=DateUtils.seconds_until_midnight())
+        self._first_update = False  # First update (on boot) considered successful
 
         return self._cache or {}
-    
+
     def _get_start(self):
         return date.today() - timedelta(days=self._fetch_days_before_today)
-    
+
     def _get_end(self):
         return date.today() + timedelta(days=self._fetch_days_after_today)
 
@@ -77,15 +86,15 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         all_calendars: Dict[date, SwedishCalendar] = {}
         # Add all themes into the dict
         for theme_data in themes:
-            all_calendars[date.fromisoformat(theme_data.date)] = SwedishCalendar(None, theme_data)
+            all_calendars[date.fromisoformat(theme_data.date)] = SwedishCalendar.from_themes(theme_data)
 
         # Add all api data, merging with themes for dates where themes are present
         for api_data in swedish_dates:
             key = date.fromisoformat(api_data.date)
             if key in all_calendars:
-                all_calendars[key]._api_data = api_data
+                all_calendars[key].with_api_data(api_data)
             else:
-                all_calendars[key] = SwedishCalendar(api_data, None)
+                all_calendars[key] = SwedishCalendar.from_api_data(api_data)
 
         return all_calendars
 
@@ -175,3 +184,41 @@ class ThemeDataProvider:
                 theme_list = list(map(lambda x: x['event'], special_themes[date_str]))
                 themes.append(ThemeData(iso_date_str, theme_list))
         return themes
+
+
+class ThemeDataUpdater:
+    def __init__(self, config: SpecialThemesConfig, session: aiohttp.ClientSession):
+        self._config = config
+        self._session = session
+        self._url = 'https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/custom_components' \
+                    '/swedish_calendar/specialThemes.json'
+
+    def can_update(self):
+        return self._config.auto_update and self._config.path is not None
+
+    async def update(self):
+        new_data = await self._download()
+        if new_data:
+            with open(self._config.path, 'w') as themes_file:
+                themes_file.write(new_data)
+                _LOGGER.info('Themes updated with latest json')
+
+    async def _download(self) -> Optional[str]:
+        _LOGGER.debug("Downloading latest themes")
+        response_data: Optional[str] = None
+        try:
+            with async_timeout.timeout(10):
+                resp = await self._session.get(self._url)
+
+            if resp.status != 200:
+                raise aiohttp.ClientError(f'Failed to fetch data for: {self._url}, response code: {resp.status}')
+            else:
+                response_data = await resp.text()
+                json.loads(response_data)  # Test that data can be loaded as json
+        except (asyncio.TimeoutError, aiohttp.ClientError) as err:
+            _LOGGER.warning('Error when calling: %s, %s', self._url, err)
+        except json.JSONDecodeError as err:
+            _LOGGER.error("Invalid json, error: %s", err)
+
+        return response_data
+

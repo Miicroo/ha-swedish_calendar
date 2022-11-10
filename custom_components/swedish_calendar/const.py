@@ -6,9 +6,10 @@ VERSION = '2.1.0'
 
 CONF_CALENDAR = 'calendar_config'
 CONF_SPECIAL_THEMES = 'special_themes'
+CONF_DIR = 'dir'
+CONF_AUTO_UPDATE = 'auto_update'
 CONF_SPECIAL_THEMES_DIR = 'special_themes_dir'
-CONF_SPECIAL_THEMES_AUTO_UPDATE = 'autoupdate'
-SPECIAL_THEMES_PATH = 'specialThemes.json'
+SPECIAL_THEMES_FILE_NAME = 'specialThemes.json'
 
 CONF_ATTRIBUTION = 'Data provided by sholiday.faboul.se'
 CONF_ATTRIBUTION_SPECIAL_THEMES = 'Data provided by https://temadagar.se. For full calendar, ' \

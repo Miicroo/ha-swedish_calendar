@@ -21,9 +21,25 @@ class SensorConfig:
 
 
 class SwedishCalendar:
-    def __init__(self, api_data: Optional[ApiData], themes: Optional[ThemeData]):
+    def __init__(self):
+        self._api_data: Optional[ApiData] = None
+        self._themes: Optional[ThemeData] = None
+
+    @staticmethod
+    def from_api_data(api_data: ApiData) -> SwedishCalendar:
+        return SwedishCalendar().with_api_data(api_data)
+
+    @staticmethod
+    def from_themes(themes: ThemeData) -> SwedishCalendar:
+        return SwedishCalendar().with_themes(themes)
+
+    def with_api_data(self, api_data: ApiData) -> SwedishCalendar:
         self._api_data = api_data
+        return self
+
+    def with_themes(self, themes: ThemeData) -> SwedishCalendar:
         self._themes = themes
+        return self
 
     def get_value_by_attribute(self, attr: str) -> Any:
         if attr != 'themes':
@@ -66,8 +82,9 @@ class ThemeData:
 
 
 class SpecialThemesConfig:
-    def __init__(self, path: str):
+    def __init__(self, path: str, auto_update: False):
         self.path = path
+        self.auto_update = auto_update
 
 
 class CalendarConfig:
