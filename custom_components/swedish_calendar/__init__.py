@@ -78,15 +78,16 @@ def get_special_themes_config(config: dict) -> SpecialThemesConfig:
     #  Warn and (maybe) migrate old config to new
     if deprecated_themes_path:
         if not new_themes_path:
-            _LOGGER.error('WARNING! Config entry "%s" is deprecated since %s, please migrate to themes schema instead! '
-                          'Using old value for now...',
-                          CONF_SPECIAL_THEMES_DIR,
-                          deprecated_since)
+            _LOGGER.warning(
+                'WARNING! Config entry "%s" is deprecated since %s, please migrate to themes schema instead! '
+                'Using old value for now...',
+                CONF_SPECIAL_THEMES_DIR,
+                deprecated_since)
             new_themes_path = deprecated_themes_path
         else:
-            _LOGGER.error('WARNING! Config entry "%s" is deprecated since %s, please remove from the config!',
-                          CONF_SPECIAL_THEMES_DIR,
-                          deprecated_since)
+            _LOGGER.warning('WARNING! Config entry "%s" is deprecated since %s, please remove from the config!',
+                            CONF_SPECIAL_THEMES_DIR,
+                            deprecated_since)
     if new_themes_path:
         path = os.path.join(new_themes_path, SPECIAL_THEMES_FILE_NAME)
         if not os.path.exists(path):
