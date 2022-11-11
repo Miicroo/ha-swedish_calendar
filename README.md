@@ -19,11 +19,11 @@ HomeAssistant 2022.5.1 or later
 2. Download the contents (the raw files, NOT as HTML) of the files from **custom_components/swedish_calendar** to the new directory
 
 ## Configuration
-| Name               | Required | Default | Description                                                                                                                                                                            |
-|--------------------|----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| exclude            | no       | *empty list* | All sensor types are tracked by default, this config lets you specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
-| special_themes_dir | no       | *empty string* | The path to the directory where you downloaded the specialThemes.json to. See [Special themes config](#special-themes).                                                                |
-| calendar_config    | no       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                           |
+| Name            | Required | Default        | Description                                                                                                                                                                                                 |
+|-----------------|----------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| exclude         | no       | *empty list*   | All sensor types are tracked by default, this config lets you specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| special_themes  | no       | *empty object* | The special themes config, see [Special themes config](#special-themes).                                                                                                                                    |
+| calendar_config | no       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                                                |
 
 ### Minimal configuration
 ~~~~yaml
@@ -64,18 +64,33 @@ swedish_calendar:
 ~~~~
 
 ### Special themes
-If you would like to include data about special themes/days, like 🍪 Kanelbullens dag 🍪, you can configure the directory where you downloaded the `specialThemes.json`
+Special themes include data about common celebrations in Sweden, like 🍪 Kanelbullens dag or 🦢 Mårtensafton.
 
+| Name        | Required | Default        | Description                                                                                                                                                                             |
+|-------------|----------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| dir         | no       | *empty string* | The path to the directory where you downloaded the specialThemes.json to. For full list of options, see [Path hints to find specialThemes.json](#path-hints-to-find-specialthemesjson). |
+| auto_update | no       | False          | If you want to enable automatic download of the latest themes every night.                                                                                                              |
+
+---
+**⚠ IMPORTANT NOTE ⚠**
+
+If you are migrating to v2.2.0+ from an earlier version, note that you have to change from the single config line `special_themes_dir: /...` to the `special_themes:`-object.
+
+---
+~~~~yaml
+# Example configuration.yaml entry with special themes, updated every night
+swedish_calendar:
+  special_themes:
+    dir: /config/custom_components/swedish_calendar
+    auto_update: True
+~~~~
+
+#### Path hints to find specialThemes.json
 | HASS set up method | Path                                                                    |
 |--------------------|-------------------------------------------------------------------------|
 | Hassio/HassOS      | `/config/custom_components/swedish_calendar`                            |
 | Manual venv        | `/home/homeassistant/.homeassistant/custom_components/swedish_calendar` |
 
-~~~~yaml
-# Example configuration.yaml entry with special themes
-swedish_calendar:
-  special_themes_dir: /config/custom_components/swedish_calendar
-~~~~
 
 ### Calendar
 | Name              | Required | Default      | Description                                                                                                                   |
