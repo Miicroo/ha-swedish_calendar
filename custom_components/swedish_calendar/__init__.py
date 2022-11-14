@@ -1,5 +1,6 @@
 import logging
 import os
+from typing import Optional
 
 import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
@@ -7,8 +8,9 @@ from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.discovery import async_load_platform
 
-from .const import DOMAIN, CONF_SPECIAL_THEMES_DIR, SPECIAL_THEMES_FILE_NAME, CONF_EXCLUDE, SENSOR_TYPES, CONF_INCLUDE, \
-    CONF_DAYS_BEFORE_TODAY, CONF_DAYS_AFTER_TODAY, CONF_CALENDAR, CONF_AUTO_UPDATE, CONF_DIR, CONF_SPECIAL_THEMES
+from .const import DOMAIN, CONF_SPECIAL_THEMES_DIR, SPECIAL_THEMES_FILE_NAME, CONF_EXCLUDE, SENSOR_TYPES, \
+    CONF_DAYS_BEFORE_TODAY, CONF_INCLUDE, CONF_DAYS_AFTER_TODAY, CONF_CALENDAR, CONF_AUTO_UPDATE, CONF_DIR, \
+    CONF_SPECIAL_THEMES, THEME_DAY
 from .provider import CalendarDataCoordinator
 from .types import SpecialThemesConfig, CalendarConfig
 
@@ -70,32 +72,49 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
 
 
 def get_special_themes_config(config: dict) -> SpecialThemesConfig:
-    path = None
-    deprecated_themes_path: str = config[CONF_SPECIAL_THEMES_DIR]
-    new_themes_path: str = config[CONF_SPECIAL_THEMES][CONF_DIR]
+    special_themes_path = None
+    themes_are_excluded = THEME_DAY in config[CONF_EXCLUDE]
+
+    if not themes_are_excluded:
+        user_defined_dir = _get_user_defined_special_themes_dir(config)
+        dirs_to_search = [user_defined_dir, os.path.dirname(__file__)]
+
+        for theme_dir in dirs_to_search:
+            if theme_dir is not None:
+                maybe_path = os.path.join(theme_dir, SPECIAL_THEMES_FILE_NAME)
+                _LOGGER.debug("Locating specialThemes.json, trying %s", maybe_path)
+                if os.path.exists(maybe_path):
+                    special_themes_path = maybe_path
+                    break
+
+        if special_themes_path is None:
+            _LOGGER.warning('Special themes is not excluded but no specialThemes.json file can be found! Either '
+                            'exclude %s, or add a config entry pointing to a directory containing specialThemes.json',
+                            THEME_DAY)
+
+    auto_update = config[CONF_SPECIAL_THEMES][CONF_AUTO_UPDATE]
+
+    return SpecialThemesConfig(special_themes_path, auto_update)
+
+
+def _get_user_defined_special_themes_dir(config: dict) -> Optional[str]:
+    deprecated_themes_path: Optional[str] = config[CONF_SPECIAL_THEMES_DIR]
+    new_themes_path: Optional[str] = config[CONF_SPECIAL_THEMES][CONF_DIR]
     deprecated_since = 'v2.2.0'
 
     #  Warn and (maybe) migrate old config to new
-    if deprecated_themes_path:
+        if deprecated_themes_path:
         if not new_themes_path:
-            _LOGGER.warning(
-                'WARNING! Config entry "%s" is deprecated since %s, please migrate to themes schema instead! '
-                'Using old value for now...',
-                CONF_SPECIAL_THEMES_DIR,
-                deprecated_since)
+            _LOGGER.warning('WARNING! Config entry "%s" is deprecated since %s, please migrate to themes schema '
+                            'instead! Using old value for now...',
+                            CONF_SPECIAL_THEMES_DIR,
+                            deprecated_since)
             new_themes_path = deprecated_themes_path
         else:
             _LOGGER.warning('WARNING! Config entry "%s" is deprecated since %s, please remove from the config!',
                             CONF_SPECIAL_THEMES_DIR,
                             deprecated_since)
-    if new_themes_path:
-        path = os.path.join(new_themes_path, SPECIAL_THEMES_FILE_NAME)
-        if not os.path.exists(path):
-            _LOGGER.warning("Special themes is configured but file cannot be found at %s, please check your config",
-                            path)
-    auto_update = config[CONF_SPECIAL_THEMES][CONF_AUTO_UPDATE]
-
-    return SpecialThemesConfig(path, auto_update)
+    return new_themes_path
 
 
 def get_calendar_config(config: dict) -> CalendarConfig:
