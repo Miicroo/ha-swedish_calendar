@@ -2,7 +2,7 @@ from .types import SensorConfig
 
 DOMAIN = 'swedish_calendar'
 DOMAIN_FRIENDLY_NAME = 'Swedish calendar'
-VERSION = '2.2.1'
+VERSION = '2.3.0'
 
 CONF_CALENDAR = 'calendar_config'
 CONF_SPECIAL_THEMES = 'special_themes'
@@ -19,6 +19,8 @@ CONF_INCLUDE = 'include'
 
 CONF_DAYS_BEFORE_TODAY = 'days_before_today'
 CONF_DAYS_AFTER_TODAY = 'days_after_today'
+
+THEME_DAY = 'theme_day'
 
 SENSOR_TYPES = {
     'date': SensorConfig(
@@ -98,7 +100,7 @@ SENSOR_TYPES = {
         default_value='unknown',
         attribution=CONF_ATTRIBUTION
     ),
-    'theme_day': SensorConfig(
+    THEME_DAY: SensorConfig(
         friendly_name='Swedish Calendar theme day',
         swedish_calendar_attribute='themes',
         default_value='',
