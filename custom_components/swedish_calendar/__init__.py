@@ -103,17 +103,17 @@ def _get_user_defined_special_themes_dir(config: dict) -> Optional[str]:
     deprecated_since = 'v2.2.0'
 
     #  Warn and (maybe) migrate old config to new
-    if deprecated_themes_path:
+        if deprecated_themes_path:
         if not new_themes_path:
-            _LOGGER.error('WARNING! Config entry "%s" is deprecated since %s, please migrate to themes schema instead! '
-                          'Using old value for now...',
-                          CONF_SPECIAL_THEMES_DIR,
-                          deprecated_since)
+            _LOGGER.warning('WARNING! Config entry "%s" is deprecated since %s, please migrate to themes schema '
+                            'instead! Using old value for now...',
+                            CONF_SPECIAL_THEMES_DIR,
+                            deprecated_since)
             new_themes_path = deprecated_themes_path
         else:
-            _LOGGER.error('WARNING! Config entry "%s" is deprecated since %s, please remove from the config!',
-                          CONF_SPECIAL_THEMES_DIR,
-                          deprecated_since)
+            _LOGGER.warning('WARNING! Config entry "%s" is deprecated since %s, please remove from the config!',
+                            CONF_SPECIAL_THEMES_DIR,
+                            deprecated_since)
     return new_themes_path
 
 
