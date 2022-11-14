@@ -66,10 +66,10 @@ swedish_calendar:
 ### Special themes
 Special themes include data about common celebrations in Sweden, like 🍪 Kanelbullens dag or 🦢 Mårtensafton.
 
-| Name        | Required | Default        | Description                                                                                                                                                                             |
-|-------------|----------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dir         | no       | *empty string* | The path to the directory where you downloaded the specialThemes.json to. For full list of options, see [Path hints to find specialThemes.json](#path-hints-to-find-specialthemesjson). |
-| auto_update | no       | False          | If you want to enable automatic download of the latest themes every night.                                                                                                              |
+| Name        | Required | Default                          | Description                                                                                                                                        |
+|-------------|----------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| dir         | no       | *current installation directory* | The directory where you have stored specialThemes.json. *Only needed if you have moved your specialThemes.json file out of the default directory!* |
+| auto_update | no       | False                            | If you want to enable automatic download of the latest themes every night.                                                                         |
 
 ---
 **⚠ IMPORTANT NOTE ⚠**
@@ -81,15 +81,8 @@ If you are migrating to v2.2.0+ from an earlier version, note that you have to c
 # Example configuration.yaml entry with special themes, updated every night
 swedish_calendar:
   special_themes:
-    dir: /config/custom_components/swedish_calendar
     auto_update: True
 ~~~~
-
-#### Path hints to find specialThemes.json
-| HASS set up method | Path                                                                    |
-|--------------------|-------------------------------------------------------------------------|
-| Hassio/HassOS      | `/config/custom_components/swedish_calendar`                            |
-| Manual venv        | `/home/homeassistant/.homeassistant/custom_components/swedish_calendar` |
 
 
 ### Calendar
