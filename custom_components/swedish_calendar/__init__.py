@@ -2,17 +2,30 @@ import logging
 import os
 from typing import Optional
 
-import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
+
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.discovery import async_load_platform
 
-from .const import DOMAIN, CONF_SPECIAL_THEMES_DIR, SPECIAL_THEMES_FILE_NAME, CONF_EXCLUDE, SENSOR_TYPES, \
-    CONF_DAYS_BEFORE_TODAY, CONF_INCLUDE, CONF_DAYS_AFTER_TODAY, CONF_CALENDAR, CONF_AUTO_UPDATE, CONF_DIR, \
-    CONF_SPECIAL_THEMES, THEME_DAY
+from .const import (
+    CONF_AUTO_UPDATE,
+    CONF_CALENDAR,
+    CONF_DAYS_AFTER_TODAY,
+    CONF_DAYS_BEFORE_TODAY,
+    CONF_DIR,
+    CONF_EXCLUDE,
+    CONF_INCLUDE,
+    CONF_SPECIAL_THEMES,
+    CONF_SPECIAL_THEMES_DIR,
+    DOMAIN,
+    SENSOR_TYPES,
+    SPECIAL_THEMES_FILE_NAME,
+    THEME_DAY,
+)
 from .provider import CalendarDataCoordinator
-from .types import SpecialThemesConfig, CalendarConfig
+from .types import CalendarConfig, SpecialThemesConfig
 
 CALENDAR_SCHEMA = vol.Schema(
     {
@@ -35,7 +48,7 @@ CONFIG_SCHEMA = vol.Schema(
     {
         DOMAIN: vol.Schema(
             {
-                # deprecated but hass cant move to an inner object, so we handle everything ourselves
+                # deprecated but hass can't move to an inner object, so we handle everything ourselves
                 vol.Optional(CONF_SPECIAL_THEMES_DIR, default=''): cv.string,
                 vol.Optional(CONF_SPECIAL_THEMES, default={}): THEMES_SCHEMA,
                 vol.Optional(CONF_CALENDAR, default={}): CALENDAR_SCHEMA,
@@ -97,9 +110,9 @@ def get_special_themes_config(config: dict) -> SpecialThemesConfig:
     return SpecialThemesConfig(special_themes_path, auto_update)
 
 
-def _get_user_defined_special_themes_dir(config: dict) -> Optional[str]:
-    deprecated_themes_path: Optional[str] = config[CONF_SPECIAL_THEMES_DIR]
-    new_themes_path: Optional[str] = config[CONF_SPECIAL_THEMES][CONF_DIR]
+def _get_user_defined_special_themes_dir(config: dict) -> str | None:
+    deprecated_themes_path: str | None = config[CONF_SPECIAL_THEMES_DIR]
+    new_themes_path: str | None = config[CONF_SPECIAL_THEMES][CONF_DIR]
     deprecated_since = 'v2.2.0'
 
     #  Warn and (maybe) migrate old config to new
