@@ -1,17 +1,24 @@
 import asyncio
+from datetime import date, datetime, timedelta
 import json
 import logging
-from datetime import date, datetime, timedelta
 from typing import Any, Dict, List, Optional
 
 import aiohttp
 import async_timeout
+
 from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
 from .const import DOMAIN_FRIENDLY_NAME
-from .types import ApiData, ThemeData, SwedishCalendar, SpecialThemesConfig, CalendarConfig
+from .types import (
+    ApiData,
+    CalendarConfig,
+    SpecialThemesConfig,
+    SwedishCalendar,
+    ThemeData,
+)
 from .utils import DateUtils
 
 _LOGGER = logging.getLogger(__name__)
@@ -23,7 +30,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         """Initialize the data object."""
         self.hass = hass
         self._themes_path: str = special_themes_config.path
-        self._cache: Dict[date, SwedishCalendar] = {}
+        self._cache: dict[date, SwedishCalendar] = {}
         self._fetch_days_before_today = calendar_config.days_before_today
         self._fetch_days_after_today = calendar_config.days_after_today
         self._first_update = True  # Keep track of first update so that we keep boot times down
@@ -46,7 +53,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         _LOGGER.debug("Scheduling refresh in %s at %s", self.update_interval, (datetime.now() + self.update_interval))
         super()._schedule_refresh()
 
-    async def update_data(self) -> Dict[date, SwedishCalendar]:
+    async def update_data(self) -> dict[date, SwedishCalendar]:
         _LOGGER.debug("Fetching new data")
 
         if self._theme_data_updater.can_update() and not self._first_update:
@@ -70,7 +77,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
     def _get_end(self):
         return date.today() + timedelta(days=self._fetch_days_after_today)
 
-    async def _get_calendars(self) -> Dict[date, SwedishCalendar]:
+    async def _get_calendars(self) -> dict[date, SwedishCalendar]:
         start_date = self._get_start()
         end_date = self._get_end()
 
@@ -82,8 +89,8 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         return CalendarDataCoordinator._merge(swedish_dates, themes)
 
     @staticmethod
-    def _merge(swedish_dates: List[ApiData], themes: List[ThemeData]) -> Dict[date, SwedishCalendar]:
-        all_calendars: Dict[date, SwedishCalendar] = {}
+    def _merge(swedish_dates: list[ApiData], themes: list[ThemeData]) -> dict[date, SwedishCalendar]:
+        all_calendars: dict[date, SwedishCalendar] = {}
         # Add all themes into the dict
         for theme_data in themes:
             all_calendars[date.fromisoformat(theme_data.date)] = SwedishCalendar.from_themes(theme_data)
@@ -104,8 +111,8 @@ class ApiDataProvider:
         self._base_url: str = 'https://sholiday.faboul.se/dagar/v2.1/'
         self._session = session
 
-    async def fetch_data(self, start: date, end: date) -> List[ApiData]:
-        urls: List[str] = self._get_urls(start, end)
+    async def fetch_data(self, start: date, end: date) -> list[ApiData]:
+        urls: list[str] = self._get_urls(start, end)
         all_api_data = []
         for url in urls:
             try:
@@ -119,12 +126,12 @@ class ApiDataProvider:
 
         return all_api_data
 
-    def _get_urls(self, start: date, end: date) -> List[str]:
+    def _get_urls(self, start: date, end: date) -> list[str]:
         return [f'{self._base_url}{date_pattern}' for date_pattern in
                 ApiDataProvider._get_url_patterns_for_date_range(start, end)]
 
     @staticmethod
-    def _get_url_patterns_for_date_range(start: date, end: date) -> List[str]:
+    def _get_url_patterns_for_date_range(start: date, end: date) -> list[str]:
         if start.year != end.year:
             # Different years -> get all days for each year
             return [str(year) for year in range(start.year, end.year + 1)]
@@ -138,7 +145,7 @@ class ApiDataProvider:
             # Same day -> get the day
             return [f'{start.year}/{start.month}/{start.day}']
 
-    async def _get_json_from_url(self, url) -> Dict[str, Any]:
+    async def _get_json_from_url(self, url) -> dict[str, Any]:
         with async_timeout.timeout(10):
             resp = await self._session.get(url)
 
@@ -146,11 +153,11 @@ class ApiDataProvider:
             raise aiohttp.ClientError(f'Failed to fetch data for: {url}, response code: {resp.status}')
         else:
             response_data = await resp.text()
-            data: Dict[str, Any] = json.loads(response_data)
+            data: dict[str, Any] = json.loads(response_data)
             return data
 
     @staticmethod
-    def _to_api_data(json_response: Dict[str, Any], start: date, end: date) -> List[ApiData]:
+    def _to_api_data(json_response: dict[str, Any], start: date, end: date) -> list[ApiData]:
         all_data = [ApiData(data_per_date) for data_per_date in json_response["dagar"]]
         wanted_data = list(filter(lambda api_data: DateUtils.in_range(api_data.date, start, end), all_data))
         return wanted_data
@@ -160,10 +167,10 @@ class ThemeDataProvider:
     def __init__(self, theme_path):
         self._theme_path = theme_path
 
-    async def fetch_data(self, start: date, end: date) -> List[ThemeData]:
+    async def fetch_data(self, start: date, end: date) -> list[ThemeData]:
         theme_dates = []
         try:
-            with open(self._theme_path, 'r') as data_file:
+            with open(self._theme_path) as data_file:
                 data = json.load(data_file)
             theme_dates = ThemeDataProvider._map_to_theme_dates(data, start, end)
         except json.JSONDecodeError as err:
@@ -172,7 +179,7 @@ class ThemeDataProvider:
         return theme_dates
 
     @staticmethod
-    def _map_to_theme_dates(json_data: Dict[str, Any], start: date, end: date) -> List[ThemeData]:
+    def _map_to_theme_dates(json_data: dict[str, Any], start: date, end: date) -> list[ThemeData]:
         special_themes = json_data['themeDays']
         themes = []
 
@@ -203,9 +210,9 @@ class ThemeDataUpdater:
                 themes_file.write(new_data)
                 _LOGGER.info('Themes updated with latest json')
 
-    async def _download(self) -> Optional[str]:
+    async def _download(self) -> str | None:
         _LOGGER.debug("Downloading latest themes")
-        response_data: Optional[str] = None
+        response_data: str | None = None
         try:
             with async_timeout.timeout(10):
                 resp = await self._session.get(self._url)

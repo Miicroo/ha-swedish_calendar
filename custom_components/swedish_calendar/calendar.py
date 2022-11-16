@@ -1,16 +1,22 @@
 from __future__ import annotations
 
+from datetime import date, datetime, timedelta
 import logging
-from datetime import datetime, date, timedelta
-from typing import List, Optional, Any, Dict
+from typing import Any, Dict, List, Optional
 
 from homeassistant.components.calendar import CalendarEntity, CalendarEvent
-from homeassistant.core import callback, HomeAssistant
+from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import DOMAIN, SENSOR_TYPES, CONF_CALENDAR, CONF_INCLUDE, DOMAIN_FRIENDLY_NAME
+from .const import (
+    CONF_CALENDAR,
+    CONF_INCLUDE,
+    DOMAIN,
+    DOMAIN_FRIENDLY_NAME,
+    SENSOR_TYPES,
+)
 from .provider import CalendarDataCoordinator
-from .types import SwedishCalendar, SensorConfig
+from .types import SensorConfig, SwedishCalendar
 from .utils import DateUtils
 
 _LOGGER = logging.getLogger(__name__)
@@ -32,11 +38,11 @@ async def async_setup_platform(hass: HomeAssistant, config, async_add_entities, 
 class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
     """Representation of a Demo Calendar element."""
 
-    def __init__(self, sensor_configs: List[SensorConfig], coordinator: CalendarDataCoordinator) -> None:
+    def __init__(self, sensor_configs: list[SensorConfig], coordinator: CalendarDataCoordinator) -> None:
         super().__init__(coordinator)
         self._sensor_configs = sensor_configs
         self._attr_name = DOMAIN_FRIENDLY_NAME
-        self._events: List[SwedishCalendarEvent] = []
+        self._events: list[SwedishCalendarEvent] = []
 
     @property
     def should_poll(self):
@@ -45,7 +51,7 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
     @property
     def event(self) -> CalendarEvent:
         """Return the next upcoming event."""
-        sorted_events: List[SwedishCalendarEvent] = sorted(self._events, key=lambda e: e.date)
+        sorted_events: list[SwedishCalendarEvent] = sorted(self._events, key=lambda e: e.date)
         for event in sorted_events:
             if not event.has_passed():
                 return event.to_hass_calendar_event()
@@ -70,7 +76,7 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
     @callback
     def _handle_coordinator_update(self) -> None:
         """Handle updated data from the coordinator."""
-        swedish_calendars: Dict[date, SwedishCalendar] = self.coordinator.data
+        swedish_calendars: dict[date, SwedishCalendar] = self.coordinator.data
         events = []
         for event_date in swedish_calendars.keys():
             swedish_calendar = swedish_calendars[event_date]
@@ -96,7 +102,7 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
             return value
 
     @staticmethod
-    def _describe_bool(value: bool, friendly_name: str) -> Optional[str]:
+    def _describe_bool(value: bool, friendly_name: str) -> str | None:
         return friendly_name if value else None
 
     @staticmethod
