@@ -6,5 +6,5 @@
     "codeowners": ["@Miicroo"],
     "requirements": [],
     "version": "2.3.0",
-    "iot_class": "cloud_poll"
+    "iot_class": "cloud_polling"
 }
