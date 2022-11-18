@@ -3,7 +3,6 @@ name: pre-commit
 on:
   pull_request:
   push:
-    branches: [master]
 
 jobs:
   pre-commit:
@@ -13,4 +12,11 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10-dev'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.test.txt
     - uses: pre-commit/action@v3.0.0
+    - name: Run pytest
+      run: |
+        pytest
