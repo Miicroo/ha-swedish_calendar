@@ -11,6 +11,11 @@ CONF_AUTO_UPDATE = 'auto_update'
 CONF_SPECIAL_THEMES_DIR = 'special_themes_dir'
 SPECIAL_THEMES_FILE_NAME = 'specialThemes.json'
 
+CONF_CACHE = 'cache'
+CONF_DEFAULT_CACHE_DIR = '.cache'
+CONF_ENABLED = 'enabled'
+CONF_RETENTION = 'retention'
+
 CONF_ATTRIBUTION = 'Data provided by sholiday.faboul.se'
 CONF_ATTRIBUTION_SPECIAL_THEMES = 'Data provided by https://temadagar.se. For full calendar, ' \
                                   'see https://temadagar.se/kop-temadagar-kalender/'

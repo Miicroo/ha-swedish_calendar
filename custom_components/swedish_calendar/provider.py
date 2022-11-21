@@ -2,18 +2,20 @@ import asyncio
 from datetime import date, datetime, timedelta
 import json
 import logging
+import os
 from typing import Any
 
 import aiohttp
 import async_timeout
 
-from homeassistant.core import callback
+from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
 from .const import DOMAIN_FRIENDLY_NAME
 from .types import (
     ApiData,
+    CacheConfig,
     CalendarConfig,
     SpecialThemesConfig,
     SwedishCalendar,
@@ -26,7 +28,11 @@ _LOGGER = logging.getLogger(__name__)
 
 class CalendarDataCoordinator(DataUpdateCoordinator):
 
-    def __init__(self, hass, special_themes_config: SpecialThemesConfig, calendar_config: CalendarConfig):
+    def __init__(self,
+                 hass: HomeAssistant,
+                 special_themes_config: SpecialThemesConfig,
+                 calendar_config: CalendarConfig,
+                 cache_config: CacheConfig):
         """Initialize the data object."""
         self.hass = hass
         self._themes_path: str = special_themes_config.path
@@ -36,7 +42,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         self._first_update = True  # Keep track of first update so that we keep boot times down
 
         session = async_get_clientsession(hass)
-        self._api_data_provider = ApiDataProvider(session=session)
+        self._api_data_provider = ApiDataProvider(session=session, cache_config=cache_config)
         self._theme_data_updater = ThemeDataUpdater(config=special_themes_config, session=session)
         self._theme_provider = ThemeDataProvider(theme_path=special_themes_config.path)
 
@@ -107,9 +113,10 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
 
 
 class ApiDataProvider:
-    def __init__(self, session: aiohttp.ClientSession):
+    def __init__(self, session: aiohttp.ClientSession, cache_config: CacheConfig):
         self._base_url: str = 'https://sholiday.faboul.se/dagar/v2.1/'
         self._session = session
+        self._cache = ApiDataCache(cache_config)
 
     async def fetch_data(self, start: date, end: date) -> list[ApiData]:
         urls: list[str] = self._get_urls(start, end)
@@ -146,6 +153,15 @@ class ApiDataProvider:
             return [f'{start.year}/{start.month}/{start.day}']
 
     async def _get_json_from_url(self, url) -> dict[str, Any]:
+        if self._cache.has_data_for(url):
+            data = self._cache.get(url)
+        else:
+            data = await self._get_data_online(url)
+            self._cache.update(url, data)
+
+        return data
+
+    async def _get_data_online(self, url):
         with async_timeout.timeout(10):
             resp = await self._session.get(url)
 
@@ -161,6 +177,41 @@ class ApiDataProvider:
         all_data = [ApiData(data_per_date) for data_per_date in json_response["dagar"]]
         wanted_data = list(filter(lambda api_data: DateUtils.in_range(api_data.date, start, end), all_data))
         return wanted_data
+
+
+class ApiDataCache:
+    def __init__(self, cache_config: CacheConfig):
+        self.config = cache_config
+
+    def has_data_for(self, url: str) -> bool:
+        return self.config.enabled and os.path.exists(self._url_to_path(url))
+
+    def _url_to_path(self, url: str) -> str:
+        filename = f'{hash(url)}.json'
+        return os.path.join(self.config.cache_dir, filename)
+
+    def get(self, url) -> dict[str, Any] | None:
+        path = self._url_to_path(url)
+        data = None
+        with open(path) as cached_file:
+            try:
+                data = json.load(cached_file)
+            except json.JSONDecodeError as err:
+                _LOGGER.error("Invalid json in cached file: %s, removing. Error: %s", path, err)
+                os.remove(path)
+
+        return data
+
+    def update(self, url, data: dict[str, Any]) -> None:
+        if self.config.enabled:
+            path = self._url_to_path(url)
+            self._assert_path_directories_exist()
+            with open(path, 'w') as cache_file:
+                cache_file.write(json.dumps(data))
+
+    def _assert_path_directories_exist(self):
+        if not os.path.exists(self.config.cache_dir):
+            os.makedirs(self.config.cache_dir)
 
 
 class ThemeDataProvider:
@@ -228,4 +279,3 @@ class ThemeDataUpdater:
             _LOGGER.error("Invalid json, error: %s", err)
 
         return response_data
-
