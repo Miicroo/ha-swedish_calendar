@@ -12,7 +12,7 @@ def test_api_data__to_bool():
 def test_api_data__to_optional_bool():
     """Test ApiData._to_optional_bool."""
     assert ApiData._to_optional_bool({"flag_day": "Nej"}, "flag_day") is False
-    assert ApiData._to_optional_bool({"flag_day": "ja"}, "flag_day") is True
+    assert ApiData._to_optional_bool({"flag_day": "Ja"}, "flag_day") is True
     assert ApiData._to_optional_bool({}, "flag_day") is False
 
 
