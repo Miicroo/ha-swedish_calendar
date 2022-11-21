@@ -6,7 +6,6 @@ https://github.com/Miicroo/ha-swedish_calendar
 """
 from datetime import date
 import logging
-from typing import Dict, List
 
 from homeassistant.const import ATTR_ATTRIBUTION
 from homeassistant.core import HomeAssistant, callback
