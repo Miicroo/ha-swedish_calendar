@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import date, datetime, timedelta
 import logging
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from homeassistant.components.calendar import CalendarEntity, CalendarEvent
 from homeassistant.core import HomeAssistant, callback
@@ -49,7 +49,7 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
         return False
 
     @property
-    def event(self) -> CalendarEvent:
+    def event(self) -> CalendarEvent | None:
         """Return the next upcoming event."""
         sorted_events: list[SwedishCalendarEvent] = sorted(self._events, key=lambda e: e.date)
         for event in sorted_events:
