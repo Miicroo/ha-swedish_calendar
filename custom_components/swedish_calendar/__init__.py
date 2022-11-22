@@ -85,14 +85,14 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     calendar_config = get_calendar_config(conf)
     cache_config = get_cache_config(conf)
 
-    coordinator = CalendarDataCoordinator(hass, special_themes_config, calendar_config, cache_config)
+    data_coordinator = CalendarDataCoordinator(hass, special_themes_config, calendar_config, cache_config)
 
     # Fetch initial data so we have data when entities subscribe
-    await coordinator.async_refresh()
+    await data_coordinator.async_refresh()
 
     hass.data[DOMAIN] = {
         "conf": conf,
-        "coordinator": coordinator,
+        "coordinator": data_coordinator,
     }
 
     hass.async_create_task(async_load_platform(hass, Platform.SENSOR, DOMAIN, {}, conf))

@@ -2,16 +2,17 @@ import asyncio
 from datetime import date, datetime, timedelta, timezone
 import hashlib
 import json
+import logging
 import os
 from typing import Any
 
 import aiohttp
 import async_timeout
 
-from custom_components.swedish_calendar import CacheConfig
-from custom_components.swedish_calendar.coordinator import _LOGGER
-from custom_components.swedish_calendar.types import ApiData
-from custom_components.swedish_calendar.utils import DateUtils
+from .types import ApiData, CacheConfig
+from .utils import DateUtils
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class ApiDataProvider:

@@ -1,15 +1,16 @@
 import asyncio
 from datetime import date
 import json
+import logging
 from typing import Any
 
 import aiohttp
 import async_timeout
 
-from custom_components.swedish_calendar import SpecialThemesConfig
-from custom_components.swedish_calendar.coordinator import _LOGGER
-from custom_components.swedish_calendar.types import ThemeData
-from custom_components.swedish_calendar.utils import DateUtils
+from .types import SpecialThemesConfig, ThemeData
+from .utils import DateUtils
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class ThemeDataProvider:
