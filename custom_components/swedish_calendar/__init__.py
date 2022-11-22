@@ -28,7 +28,7 @@ from .const import (
     SPECIAL_THEMES_FILE_NAME,
     THEME_DAY,
 )
-from .provider import CalendarDataCoordinator
+from .coordinator import CalendarDataCoordinator
 from .types import CacheConfig, CalendarConfig, SpecialThemesConfig
 
 CALENDAR_SCHEMA = vol.Schema(
