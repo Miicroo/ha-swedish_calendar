@@ -24,6 +24,7 @@ HomeAssistant 2022.5.1 or later
 | exclude         | no       | *empty list*   | All sensor types are tracked by default, this config lets you specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
 | special_themes  | no       | *empty object* | The special themes config, see [Special themes config](#special-themes).                                                                                                                                    |
 | calendar_config | no       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                                                |
+| cache           | no       | *empty object* | The cache config, if you to store data locally for instance when running on a slow connection. See [Cache configuration](#cache).                                                                           |
 
 ### Minimal configuration
 ~~~~yaml
@@ -84,7 +85,6 @@ swedish_calendar:
     auto_update: True
 ~~~~
 
-
 ### Calendar
 | Name              | Required | Default      | Description                                                                                                                   |
 |-------------------|----------|--------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -93,7 +93,7 @@ swedish_calendar:
 | days_after_today  | no       | 0            | Number of days after today that you want to show in calendar                                                                  |
 
 ```yaml
-# Example configuration.yaml entry with special themes
+# Example configuration.yaml entry with calendar enabled
 swedish_calendar:
   calendar_config:
     days_before_today: 7
@@ -106,6 +106,22 @@ Result in calendar with above configuration for Dec 2022:
 <p>
   <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/assets/calendar.png" alt="Swedish calendar view" width="80%" height="80%"/>
 </p>
+
+### Cache
+| Name      | Required | Default                   | Description                                                                                                                                                         |
+|-----------|----------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| enabled   | no       | False                     | Enable/disable the cache                                                                                                                                            |
+| dir       | no       | *installation_dir*/.cache | Full path to directory where cached data should be stored                                                                                                           |
+| retention | no       | 7 days                    | Time until cache is renewed, must be set as “hh:mm:ss” or it must contain at least one of the following entries: days:, hours:, minutes:, seconds: or milliseconds: |
+
+```yaml
+# Example configuration.yaml entry caching data for 1 month
+swedish_calendar:
+  cache:
+    enabled: True
+    retention:
+      days: 31
+```
 
 ## Example UI
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
