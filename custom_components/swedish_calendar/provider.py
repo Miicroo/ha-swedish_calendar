@@ -1,5 +1,6 @@
 import asyncio
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
+import hashlib
 import json
 import logging
 import os
@@ -154,6 +155,7 @@ class ApiDataProvider:
 
     async def _get_json_from_url(self, url) -> dict[str, Any]:
         if self._cache.has_data_for(url):
+            _LOGGER.debug("Using cached version of url: %s", url)
             data = self._cache.get(url)
         else:
             data = await self._get_data_online(url)
@@ -184,11 +186,21 @@ class ApiDataCache:
         self.config = cache_config
 
     def has_data_for(self, url: str) -> bool:
-        return self.config.enabled and os.path.exists(self._url_to_path(url))
+        return self.config.enabled and \
+               os.path.exists(self._url_to_path(url)) and \
+               self._cache_age(url) <= self.config.retention
 
     def _url_to_path(self, url: str) -> str:
-        filename = f'{hash(url)}.json'
+        hashed_name = hashlib.md5(url.encode())
+        filename = f'{hashed_name.hexdigest()}.json'
         return os.path.join(self.config.cache_dir, filename)
+
+    def _cache_age(self, url) -> timedelta:
+        path = self._url_to_path(url)
+        modified_time = os.path.getmtime(path)
+        cache_in_utc = datetime.fromtimestamp(modified_time, tz=timezone.utc)
+        now_in_utc = datetime.now().astimezone(tz=timezone.utc)
+        return now_in_utc - cache_in_utc
 
     def get(self, url) -> dict[str, Any] | None:
         path = self._url_to_path(url)
@@ -205,13 +217,16 @@ class ApiDataCache:
     def update(self, url, data: dict[str, Any]) -> None:
         if self.config.enabled:
             path = self._url_to_path(url)
+            _LOGGER.debug("Caching %s, saving to %s", url, path)
             self._assert_path_directories_exist()
             with open(path, 'w') as cache_file:
                 cache_file.write(json.dumps(data))
+                _LOGGER.debug("%s updated", path)
 
     def _assert_path_directories_exist(self):
         if not os.path.exists(self.config.cache_dir):
-            os.makedirs(self.config.cache_dir)
+            _LOGGER.debug("%s does not exist, creating", self.config.cache_dir)
+            os.makedirs(self.config.cache_dir, exist_ok=True)
 
 
 class ThemeDataProvider:
