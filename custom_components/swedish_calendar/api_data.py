@@ -32,7 +32,7 @@ class ApiDataProvider:
             except (asyncio.TimeoutError, aiohttp.ClientError) as err:
                 _LOGGER.warning('Error when calling: %s, %s', url, err)
             except json.JSONDecodeError as err:
-                _LOGGER.error("Invalid json, error: %s", err)
+                _LOGGER.error('Invalid json, error: %s', err)
 
         return all_api_data
 
@@ -57,7 +57,7 @@ class ApiDataProvider:
 
     async def _get_json_from_url(self, url) -> dict[str, Any]:
         if self._cache.has_data_for(url):
-            _LOGGER.debug("Using cached version of url: %s", url)
+            _LOGGER.debug('Using cached version of url: %s', url)
             data = self._cache.get(url)
         else:
             data = await self._get_data_online(url)
@@ -78,7 +78,7 @@ class ApiDataProvider:
 
     @staticmethod
     def _to_api_data(json_response: dict[str, Any], start: date, end: date) -> list[ApiData]:
-        all_data = [ApiData(data_per_date) for data_per_date in json_response["dagar"]]
+        all_data = [ApiData(data_per_date) for data_per_date in json_response['dagar']]
         wanted_data = list(filter(lambda api_data: DateUtils.in_range(api_data.date, start, end), all_data))
         return wanted_data
 
@@ -89,8 +89,8 @@ class ApiDataCache:
 
     def has_data_for(self, url: str) -> bool:
         return self.config.enabled and \
-               os.path.exists(self._url_to_path(url)) and \
-               self._cache_age(url) <= self.config.retention
+            os.path.exists(self._url_to_path(url)) and \
+            self._cache_age(url) <= self.config.retention
 
     def _url_to_path(self, url: str) -> str:
         hashed_name = hashlib.md5(url.encode())
@@ -111,7 +111,7 @@ class ApiDataCache:
             try:
                 data = json.load(cached_file)
             except json.JSONDecodeError as err:
-                _LOGGER.error("Invalid json in cached file: %s, removing. Error: %s", path, err)
+                _LOGGER.error('Invalid json in cached file: %s, removing. Error: %s', path, err)
                 os.remove(path)
 
         return data
@@ -119,13 +119,13 @@ class ApiDataCache:
     def update(self, url, data: dict[str, Any]) -> None:
         if self.config.enabled:
             path = self._url_to_path(url)
-            _LOGGER.debug("Caching %s, saving to %s", url, path)
+            _LOGGER.debug('Caching %s, saving to %s', url, path)
             self._assert_path_directories_exist()
             with open(path, 'w') as cache_file:
                 cache_file.write(json.dumps(data))
-                _LOGGER.debug("%s updated", path)
+                _LOGGER.debug('%s updated', path)
 
     def _assert_path_directories_exist(self):
         if not os.path.exists(self.config.cache_dir):
-            _LOGGER.debug("%s does not exist, creating", self.config.cache_dir)
+            _LOGGER.debug('%s does not exist, creating', self.config.cache_dir)
             os.makedirs(self.config.cache_dir, exist_ok=True)
