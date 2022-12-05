@@ -50,7 +50,7 @@ THEMES_SCHEMA = vol.Schema(
 
 CACHE_SCHEMA = vol.Schema(
     {
-        vol.Optional(CONF_ENABLED, default=False): cv.string,
+        vol.Optional(CONF_ENABLED, default=False): cv.boolean,
         vol.Optional(CONF_DIR, default=os.path.join(os.path.dirname(__file__), CONF_DEFAULT_CACHE_DIR)): cv.string,
         vol.Optional(CONF_RETENTION, default=timedelta(days=7)): vol.All(
             cv.time_period, cv.positive_timedelta
