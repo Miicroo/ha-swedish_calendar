@@ -15,7 +15,7 @@ from .const import (
     DOMAIN_FRIENDLY_NAME,
     SENSOR_TYPES,
 )
-from .provider import CalendarDataCoordinator
+from .coordinator import CalendarDataCoordinator
 from .types import SensorConfig, SwedishCalendar
 from .utils import DateUtils
 

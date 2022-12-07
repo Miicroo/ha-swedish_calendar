@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import timedelta
 from typing import Any
 
 
@@ -92,3 +93,10 @@ class CalendarConfig:
         self.includes = includes
         self.days_before_today = days_before_today
         self.days_after_today = days_after_today
+
+
+class CacheConfig:
+    def __init__(self, enabled: bool, cache_dir: str, retention: timedelta):
+        self.enabled = enabled
+        self.cache_dir = cache_dir
+        self.retention = retention

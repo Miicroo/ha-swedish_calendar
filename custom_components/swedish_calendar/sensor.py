@@ -13,7 +13,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.util import slugify
 
 from .const import CONF_EXCLUDE, DOMAIN, SENSOR_TYPES
-from .provider import CalendarDataCoordinator
+from .coordinator import CalendarDataCoordinator
 from .types import SensorConfig, SwedishCalendar
 
 _LOGGER = logging.getLogger(__name__)

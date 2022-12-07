@@ -4,7 +4,7 @@ from datetime import date, datetime, timedelta
 
 class DateUtils:
     @staticmethod
-    def range(start: date, end: date) -> Generator[timedelta]:
+    def range(start: date, end: date) -> Generator[date]:
         for n in range(int((end - start).days) + 1):
             yield start + timedelta(n)
 
