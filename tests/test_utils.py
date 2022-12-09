@@ -51,8 +51,10 @@ def test_seconds_until_midnight():
     """Test DateUtils.seconds_until_midnight."""
     midnight = _today_at(time.min)
     noon = _today_at(time.fromisoformat("12:00:00"))
-    tomorrow_at_noon = _tomorrow_at(time.fromisoformat("12:00:00"))  # Should behave like today at noon
-
+    tomorrow_at_noon = _tomorrow_at(
+        time.fromisoformat("12:00:00")
+    )  # Should behave like today at noon
+    
     assert DateUtils.seconds_until_midnight(midnight) == 86401
     assert DateUtils.seconds_until_midnight(noon) == 43201
     assert DateUtils.seconds_until_midnight(tomorrow_at_noon) == 43201
