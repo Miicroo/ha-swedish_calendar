@@ -1,5 +1,5 @@
-"""Test util functions."""
-from datetime import date, datetime, time
+ """Test util functions."""
+from datetime import date, datetime, time, timedelta
 
 from custom_components.swedish_calendar.utils import DateUtils
 
@@ -51,13 +51,19 @@ def test_seconds_until_midnight():
     """Test DateUtils.seconds_until_midnight."""
     midnight = _today_at(time.min)
     noon = _today_at(time.fromisoformat("12:00:00"))
+    tomorrow_at_noon = _tomorrow_at(time.fromisoformat("12:00:00"))  # Should behave like today at noon
 
     assert DateUtils.seconds_until_midnight(midnight) == 86401
     assert DateUtils.seconds_until_midnight(noon) == 43201
+    assert DateUtils.seconds_until_midnight(tomorrow_at_noon) == 43201
 
 
 def _today_at(t: time) -> datetime:
     return datetime.combine(date.today(), t)
+
+
+def _tomorrow_at(t: time) -> datetime:
+    return datetime.combine(date.today() + timedelta(days=1), t)
 
 
 def _range_tester(generator_iterator_to_test, expected_values):
