@@ -1,8 +1,5 @@
-import logging
 from collections.abc import Generator
 from datetime import date, datetime, timedelta
-
-_LOGGER = logging.getLogger(__name__)
 
 
 class DateUtils:
@@ -16,13 +13,10 @@ class DateUtils:
         return start <= date.fromisoformat(isodate) <= end
 
     @staticmethod
-    def seconds_until_midnight(from_time: datetime = datetime.now()) -> int:
-        _LOGGER.debug('Calculate seconds until midnight from: %s', from_time)
+    def seconds_until_midnight(from_time: datetime = None) -> int:
+        from_time = from_time or datetime.now()  # Use now() if no time provided
         tomorrow = from_time + timedelta(days=1)
         midnight = datetime.combine(tomorrow, datetime.min.time())
-        _LOGGER.debug('Midnight is at: %s', midnight)
         diff = midnight - from_time
-
-        _LOGGER.debug('Diff: %s', diff)
 
         return diff.days*86400 + diff.seconds + 1
