@@ -1,10 +1,10 @@
 {
     "domain": "swedish_calendar",
     "name": "Swedish calendar",
-    "documentation": "https://github.com/Miicroo/ha-swedish_calendar",
-    "dependencies": [],
     "codeowners": ["@Miicroo"],
+    "dependencies": [],
+    "documentation": "https://github.com/Miicroo/ha-swedish_calendar",
+    "iot_class": "cloud_polling",
     "requirements": [],
-    "version": "2.3.0",
-    "iot_class": "cloud_polling"
+    "version": "2.3.0"
 }
