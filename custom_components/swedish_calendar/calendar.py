@@ -98,6 +98,10 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
             return SwedishCalendarEntity._describe_bool(value, item.friendly_name)
         elif isinstance(value, int):
             return SwedishCalendarEntity._describe_int(value, item.friendly_name)
+        elif isinstance(value, list):
+            return ','.join(value)
+        elif isinstance(value, dict):
+            return ','.join([SwedishCalendarEntity._describe_any(value[key], key) for key in value])
         else:
             return value
 
@@ -109,6 +113,10 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
     def _describe_int(value: int, friendly_name: str) -> str:
         return f'{friendly_name}: {value}'
 
+    @staticmethod
+    def _describe_any(value: Any, friendly_name: str) -> str:
+        return f'{friendly_name}: {value}'
+
 
 class SwedishCalendarEvent:
     def __init__(self, isodate: date, description: str):
@@ -117,7 +125,7 @@ class SwedishCalendarEvent:
 
     def to_hass_calendar_event(self) -> CalendarEvent:
         end = self.date + timedelta(days=1)
-        return CalendarEvent(start=self.date, end=end, summary=self.description, description=self.description)
+        return CalendarEvent(start=self.date, end=end, summary=str(self.description), description=str(self.description))
 
     def has_passed(self) -> bool:
         return self.date < date.today()
