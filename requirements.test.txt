@@ -4,7 +4,7 @@
 
 aioresponses==0.7.2
 algoliasearch==2.6.2
-codecov==2.1.12
+codecov==2.1.13
 coverage>=6.4.4
 mypy==0.991
 pytest>=7.1.0
