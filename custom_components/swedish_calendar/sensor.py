@@ -7,6 +7,7 @@ https://github.com/Miicroo/ha-swedish_calendar
 from datetime import date
 import logging
 
+from homeassistant import config_entries
 from homeassistant.const import ATTR_ATTRIBUTION
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
@@ -19,10 +20,15 @@ from .types import SensorConfig, SwedishCalendar
 _LOGGER = logging.getLogger(__name__)
 
 
-async def async_setup_platform(hass: HomeAssistant, config, async_add_entities, discovery_info=None):
-    """Set up the calendar sensor."""
-    coordinator = hass.data[DOMAIN]["coordinator"]
-    conf = hass.data[DOMAIN]["conf"]
+async def async_setup_entry(
+        hass: HomeAssistant,
+        config_entry: config_entries.ConfigEntry,
+        async_add_entities,
+):
+    """Setup sensors from a config entry created in the integrations UI."""
+    entry_conf = hass.data[DOMAIN][config_entry.entry_id]
+    coordinator = entry_conf["coordinator"]
+    conf = entry_conf["conf"]
 
     included_sensor_types: list[str] = [sensor_type
                                         for sensor_type in SENSOR_TYPES
@@ -30,7 +36,7 @@ async def async_setup_platform(hass: HomeAssistant, config, async_add_entities, 
 
     devices = [SwedishCalendarSensor(sensor_type, SENSOR_TYPES[sensor_type], coordinator)
                for sensor_type in included_sensor_types]
-    async_add_entities(devices)
+    async_add_entities(devices, update_before_add=True)
 
 
 class SwedishCalendarSensor(CoordinatorEntity):

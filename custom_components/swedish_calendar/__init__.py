@@ -4,10 +4,10 @@ import os
 
 import voluptuous as vol
 
+from homeassistant import config_entries
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers.discovery import async_load_platform
 
 from .const import (
     CONF_AUTO_UPDATE,
@@ -76,11 +76,22 @@ CONFIG_SCHEMA = vol.Schema(
     extra=vol.ALLOW_EXTRA,
 )
 
+PLATFORMS = [
+    Platform.CALENDAR,
+    Platform.SENSOR
+]
+
 _LOGGER = logging.getLogger(__name__)
 
 
-async def async_setup(hass: HomeAssistant, config: dict) -> bool:
-    conf = config[DOMAIN]
+async def async_setup_entry(hass: HomeAssistant, entry: config_entries.ConfigEntry) -> bool:
+    """Set up platform from a ConfigEntry."""
+    conf = dict(entry.data)
+    # Registers update listener to update config entry when options are updated.
+    #unsub_options_update_listener = entry.add_update_listener(options_update_listener)
+    # Store a reference to the unsubscribe function to cleanup if an entry is unloaded.
+    #hass_data["unsub_options_update_listener"] = unsub_options_update_listener
+
     special_themes_config = get_special_themes_config(conf)
     calendar_config = get_calendar_config(conf)
     cache_config = get_cache_config(conf)
@@ -90,13 +101,24 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     # Fetch initial data so we have data when entities subscribe
     await data_coordinator.async_refresh()
 
-    hass.data[DOMAIN] = {
+    hass.data.setdefault(DOMAIN, {})
+    hass.data[DOMAIN][entry.entry_id] = {
         "conf": conf,
         "coordinator": data_coordinator,
     }
 
-    hass.async_create_task(async_load_platform(hass, Platform.SENSOR, DOMAIN, {}, conf))
-    hass.async_create_task(async_load_platform(hass, Platform.CALENDAR, DOMAIN, {}, conf))
+    await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
+    return True
+
+
+async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+    # No config entry exists and configuration.yaml config exists, trigger the import flow.
+    if not hass.config_entries.async_entries(DOMAIN):
+        hass.async_create_task(
+            hass.config_entries.flow.async_init(
+                DOMAIN, context={"source": config_entries.SOURCE_IMPORT}, data=config
+            )
+        )
 
     return True
 
@@ -128,7 +150,7 @@ def get_special_themes_config(config: dict) -> SpecialThemesConfig:
 
 
 def _get_user_defined_special_themes_dir(config: dict) -> str | None:
-    deprecated_themes_path: str | None = config[CONF_SPECIAL_THEMES_DIR]
+    deprecated_themes_path: str | None = config.get(CONF_SPECIAL_THEMES_DIR)
     new_themes_path: str | None = config[CONF_SPECIAL_THEMES][CONF_DIR]
     deprecated_since = 'v2.2.0'
 
@@ -159,9 +181,10 @@ def get_calendar_config(config: dict) -> CalendarConfig:
 
 def get_cache_config(config: dict) -> CacheConfig:
     cache_config = config[CONF_CACHE]
-
+    retention_config = cache_config[CONF_RETENTION]
+    retention = retention_config if isinstance(retention_config, timedelta) else timedelta(days=retention_config)
     return CacheConfig(
         enabled=cache_config[CONF_ENABLED],
         cache_dir=cache_config[CONF_DIR],
-        retention=cache_config[CONF_RETENTION]
+        retention=retention
     )

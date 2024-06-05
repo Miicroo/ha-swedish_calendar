@@ -1,0 +1,37 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "include": "Sensors to include"
+        }
+      },
+      "special_themes": {
+        "data": {
+          "dir": "Directory to find specialThemes.json",
+          "auto_update": "Automatically update if new file is published online"
+        },
+        "title": "Special themes"
+      },
+      "calendar": {
+        "data": {
+          "days_before_today": "Show events x days before today",
+          "days_after_today": "Show events x days after today",
+          "include": "Sensors to show in calendar"
+        },
+        "title": "Calendar"
+      },
+      "cache": {
+        "data": {
+          "enabled": "Save data locally (enables offline mode and improves startup speed)",
+          "dir": "Directory to store data",
+          "retention": "How long to keep local data (in days)"
+        },
+        "title": "Save data locally"
+      }
+    },
+    "abort": {
+      "already_configured": "Swedish calendar is already configured"
+    }
+  }
+}

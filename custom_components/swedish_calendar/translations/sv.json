@@ -1,0 +1,37 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "include": "Sensorer som ska inkluderas"
+        }
+      },
+      "special_themes": {
+        "data": {
+          "dir": "Mapp med specialThemes.json",
+          "auto_update": "Uppdatera automatiskt om en ny fil publiceras online"
+        },
+        "title": "Temadagar"
+      },
+      "calendar": {
+        "data": {
+          "days_before_today": "Visa event x dagar före idag",
+          "days_after_today": "Visa events x dagar efter idag",
+          "include": "Sensorer som visas i kalendern"
+        },
+        "title": "Kalender"
+      },
+      "cache": {
+        "data": {
+          "enabled": "Spara data lokalt (möjliggör offline-läge och förbättrar uppstartstiden)",
+          "dir": "Mapp att spara data i",
+          "retention": "Hur länge ska datan sparas (antal dagar)"
+        },
+        "title": "Spara data lokalt"
+      }
+    },
+    "abort": {
+      "already_configured": "Swedish calendar är redan konfigurerad"
+    }
+  }
+}
