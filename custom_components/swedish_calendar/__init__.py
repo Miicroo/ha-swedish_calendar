@@ -2,12 +2,9 @@ from datetime import timedelta
 import logging
 import os
 
-import voluptuous as vol
-
 from homeassistant import config_entries
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
-import homeassistant.helpers.config_validation as cv
 
 from .const import (
     CONF_AUTO_UPDATE,
@@ -30,51 +27,6 @@ from .const import (
 )
 from .coordinator import CalendarDataCoordinator
 from .types import CacheConfig, CalendarConfig, SpecialThemesConfig
-
-CALENDAR_SCHEMA = vol.Schema(
-    {
-        vol.Optional(CONF_INCLUDE, default=[]):
-            vol.All(cv.ensure_list, vol.Length(min=0), [vol.In(SENSOR_TYPES)]),
-        vol.Optional(CONF_DAYS_BEFORE_TODAY, default=0): cv.positive_int,
-        vol.Optional(CONF_DAYS_AFTER_TODAY, default=0): cv.positive_int,
-    }
-)
-
-THEMES_SCHEMA = vol.Schema(
-    {
-        vol.Optional(CONF_DIR, default=''): cv.string,
-        vol.Optional(CONF_AUTO_UPDATE, default=False): cv.boolean,
-    },
-    extra=vol.ALLOW_EXTRA,
-)
-
-CACHE_SCHEMA = vol.Schema(
-    {
-        vol.Optional(CONF_ENABLED, default=False): cv.boolean,
-        vol.Optional(CONF_DIR, default=os.path.join(os.path.dirname(__file__), CONF_DEFAULT_CACHE_DIR)): cv.string,
-        vol.Optional(CONF_RETENTION, default=timedelta(days=7)): vol.All(
-            cv.time_period, cv.positive_timedelta
-        ),
-    },
-    extra=vol.ALLOW_EXTRA,
-)
-
-CONFIG_SCHEMA = vol.Schema(
-    {
-        DOMAIN: vol.Schema(
-            {
-                # deprecated but hass can't move to an inner object, so we handle everything ourselves
-                vol.Optional(CONF_SPECIAL_THEMES_DIR, default=''): cv.string,
-                vol.Optional(CONF_SPECIAL_THEMES, default={}): THEMES_SCHEMA,
-                vol.Optional(CONF_CACHE, default={}): CACHE_SCHEMA,
-                vol.Optional(CONF_CALENDAR, default={}): CALENDAR_SCHEMA,
-                vol.Optional(CONF_EXCLUDE, default=[]):
-                    vol.All(cv.ensure_list, vol.Length(min=0), [vol.In(SENSOR_TYPES)]),
-            }
-        )
-    },
-    extra=vol.ALLOW_EXTRA,
-)
 
 PLATFORMS = [
     Platform.CALENDAR,
@@ -128,7 +80,7 @@ def get_special_themes_config(config: dict) -> SpecialThemesConfig:
     themes_are_excluded = THEME_DAY in config[CONF_EXCLUDE]
 
     if not themes_are_excluded:
-        user_defined_dir = _get_user_defined_special_themes_dir(config)
+        user_defined_dir = config[CONF_SPECIAL_THEMES][CONF_DIR]
         dirs_to_search = [user_defined_dir, os.path.dirname(__file__)]
 
         for theme_dir in dirs_to_search:
@@ -147,26 +99,6 @@ def get_special_themes_config(config: dict) -> SpecialThemesConfig:
     auto_update = config[CONF_SPECIAL_THEMES][CONF_AUTO_UPDATE]
 
     return SpecialThemesConfig(special_themes_path, auto_update)
-
-
-def _get_user_defined_special_themes_dir(config: dict) -> str | None:
-    deprecated_themes_path: str | None = config.get(CONF_SPECIAL_THEMES_DIR)
-    new_themes_path: str | None = config[CONF_SPECIAL_THEMES][CONF_DIR]
-    deprecated_since = 'v2.2.0'
-
-    #  Warn and (maybe) migrate old config to new
-    if deprecated_themes_path:
-        if not new_themes_path:
-            _LOGGER.warning('WARNING! Config entry "%s" is deprecated since %s, please migrate to themes schema '
-                            'instead! Using old value for now...',
-                            CONF_SPECIAL_THEMES_DIR,
-                            deprecated_since)
-            new_themes_path = deprecated_themes_path
-        else:
-            _LOGGER.warning('WARNING! Config entry "%s" is deprecated since %s, please remove from the config!',
-                            CONF_SPECIAL_THEMES_DIR,
-                            deprecated_since)
-    return new_themes_path
 
 
 def get_calendar_config(config: dict) -> CalendarConfig:
