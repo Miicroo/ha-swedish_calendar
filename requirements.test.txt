@@ -10,5 +10,5 @@ mypy==0.991
 pytest>=7.1.0
 pytest-cov>=3.0.0
 pytest-mock>=3.10
-pytest-homeassistant-custom-component==0.12.20
+pytest-homeassistant-custom-component==0.13.133
 typing-extensions==4.4.0

@@ -5,7 +5,7 @@ from typing import Any
 import voluptuous as vol
 
 from homeassistant.components import persistent_notification
-from homeassistant.config_entries import ConfigFlow
+from homeassistant.config_entries import ConfigEntry, ConfigFlow
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.selector import selector
 from homeassistant.helpers.typing import ConfigType
@@ -39,9 +39,14 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
     MINOR_VERSION = 1
 
     data: dict[str, Any]
-    is_reconfiguration: bool | None = None
+    config_entry: ConfigEntry | None = None
 
-    def _get_include_sensor_schema(self, default_includes: list[str]) -> vol.Schema:
+    def _get_include_sensor_schema(self) -> vol.Schema:
+        if self.config_entry:
+            default_includes = self._get_not_excluded_sensors(self.config_entry.data)
+        else:
+            default_includes = self._get_friendly_name_of_sensors()
+
         return vol.Schema(
             {
                 vol.Optional(CONF_INCLUDE, default=default_includes): selector({
@@ -53,13 +58,12 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
             }
         )
 
-    @staticmethod
-    def _get_themes_schema(default_dir: str = os.path.dirname(__file__),
-                           default_auto_update: bool = False) -> vol.Schema:
+    def _get_themes_schema(self) -> vol.Schema:
+        entry_data = self.config_entry.data[CONF_SPECIAL_THEMES] if self.config_entry else {}
         return vol.Schema(
             {
-                vol.Optional(CONF_DIR, default=default_dir): cv.string,
-                vol.Optional(CONF_AUTO_UPDATE, default=default_auto_update): cv.boolean,
+                vol.Optional(CONF_DIR, default=entry_data.get(CONF_DIR) or os.path.dirname(__file__)): cv.string,
+                vol.Optional(CONF_AUTO_UPDATE, default=entry_data.get(CONF_AUTO_UPDATE) or False): cv.boolean,
             },
         )
 
@@ -68,12 +72,16 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         return [SENSOR_TYPES[key].friendly_name for key in SENSOR_TYPES
                 if key not in data_map[CONF_EXCLUDE]]
 
-    def _get_calendar_schema(self,
-                             default_days_before_today: int = 0,
-                             default_days_after_today: int = 0,
-                             ) -> vol.Schema:
+    def _get_calendar_schema(self) -> vol.Schema:
         all_sensors = SwedishCalendarConfigFlow._get_friendly_name_of_sensors()
-        already_included_sensors = self._get_not_excluded_sensors(self.data)
+        entry_data = self.config_entry.data[CONF_CALENDAR] if self.config_entry else {}
+        already_included_sensors = [
+            SENSOR_TYPES[key].friendly_name
+            for key in SENSOR_TYPES
+            if key not in self.data[CONF_EXCLUDE] and (key in entry_data.get(CONF_INCLUDE) or self.config_entry is None)
+        ]
+
+        self._get_not_excluded_sensors(self.data)
 
         return vol.Schema(
             {
@@ -83,41 +91,26 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
                         "multiple": True
                     }
                 }),
-                vol.Optional(CONF_DAYS_BEFORE_TODAY, default=default_days_before_today): cv.positive_int,
-                vol.Optional(CONF_DAYS_AFTER_TODAY, default=default_days_after_today): cv.positive_int,
+                vol.Optional(CONF_DAYS_BEFORE_TODAY, default=entry_data.get(CONF_DAYS_BEFORE_TODAY) or 0): cv.positive_int,
+                vol.Optional(CONF_DAYS_AFTER_TODAY, default=entry_data.get(CONF_DAYS_AFTER_TODAY or 0)): cv.positive_int,
             }
         )
 
-    @staticmethod
-    def _get_cache_schema(default_enabled: bool = False,
-                          default_dir: str = os.path.join(os.path.dirname(__file__), CONF_DEFAULT_CACHE_DIR),
-                          default_retention_days: int = 7) -> vol.Schema:
+    def _get_cache_schema(self) -> vol.Schema:
+        entry_data = self.config_entry.data[CONF_CACHE] if self.config_entry else {}
+        default_dir = os.path.join(os.path.dirname(__file__), CONF_DEFAULT_CACHE_DIR)
+
         return vol.Schema(
             {
-                vol.Optional(CONF_ENABLED, default=default_enabled): cv.boolean,
-                vol.Optional(CONF_DIR, default=default_dir): cv.string,
-                vol.Optional(CONF_RETENTION, default=default_retention_days): cv.positive_int,
+                vol.Optional(CONF_ENABLED, default=entry_data.get(CONF_ENABLED) or False): cv.boolean,
+                vol.Optional(CONF_DIR, default=entry_data.get(CONF_DIR) or default_dir): cv.string,
+                vol.Optional(CONF_RETENTION, default=entry_data.get(CONF_RETENTION) or 7): cv.positive_int,
             },
         )
 
-    def _get_existing_config_entry(self):
-        entries = self.hass.config_entries.async_entries(domain=DOMAIN)
-        if len(entries) == 0:
-            return None
-        elif len(entries) == 1:
-            return entries[0]
-        else:
-            raise Exception('Multiple entries found, aborting')
+    async def async_step_user(self, user_input: dict[str, Any] | None = None):
 
-    def _get_existing_config_entry_data(self):
-        entry = self._get_existing_config_entry()
-        return entry.data if entry is not None else None
-
-    async def async_step_user(self, user_input: dict[str, Any] | None = None, reconfigure: bool = False):
-        if self.is_reconfiguration is None:  # Value not set yet
-            self.is_reconfiguration = reconfigure
-
-        if not self.is_reconfiguration:  # On a reconfiguration we want an entry, since we are updating it
+        if not self.config_entry:  # On a reconfiguration we want an entry, since we are updating it
             self._async_abort_entries_match(match_dict={})
 
         if user_input is not None:
@@ -126,12 +119,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
             return await self.async_step_special_themes()
 
         self.data = {}
-        default_includes = self._get_not_excluded_sensors(self._get_existing_config_entry_data()) \
-            if self.is_reconfiguration else self._get_friendly_name_of_sensors()  # reconfig -> get from entry, else all
-
-        sensor_schema = self._get_include_sensor_schema(default_includes=default_includes)
-
-        return self.async_show_form(step_id="user", data_schema=sensor_schema)
+        return self.async_show_form(step_id="user", data_schema=self._get_include_sensor_schema())
 
     async def async_step_special_themes(self, user_input: dict[str, Any] | None = None):
         if THEME_DAY in self.data[CONF_EXCLUDE]:
@@ -141,13 +129,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
             self.data[CONF_SPECIAL_THEMES] = user_input
             return await self.async_step_calendar()
 
-        if self.is_reconfiguration:
-            entry = self._get_existing_config_entry_data()[CONF_SPECIAL_THEMES]
-            schema = self._get_themes_schema(default_dir=entry[CONF_DIR], default_auto_update=entry[CONF_AUTO_UPDATE])
-        else:
-            schema = self._get_themes_schema()
-
-        return self.async_show_form(step_id="special_themes", data_schema=schema)
+        return self.async_show_form(step_id="special_themes", data_schema=self._get_themes_schema())
 
     async def async_step_calendar(self, user_input: dict[str, Any] | None = None):
         if user_input is not None:
@@ -157,36 +139,27 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
 
             return await self.async_step_cache()
 
-        if self.is_reconfiguration:
-            entry = self._get_existing_config_entry_data()[CONF_CALENDAR]
-            schema = self._get_calendar_schema(default_days_before_today=entry[CONF_DAYS_BEFORE_TODAY],
-                                               default_days_after_today=entry[CONF_DAYS_AFTER_TODAY])
-        else:
-            schema = self._get_calendar_schema()
-
-        return self.async_show_form(step_id="calendar", data_schema=schema)
+        return self.async_show_form(step_id="calendar", data_schema=self._get_calendar_schema())
 
     async def async_step_cache(self, user_input: dict[str, Any] | None = None):
         if user_input is not None:
             self.data[CONF_CACHE] = user_input
 
-            if self.is_reconfiguration:
-                await self.hass.config_entries.async_remove(self._get_existing_config_entry().entry_id)
+            if self.config_entry:
+                await self.hass.config_entries.async_remove(self.config_entry.entry_id)
 
             return self.async_create_entry(title=DOMAIN_FRIENDLY_NAME, data=self.data)
 
-        if self.is_reconfiguration:
-            entry = self._get_existing_config_entry_data()[CONF_CACHE]
-            schema = self._get_cache_schema(default_enabled=entry[CONF_ENABLED],
-                                            default_dir=entry[CONF_DIR],
-                                            default_retention_days=entry[CONF_RETENTION])
-        else:
-            schema = self._get_cache_schema()
-
-        return self.async_show_form(step_id="cache", data_schema=schema)
+        return self.async_show_form(step_id="cache", data_schema=self._get_cache_schema())
 
     async def async_step_reconfigure(self, user_input: dict[str, Any] | None = None):
-        return await self.async_step_user(reconfigure=True)
+        entries = self.hass.config_entries.async_entries(domain=DOMAIN)
+
+        if len(entries) != 1:
+            return self.async_abort(reason=f'Unexpected number of config entries, wanted 1 found {len(entries)}')
+        else:
+            self.config_entry = entries[0]
+            return await self.async_step_user()
 
     async def async_step_import(self, import_data: ConfigType):
         """Import entry from configuration.yaml."""
