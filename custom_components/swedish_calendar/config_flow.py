@@ -264,7 +264,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
     @staticmethod
     def _get_user_defined_special_themes_dir(config: dict) -> str | None:
         deprecated_themes_path: str | None = config.get(CONF_SPECIAL_THEMES_DIR)
-        new_themes_path: str | None = config[CONF_SPECIAL_THEMES][CONF_DIR]
+        new_themes_path: str | None = (config.get(CONF_SPECIAL_THEMES) or {}).get(CONF_DIR)
 
         if deprecated_themes_path:
             if not new_themes_path:
