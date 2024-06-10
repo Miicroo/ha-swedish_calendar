@@ -102,7 +102,6 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
 
     def _get_existing_config_entry(self):
         entries = self.hass.config_entries.async_entries(domain=DOMAIN)
-        _LOGGER.warning(entries)
         if len(entries) == 0:
             return None
         elif len(entries) == 1:
