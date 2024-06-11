@@ -51,6 +51,11 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
         self._events: list[SwedishCalendarEvent] = []
 
     @property
+    def unique_id(self) -> str:
+        """Return a unique ID."""
+        return f'calendar.{DOMAIN}'
+
+    @property
     def should_poll(self):
         return False
 
