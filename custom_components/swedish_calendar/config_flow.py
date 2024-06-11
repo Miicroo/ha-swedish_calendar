@@ -41,6 +41,9 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
     data: dict[str, Any]
     config_entry: ConfigEntry | None = None
 
+    def __init__(self):
+        self.data = {}
+
     def _get_include_sensor_schema(self) -> vol.Schema:
         if self.config_entry:
             default_includes = self._get_not_excluded_sensors(self.config_entry.data)
@@ -78,10 +81,8 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         already_included_sensors = [
             SENSOR_TYPES[key].friendly_name
             for key in SENSOR_TYPES
-            if key not in self.data[CONF_EXCLUDE] and (key in entry_data.get(CONF_INCLUDE) or self.config_entry is None)
+            if key not in self.data[CONF_EXCLUDE] and (self.config_entry is None or key in entry_data.get(CONF_INCLUDE))
         ]
-
-        self._get_not_excluded_sensors(self.data)
 
         return vol.Schema(
             {
@@ -92,7 +93,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
                     }
                 }),
                 vol.Optional(CONF_DAYS_BEFORE_TODAY, default=entry_data.get(CONF_DAYS_BEFORE_TODAY) or 0): cv.positive_int,
-                vol.Optional(CONF_DAYS_AFTER_TODAY, default=entry_data.get(CONF_DAYS_AFTER_TODAY or 0)): cv.positive_int,
+                vol.Optional(CONF_DAYS_AFTER_TODAY, default=entry_data.get(CONF_DAYS_AFTER_TODAY) or 0): cv.positive_int
             }
         )
 
@@ -109,7 +110,6 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         )
 
     async def async_step_user(self, user_input: dict[str, Any] | None = None):
-
         if not self.config_entry:  # On a reconfiguration we want an entry, since we are updating it
             self._async_abort_entries_match(match_dict={})
 
@@ -118,7 +118,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
             self.data[CONF_EXCLUDE] = excludes
             return await self.async_step_special_themes()
 
-        self.data = {}
+        self.data = {}  # Reset data object
         return self.async_show_form(step_id="user", data_schema=self._get_include_sensor_schema())
 
     async def async_step_special_themes(self, user_input: dict[str, Any] | None = None):
