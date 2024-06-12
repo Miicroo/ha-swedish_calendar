@@ -4,6 +4,7 @@ from datetime import date, datetime, timedelta
 import logging
 from typing import Any
 
+from homeassistant import config_entries
 from homeassistant.components.calendar import CalendarEntity, CalendarEvent
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
@@ -22,17 +23,22 @@ from .utils import DateUtils
 _LOGGER = logging.getLogger(__name__)
 
 
-async def async_setup_platform(hass: HomeAssistant, config, async_add_entities, discovery_info=None) -> None:
-    """Set up the calendar sensor."""
-    coordinator = hass.data[DOMAIN]["coordinator"]
-    conf = hass.data[DOMAIN]["conf"][CONF_CALENDAR]
+async def async_setup_entry(
+        hass: HomeAssistant,
+        config_entry: config_entries.ConfigEntry,
+        async_add_entities,
+):
+    """Setup sensors from a config entry created in the integrations UI."""
+    entry_conf = hass.data[DOMAIN][config_entry.entry_id]
+    coordinator = entry_conf["coordinator"]
+    conf = entry_conf["conf"][CONF_CALENDAR]
 
     sensor_configs = [SENSOR_TYPES[sensor_type]
                       for sensor_type in SENSOR_TYPES
                       if sensor_type in conf[CONF_INCLUDE]]
 
     if len(sensor_configs) > 0:
-        async_add_entities([SwedishCalendarEntity(sensor_configs, coordinator)])
+        async_add_entities([SwedishCalendarEntity(sensor_configs, coordinator)], update_before_add=True)
 
 
 class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
@@ -43,6 +49,11 @@ class SwedishCalendarEntity(CalendarEntity, CoordinatorEntity):
         self._sensor_configs = sensor_configs
         self._attr_name = DOMAIN_FRIENDLY_NAME
         self._events: list[SwedishCalendarEvent] = []
+
+    @property
+    def unique_id(self) -> str:
+        """Return a unique ID."""
+        return f'calendar.{DOMAIN}'
 
     @property
     def should_poll(self):

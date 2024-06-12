@@ -1,8 +1,8 @@
 # Swedish calendar
-This is a HomeAssistant sensor for showing data about swedish holidays. It uses the api at *sholiday.faboul.se* to generate statistics as sensors. The sensors are checked once per day (at midnight).
+This is a HomeAssistant sensor for showing data about swedish holidays. It uses the api at *sholiday.faboul.se* to generate statistics as sensors. The sensors are updated once per day (at midnight).
 
 ## Requirements
-HomeAssistant 2022.5.1 or later
+Minimum HomeAssistant 2022.5.1 or later, though recommending HomeAssistant 2024.4 or later
 
 ## Installation
 
@@ -19,25 +19,38 @@ HomeAssistant 2022.5.1 or later
 2. Download the contents (the raw files, NOT as HTML) of the files from **custom_components/swedish_calendar** to the new directory
 
 ## Configuration
-| Name            | Required | Default        | Description                                                                                                                                                                                                 |
-|-----------------|----------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| exclude         | no       | *empty list*   | All sensor types are tracked by default, this config lets you specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
-| special_themes  | no       | *empty object* | The special themes config, see [Special themes config](#special-themes).                                                                                                                                    |
-| calendar_config | no       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                                                |
-| cache           | no       | *empty object* | The cache config, if you to store data locally for instance when running on a slow connection. See [Cache configuration](#cache).                                                                           |
+To add the integration to your Home Assistant instance, use this My button:
+<p>
+    <a href="https://my.home-assistant.io/redirect/config_flow_start?domain=swedish_calendar" class="my badge" target="_blank">
+        <img src="https://my.home-assistant.io/badges/config_flow_start.svg">
+    </a>
+</p>
 
-### Minimal configuration
-~~~~yaml
-# Example configuration.yaml entry
-swedish_calendar:
-~~~~
+If the above My button doesn’t work, you can also perform the following steps
+manually:
+ * Browse to your Home Assistant instance.
+ * Go to <strong><a href="https://my.home-assistant.io/redirect/integrations" class="my" target="_blank">Settings &gt; Devices &amp; Services</a></strong>.
+ * In the bottom right corner, select the <strong><a href="https://my.home-assistant.io/redirect/config_flow_start?domain=swedish_calendar" class="my" target="_blank">Add Integration</a></strong> button.
+ * From the list, select <strong>Swedish calendar</strong>.
+ * Follow the instructions on screen to complete the setup.
 
----
-**⚠ IMPORTANT NOTE ⚠**
+### Configuration.yaml
+If you have a previous installation of the integration that uses yaml configuration, you don't have to do anything, all values will be imported for you.
+When the import is finished you will get a notification saying that you can remove the old configuration.
 
-If you are migrating from v1.0.0 to v2.x.x, note that you have to change from `sensor:` to `swedish_calendar:` in your configuration.yaml. This change was necessary to be able to add more features and an even more extensive config. The `platform`-key is also no longer required.
 
----
+### Reconfiguration
+If you ever want to update the configuration, you have 2 options. 
+1. If you are running HomeAssistant 2024.4+, go to the integration page for Swedish calendar, click the three dot menu and choose "🔧 Reconfigure". This will open the configuration dialogue again, but with your previous values pre-filled in. Go through all the dialogue screens and hit save.
+2. If you are running HomeAssistant pre 2024.4, go to the integration page for Swedish calendar, click the three dot menu and choose "🗑️ Remove". Set up the integration from scratch again.
+
+### Configuration value definitions
+| Name           | Default        | Description                                                                                                                                                                                                 |
+|----------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| includes       | *all sensors*  | All sensor types are tracked by default, this config lets you specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| special themes | *empty object* | The special themes config, see [Special themes config](#special-themes).                                                                                                                                    |
+| calendar       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                                                |
+| cache          | *empty object* | The cache config, if you want to store data locally for instance when running on a slow connection. See [Cache configuration](#cache).                                                                      |
 
 ### Supported sensor types
 | Sensor type                 | Swedish description        | Example value |
@@ -56,72 +69,34 @@ If you are migrating from v1.0.0 to v2.x.x, note that you have to change from `s
 | theme_day                   | Temadag                    | Julafton      |
 
 
-~~~~yaml
-# Example configuration.yaml entry with exclusion
-swedish_calendar:
-  exclude:
-    - date
-    - day_before_workfree_holiday
-~~~~
-
 ### Special themes
 Special themes include data about common celebrations in Sweden, like 🍪 Kanelbullens dag or 🦢 Mårtensafton.
 
-| Name        | Required | Default                          | Description                                                                                                                                        |
-|-------------|----------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| dir         | no       | *current installation directory* | The directory where you have stored specialThemes.json. *Only needed if you have moved your specialThemes.json file out of the default directory!* |
-| auto_update | no       | False                            | If you want to enable automatic download of the latest themes every night.                                                                         |
+| Name        | Default                          | Description                                                                                                                                        |
+|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| dir         | *current installation directory* | The directory where you have stored specialThemes.json. *Only needed if you have moved your specialThemes.json file out of the default directory!* |
+| auto update | False                            | If you want to enable automatic download of the latest themes every night.                                                                         |
 
----
-**⚠ IMPORTANT NOTE ⚠**
-
-If you are migrating to v2.2.0+ from an earlier version, note that you have to change from the single config line `special_themes_dir: /...` to the `special_themes:`-object.
-
----
-~~~~yaml
-# Example configuration.yaml entry with special themes, updated every night
-swedish_calendar:
-  special_themes:
-    auto_update: True
-~~~~
 
 ### Calendar
-| Name              | Required | Default      | Description                                                                                                                   |
-|-------------------|----------|--------------|-------------------------------------------------------------------------------------------------------------------------------|
-| include           | no       | *empty list* | All sensor types that you **want** to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
-| days_before_today | no       | 0            | Number of days prior to today that you want to show in calendar                                                               |
-| days_after_today  | no       | 0            | Number of days after today that you want to show in calendar                                                                  |
+| Name              | Default                               | Description                                                                                                                   |
+|-------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| include           | *all sensors not previously excluded* | All sensor types that you **want** to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| days before today | 0                                     | Number of days prior to today that you want to show in calendar                                                               |
+| days after today  | 0                                     | Number of days after today that you want to show in calendar                                                                  |
 
-```yaml
-# Example configuration.yaml entry with calendar enabled
-swedish_calendar:
-  calendar_config:
-    days_before_today: 7
-    days_after_today: 31
-    include:
-      - eve
-      - holiday
-```
-Result in calendar with above configuration for Dec 2022:
+Example showing `eve` and `holiday` for Dec 2022 (7 days before today, 31 days after today):
 <p>
   <img src="https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/assets/calendar.png" alt="Swedish calendar view" width="80%" height="80%"/>
 </p>
 
 ### Cache
-| Name      | Required | Default                   | Description                                                                                                                                                         |
-|-----------|----------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled   | no       | False                     | Enable/disable the cache                                                                                                                                            |
-| dir       | no       | *installation_dir*/.cache | Full path to directory where cached data should be stored                                                                                                           |
-| retention | no       | 7 days                    | Time until cache is renewed, must be set as “hh:mm:ss” or it must contain at least one of the following entries: days:, hours:, minutes:, seconds: or milliseconds: |
+| Name      | Default                   | Description                                               |
+|-----------|---------------------------|-----------------------------------------------------------|
+| enabled   | False                     | Enable/disable the cache                                  |
+| dir       | *installation_dir*/.cache | Full path to directory where cached data should be stored |
+| retention | 7 days                    | Time until cache is renewed, in number of days            |
 
-```yaml
-# Example configuration.yaml entry caching data for 1 month
-swedish_calendar:
-  cache:
-    enabled: True
-    retention:
-      days: 31
-```
 
 ## Example UI
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
