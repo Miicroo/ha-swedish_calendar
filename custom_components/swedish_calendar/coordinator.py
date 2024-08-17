@@ -37,9 +37,9 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         self._first_update = True  # Keep track of first update so that we keep boot times down
 
         session = async_get_clientsession(hass)
-        self._api_data_provider = ApiDataProvider(session=session, cache_config=cache_config)
-        self._theme_data_updater = ThemeDataUpdater(config=special_themes_config, session=session)
-        self._theme_provider = ThemeDataProvider(theme_path=special_themes_config.path)
+        self._api_data_provider = ApiDataProvider(hass=hass, session=session, cache_config=cache_config)
+        self._theme_data_updater = ThemeDataUpdater(hass=hass, config=special_themes_config, session=session)
+        self._theme_provider = ThemeDataProvider(hass=hass, theme_path=special_themes_config.path)
 
         super().__init__(
             hass,

@@ -1,6 +1,7 @@
 import asyncio
 from collections import deque
 from datetime import date, datetime, timedelta, timezone
+from functools import partial
 import hashlib
 import json
 import logging
@@ -10,6 +11,8 @@ from typing import Any
 import aiohttp
 import async_timeout
 
+from homeassistant.core import HomeAssistant
+
 from .types import ApiData, CacheConfig
 from .utils import DateUtils
 
@@ -17,10 +20,10 @@ _LOGGER = logging.getLogger(__name__)
 
 
 class ApiDataProvider:
-    def __init__(self, session: aiohttp.ClientSession, cache_config: CacheConfig):
+    def __init__(self, hass: HomeAssistant, session: aiohttp.ClientSession, cache_config: CacheConfig):
         self._base_url: str = 'https://sholiday.faboul.se/dagar/v2.1/'
         self._session = session
-        self._cache = ApiDataCache(cache_config)
+        self._cache = ApiDataCache(hass, cache_config)
 
     async def fetch_data(self, start: date, end: date) -> list[ApiData]:
         urls = deque(self._get_urls(start, end))
@@ -74,10 +77,10 @@ class ApiDataProvider:
     async def _get_json_from_url(self, url, timeout) -> dict[str, Any]:
         if self._cache.has_data_for(url):
             _LOGGER.debug("Using cached version of url: %s", url)
-            data = self._cache.get(url)
+            data = await self._cache.get(url)
         else:
             data = await self._get_data_online(url, timeout)
-            self._cache.update(url, data)
+            await self._cache.update(url, data)
 
         return data
 
@@ -101,7 +104,8 @@ class ApiDataProvider:
 
 
 class ApiDataCache:
-    def __init__(self, cache_config: CacheConfig):
+    def __init__(self, hass: HomeAssistant, cache_config: CacheConfig):
+        self._hass = hass
         self.config = cache_config
 
     def has_data_for(self, url: str) -> bool:
@@ -121,7 +125,10 @@ class ApiDataCache:
         now_in_utc = datetime.now().astimezone(tz=timezone.utc)
         return now_in_utc - cache_in_utc
 
-    def get(self, url) -> dict[str, Any] | None:
+    async def get(self, url) -> dict[str, Any] | None:
+        return await self._hass.async_add_executor_job(partial(self._get, url=url))
+
+    def _get(self, url) -> dict[str, Any] | None:
         path = self._url_to_path(url)
         data = None
         with open(path) as cached_file:
@@ -133,7 +140,10 @@ class ApiDataCache:
 
         return data
 
-    def update(self, url, data: dict[str, Any]) -> None:
+    async def update(self, url, data: dict[str, Any]) -> None:
+        return await self._hass.async_add_executor_job(partial(self._update, url=url, data=data))
+
+    def _update(self, url, data: dict[str, Any]) -> None:
         if self.config.enabled:
             path = self._url_to_path(url)
             _LOGGER.debug("Caching %s, saving to %s", url, path)
