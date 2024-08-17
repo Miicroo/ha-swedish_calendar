@@ -65,7 +65,7 @@ async def test_api_data_cache_get_removes_file_on_json_decode_error(mocker, hass
 
     mock_open = mock.mock_open(read_data="<html>")
     with mock.patch("builtins.open", mock_open):
-        result = api_cache.get("https://whatever")
+        result = await api_cache.get("https://whatever")
 
         assert result is None
         remove_mock.assert_has_calls(calls=[call(expected_file_path)], any_order=True)
