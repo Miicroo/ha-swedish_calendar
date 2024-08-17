@@ -1,11 +1,14 @@
 import asyncio
 from datetime import date
+from functools import partial
 import json
 import logging
 from typing import Any
 
 import aiohttp
 import async_timeout
+
+from homeassistant.core import HomeAssistant
 
 from .types import SpecialThemesConfig, ThemeData
 from .utils import DateUtils
@@ -14,10 +17,14 @@ _LOGGER = logging.getLogger(__name__)
 
 
 class ThemeDataProvider:
-    def __init__(self, theme_path):
+    def __init__(self, hass, theme_path):
+        self._hass = hass
         self._theme_path = theme_path
 
     async def fetch_data(self, start: date, end: date) -> list[ThemeData]:
+        return await self._hass.async_add_executor_job(partial(self._fetch_data, start=start, end=end))
+
+    def _fetch_data(self, start: date, end: date) -> list[ThemeData]:
         theme_dates = []
         try:
             with open(self._theme_path) as data_file:
@@ -44,7 +51,8 @@ class ThemeDataProvider:
 
 
 class ThemeDataUpdater:
-    def __init__(self, config: SpecialThemesConfig, session: aiohttp.ClientSession):
+    def __init__(self, hass: HomeAssistant, config: SpecialThemesConfig, session: aiohttp.ClientSession):
+        self._hass = hass
         self._config = config
         self._session = session
         self._url = 'https://raw.githubusercontent.com/Miicroo/ha-swedish_calendar/master/custom_components' \
@@ -56,9 +64,12 @@ class ThemeDataUpdater:
     async def update(self):
         new_data = await self._download()
         if new_data:
-            with open(self._config.path, 'w') as themes_file:
-                themes_file.write(new_data)
-                _LOGGER.info('Themes updated with latest json')
+            await self._hass.async_add_executor_job(partial(self._write_update, new_data=new_data))
+
+    def _write_update(self, new_data):
+        with open(self._config.path, 'w') as themes_file:
+            themes_file.write(new_data)
+            _LOGGER.info('Themes updated with latest json')
 
     async def _download(self) -> str | None:
         _LOGGER.debug("Downloading latest themes")
