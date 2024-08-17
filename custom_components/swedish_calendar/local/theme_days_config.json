@@ -1,0 +1,6257 @@
+[
+  {
+    "theme": "Nationella regifting-dagen",
+    "generator": "same_date",
+    "description": "27 december varje \u00e5r",
+    "month": 12,
+    "day": 27
+  },
+  {
+    "theme": "V\u00e4rnl\u00f6sa barns dag",
+    "generator": "same_date",
+    "description": "28 december varje \u00e5r",
+    "month": 12,
+    "day": 28
+  },
+  {
+    "theme": "Statisternas dag",
+    "generator": "same_date",
+    "description": "29 december varje \u00e5r",
+    "month": 12,
+    "day": 29
+  },
+  {
+    "theme": "Ny\u00e5rsafton",
+    "generator": "same_date",
+    "description": "31 december varje \u00e5r",
+    "month": 12,
+    "day": 31
+  },
+  {
+    "theme": "Internationella Expect a better tomorrow-dagen",
+    "generator": "same_date",
+    "description": "31 december varje \u00e5r",
+    "month": 12,
+    "day": 31
+  },
+  {
+    "theme": "Internationella pizzadagen",
+    "generator": "same_date",
+    "description": "01 januari varje \u00e5r",
+    "month": 1,
+    "day": 1
+  },
+  {
+    "theme": "Ny\u00e5rsdagen",
+    "generator": "same_date",
+    "description": "01 januari varje \u00e5r",
+    "month": 1,
+    "day": 1
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r introverta",
+    "generator": "same_date",
+    "description": "02 januari varje \u00e5r",
+    "month": 1,
+    "day": 2
+  },
+  {
+    "theme": "Internationella JRR Tolkien-dagen",
+    "generator": "same_date",
+    "description": "03 januari varje \u00e5r",
+    "month": 1,
+    "day": 3
+  },
+  {
+    "theme": "Punktskriftens dag",
+    "generator": "same_date",
+    "description": "04 januari varje \u00e5r",
+    "month": 1,
+    "day": 4
+  },
+  {
+    "theme": "V\u00e4rldshypnosdagen",
+    "generator": "same_date",
+    "description": "04 januari varje \u00e5r",
+    "month": 1,
+    "day": 4
+  },
+  {
+    "theme": "Trettondagsafton",
+    "generator": "same_date",
+    "description": "05 januari varje \u00e5r",
+    "month": 1,
+    "day": 5
+  },
+  {
+    "theme": "Trettondagen",
+    "generator": "same_date",
+    "description": "06 januari varje \u00e5r",
+    "month": 1,
+    "day": 6
+  },
+  {
+    "theme": "Temadagens dag",
+    "generator": "same_date",
+    "description": "07 januari varje \u00e5r",
+    "month": 1,
+    "day": 7
+  },
+  {
+    "theme": "Marsipanens dag",
+    "generator": "same_date",
+    "description": "12 januari varje \u00e5r",
+    "month": 1,
+    "day": 12
+  },
+  {
+    "theme": "Tjugondag jul",
+    "generator": "same_date",
+    "description": "13 januari varje \u00e5r",
+    "month": 1,
+    "day": 13
+  },
+  {
+    "theme": "Internationella fetischdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje fredag i januari",
+    "xth": 3,
+    "weekday": 5,
+    "month": 1
+  },
+  {
+    "theme": "Tulpanens dag",
+    "generator": "same_date",
+    "description": "15 januari varje \u00e5r",
+    "month": 1,
+    "day": 15
+  },
+  {
+    "theme": "Internationella LCHF-dagen",
+    "generator": "same_date",
+    "description": "16 januari varje \u00e5r",
+    "month": 1,
+    "day": 16
+  },
+  {
+    "theme": "Sl\u00e4ktforskningens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i januari",
+    "xth": 3,
+    "weekday": 6,
+    "month": 1
+  },
+  {
+    "theme": "V\u00e4rldsreligionsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje s\u00f6ndag i januari",
+    "xth": 3,
+    "weekday": 7,
+    "month": 1
+  },
+  {
+    "theme": "Internationella Nalle Puh-dagen",
+    "generator": "same_date",
+    "description": "18 januari varje \u00e5r",
+    "month": 1,
+    "day": 18
+  },
+  {
+    "theme": "Martin Luther King-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje m\u00e5ndag i januari",
+    "xth": 3,
+    "weekday": 1,
+    "month": 1
+  },
+  {
+    "theme": "Sten Stures ben",
+    "generator": "same_date",
+    "description": "19 januari varje \u00e5r",
+    "month": 1,
+    "day": 19
+  },
+  {
+    "theme": "Internationella popcorndagen",
+    "generator": "same_date",
+    "description": "19 januari varje \u00e5r",
+    "month": 1,
+    "day": 19
+  },
+  {
+    "theme": "L\u00f6senordsbytardagen",
+    "generator": "same_date",
+    "description": "20 januari varje \u00e5r",
+    "month": 1,
+    "day": 20
+  },
+  {
+    "theme": "Kramens dag",
+    "generator": "same_date",
+    "description": "21 januari varje \u00e5r",
+    "month": 1,
+    "day": 21
+  },
+  {
+    "theme": "Vinets dag",
+    "generator": "same_date",
+    "description": "22 januari varje \u00e5r",
+    "month": 1,
+    "day": 22
+  },
+  {
+    "theme": "Pilsnerfilmens dag",
+    "generator": "same_date",
+    "description": "22 januari varje \u00e5r",
+    "month": 1,
+    "day": 22
+  },
+  {
+    "theme": "Elens dag",
+    "generator": "same_date",
+    "description": "23 januari varje \u00e5r",
+    "month": 1,
+    "day": 23
+  },
+  {
+    "theme": "Frufridagen",
+    "generator": "same_date",
+    "description": "24 januari varje \u00e5r",
+    "month": 1,
+    "day": 24
+  },
+  {
+    "theme": "Halvsn\u00f6dagen",
+    "generator": "same_date",
+    "description": "25 januari varje \u00e5r",
+    "month": 1,
+    "day": 25
+  },
+  {
+    "theme": "F\u00f6rintelsens minnesdag",
+    "generator": "same_date",
+    "description": "27 januari varje \u00e5r",
+    "month": 1,
+    "day": 27
+  },
+  {
+    "theme": "Hemtj\u00e4nstens dag",
+    "generator": "same_date",
+    "description": "27 januari varje \u00e5r",
+    "month": 1,
+    "day": 27
+  },
+  {
+    "theme": "Dataskyddsdagen",
+    "generator": "same_date",
+    "description": "28 januari varje \u00e5r",
+    "month": 1,
+    "day": 28
+  },
+  {
+    "theme": "Konungens namnsdag",
+    "generator": "same_date",
+    "description": "28 januari varje \u00e5r",
+    "month": 1,
+    "day": 28
+  },
+  {
+    "theme": "Veganpizza-dagen",
+    "generator": "same_date",
+    "description": "29 januari varje \u00e5r",
+    "month": 1,
+    "day": 29
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r leprasjuka",
+    "generator": "last_weekday_of_month",
+    "description": "Sista s\u00f6ndag i januari",
+    "weekday": 7,
+    "month": 1
+  },
+  {
+    "theme": "Vegetariska dagen",
+    "generator": "same_date",
+    "description": "01 februari varje \u00e5r",
+    "month": 2,
+    "day": 1
+  },
+  {
+    "theme": "Murmeldjursdagen",
+    "generator": "same_date",
+    "description": "02 februari varje \u00e5r",
+    "month": 2,
+    "day": 2
+  },
+  {
+    "theme": "Internationella v\u00e5tmarksdagen",
+    "generator": "same_date",
+    "description": "02 februari varje \u00e5r",
+    "month": 2,
+    "day": 2
+  },
+  {
+    "theme": "Internationella tvillingdagen",
+    "generator": "same_date",
+    "description": "02 februari varje \u00e5r",
+    "month": 2,
+    "day": 2
+  },
+  {
+    "theme": "Andningens dag",
+    "generator": "same_date",
+    "description": "03 februari varje \u00e5r",
+    "month": 2,
+    "day": 3
+  },
+  {
+    "theme": "Morotskakans dag",
+    "generator": "same_date",
+    "description": "03 februari varje \u00e5r",
+    "month": 2,
+    "day": 3
+  },
+  {
+    "theme": "V\u00e4rldscancerdagen",
+    "generator": "same_date",
+    "description": "04 februari varje \u00e5r",
+    "month": 2,
+    "day": 4
+  },
+  {
+    "theme": "Vargens dag",
+    "generator": "same_date",
+    "description": "04 februari varje \u00e5r",
+    "month": 2,
+    "day": 4
+  },
+  {
+    "theme": "Nutelladagen",
+    "generator": "same_date",
+    "description": "05 februari varje \u00e5r",
+    "month": 2,
+    "day": 5
+  },
+  {
+    "theme": "Runebergsdagen",
+    "generator": "same_date",
+    "description": "05 februari varje \u00e5r",
+    "month": 2,
+    "day": 5
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r nolltolerans mot kvinnlig k\u00f6nsstympning",
+    "generator": "same_date",
+    "description": "06 februari varje \u00e5r",
+    "month": 2,
+    "day": 6
+  },
+  {
+    "theme": "L\u00f6pningens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i februari",
+    "xth": 1,
+    "weekday": 6,
+    "month": 2
+  },
+  {
+    "theme": "Samernas nationaldag",
+    "generator": "same_date",
+    "description": "06 februari varje \u00e5r",
+    "month": 2,
+    "day": 6
+  },
+  {
+    "theme": "Semikolonets dag",
+    "generator": "same_date",
+    "description": "06 februari varje \u00e5r",
+    "month": 2,
+    "day": 6
+  },
+  {
+    "theme": "Tankens dag",
+    "generator": "same_date",
+    "description": "07 februari varje \u00e5r",
+    "month": 2,
+    "day": 7
+  },
+  {
+    "theme": "Clean Out Your Computer Day",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra m\u00e5ndag i februari",
+    "xth": 2,
+    "weekday": 1,
+    "month": 2
+  },
+  {
+    "theme": "Internationella epilepsidagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra m\u00e5ndag i februari",
+    "xth": 2,
+    "weekday": 1,
+    "month": 2
+  },
+  {
+    "theme": "\u00c4ggahalvans dag",
+    "generator": "same_date",
+    "description": "08 februari varje \u00e5r",
+    "month": 2,
+    "day": 8
+  },
+  {
+    "theme": "Baljv\u00e4xtens dag",
+    "generator": "same_date",
+    "description": "10 februari varje \u00e5r",
+    "month": 2,
+    "day": 10
+  },
+  {
+    "theme": "Internationella 112-dagen",
+    "generator": "same_date",
+    "description": "11 februari varje \u00e5r",
+    "month": 2,
+    "day": 11
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r de sjuka",
+    "generator": "same_date",
+    "description": "11 februari varje \u00e5r",
+    "month": 2,
+    "day": 11
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r kvinnor och flickor inom vetenskap",
+    "generator": "same_date",
+    "description": "11 februari varje \u00e5r",
+    "month": 2,
+    "day": 11
+  },
+  {
+    "theme": "Darwins f\u00f6delsedag",
+    "generator": "same_date",
+    "description": "12 februari varje \u00e5r",
+    "month": 2,
+    "day": 12
+  },
+  {
+    "theme": "Djurf\u00f6rs\u00f6kens dag",
+    "generator": "same_date",
+    "description": "12 februari varje \u00e5r",
+    "month": 2,
+    "day": 12
+  },
+  {
+    "theme": "V\u00e4rldsradiodagen",
+    "generator": "same_date",
+    "description": "13 februari varje \u00e5r",
+    "month": 2,
+    "day": 13
+  },
+  {
+    "theme": "Tandborstbytardagen",
+    "generator": "same_date",
+    "description": "13 februari varje \u00e5r",
+    "month": 2,
+    "day": 13
+  },
+  {
+    "theme": "Alla hj\u00e4rtans dag",
+    "generator": "same_date",
+    "description": "14 februari varje \u00e5r",
+    "month": 2,
+    "day": 14
+  },
+  {
+    "theme": "Fastlagss\u00f6ndagen",
+    "generator": "fast_days",
+    "description": "F\u00f6rsta dagen i fastlagsdagarna",
+    "index": 0
+  },
+  {
+    "theme": "Alla hj\u00e4rtebarns dag",
+    "generator": "same_date",
+    "description": "14 februari varje \u00e5r",
+    "month": 2,
+    "day": 14
+  },
+  {
+    "theme": "Internationella barncancerdagen",
+    "generator": "same_date",
+    "description": "15 februari varje \u00e5r",
+    "month": 2,
+    "day": 15
+  },
+  {
+    "theme": "Gel\u00e9hallonens dag",
+    "generator": "same_date",
+    "description": "15 februari varje \u00e5r",
+    "month": 2,
+    "day": 15
+  },
+  {
+    "theme": "Fettisdagen",
+    "generator": "fast_days",
+    "description": "Tredje dagen i fastlagsdagarna",
+    "index": 2
+  },
+  {
+    "theme": "Internationella pannkaksdagen",
+    "generator": "fast_days",
+    "description": "Tredje dagen i fastlagsdagarna",
+    "index": 2
+  },
+  {
+    "theme": "Askonsdagen",
+    "generator": "fast_days",
+    "description": "Fj\u00e4rde dagen i fastlagsdagarna",
+    "index": 3
+  },
+  {
+    "theme": "Fotens dag",
+    "generator": "same_date",
+    "description": "18 februari varje \u00e5r",
+    "month": 2,
+    "day": 18
+  },
+  {
+    "theme": "Kn\u00e4ckebr\u00f6dets dag",
+    "generator": "same_date",
+    "description": "19 februari varje \u00e5r",
+    "month": 2,
+    "day": 19
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r social r\u00e4ttvisa",
+    "generator": "same_date",
+    "description": "20 februari varje \u00e5r",
+    "month": 2,
+    "day": 20
+  },
+  {
+    "theme": "Slarvighetens dag",
+    "generator": "same_date",
+    "description": "20 februari varje \u00e5r",
+    "month": 2,
+    "day": 20
+  },
+  {
+    "theme": "Internationella pipr\u00f6kardagen",
+    "generator": "same_date",
+    "description": "20 februari varje \u00e5r",
+    "month": 2,
+    "day": 20
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r modersm\u00e5l",
+    "generator": "same_date",
+    "description": "21 februari varje \u00e5r",
+    "month": 2,
+    "day": 21
+  },
+  {
+    "theme": "Fondvalsdagen",
+    "generator": "same_date",
+    "description": "21 februari varje \u00e5r",
+    "month": 2,
+    "day": 21
+  },
+  {
+    "theme": "Alla scouters dag",
+    "generator": "same_date",
+    "description": "22 februari varje \u00e5r",
+    "month": 2,
+    "day": 22
+  },
+  {
+    "theme": "Internationella brottsofferdagen",
+    "generator": "same_date",
+    "description": "22 februari varje \u00e5r",
+    "month": 2,
+    "day": 22
+  },
+  {
+    "theme": "Sverigefinnarnas dag",
+    "generator": "same_date",
+    "description": "24 februari varje \u00e5r",
+    "month": 2,
+    "day": 24
+  },
+  {
+    "theme": "Internationella EBM-dagen",
+    "generator": "same_date",
+    "description": "24 februari varje \u00e5r",
+    "month": 2,
+    "day": 24
+  },
+  {
+    "theme": "Grapefruktens dag",
+    "generator": "same_date",
+    "description": "25 februari varje \u00e5r",
+    "month": 2,
+    "day": 25
+  },
+  {
+    "theme": "Internationella isbj\u00f6rnsdagen",
+    "generator": "same_date",
+    "description": "27 februari varje \u00e5r",
+    "month": 2,
+    "day": 27
+  },
+  {
+    "theme": "Internationella musarmsdagen",
+    "generator": "same_date",
+    "description": "28 februari varje \u00e5r",
+    "month": 2,
+    "day": 28
+  },
+  {
+    "theme": "Myggholkens dag",
+    "generator": "same_date",
+    "description": "28 februari varje \u00e5r",
+    "month": 2,
+    "day": 28
+  },
+  {
+    "theme": "Kalevaladagen",
+    "generator": "same_date",
+    "description": "28 februari varje \u00e5r",
+    "month": 2,
+    "day": 28
+  },
+  {
+    "theme": "Krama en bibliotekarie-dagen",
+    "generator": "same_date",
+    "description": "01 mars varje \u00e5r",
+    "month": 3,
+    "day": 1
+  },
+  {
+    "theme": "Internationella dagen mot diskriminering",
+    "generator": "same_date",
+    "description": "01 mars varje \u00e5r",
+    "month": 3,
+    "day": 1
+  },
+  {
+    "theme": "Dagen f\u00f6r musikalisk frihet",
+    "generator": "same_date",
+    "description": "03 mars varje \u00e5r",
+    "month": 3,
+    "day": 3
+  },
+  {
+    "theme": "Mandelkubbens dag",
+    "generator": "same_date",
+    "description": "03 mars varje \u00e5r",
+    "month": 3,
+    "day": 3
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r natur- och djurliv",
+    "generator": "same_date",
+    "description": "03 mars varje \u00e5r",
+    "month": 3,
+    "day": 3
+  },
+  {
+    "theme": "F\u00f6ssta Tossdan i Mass",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta torsdag i mars",
+    "xth": 1,
+    "weekday": 4,
+    "month": 3
+  },
+  {
+    "theme": "Bananens dag",
+    "generator": "same_date",
+    "description": "04 mars varje \u00e5r",
+    "month": 3,
+    "day": 4
+  },
+  {
+    "theme": "Ostb\u00e5gens dag",
+    "generator": "same_date",
+    "description": "05 mars varje \u00e5r",
+    "month": 3,
+    "day": 5
+  },
+  {
+    "theme": "V\u00e4rldsb\u00f6ndagen f\u00f6r fred",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta fredag i mars",
+    "xth": 1,
+    "weekday": 5,
+    "month": 3
+  },
+  {
+    "theme": "Europeiska logopeddagen",
+    "generator": "same_date",
+    "description": "06 mars varje \u00e5r",
+    "month": 3,
+    "day": 6
+  },
+  {
+    "theme": "Nolltaxedagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i mars",
+    "xth": 1,
+    "weekday": 6,
+    "month": 3
+  },
+  {
+    "theme": "Punschrullens dag",
+    "generator": "same_date",
+    "description": "07 mars varje \u00e5r",
+    "month": 3,
+    "day": 7
+  },
+  {
+    "theme": "Podcastens dag",
+    "generator": "same_date",
+    "description": "07 mars varje \u00e5r",
+    "month": 3,
+    "day": 7
+  },
+  {
+    "theme": "Internationella kvinnodagen",
+    "generator": "same_date",
+    "description": "08 mars varje \u00e5r",
+    "month": 3,
+    "day": 8
+  },
+  {
+    "theme": "Tomats\u00e5sens dag",
+    "generator": "same_date",
+    "description": "09 mars varje \u00e5r",
+    "month": 3,
+    "day": 9
+  },
+  {
+    "theme": "V8-motorns dag",
+    "generator": "same_date",
+    "description": "10 mars varje \u00e5r",
+    "month": 3,
+    "day": 10
+  },
+  {
+    "theme": "Europeisk minnesdag f\u00f6r terrorismens offer",
+    "generator": "same_date",
+    "description": "11 mars varje \u00e5r",
+    "month": 3,
+    "day": 11
+  },
+  {
+    "theme": "V\u00e4rldsnjurdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra torsdag i mars",
+    "xth": 2,
+    "weekday": 4,
+    "month": 3
+  },
+  {
+    "theme": "R\u00f6rmokeriets v\u00e4rldsdag",
+    "generator": "same_date",
+    "description": "11 mars varje \u00e5r",
+    "month": 3,
+    "day": 11
+  },
+  {
+    "theme": "V\u00e4rldsdagen mot cybercensur",
+    "generator": "same_date",
+    "description": "12 mars varje \u00e5r",
+    "month": 3,
+    "day": 12
+  },
+  {
+    "theme": "V\u00e4rldsglaukomdagen",
+    "generator": "same_date",
+    "description": "12 mars varje \u00e5r",
+    "month": 3,
+    "day": 12
+  },
+  {
+    "theme": "Republiken Jamtland",
+    "generator": "same_date",
+    "description": "12 mars varje \u00e5r",
+    "month": 3,
+    "day": 12
+  },
+  {
+    "theme": "Alla korvars dag",
+    "generator": "same_date",
+    "description": "12 mars varje \u00e5r",
+    "month": 3,
+    "day": 12
+  },
+  {
+    "theme": "Nationella syntolkningsdagen",
+    "generator": "same_date",
+    "description": "12 mars varje \u00e5r",
+    "month": 3,
+    "day": 12
+  },
+  {
+    "theme": "Kronprinsessans namnsdag",
+    "generator": "same_date",
+    "description": "12 mars varje \u00e5r",
+    "month": 3,
+    "day": 12
+  },
+  {
+    "theme": "Mazarindagen",
+    "generator": "same_date",
+    "description": "13 mars varje \u00e5r",
+    "month": 3,
+    "day": 13
+  },
+  {
+    "theme": "Pi-dagen",
+    "generator": "same_date",
+    "description": "14 mars varje \u00e5r",
+    "month": 3,
+    "day": 14
+  },
+  {
+    "theme": "Steak and BJ day",
+    "generator": "same_date",
+    "description": "14 mars varje \u00e5r",
+    "month": 3,
+    "day": 14
+  },
+  {
+    "theme": "Matematikens dag",
+    "generator": "same_date",
+    "description": "14 mars varje \u00e5r",
+    "month": 3,
+    "day": 14
+  },
+  {
+    "theme": "Internationella dagen mot polisv\u00e5ld",
+    "generator": "same_date",
+    "description": "15 mars varje \u00e5r",
+    "month": 3,
+    "day": 15
+  },
+  {
+    "theme": "Internationella konsumentdagen",
+    "generator": "same_date",
+    "description": "15 mars varje \u00e5r",
+    "month": 3,
+    "day": 15
+  },
+  {
+    "theme": "N\u00e4mndemannens dag",
+    "generator": "same_date",
+    "description": "15 mars varje \u00e5r",
+    "month": 3,
+    "day": 15
+  },
+  {
+    "theme": "NPF-dagen",
+    "generator": "same_date",
+    "description": "15 mars varje \u00e5r",
+    "month": 3,
+    "day": 15
+  },
+  {
+    "theme": "Stoppa incestdagen",
+    "generator": "same_date",
+    "description": "16 mars varje \u00e5r",
+    "month": 3,
+    "day": 16
+  },
+  {
+    "theme": "Kollektivavtalets dag",
+    "generator": "same_date",
+    "description": "17 mars varje \u00e5r",
+    "month": 3,
+    "day": 17
+  },
+  {
+    "theme": "Saint Patrick's day",
+    "generator": "same_date",
+    "description": "17 mars varje \u00e5r",
+    "month": 3,
+    "day": 17
+  },
+  {
+    "theme": "Bussf\u00f6rarens dag",
+    "generator": "same_date",
+    "description": "18 mars varje \u00e5r",
+    "month": 3,
+    "day": 18
+  },
+  {
+    "theme": "Supporterns Dag",
+    "generator": "same_date",
+    "description": "19 mars varje \u00e5r",
+    "month": 3,
+    "day": 19
+  },
+  {
+    "theme": "V\u00e4rldsber\u00e4ttardagen",
+    "generator": "same_date",
+    "description": "20 mars varje \u00e5r",
+    "month": 3,
+    "day": 20
+  },
+  {
+    "theme": "Internationella gl\u00e4djedagen",
+    "generator": "same_date",
+    "description": "20 mars varje \u00e5r",
+    "month": 3,
+    "day": 20
+  },
+  {
+    "theme": "V\u00e5rdagj\u00e4mningen",
+    "generator": "equinox_solstice",
+    "description": "V\u00e5rdagj\u00e4mning",
+    "index": 0
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r avskaffande av rasdiskriminering",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r Nowruz",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Internationella dockteaterdagen",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "V\u00e4rldspoesidagen",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Internationella Downs syndrom-dagen",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Internationella f\u00e4rgdagen",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Rocka sockorna-dagen",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Internationella skogsdagen",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Internationella vattendagen",
+    "generator": "same_date",
+    "description": "22 mars varje \u00e5r",
+    "month": 3,
+    "day": 22
+  },
+  {
+    "theme": "Kennethdagen",
+    "generator": "same_date",
+    "description": "22 mars varje \u00e5r",
+    "month": 3,
+    "day": 22
+  },
+  {
+    "theme": "Nordens dag",
+    "generator": "same_date",
+    "description": "23 mars varje \u00e5r",
+    "month": 3,
+    "day": 23
+  },
+  {
+    "theme": "V\u00e4rldsmeteorologidagen",
+    "generator": "same_date",
+    "description": "23 mars varje \u00e5r",
+    "month": 3,
+    "day": 23
+  },
+  {
+    "theme": "Matl\u00e5dans dag",
+    "generator": "same_date",
+    "description": "23 mars varje \u00e5r",
+    "month": 3,
+    "day": 23
+  },
+  {
+    "theme": "Europeiska dagen f\u00f6r hantverksm\u00e4ssigt tillverkad glass",
+    "generator": "same_date",
+    "description": "24 mars varje \u00e5r",
+    "month": 3,
+    "day": 24
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r r\u00e4tt till sanning om grova kr\u00e4nkningar av de m\u00e4nskliga r\u00e4ttigheterna...",
+    "generator": "same_date",
+    "description": "24 mars varje \u00e5r",
+    "month": 3,
+    "day": 24
+  },
+  {
+    "theme": "V\u00e4rldstuberkulosdagen",
+    "generator": "same_date",
+    "description": "24 mars varje \u00e5r",
+    "month": 3,
+    "day": 24
+  },
+  {
+    "theme": "Internationella dagen till minne av slaveriets offer",
+    "generator": "same_date",
+    "description": "25 mars varje \u00e5r",
+    "month": 3,
+    "day": 25
+  },
+  {
+    "theme": "Trandagen",
+    "generator": "same_date",
+    "description": "25 mars varje \u00e5r",
+    "month": 3,
+    "day": 25
+  },
+  {
+    "theme": "V\u00e5ffeldagen",
+    "generator": "same_date",
+    "description": "25 mars varje \u00e5r",
+    "month": 3,
+    "day": 25
+  },
+  {
+    "theme": "Tolkien reading day",
+    "generator": "same_date",
+    "description": "25 mars varje \u00e5r",
+    "month": 3,
+    "day": 25
+  },
+  {
+    "theme": "Internationella solidaritetsdagen f\u00f6r frihetsber\u00f6vad eller f\u00f6rvunnen personal",
+    "generator": "same_date",
+    "description": "25 mars varje \u00e5r",
+    "month": 3,
+    "day": 25
+  },
+  {
+    "theme": "Dialersystemens dag",
+    "generator": "same_date",
+    "description": "26 mars varje \u00e5r",
+    "month": 3,
+    "day": 26
+  },
+  {
+    "theme": "V\u00e4rldsteaterdagen",
+    "generator": "same_date",
+    "description": "27 mars varje \u00e5r",
+    "month": 3,
+    "day": 27
+  },
+  {
+    "theme": "Bipol\u00e4rdagen",
+    "generator": "same_date",
+    "description": "30 mars varje \u00e5r",
+    "month": 3,
+    "day": 30
+  },
+  {
+    "theme": "V\u00e4rldsbackupdagen",
+    "generator": "same_date",
+    "description": "31 mars varje \u00e5r",
+    "month": 3,
+    "day": 31
+  },
+  {
+    "theme": "Knivens dag",
+    "generator": "easter",
+    "description": "F\u00f6rsta dagen i p\u00e5sk",
+    "index": 0
+  },
+  {
+    "theme": "Skojardagen",
+    "generator": "same_date",
+    "description": "01 april varje \u00e5r",
+    "month": 4,
+    "day": 1
+  },
+  {
+    "theme": "Sk\u00e4rtorsdagen",
+    "generator": "easter",
+    "description": "F\u00f6rsta dagen i p\u00e5sk",
+    "index": 0
+  },
+  {
+    "theme": "V\u00e4rldsautismdagen",
+    "generator": "same_date",
+    "description": "02 april varje \u00e5r",
+    "month": 4,
+    "day": 2
+  },
+  {
+    "theme": "Internationella barnboksdagen",
+    "generator": "same_date",
+    "description": "02 april varje \u00e5r",
+    "month": 4,
+    "day": 2
+  },
+  {
+    "theme": "L\u00e5ngfredagen",
+    "generator": "easter",
+    "description": "Andra dagen i p\u00e5sk",
+    "index": 1
+  },
+  {
+    "theme": "Studenternas dag",
+    "generator": "same_date",
+    "description": "02 april varje \u00e5r",
+    "month": 4,
+    "day": 2
+  },
+  {
+    "theme": "K\u00e4rlekens dag",
+    "generator": "same_date",
+    "description": "03 april varje \u00e5r",
+    "month": 4,
+    "day": 3
+  },
+  {
+    "theme": "P\u00e5skafton",
+    "generator": "easter",
+    "description": "Tredje dagen i p\u00e5sk",
+    "index": 2
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r minor och minr\u00f6jning",
+    "generator": "same_date",
+    "description": "04 april varje \u00e5r",
+    "month": 4,
+    "day": 4
+  },
+  {
+    "theme": "Morotens dag",
+    "generator": "same_date",
+    "description": "04 april varje \u00e5r",
+    "month": 4,
+    "day": 4
+  },
+  {
+    "theme": "P\u00e5skdagen",
+    "generator": "easter",
+    "description": "Fj\u00e4rde dagen i p\u00e5sk",
+    "index": 3
+  },
+  {
+    "theme": "Annandag p\u00e5sk",
+    "generator": "easter",
+    "description": "Femte dagen i p\u00e5sk",
+    "index": 4
+  },
+  {
+    "theme": "Capsens dag",
+    "generator": "same_date",
+    "description": "05 april varje \u00e5r",
+    "month": 4,
+    "day": 5
+  },
+  {
+    "theme": "Barn p\u00e5 sjukhusdagen",
+    "generator": "same_date",
+    "description": "06 april varje \u00e5r",
+    "month": 4,
+    "day": 6
+  },
+  {
+    "theme": "Pingisens dag",
+    "generator": "same_date",
+    "description": "06 april varje \u00e5r",
+    "month": 4,
+    "day": 6
+  },
+  {
+    "theme": "Internationella sportdagen f\u00f6r utveckling och fred",
+    "generator": "same_date",
+    "description": "06 april varje \u00e5r",
+    "month": 4,
+    "day": 6
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r reflektion av folkmordet i Rwanda",
+    "generator": "same_date",
+    "description": "07 april varje \u00e5r",
+    "month": 4,
+    "day": 7
+  },
+  {
+    "theme": "V\u00e4rldsh\u00e4lsodagen",
+    "generator": "same_date",
+    "description": "07 april varje \u00e5r",
+    "month": 4,
+    "day": 7
+  },
+  {
+    "theme": "National Walking Day",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta onsdag i april",
+    "xth": 1,
+    "weekday": 3,
+    "month": 4
+  },
+  {
+    "theme": "Romernas internationella dag",
+    "generator": "same_date",
+    "description": "08 april varje \u00e5r",
+    "month": 4,
+    "day": 8
+  },
+  {
+    "theme": "CSS-naked day",
+    "generator": "same_date",
+    "description": "09 april varje \u00e5r",
+    "month": 4,
+    "day": 9
+  },
+  {
+    "theme": "Internationella gin och tonic-dagen",
+    "generator": "same_date",
+    "description": "19 oktober varje \u00e5r",
+    "month": 10,
+    "day": 19
+  },
+  {
+    "theme": "Surdegsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i april",
+    "xth": 2,
+    "weekday": 6,
+    "month": 4
+  },
+  {
+    "theme": "Bulle med bullens-dag",
+    "generator": "same_date",
+    "description": "10 april varje \u00e5r",
+    "month": 4,
+    "day": 10
+  },
+  {
+    "theme": "Internationella syskondagen",
+    "generator": "same_date",
+    "description": "10 april varje \u00e5r",
+    "month": 4,
+    "day": 10
+  },
+  {
+    "theme": "Internationella parkinsondagen",
+    "generator": "same_date",
+    "description": "11 april varje \u00e5r",
+    "month": 4,
+    "day": 11
+  },
+  {
+    "theme": "S\u00e5pbubblans dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra s\u00f6ndag i april",
+    "xth": 2,
+    "weekday": 7,
+    "month": 4
+  },
+  {
+    "theme": "Lakritsdagen",
+    "generator": "same_date",
+    "description": "12 april varje \u00e5r",
+    "month": 4,
+    "day": 12
+  },
+  {
+    "theme": "Linssoppans dag",
+    "generator": "same_date",
+    "description": "12 april varje \u00e5r",
+    "month": 4,
+    "day": 12
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r bemannade rymdf\u00e4rder",
+    "generator": "same_date",
+    "description": "12 april varje \u00e5r",
+    "month": 4,
+    "day": 12
+  },
+  {
+    "theme": "Knytblusens dag",
+    "generator": "same_date",
+    "description": "13 april varje \u00e5r",
+    "month": 4,
+    "day": 13
+  },
+  {
+    "theme": "Cultural Unity Day",
+    "generator": "same_date",
+    "description": "14 april varje \u00e5r",
+    "month": 4,
+    "day": 14
+  },
+  {
+    "theme": "Mahl Language Day",
+    "generator": "same_date",
+    "description": "14 april varje \u00e5r",
+    "month": 4,
+    "day": 14
+  },
+  {
+    "theme": "Volvons dag",
+    "generator": "same_date",
+    "description": "14 april varje \u00e5r",
+    "month": 4,
+    "day": 14
+  },
+  {
+    "theme": "Cake and Cunnilingus Day",
+    "generator": "same_date",
+    "description": "14 april varje \u00e5r",
+    "month": 4,
+    "day": 14
+  },
+  {
+    "theme": "Internationella biomedicinska analytikerdagen",
+    "generator": "same_date",
+    "description": "15 april varje \u00e5r",
+    "month": 4,
+    "day": 15
+  },
+  {
+    "theme": "V\u00e4rldsr\u00f6stdagen",
+    "generator": "same_date",
+    "description": "16 april varje \u00e5r",
+    "month": 4,
+    "day": 16
+  },
+  {
+    "theme": "De bl\u00f6darsjukas dag",
+    "generator": "same_date",
+    "description": "17 april varje \u00e5r",
+    "month": 4,
+    "day": 17
+  },
+  {
+    "theme": "Amat\u00f6rradions dag",
+    "generator": "same_date",
+    "description": "18 april varje \u00e5r",
+    "month": 4,
+    "day": 18
+  },
+  {
+    "theme": "Internationella cannabisdagen",
+    "generator": "same_date",
+    "description": "20 april varje \u00e5r",
+    "month": 4,
+    "day": 20
+  },
+  {
+    "theme": "Polkagrisens dag",
+    "generator": "same_date",
+    "description": "20 april varje \u00e5r",
+    "month": 4,
+    "day": 20
+  },
+  {
+    "theme": "Internationella sekreterardagen",
+    "generator": "weekday_of_last_full_week_in_month",
+    "description": "onsdag i sista hela veckan i april",
+    "weekday": 3,
+    "month": 4
+  },
+  {
+    "theme": "Terrakottakrukans dag",
+    "generator": "same_date",
+    "description": "21 april varje \u00e5r",
+    "month": 4,
+    "day": 21
+  },
+  {
+    "theme": "V\u00e4rldsdagen\u00a0f\u00f6r\u00a0kreativitet och innovation",
+    "generator": "same_date",
+    "description": "21 april varje \u00e5r",
+    "month": 4,
+    "day": 21
+  },
+  {
+    "theme": "Jordens dag",
+    "generator": "same_date",
+    "description": "22 april varje \u00e5r",
+    "month": 4,
+    "day": 22
+  },
+  {
+    "theme": "V\u00e4rldsbokdagen",
+    "generator": "same_date",
+    "description": "23 april varje \u00e5r",
+    "month": 4,
+    "day": 23
+  },
+  {
+    "theme": "Sankt Georgsdagen",
+    "generator": "same_date",
+    "description": "23 april varje \u00e5r",
+    "month": 4,
+    "day": 23
+  },
+  {
+    "theme": "F\u00f6rs\u00f6ksdjurens dag",
+    "generator": "same_date",
+    "description": "24 april varje \u00e5r",
+    "month": 4,
+    "day": 24
+  },
+  {
+    "theme": "Den lokala handelns dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista l\u00f6rdag i april",
+    "weekday": 6,
+    "month": 4
+  },
+  {
+    "theme": "Alla barns dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista l\u00f6rdag i april",
+    "weekday": 6,
+    "month": 4
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r multilateralism och diplomati f\u00f6r fred",
+    "generator": "same_date",
+    "description": "24 april varje \u00e5r",
+    "month": 4,
+    "day": 24
+  },
+  {
+    "theme": "V\u00e4rldsmalariadagen",
+    "generator": "same_date",
+    "description": "25 april varje \u00e5r",
+    "month": 4,
+    "day": 25
+  },
+  {
+    "theme": "Mamatummy Day",
+    "generator": "same_date",
+    "description": "25 april varje \u00e5r",
+    "month": 4,
+    "day": 25
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r intellektuell \u00e4gander\u00e4tt",
+    "generator": "same_date",
+    "description": "26 april varje \u00e5r",
+    "month": 4,
+    "day": 26
+  },
+  {
+    "theme": "Promenadens dag",
+    "generator": "same_date",
+    "description": "26 april varje \u00e5r",
+    "month": 4,
+    "day": 26
+  },
+  {
+    "theme": "Alien-dagen",
+    "generator": "same_date",
+    "description": "26 april varje \u00e5r",
+    "month": 4,
+    "day": 26
+  },
+  {
+    "theme": "Internationella dagen till minnet av Tjernobylkatastrofen",
+    "generator": "same_date",
+    "description": "26 april varje \u00e5r",
+    "month": 4,
+    "day": 26
+  },
+  {
+    "theme": "V\u00e4rldstapirdagen",
+    "generator": "same_date",
+    "description": "27 april varje \u00e5r",
+    "month": 4,
+    "day": 27
+  },
+  {
+    "theme": "Arbetsmilj\u00f6dagen",
+    "generator": "same_date",
+    "description": "28 april varje \u00e5r",
+    "month": 4,
+    "day": 28
+  },
+  {
+    "theme": "Ledarhundens dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista onsdag i april",
+    "weekday": 3,
+    "month": 4
+  },
+  {
+    "theme": "M\u00f6teskulturdagen",
+    "generator": "same_date",
+    "description": "28 april varje \u00e5r",
+    "month": 4,
+    "day": 28
+  },
+  {
+    "theme": "Dansens dag",
+    "generator": "same_date",
+    "description": "29 april varje \u00e5r",
+    "month": 4,
+    "day": 29
+  },
+  {
+    "theme": "Svenska friluftsdagen",
+    "generator": "same_date",
+    "description": "29 april varje \u00e5r",
+    "month": 4,
+    "day": 29
+  },
+  {
+    "theme": "Valborgsm\u00e4ssoafton",
+    "generator": "same_date",
+    "description": "30 april varje \u00e5r",
+    "month": 4,
+    "day": 30
+  },
+  {
+    "theme": "Konungens f\u00f6delsedag",
+    "generator": "same_date",
+    "description": "30 april varje \u00e5r",
+    "month": 4,
+    "day": 30
+  },
+  {
+    "theme": "Internationella jazzdagen",
+    "generator": "same_date",
+    "description": "30 april varje \u00e5r",
+    "month": 4,
+    "day": 30
+  },
+  {
+    "theme": "Arbetarr\u00f6relsens dag",
+    "generator": "same_date",
+    "description": "01 maj varje \u00e5r",
+    "month": 5,
+    "day": 1
+  },
+  {
+    "theme": "Gratis serietidningsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i maj",
+    "xth": 1,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Nakna tr\u00e4dg\u00e5rdsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i maj",
+    "xth": 1,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Budapestbakelsens dag",
+    "generator": "same_date",
+    "description": "01 maj varje \u00e5r",
+    "month": 5,
+    "day": 1
+  },
+  {
+    "theme": "F\u00f6rsta maj",
+    "generator": "same_date",
+    "description": "01 maj varje \u00e5r",
+    "month": 5,
+    "day": 1
+  },
+  {
+    "theme": "Harry potter-dagen",
+    "generator": "same_date",
+    "description": "02 maj varje \u00e5r",
+    "month": 5,
+    "day": 2
+  },
+  {
+    "theme": "N\u00e4sslans dag",
+    "generator": "nettle",
+    "description": ""
+  },
+  {
+    "theme": "V\u00e4rldsskrattdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta s\u00f6ndag i maj",
+    "xth": 1,
+    "weekday": 7,
+    "month": 5
+  },
+  {
+    "theme": "Internationella barfotal\u00f6pningsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta s\u00f6ndag i maj",
+    "xth": 1,
+    "weekday": 7,
+    "month": 5
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r tonfisk",
+    "generator": "same_date",
+    "description": "02 maj varje \u00e5r",
+    "month": 5,
+    "day": 2
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r pressfrihet",
+    "generator": "same_date",
+    "description": "03 maj varje \u00e5r",
+    "month": 5,
+    "day": 3
+  },
+  {
+    "theme": "Asociala dagen",
+    "generator": "same_date",
+    "description": "03 maj varje \u00e5r",
+    "month": 5,
+    "day": 3
+  },
+  {
+    "theme": "Foth\u00e4lsodagen",
+    "generator": "same_date",
+    "description": "04 maj varje \u00e5r",
+    "month": 5,
+    "day": 4
+  },
+  {
+    "theme": "Internationella astmadagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta tisdag i maj",
+    "xth": 1,
+    "weekday": 2,
+    "month": 5
+  },
+  {
+    "theme": "Star wars-dagen",
+    "generator": "same_date",
+    "description": "04 maj varje \u00e5r",
+    "month": 5,
+    "day": 4
+  },
+  {
+    "theme": "Internationella barnmorskedagen",
+    "generator": "same_date",
+    "description": "05 maj varje \u00e5r",
+    "month": 5,
+    "day": 5
+  },
+  {
+    "theme": "Internationella kebabdagen",
+    "generator": "same_date",
+    "description": "05 maj varje \u00e5r",
+    "month": 5,
+    "day": 5
+  },
+  {
+    "theme": "Internationella handhygiendagen",
+    "generator": "same_date",
+    "description": "05 maj varje \u00e5r",
+    "month": 5,
+    "day": 5
+  },
+  {
+    "theme": "Hembakatdagen",
+    "generator": "same_date",
+    "description": "06 maj varje \u00e5r",
+    "month": 5,
+    "day": 6
+  },
+  {
+    "theme": "Inkontinensdagen",
+    "generator": "same_date",
+    "description": "06 maj varje \u00e5r",
+    "month": 5,
+    "day": 6
+  },
+  {
+    "theme": "Dragspelets dag",
+    "generator": "same_date",
+    "description": "06 maj varje \u00e5r",
+    "month": 5,
+    "day": 6
+  },
+  {
+    "theme": "Internationella tubadagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta fredag i maj",
+    "xth": 1,
+    "weekday": 5,
+    "month": 5
+  },
+  {
+    "theme": "Byxfria dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta fredag i maj",
+    "xth": 1,
+    "weekday": 5,
+    "month": 5
+  },
+  {
+    "theme": "Grillens dag",
+    "generator": "grill",
+    "description": ""
+  },
+  {
+    "theme": "H\u00e5gkomst och f\u00f6rsoning f\u00f6r de som omkom under andra v\u00e4rldskriget",
+    "generator": "same_date",
+    "description": "08 maj varje \u00e5r",
+    "month": 5,
+    "day": 8
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r r\u00e4ttvis handel",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i maj",
+    "xth": 2,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Tunnbr\u00f6dets dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i maj",
+    "xth": 2,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Tunnbr\u00f6dsrullens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i maj",
+    "xth": 2,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Internationella vikingadagen",
+    "generator": "same_date",
+    "description": "08 maj varje \u00e5r",
+    "month": 5,
+    "day": 8
+  },
+  {
+    "theme": "Europadagen",
+    "generator": "same_date",
+    "description": "09 maj varje \u00e5r",
+    "month": 5,
+    "day": 9
+  },
+  {
+    "theme": "Internationella flyttf\u00e5geldagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i maj",
+    "xth": 2,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Nedkopplingens dag",
+    "generator": "same_date",
+    "description": "09 maj varje \u00e5r",
+    "month": 5,
+    "day": 9
+  },
+  {
+    "theme": "Linder\u00f6dsgrisens dag",
+    "generator": "same_date",
+    "description": "09 maj varje \u00e5r",
+    "month": 5,
+    "day": 9
+  },
+  {
+    "theme": "Gossk\u00f6rernas dag",
+    "generator": "weekday_of_xth_week",
+    "description": "s\u00f6ndag i vecka 18",
+    "week": 18,
+    "weekday": 7
+  },
+  {
+    "theme": "Internationella SLE-dagen",
+    "generator": "same_date",
+    "description": "10 maj varje \u00e5r",
+    "month": 5,
+    "day": 10
+  },
+  {
+    "theme": "Fritidshemmens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra tisdag i maj",
+    "xth": 2,
+    "weekday": 2,
+    "month": 5
+  },
+  {
+    "theme": "Internationella strokedagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra tisdag i maj",
+    "xth": 2,
+    "weekday": 2,
+    "month": 5
+  },
+  {
+    "theme": "Chokladbollens dag",
+    "generator": "same_date",
+    "description": "11 maj varje \u00e5r",
+    "month": 5,
+    "day": 11
+  },
+  {
+    "theme": "Skolidrottsf\u00f6reningens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra tisdag i maj",
+    "xth": 2,
+    "weekday": 2,
+    "month": 5
+  },
+  {
+    "theme": "Gamla v\u00e4nners dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra onsdag i maj",
+    "xth": 2,
+    "weekday": 3,
+    "month": 5
+  },
+  {
+    "theme": "Internationella fibromyalgidagen",
+    "generator": "same_date",
+    "description": "12 maj varje \u00e5r",
+    "month": 5,
+    "day": 12
+  },
+  {
+    "theme": "Internationella sjuksk\u00f6terskedagen",
+    "generator": "same_date",
+    "description": "12 maj varje \u00e5r",
+    "month": 5,
+    "day": 12
+  },
+  {
+    "theme": "Kristi himmelsf\u00e4rdsafton",
+    "generator": "ascension",
+    "description": "F\u00f6rsta dagen i Kristi Himmelsf\u00e4rd",
+    "index": 0
+  },
+  {
+    "theme": "Massagens dag",
+    "generator": "same_date",
+    "description": "12 maj varje \u00e5r",
+    "month": 5,
+    "day": 12
+  },
+  {
+    "theme": "ME/CFS-dagen",
+    "generator": "same_date",
+    "description": "12 maj varje \u00e5r",
+    "month": 5,
+    "day": 12
+  },
+  {
+    "theme": "Dagbokens dag",
+    "generator": "same_date",
+    "description": "12 maj varje \u00e5r",
+    "month": 5,
+    "day": 12
+  },
+  {
+    "theme": "Automower\u00ae-dagen",
+    "generator": "same_date",
+    "description": "12 maj varje \u00e5r",
+    "month": 5,
+    "day": 12
+  },
+  {
+    "theme": "Snellmansdagen",
+    "generator": "same_date",
+    "description": "12 maj varje \u00e5r",
+    "month": 5,
+    "day": 12
+  },
+  {
+    "theme": "Folknykterhetens dag",
+    "generator": "ascension",
+    "description": "Andra dagen i Kristi Himmelsf\u00e4rd",
+    "index": 1
+  },
+  {
+    "theme": "F\u00f6rsta metardagen",
+    "generator": "ascension",
+    "description": "Andra dagen i Kristi Himmelsf\u00e4rd",
+    "index": 1
+  },
+  {
+    "theme": "Kristi himmelsf\u00e4rdsdag",
+    "generator": "ascension",
+    "description": "Andra dagen i Kristi Himmelsf\u00e4rd",
+    "index": 1
+  },
+  {
+    "theme": "Receptionistens dag",
+    "generator": "same_date",
+    "description": "13 maj varje \u00e5r",
+    "month": 5,
+    "day": 13
+  },
+  {
+    "theme": "Teckenspr\u00e5kets dag",
+    "generator": "same_date",
+    "description": "14 maj varje \u00e5r",
+    "month": 5,
+    "day": 14
+  },
+  {
+    "theme": "Rumpans dag",
+    "generator": "same_date",
+    "description": "14 maj varje \u00e5r",
+    "month": 5,
+    "day": 14
+  },
+  {
+    "theme": "Internationella familjedagen",
+    "generator": "same_date",
+    "description": "15 maj varje \u00e5r",
+    "month": 5,
+    "day": 15
+  },
+  {
+    "theme": "Internationella whiskydagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i maj",
+    "xth": 3,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Kardemummabullens dag",
+    "generator": "same_date",
+    "description": "15 maj varje \u00e5r",
+    "month": 5,
+    "day": 15
+  },
+  {
+    "theme": "Arbetsl\u00f6shetens dag",
+    "generator": "same_date",
+    "description": "15 maj varje \u00e5r",
+    "month": 5,
+    "day": 15
+  },
+  {
+    "theme": "Internationella celiakidagen",
+    "generator": "same_date",
+    "description": "16 maj varje \u00e5r",
+    "month": 5,
+    "day": 16
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r fredlig samlevnad",
+    "generator": "same_date",
+    "description": "16 maj varje \u00e5r",
+    "month": 5,
+    "day": 16
+  },
+  {
+    "theme": "Internationella ljusdagen",
+    "generator": "same_date",
+    "description": "16 maj varje \u00e5r",
+    "month": 5,
+    "day": 16
+  },
+  {
+    "theme": "Internationella dagen mot homo- och transfobi",
+    "generator": "same_date",
+    "description": "17 maj varje \u00e5r",
+    "month": 5,
+    "day": 17
+  },
+  {
+    "theme": "Internationella telekommunikationsdagen",
+    "generator": "same_date",
+    "description": "17 maj varje \u00e5r",
+    "month": 5,
+    "day": 17
+  },
+  {
+    "theme": "Fascinerande v\u00e4xters dag",
+    "generator": "same_date",
+    "description": "18 maj varje \u00e5r",
+    "month": 5,
+    "day": 18
+  },
+  {
+    "theme": "Internationella museidag",
+    "generator": "same_date",
+    "description": "18 maj varje \u00e5r",
+    "month": 5,
+    "day": 18
+  },
+  {
+    "theme": "Nationella mag-och tarmdagen",
+    "generator": "same_date",
+    "description": "19 maj varje \u00e5r",
+    "month": 5,
+    "day": 19
+  },
+  {
+    "theme": "IT-chefens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje onsdag i maj",
+    "xth": 3,
+    "weekday": 3,
+    "month": 5
+  },
+  {
+    "theme": "F\u00f6rskolans dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje torsdag i maj",
+    "xth": 3,
+    "weekday": 4,
+    "month": 5
+  },
+  {
+    "theme": "Internationella bi-dagen",
+    "generator": "same_date",
+    "description": "20 maj varje \u00e5r",
+    "month": 5,
+    "day": 20
+  },
+  {
+    "theme": "Williams syndromdagen",
+    "generator": "same_date",
+    "description": "20 maj varje \u00e5r",
+    "month": 5,
+    "day": 20
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r kulturell m\u00e5ngfald f\u00f6r dialog och utveckling",
+    "generator": "same_date",
+    "description": "21 maj varje \u00e5r",
+    "month": 5,
+    "day": 21
+  },
+  {
+    "theme": "Internationella tedagen",
+    "generator": "same_date",
+    "description": "21 maj varje \u00e5r",
+    "month": 5,
+    "day": 21
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r biologiskt m\u00e5ngfald",
+    "generator": "same_date",
+    "description": "22 maj varje \u00e5r",
+    "month": 5,
+    "day": 22
+  },
+  {
+    "theme": "Pingstafton",
+    "generator": "pentecost",
+    "description": "F\u00f6rsta dagen i pingst",
+    "index": 0
+  },
+  {
+    "theme": "Picknickens dag",
+    "generator": "same_date",
+    "description": "22 maj varje \u00e5r",
+    "month": 5,
+    "day": 22
+  },
+  {
+    "theme": "Bl\u00e5smusikens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Fj\u00e4rde l\u00f6rdag i maj",
+    "xth": 4,
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Pingstdagen",
+    "generator": "pentecost",
+    "description": "Andra dagen i pingst",
+    "index": 1
+  },
+  {
+    "theme": "Internationella sk\u00f6ldpaddsdagen",
+    "generator": "same_date",
+    "description": "23 maj varje \u00e5r",
+    "month": 5,
+    "day": 23
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r utrotning av obstetrisk fistula",
+    "generator": "same_date",
+    "description": "23 maj varje \u00e5r",
+    "month": 5,
+    "day": 23
+  },
+  {
+    "theme": "Nationalparkernas dag",
+    "generator": "same_date",
+    "description": "24 maj varje \u00e5r",
+    "month": 5,
+    "day": 24
+  },
+  {
+    "theme": "Internationella n\u00f6rddagen",
+    "generator": "same_date",
+    "description": "25 maj varje \u00e5r",
+    "month": 5,
+    "day": 25
+  },
+  {
+    "theme": "Handduksdagen",
+    "generator": "same_date",
+    "description": "25 maj varje \u00e5r",
+    "month": 5,
+    "day": 25
+  },
+  {
+    "theme": "Internationella sk\u00f6ldk\u00f6rteldagen",
+    "generator": "same_date",
+    "description": "25 maj varje \u00e5r",
+    "month": 5,
+    "day": 25
+  },
+  {
+    "theme": "Muffinsdagen",
+    "generator": "same_date",
+    "description": "27 maj varje \u00e5r",
+    "month": 5,
+    "day": 27
+  },
+  {
+    "theme": "Ostens dag",
+    "generator": "same_date",
+    "description": "27 maj varje \u00e5r",
+    "month": 5,
+    "day": 27
+  },
+  {
+    "theme": "Parfymfria dagen",
+    "generator": "last_weekday_of_month",
+    "description": "Sista torsdag i maj",
+    "weekday": 4,
+    "month": 5
+  },
+  {
+    "theme": "Den stressfria dagen",
+    "generator": "same_date",
+    "description": "28 maj varje \u00e5r",
+    "month": 5,
+    "day": 28
+  },
+  {
+    "theme": "Internationella krama en musiker-dagen",
+    "generator": "same_date",
+    "description": "28 maj varje \u00e5r",
+    "month": 5,
+    "day": 28
+  },
+  {
+    "theme": "Internationella burgardagen",
+    "generator": "same_date",
+    "description": "28 maj varje \u00e5r",
+    "month": 5,
+    "day": 28
+  },
+  {
+    "theme": "Internationella mensdagen",
+    "generator": "same_date",
+    "description": "28 maj varje \u00e5r",
+    "month": 5,
+    "day": 28
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r FN:s fredsbevarande personal",
+    "generator": "same_date",
+    "description": "29 maj varje \u00e5r",
+    "month": 5,
+    "day": 29
+  },
+  {
+    "theme": "Ofrivilligt barnl\u00f6sas dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista l\u00f6rdag i maj",
+    "weekday": 6,
+    "month": 5
+  },
+  {
+    "theme": "Veterandagen",
+    "generator": "same_date",
+    "description": "29 maj varje \u00e5r",
+    "month": 5,
+    "day": 29
+  },
+  {
+    "theme": "Mors dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista s\u00f6ndag i maj",
+    "weekday": 7,
+    "month": 5
+  },
+  {
+    "theme": "Internationella MS-dagen",
+    "generator": "same_date",
+    "description": "30 maj varje \u00e5r",
+    "month": 5,
+    "day": 30
+  },
+  {
+    "theme": "F\u00f6nsterrenoveringens dag",
+    "generator": "same_date",
+    "description": "30 maj varje \u00e5r",
+    "month": 5,
+    "day": 30
+  },
+  {
+    "theme": "Internationella dagen mot tobak",
+    "generator": "same_date",
+    "description": "31 maj varje \u00e5r",
+    "month": 5,
+    "day": 31
+  },
+  {
+    "theme": "Mj\u00f6lkens dag",
+    "generator": "same_date",
+    "description": "01 juni varje \u00e5r",
+    "month": 6,
+    "day": 1
+  },
+  {
+    "theme": "Mobilfria dagen",
+    "generator": "same_date",
+    "description": "01 juni varje \u00e5r",
+    "month": 6,
+    "day": 1
+  },
+  {
+    "theme": "Globala dagen f\u00f6r f\u00f6r\u00e4ldrar",
+    "generator": "same_date",
+    "description": "01 juni varje \u00e5r",
+    "month": 6,
+    "day": 1
+  },
+  {
+    "theme": "\u00c5ngans dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i juni",
+    "xth": 1,
+    "weekday": 6,
+    "month": 6
+  },
+  {
+    "theme": "Internationella klumpfotsdagen",
+    "generator": "same_date",
+    "description": "03 juni varje \u00e5r",
+    "month": 6,
+    "day": 3
+  },
+  {
+    "theme": "Internationella cykeldagen",
+    "generator": "same_date",
+    "description": "03 juni varje \u00e5r",
+    "month": 6,
+    "day": 3
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r barn som blivit offer f\u00f6r aggression",
+    "generator": "same_date",
+    "description": "04 juni varje \u00e5r",
+    "month": 6,
+    "day": 4
+  },
+  {
+    "theme": "Assistansens dag",
+    "generator": "same_date",
+    "description": "04 juni varje \u00e5r",
+    "month": 6,
+    "day": 4
+  },
+  {
+    "theme": "Internationella donutdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta fredag i juni",
+    "xth": 1,
+    "weekday": 5,
+    "month": 6
+  },
+  {
+    "theme": "V\u00e4rldsmilj\u00f6dagen",
+    "generator": "same_date",
+    "description": "05 juni varje \u00e5r",
+    "month": 6,
+    "day": 5
+  },
+  {
+    "theme": "Alla v\u00e4nners dag",
+    "generator": "same_date",
+    "description": "05 juni varje \u00e5r",
+    "month": 6,
+    "day": 5
+  },
+  {
+    "theme": "Barfotadagen",
+    "generator": "same_date",
+    "description": "05 juni varje \u00e5r",
+    "month": 6,
+    "day": 5
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r kampen mot illegalt, orapporterat och oreglerat fiske",
+    "generator": "same_date",
+    "description": "05 juni varje \u00e5r",
+    "month": 6,
+    "day": 5
+  },
+  {
+    "theme": "Dagen-D",
+    "generator": "same_date",
+    "description": "06 juni varje \u00e5r",
+    "month": 6,
+    "day": 6
+  },
+  {
+    "theme": "Fruktens dag",
+    "generator": "same_date",
+    "description": "06 juni varje \u00e5r",
+    "month": 6,
+    "day": 6
+  },
+  {
+    "theme": "F\u00e4rskpotatisens dag",
+    "generator": "same_date",
+    "description": "06 juni varje \u00e5r",
+    "month": 6,
+    "day": 6
+  },
+  {
+    "theme": "Sillens dag",
+    "generator": "same_date",
+    "description": "06 juni varje \u00e5r",
+    "month": 6,
+    "day": 6
+  },
+  {
+    "theme": "Sveriges nationaldag",
+    "generator": "same_date",
+    "description": "06 juni varje \u00e5r",
+    "month": 6,
+    "day": 6
+  },
+  {
+    "theme": "Den stora lupinbek\u00e4mpardagen",
+    "generator": "same_date",
+    "description": "06 juni varje \u00e5r",
+    "month": 6,
+    "day": 6
+  },
+  {
+    "theme": "Motorhistoriska dagen",
+    "generator": "same_date",
+    "description": "06 juni varje \u00e5r",
+    "month": 6,
+    "day": 6
+  },
+  {
+    "theme": "Punkens dag",
+    "generator": "same_date",
+    "description": "07 juni varje \u00e5r",
+    "month": 6,
+    "day": 7
+  },
+  {
+    "theme": "V\u00e4rldshavens dag",
+    "generator": "same_date",
+    "description": "08 juni varje \u00e5r",
+    "month": 6,
+    "day": 8
+  },
+  {
+    "theme": "Internationella arkivdagen",
+    "generator": "same_date",
+    "description": "09 juni varje \u00e5r",
+    "month": 6,
+    "day": 9
+  },
+  {
+    "theme": "Internationella dagen mot barnarbete",
+    "generator": "same_date",
+    "description": "12 juni varje \u00e5r",
+    "month": 6,
+    "day": 12
+  },
+  {
+    "theme": "V\u00e4rldsstickningsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i juni",
+    "xth": 2,
+    "weekday": 6,
+    "month": 6
+  },
+  {
+    "theme": "Nationalbastudagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i juni",
+    "xth": 2,
+    "weekday": 6,
+    "month": 6
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r medvetenhet om albinism",
+    "generator": "same_date",
+    "description": "13 juni varje \u00e5r",
+    "month": 6,
+    "day": 13
+  },
+  {
+    "theme": "Internationella blodgivardagen",
+    "generator": "same_date",
+    "description": "14 juni varje \u00e5r",
+    "month": 6,
+    "day": 14
+  },
+  {
+    "theme": "Chauff\u00f6rens dag",
+    "generator": "same_date",
+    "description": "15 juni varje \u00e5r",
+    "month": 6,
+    "day": 15
+  },
+  {
+    "theme": "V\u00e4rldsdagen om v\u00e5ld och \u00f6vergrepp mot \u00e4ldre",
+    "generator": "same_date",
+    "description": "15 juni varje \u00e5r",
+    "month": 6,
+    "day": 15
+  },
+  {
+    "theme": "Bloomsday",
+    "generator": "same_date",
+    "description": "16 juni varje \u00e5r",
+    "month": 6,
+    "day": 16
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r familjeremitteringar",
+    "generator": "same_date",
+    "description": "16 juni varje \u00e5r",
+    "month": 6,
+    "day": 16
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r bek\u00e4mpning av \u00f6kenutbredning och torka",
+    "generator": "same_date",
+    "description": "17 juni varje \u00e5r",
+    "month": 6,
+    "day": 17
+  },
+  {
+    "theme": "Internationella picknickdagen ",
+    "generator": "same_date",
+    "description": "18 juni varje \u00e5r",
+    "month": 6,
+    "day": 18
+  },
+  {
+    "theme": "Pionens dag",
+    "generator": "same_date",
+    "description": "18 juni varje \u00e5r",
+    "month": 6,
+    "day": 18
+  },
+  {
+    "theme": "Internationella sushidagen",
+    "generator": "same_date",
+    "description": "18 juni varje \u00e5r",
+    "month": 6,
+    "day": 18
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r h\u00e5llbar gastronomi",
+    "generator": "same_date",
+    "description": "18 juni varje \u00e5r",
+    "month": 6,
+    "day": 18
+  },
+  {
+    "theme": "Naturismens dag",
+    "generator": "caravan",
+    "description": ""
+  },
+  {
+    "theme": "Husbilens dag",
+    "generator": "caravan",
+    "description": ""
+  },
+  {
+    "theme": "Internationella flanerardagen",
+    "generator": "same_date",
+    "description": "19 juni varje \u00e5r",
+    "month": 6,
+    "day": 19
+  },
+  {
+    "theme": "Fris\u00f6rens dag",
+    "generator": "same_date",
+    "description": "19 juni varje \u00e5r",
+    "month": 6,
+    "day": 19
+  },
+  {
+    "theme": "Internationella surfdagen",
+    "generator": "same_date",
+    "description": "20 juni varje \u00e5r",
+    "month": 6,
+    "day": 20
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r flyktingar",
+    "generator": "same_date",
+    "description": "20 juni varje \u00e5r",
+    "month": 6,
+    "day": 20
+  },
+  {
+    "theme": "Internationella ALS-dagen",
+    "generator": "equinox_solstice",
+    "description": "Sommarsolst\u00e5nd",
+    "index": 1
+  },
+  {
+    "theme": "L\u00e5ngsamhetens dag",
+    "generator": "same_date",
+    "description": "21 juni varje \u00e5r",
+    "month": 6,
+    "day": 21
+  },
+  {
+    "theme": "V\u00e4rldsmusikdagen",
+    "generator": "same_date",
+    "description": "21 juni varje \u00e5r",
+    "month": 6,
+    "day": 21
+  },
+  {
+    "theme": "Sommarsolst\u00e5ndet",
+    "generator": "equinox_solstice",
+    "description": "Sommarsolst\u00e5nd",
+    "index": 1
+  },
+  {
+    "theme": "Ride to Work Day",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje m\u00e5ndag i juni",
+    "xth": 3,
+    "weekday": 1,
+    "month": 6
+  },
+  {
+    "theme": "Internationella yogadagen",
+    "generator": "same_date",
+    "description": "21 juni varje \u00e5r",
+    "month": 6,
+    "day": 21
+  },
+  {
+    "theme": "Internationella selfiedagen",
+    "generator": "same_date",
+    "description": "21 juni varje \u00e5r",
+    "month": 6,
+    "day": 21
+  },
+  {
+    "theme": "Giraffens dag",
+    "generator": "same_date",
+    "description": "21 juni varje \u00e5r",
+    "month": 6,
+    "day": 21
+  },
+  {
+    "theme": "V\u00e4rldshumanistdagen",
+    "generator": "same_date",
+    "description": "21 juni varje \u00e5r",
+    "month": 6,
+    "day": 21
+  },
+  {
+    "theme": "FN:s dag f\u00f6r offentliga tj\u00e4nster",
+    "generator": "same_date",
+    "description": "23 juni varje \u00e5r",
+    "month": 6,
+    "day": 23
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r \u00e4nkor",
+    "generator": "same_date",
+    "description": "23 juni varje \u00e5r",
+    "month": 6,
+    "day": 23
+  },
+  {
+    "theme": "Johannes d\u00f6parens dag",
+    "generator": "same_date",
+    "description": "24 juni varje \u00e5r",
+    "month": 6,
+    "day": 24
+  },
+  {
+    "theme": "Midsommarafton",
+    "generator": "midsummer",
+    "description": "Midsommarafton",
+    "index": 0
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r sj\u00f6farare",
+    "generator": "same_date",
+    "description": "25 juni varje \u00e5r",
+    "month": 6,
+    "day": 25
+  },
+  {
+    "theme": "Internationell solidaritetsdag f\u00f6r tortyroffer",
+    "generator": "same_date",
+    "description": "26 juni varje \u00e5r",
+    "month": 6,
+    "day": 26
+  },
+  {
+    "theme": "Internationella dagen mot missbruk av och olaglig handel med narkotika",
+    "generator": "same_date",
+    "description": "26 juni varje \u00e5r",
+    "month": 6,
+    "day": 26
+  },
+  {
+    "theme": "Midsommardagen",
+    "generator": "midsummer",
+    "description": "Midsommardagen",
+    "index": 1
+  },
+  {
+    "theme": "Chokladpuddingens dag",
+    "generator": "same_date",
+    "description": "26 juni varje \u00e5r",
+    "month": 6,
+    "day": 26
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r sm\u00e5- och medelstora f\u00f6retag",
+    "generator": "same_date",
+    "description": "27 juni varje \u00e5r",
+    "month": 6,
+    "day": 27
+  },
+  {
+    "theme": "Nationella entrepren\u00f6rsdagen",
+    "generator": "last_weekday_of_month",
+    "description": "Sista m\u00e5ndag i juni",
+    "weekday": 1,
+    "month": 6
+  },
+  {
+    "theme": "Pilsnerkorvens dag",
+    "generator": "same_date",
+    "description": "30 juni varje \u00e5r",
+    "month": 6,
+    "day": 30
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r asteroider",
+    "generator": "same_date",
+    "description": "30 juni varje \u00e5r",
+    "month": 6,
+    "day": 30
+  },
+  {
+    "theme": "Internationella dagen\u00a0f\u00f6r\u00a0parlamentarism",
+    "generator": "same_date",
+    "description": "30 juni varje \u00e5r",
+    "month": 6,
+    "day": 30
+  },
+  {
+    "theme": "Silikonbr\u00f6stens Dag",
+    "generator": "same_date",
+    "description": "01 juli varje \u00e5r",
+    "month": 7,
+    "day": 1
+  },
+  {
+    "theme": "Rosens dag",
+    "generator": "same_date",
+    "description": "02 juli varje \u00e5r",
+    "month": 7,
+    "day": 2
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r kooperativ",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i juli",
+    "xth": 1,
+    "weekday": 6,
+    "month": 7
+  },
+  {
+    "theme": "Internationella kyssdagen",
+    "generator": "same_date",
+    "description": "06 juli varje \u00e5r",
+    "month": 7,
+    "day": 6
+  },
+  {
+    "theme": "Hudv\u00e5rdens dag",
+    "generator": "same_date",
+    "description": "07 juli varje \u00e5r",
+    "month": 7,
+    "day": 7
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r oskadligg\u00f6rande av handeldvapen",
+    "generator": "same_date",
+    "description": "09 juli varje \u00e5r",
+    "month": 7,
+    "day": 9
+  },
+  {
+    "theme": "Hoya - Porslinsblommans dag",
+    "generator": "same_date",
+    "description": "10 juli varje \u00e5r",
+    "month": 7,
+    "day": 10
+  },
+  {
+    "theme": "FN:s befolkningsdag",
+    "generator": "same_date",
+    "description": "11 juli varje \u00e5r",
+    "month": 7,
+    "day": 11
+  },
+  {
+    "theme": "Internationella r\u00e5kostdagen",
+    "generator": "same_date",
+    "description": "11 juli varje \u00e5r",
+    "month": 7,
+    "day": 11
+  },
+  {
+    "theme": "Internationella minnesdagen f\u00f6r Srebrenica",
+    "generator": "same_date",
+    "description": "11 juli varje \u00e5r",
+    "month": 7,
+    "day": 11
+  },
+  {
+    "theme": "Fulhetens dag",
+    "generator": "same_date",
+    "description": "12 juli varje \u00e5r",
+    "month": 7,
+    "day": 12
+  },
+  {
+    "theme": "Paltdagen",
+    "generator": "same_date",
+    "description": "13 juli varje \u00e5r",
+    "month": 7,
+    "day": 13
+  },
+  {
+    "theme": "Internationella rock and roll-dagen",
+    "generator": "same_date",
+    "description": "13 juli varje \u00e5r",
+    "month": 7,
+    "day": 13
+  },
+  {
+    "theme": "Kronprinsessans f\u00f6delsedag",
+    "generator": "same_date",
+    "description": "14 juli varje \u00e5r",
+    "month": 7,
+    "day": 14
+  },
+  {
+    "theme": "Tornedalingarnas dag",
+    "generator": "same_date",
+    "description": "15 juli varje \u00e5r",
+    "month": 7,
+    "day": 15
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r ungdomars talanger",
+    "generator": "same_date",
+    "description": "15 juli varje \u00e5r",
+    "month": 7,
+    "day": 15
+  },
+  {
+    "theme": "Dagen f\u00f6r v\u00e4rldsomfattande r\u00e4ttvisa",
+    "generator": "same_date",
+    "description": "17 juli varje \u00e5r",
+    "month": 7,
+    "day": 17
+  },
+  {
+    "theme": "Emojins dag",
+    "generator": "same_date",
+    "description": "17 juli varje \u00e5r",
+    "month": 7,
+    "day": 17
+  },
+  {
+    "theme": "Internationella Nelson Mandela-dagen",
+    "generator": "same_date",
+    "description": "18 juli varje \u00e5r",
+    "month": 7,
+    "day": 18
+  },
+  {
+    "theme": "Sk\u00e5nska flaggans dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje s\u00f6ndag i juli",
+    "xth": 3,
+    "weekday": 7,
+    "month": 7
+  },
+  {
+    "theme": "Baddr\u00e4ktsfria dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje s\u00f6ndag i juli",
+    "xth": 3,
+    "weekday": 7,
+    "month": 7
+  },
+  {
+    "theme": "Internationella\u00a0schackdagen",
+    "generator": "same_date",
+    "description": "20 juli varje \u00e5r",
+    "month": 7,
+    "day": 20
+  },
+  {
+    "theme": "\u00d6lets dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje onsdag i juli",
+    "xth": 3,
+    "weekday": 3,
+    "month": 7
+  },
+  {
+    "theme": "Approximativa pi-dagen",
+    "generator": "same_date",
+    "description": "22 juli varje \u00e5r",
+    "month": 7,
+    "day": 22
+  },
+  {
+    "theme": "Varmkorvens dag",
+    "generator": "same_date",
+    "description": "23 juli varje \u00e5r",
+    "month": 7,
+    "day": 23
+  },
+  {
+    "theme": "Internationella BDSM-dagen",
+    "generator": "same_date",
+    "description": "24 juli varje \u00e5r",
+    "month": 7,
+    "day": 24
+  },
+  {
+    "theme": "Drive-thru dagen",
+    "generator": "same_date",
+    "description": "24 juli varje \u00e5r",
+    "month": 7,
+    "day": 24
+  },
+  {
+    "theme": "Tr\u00e4 n\u00e5len-dagen",
+    "generator": "same_date",
+    "description": "25 juli varje \u00e5r",
+    "month": 7,
+    "day": 25
+  },
+  {
+    "theme": "Bellmandagen",
+    "generator": "same_date",
+    "description": "26 juli varje \u00e5r",
+    "month": 7,
+    "day": 26
+  },
+  {
+    "theme": "Esperantodagen",
+    "generator": "same_date",
+    "description": "26 juli varje \u00e5r",
+    "month": 7,
+    "day": 26
+  },
+  {
+    "theme": "Sjusovardagen",
+    "generator": "same_date",
+    "description": "27 juli varje \u00e5r",
+    "month": 7,
+    "day": 27
+  },
+  {
+    "theme": "G\u00e5 p\u00e5 styltor-dagen",
+    "generator": "same_date",
+    "description": "27 juli varje \u00e5r",
+    "month": 7,
+    "day": 27
+  },
+  {
+    "theme": "Jakttornets dag",
+    "generator": "same_date",
+    "description": "28 juli varje \u00e5r",
+    "month": 7,
+    "day": 28
+  },
+  {
+    "theme": "V\u00e4rldshepatitdagen",
+    "generator": "same_date",
+    "description": "28 juli varje \u00e5r",
+    "month": 7,
+    "day": 28
+  },
+  {
+    "theme": "Internationella tigerdagen",
+    "generator": "same_date",
+    "description": "29 juli varje \u00e5r",
+    "month": 7,
+    "day": 29
+  },
+  {
+    "theme": "Lasagnens dag",
+    "generator": "same_date",
+    "description": "29 juli varje \u00e5r",
+    "month": 7,
+    "day": 29
+  },
+  {
+    "theme": "Internationella dagen mot trafficking av personer",
+    "generator": "same_date",
+    "description": "30 juli varje \u00e5r",
+    "month": 7,
+    "day": 30
+  },
+  {
+    "theme": "Systemadministrat\u00f6rens dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista fredag i juli",
+    "weekday": 5,
+    "month": 7
+  },
+  {
+    "theme": "V\u00e4rldsbroderidagen",
+    "generator": "same_date",
+    "description": "30 juli varje \u00e5r",
+    "month": 7,
+    "day": 30
+  },
+  {
+    "theme": "Pocketbokens dag",
+    "generator": "same_date",
+    "description": "30 juli varje \u00e5r",
+    "month": 7,
+    "day": 30
+  },
+  {
+    "theme": "Dagen f\u00f6r ovanliga instrument",
+    "generator": "same_date",
+    "description": "31 juli varje \u00e5r",
+    "month": 7,
+    "day": 31
+  },
+  {
+    "theme": "Hembygdsg\u00e5rdarnas dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta s\u00f6ndag i augusti",
+    "xth": 1,
+    "weekday": 7,
+    "month": 8
+  },
+  {
+    "theme": "V\u00e4rldsv\u00e4nskapsdagen",
+    "generator": "same_date",
+    "description": "31 juli varje \u00e5r",
+    "month": 7,
+    "day": 31
+  },
+  {
+    "theme": "Alla flickv\u00e4nners dag",
+    "generator": "same_date",
+    "description": "01 augusti varje \u00e5r",
+    "month": 8,
+    "day": 1
+  },
+  {
+    "theme": "Vattenmelonens dag",
+    "generator": "same_date",
+    "description": "03 augusti varje \u00e5r",
+    "month": 8,
+    "day": 3
+  },
+  {
+    "theme": "Alla systrars dag",
+    "generator": "same_date",
+    "description": "04 augusti varje \u00e5r",
+    "month": 8,
+    "day": 4
+  },
+  {
+    "theme": "Internationella ipa-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta torsdag i augusti",
+    "xth": 1,
+    "weekday": 4,
+    "month": 8
+  },
+  {
+    "theme": "Hiroshimadagen",
+    "generator": "same_date",
+    "description": "06 augusti varje \u00e5r",
+    "month": 8,
+    "day": 6
+  },
+  {
+    "theme": "Internationella \u00f6ldagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta fredag i augusti",
+    "xth": 1,
+    "weekday": 5,
+    "month": 8
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r frisk andedr\u00e4kt",
+    "generator": "same_date",
+    "description": "06 augusti varje \u00e5r",
+    "month": 8,
+    "day": 6
+  },
+  {
+    "theme": "\u00d6rtens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i augusti",
+    "xth": 1,
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Senapens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i augusti",
+    "xth": 1,
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Hattens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i augusti",
+    "xth": 1,
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Internationella orgasmdagen",
+    "generator": "same_date",
+    "description": "08 augusti varje \u00e5r",
+    "month": 8,
+    "day": 8
+  },
+  {
+    "theme": "Kr\u00e4ftpremi\u00e4ren",
+    "generator": "same_date",
+    "description": "08 augusti varje \u00e5r",
+    "month": 8,
+    "day": 8
+  },
+  {
+    "theme": "Lyckans dag",
+    "generator": "same_date",
+    "description": "08 augusti varje \u00e5r",
+    "month": 8,
+    "day": 8
+  },
+  {
+    "theme": "Internationella kattdagen",
+    "generator": "same_date",
+    "description": "08 augusti varje \u00e5r",
+    "month": 8,
+    "day": 8
+  },
+  {
+    "theme": "Drottningens namnsdag",
+    "generator": "same_date",
+    "description": "08 augusti varje \u00e5r",
+    "month": 8,
+    "day": 8
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r v\u00e4rldens ursprungsfolk",
+    "generator": "same_date",
+    "description": "09 augusti varje \u00e5r",
+    "month": 8,
+    "day": 9
+  },
+  {
+    "theme": "Rullt\u00e5rtans dag",
+    "generator": "same_date",
+    "description": "09 augusti varje \u00e5r",
+    "month": 8,
+    "day": 9
+  },
+  {
+    "theme": "Larsdagen",
+    "generator": "same_date",
+    "description": "10 augusti varje \u00e5r",
+    "month": 8,
+    "day": 10
+  },
+  {
+    "theme": "Lejonets dag",
+    "generator": "same_date",
+    "description": "10 augusti varje \u00e5r",
+    "month": 8,
+    "day": 10
+  },
+  {
+    "theme": "Internationella ungdomsdagen",
+    "generator": "same_date",
+    "description": "12 augusti varje \u00e5r",
+    "month": 8,
+    "day": 12
+  },
+  {
+    "theme": "V\u00e4nsterh\u00e4ntas dag",
+    "generator": "same_date",
+    "description": "13 augusti varje \u00e5r",
+    "month": 8,
+    "day": 13
+  },
+  {
+    "theme": "Loppmarknadens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i augusti",
+    "xth": 2,
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Mormorsrutans dag",
+    "generator": "same_date",
+    "description": "15 augusti varje \u00e5r",
+    "month": 8,
+    "day": 15
+  },
+  {
+    "theme": "Ber\u00e4tta ett sk\u00e4mt-dagen",
+    "generator": "same_date",
+    "description": "16 augusti varje \u00e5r",
+    "month": 8,
+    "day": 16
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r humanit\u00e4rt arbete",
+    "generator": "same_date",
+    "description": "19 augusti varje \u00e5r",
+    "month": 8,
+    "day": 19
+  },
+  {
+    "theme": "Surstr\u00f6mmingspremi\u00e4r",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje torsdag i augusti",
+    "xth": 3,
+    "weekday": 4,
+    "month": 8
+  },
+  {
+    "theme": "Luftfartsdagen",
+    "generator": "same_date",
+    "description": "19 augusti varje \u00e5r",
+    "month": 8,
+    "day": 19
+  },
+  {
+    "theme": "Honungens dag",
+    "generator": "same_date",
+    "description": "20 augusti varje \u00e5r",
+    "month": 8,
+    "day": 20
+  },
+  {
+    "theme": "V\u00e4rldsentrepren\u00f6rsdagen",
+    "generator": "same_date",
+    "description": "21 augusti varje \u00e5r",
+    "month": 8,
+    "day": 21
+  },
+  {
+    "theme": "Alla pension\u00e4rers dag",
+    "generator": "same_date",
+    "description": "21 augusti varje \u00e5r",
+    "month": 8,
+    "day": 21
+  },
+  {
+    "theme": "Heml\u00f6sa djurs dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i augusti",
+    "xth": 3,
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Internationella geocachingdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i augusti",
+    "xth": 3,
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Durspelets dag",
+    "generator": "same_date",
+    "description": "21 augusti varje \u00e5r",
+    "month": 8,
+    "day": 21
+  },
+  {
+    "theme": "Internationella dagen till minnet av terrorismens offer",
+    "generator": "same_date",
+    "description": "21 augusti varje \u00e5r",
+    "month": 8,
+    "day": 21
+  },
+  {
+    "theme": "Internationella m\u00fcslidagen",
+    "generator": "same_date",
+    "description": "22 augusti varje \u00e5r",
+    "month": 8,
+    "day": 22
+  },
+  {
+    "theme": "Internationella minnesdagen f\u00f6r m\u00e4nniskor som fallit offer f\u00f6r v\u00e5ldsd\u00e5d relaterade till religion...",
+    "generator": "same_date",
+    "description": "22 augusti varje \u00e5r",
+    "month": 8,
+    "day": 22
+  },
+  {
+    "theme": "Internationella dagen till minne av slaveriet och dess avskaffande",
+    "generator": "same_date",
+    "description": "23 augusti varje \u00e5r",
+    "month": 8,
+    "day": 23
+  },
+  {
+    "theme": "K\u00f6ttbullens dag",
+    "generator": "same_date",
+    "description": "23 augusti varje \u00e5r",
+    "month": 8,
+    "day": 23
+  },
+  {
+    "theme": "\u00c5rsdagen av Plutos degradering",
+    "generator": "same_date",
+    "description": "24 augusti varje \u00e5r",
+    "month": 8,
+    "day": 24
+  },
+  {
+    "theme": "Alla hundars dag",
+    "generator": "same_date",
+    "description": "26 augusti varje \u00e5r",
+    "month": 8,
+    "day": 26
+  },
+  {
+    "theme": "J\u00e4mst\u00e4lldhetsdagen",
+    "generator": "same_date",
+    "description": "26 augusti varje \u00e5r",
+    "month": 8,
+    "day": 26
+  },
+  {
+    "theme": "Polisens dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista torsdag i augusti",
+    "weekday": 4,
+    "month": 8
+  },
+  {
+    "theme": "Sveriges Raoul Wallenbergdag",
+    "generator": "same_date",
+    "description": "27 augusti varje \u00e5r",
+    "month": 8,
+    "day": 27
+  },
+  {
+    "theme": "Squaredansens dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista l\u00f6rdag i augusti",
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Arkeologidagen",
+    "generator": "last_weekday_of_month",
+    "description": "Sista s\u00f6ndag i augusti",
+    "weekday": 7,
+    "month": 8
+  },
+  {
+    "theme": "Internationella dagen mot k\u00e4rnvapenprov",
+    "generator": "same_date",
+    "description": "29 augusti varje \u00e5r",
+    "month": 8,
+    "day": 29
+  },
+  {
+    "theme": "Porslinets dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista s\u00f6ndag i augusti",
+    "weekday": 7,
+    "month": 8
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r offren f\u00f6r p\u00e5tvingade f\u00f6rsvinnanden",
+    "generator": "same_date",
+    "description": "30 augusti varje \u00e5r",
+    "month": 8,
+    "day": 30
+  },
+  {
+    "theme": "Internationella f\u00f6rebildsdagen",
+    "generator": "same_date",
+    "description": "31 augusti varje \u00e5r",
+    "month": 8,
+    "day": 31
+  },
+  {
+    "theme": "Fluortantens dag",
+    "generator": "same_date",
+    "description": "01 september varje \u00e5r",
+    "month": 9,
+    "day": 1
+  },
+  {
+    "theme": "Skolledarnas dag",
+    "generator": "same_date",
+    "description": "03 september varje \u00e5r",
+    "month": 9,
+    "day": 3
+  },
+  {
+    "theme": "Hemsl\u00f6jdens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i september",
+    "xth": 1,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Ostronets dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i september",
+    "xth": 1,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Internationella bacondagen",
+    "generator": "bacon",
+    "description": ""
+  },
+  {
+    "theme": "Dagen f\u00f6r ungas psykiska h\u00e4lsa",
+    "generator": "same_date",
+    "description": "04 september varje \u00e5r",
+    "month": 9,
+    "day": 4
+  },
+  {
+    "theme": "Sk\u00e4ggets dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i september",
+    "xth": 1,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Scooterns dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i september",
+    "xth": 1,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Dansbandens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta s\u00f6ndag i september",
+    "xth": 1,
+    "weekday": 7,
+    "month": 9
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r v\u00e4lg\u00f6renhet",
+    "generator": "same_date",
+    "description": "05 september varje \u00e5r",
+    "month": 9,
+    "day": 5
+  },
+  {
+    "theme": "Svampens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta s\u00f6ndag i september",
+    "xth": 1,
+    "weekday": 7,
+    "month": 9
+  },
+  {
+    "theme": "Skolans dag",
+    "generator": "same_date",
+    "description": "05 september varje \u00e5r",
+    "month": 9,
+    "day": 5
+  },
+  {
+    "theme": "Labor day",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta m\u00e5ndag i september",
+    "xth": 1,
+    "weekday": 1,
+    "month": 9
+  },
+  {
+    "theme": "Salamins dag",
+    "generator": "same_date",
+    "description": "07 september varje \u00e5r",
+    "month": 9,
+    "day": 7
+  },
+  {
+    "theme": "Stora duchennesdagen",
+    "generator": "same_date",
+    "description": "07 september varje \u00e5r",
+    "month": 9,
+    "day": 7
+  },
+  {
+    "theme": "Internationella l\u00e4skunnighetsdagen",
+    "generator": "same_date",
+    "description": "08 september varje \u00e5r",
+    "month": 9,
+    "day": 8
+  },
+  {
+    "theme": "Internationella fysioterapins dag",
+    "generator": "same_date",
+    "description": "08 september varje \u00e5r",
+    "month": 9,
+    "day": 8
+  },
+  {
+    "theme": "Yrkesf\u00f6rarens dag",
+    "generator": "same_date",
+    "description": "09 september varje \u00e5r",
+    "month": 9,
+    "day": 9
+  },
+  {
+    "theme": "Internationella suicidpreventiva dagen",
+    "generator": "same_date",
+    "description": "10 september varje \u00e5r",
+    "month": 9,
+    "day": 10
+  },
+  {
+    "theme": "Geologins dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i september",
+    "xth": 2,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Kebabens dag",
+    "generator": "same_date",
+    "description": "11 september varje \u00e5r",
+    "month": 9,
+    "day": 11
+  },
+  {
+    "theme": "Vandringens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i september",
+    "xth": 2,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Kulturarvsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra s\u00f6ndag i september",
+    "xth": 2,
+    "weekday": 7,
+    "month": 9
+  },
+  {
+    "theme": "Mor- och farf\u00f6r\u00e4ldrarnas dag",
+    "generator": "grandparents",
+    "description": ""
+  },
+  {
+    "theme": "TV-spelsdagen",
+    "generator": "same_date",
+    "description": "12 september varje \u00e5r",
+    "month": 9,
+    "day": 12
+  },
+  {
+    "theme": "Europeiska migr\u00e4ndagen",
+    "generator": "same_date",
+    "description": "12 september varje \u00e5r",
+    "month": 9,
+    "day": 12
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r syd-syd-samarbete",
+    "generator": "same_date",
+    "description": "12 september varje \u00e5r",
+    "month": 9,
+    "day": 12
+  },
+  {
+    "theme": "Programmerarens dag",
+    "generator": "xth_day_of_year",
+    "description": "Dag 256 varje \u00e5r",
+    "day": 256
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r atopiskt eksem",
+    "generator": "same_date",
+    "description": "14 september varje \u00e5r",
+    "month": 9,
+    "day": 14
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r demokrati",
+    "generator": "same_date",
+    "description": "15 september varje \u00e5r",
+    "month": 9,
+    "day": 15
+  },
+  {
+    "theme": "Internationella lymfomdagen",
+    "generator": "same_date",
+    "description": "15 september varje \u00e5r",
+    "month": 9,
+    "day": 15
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r bevarande av ozonskiktet",
+    "generator": "same_date",
+    "description": "16 september varje \u00e5r",
+    "month": 9,
+    "day": 16
+  },
+  {
+    "theme": "H\u00f6ga klackars dag",
+    "generator": "same_date",
+    "description": "17 september varje \u00e5r",
+    "month": 9,
+    "day": 17
+  },
+  {
+    "theme": "Internationella patients\u00e4kerhetsdagen",
+    "generator": "same_date",
+    "description": "17 september varje \u00e5r",
+    "month": 9,
+    "day": 17
+  },
+  {
+    "theme": "4H-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i september",
+    "xth": 3,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Software freedom day",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i september",
+    "xth": 3,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Strandens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i september",
+    "xth": 3,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Worldwide spin in public day",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i september",
+    "xth": 3,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Internationella r\u00f6d panda-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i september",
+    "xth": 3,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Surk\u00e5lens dag",
+    "generator": "same_date",
+    "description": "18 september varje \u00e5r",
+    "month": 9,
+    "day": 18
+  },
+  {
+    "theme": "Internationella piratdagen",
+    "generator": "same_date",
+    "description": "19 september varje \u00e5r",
+    "month": 9,
+    "day": 19
+  },
+  {
+    "theme": "Messm\u00f6rets dag",
+    "generator": "same_date",
+    "description": "19 september varje \u00e5r",
+    "month": 9,
+    "day": 19
+  },
+  {
+    "theme": "Brunchens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje s\u00f6ndag i september",
+    "xth": 3,
+    "weekday": 7,
+    "month": 9
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r aortadissektion",
+    "generator": "same_date",
+    "description": "19 september varje \u00e5r",
+    "month": 9,
+    "day": 19
+  },
+  {
+    "theme": "B\u00e5lens dag",
+    "generator": "same_date",
+    "description": "20 september varje \u00e5r",
+    "month": 9,
+    "day": 20
+  },
+  {
+    "theme": "Internationella Alzheimerdagen",
+    "generator": "same_date",
+    "description": "21 september varje \u00e5r",
+    "month": 9,
+    "day": 21
+  },
+  {
+    "theme": "Internationella fredsdagen",
+    "generator": "same_date",
+    "description": "21 september varje \u00e5r",
+    "month": 9,
+    "day": 21
+  },
+  {
+    "theme": "Minigolfdagen",
+    "generator": "same_date",
+    "description": "21 september varje \u00e5r",
+    "month": 9,
+    "day": 21
+  },
+  {
+    "theme": "V\u00e4rldstacksamhetsdagen",
+    "generator": "same_date",
+    "description": "21 september varje \u00e5r",
+    "month": 9,
+    "day": 21
+  },
+  {
+    "theme": "Internationella bilfria dagen",
+    "generator": "same_date",
+    "description": "22 september varje \u00e5r",
+    "month": 9,
+    "day": 22
+  },
+  {
+    "theme": "Hobbitdagen",
+    "generator": "same_date",
+    "description": "22 september varje \u00e5r",
+    "month": 9,
+    "day": 22
+  },
+  {
+    "theme": "D-vitaminens dag",
+    "generator": "equinox_solstice",
+    "description": "H\u00f6stdagj\u00e4mning",
+    "index": 2
+  },
+  {
+    "theme": "H\u00f6stdagj\u00e4mningen",
+    "generator": "equinox_solstice",
+    "description": "H\u00f6stdagj\u00e4mning",
+    "index": 2
+  },
+  {
+    "theme": "Trappans dag",
+    "generator": "equinox_solstice",
+    "description": "H\u00f6stdagj\u00e4mning",
+    "index": 2
+  },
+  {
+    "theme": "Nosh\u00f6rningens dag",
+    "generator": "same_date",
+    "description": "22 september varje \u00e5r",
+    "month": 9,
+    "day": 22
+  },
+  {
+    "theme": "Hj\u00e4lpmedelsdagen",
+    "generator": "same_date",
+    "description": "23 september varje \u00e5r",
+    "month": 9,
+    "day": 23
+  },
+  {
+    "theme": "Internationella teckenspr\u00e5ksdagen",
+    "generator": "same_date",
+    "description": "23 september varje \u00e5r",
+    "month": 9,
+    "day": 23
+  },
+  {
+    "theme": "Bisexualitetens dag",
+    "generator": "same_date",
+    "description": "23 september varje \u00e5r",
+    "month": 9,
+    "day": 23
+  },
+  {
+    "theme": "Upphandlarens dag",
+    "generator": "same_date",
+    "description": "23 september varje \u00e5r",
+    "month": 9,
+    "day": 23
+  },
+  {
+    "theme": "Janssons-dagen",
+    "generator": "last_weekday_of_month",
+    "description": "Sista fredag i september",
+    "weekday": 5,
+    "month": 9
+  },
+  {
+    "theme": "Skiljetecknets dag",
+    "generator": "same_date",
+    "description": "24 september varje \u00e5r",
+    "month": 9,
+    "day": 24
+  },
+  {
+    "theme": "Dagvattnets dag",
+    "generator": "same_date",
+    "description": "24 september varje \u00e5r",
+    "month": 9,
+    "day": 24
+  },
+  {
+    "theme": "\u00c4pplets dag",
+    "generator": "same_date",
+    "description": "25 september varje \u00e5r",
+    "month": 9,
+    "day": 25
+  },
+  {
+    "theme": "Internationella farmaceutdagen",
+    "generator": "same_date",
+    "description": "25 september varje \u00e5r",
+    "month": 9,
+    "day": 25
+  },
+  {
+    "theme": "D\u00f6vas dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje s\u00f6ndag i september",
+    "xth": 3,
+    "weekday": 7,
+    "month": 9
+  },
+  {
+    "theme": "Europeiska spr\u00e5kdagen",
+    "generator": "same_date",
+    "description": "26 september varje \u00e5r",
+    "month": 9,
+    "day": 26
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r eliminerandet av k\u00e4rnvapen",
+    "generator": "same_date",
+    "description": "26 september varje \u00e5r",
+    "month": 9,
+    "day": 26
+  },
+  {
+    "theme": "Hummerpremi\u00e4ren",
+    "generator": "start_of_lobster_fishing",
+    "description": ""
+  },
+  {
+    "theme": "Tj\u00e4nstepensionens dag",
+    "generator": "same_date",
+    "description": "27 september varje \u00e5r",
+    "month": 9,
+    "day": 27
+  },
+  {
+    "theme": "V\u00e4rldsturismdagen",
+    "generator": "same_date",
+    "description": "27 september varje \u00e5r",
+    "month": 9,
+    "day": 27
+  },
+  {
+    "theme": "Internationella rabiesdagen ",
+    "generator": "same_date",
+    "description": "28 september varje \u00e5r",
+    "month": 9,
+    "day": 28
+  },
+  {
+    "theme": "Neurodagen",
+    "generator": "same_date",
+    "description": "28 september varje \u00e5r",
+    "month": 9,
+    "day": 28
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r universell tillg\u00e5ng till information",
+    "generator": "same_date",
+    "description": "28 september varje \u00e5r",
+    "month": 9,
+    "day": 28
+  },
+  {
+    "theme": "Kaffets dag",
+    "generator": "same_date",
+    "description": "29 september varje \u00e5r",
+    "month": 9,
+    "day": 29
+  },
+  {
+    "theme": "Skolmj\u00f6lkens dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista onsdag i september",
+    "weekday": 3,
+    "month": 9
+  },
+  {
+    "theme": "Internationella hj\u00e4rtdagen",
+    "generator": "same_date",
+    "description": "29 september varje \u00e5r",
+    "month": 9,
+    "day": 29
+  },
+  {
+    "theme": "Alla soffpotatisars dag",
+    "generator": "same_date",
+    "description": "29 september varje \u00e5r",
+    "month": 9,
+    "day": 29
+  },
+  {
+    "theme": "\u00c5tervinningens dag",
+    "generator": "same_date",
+    "description": "29 september varje \u00e5r",
+    "month": 9,
+    "day": 29
+  },
+  {
+    "theme": "Resandefolkets dag",
+    "generator": "same_date",
+    "description": "29 september varje \u00e5r",
+    "month": 9,
+    "day": 29
+  },
+  {
+    "theme": "Internationella pussdagen",
+    "generator": "same_date",
+    "description": "29 september varje \u00e5r",
+    "month": 9,
+    "day": 29
+  },
+  {
+    "theme": "International Blasphemy Rights Day",
+    "generator": "same_date",
+    "description": "30 september varje \u00e5r",
+    "month": 9,
+    "day": 30
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r \u00f6vers\u00e4ttning",
+    "generator": "same_date",
+    "description": "30 september varje \u00e5r",
+    "month": 9,
+    "day": 30
+  },
+  {
+    "theme": "Br\u00f6stcancerdagen",
+    "generator": "same_date",
+    "description": "01 oktober varje \u00e5r",
+    "month": 10,
+    "day": 1
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r \u00e4ldre",
+    "generator": "same_date",
+    "description": "01 oktober varje \u00e5r",
+    "month": 10,
+    "day": 1
+  },
+  {
+    "theme": "Vegetariska v\u00e4rldsdagen",
+    "generator": "same_date",
+    "description": "01 oktober varje \u00e5r",
+    "month": 10,
+    "day": 1
+  },
+  {
+    "theme": "Svenska flaskans dag",
+    "generator": "same_date",
+    "description": "01 oktober varje \u00e5r",
+    "month": 10,
+    "day": 1
+  },
+  {
+    "theme": "Internationella ickev\u00e5ldsdagen",
+    "generator": "same_date",
+    "description": "02 oktober varje \u00e5r",
+    "month": 10,
+    "day": 2
+  },
+  {
+    "theme": "Lantbruksdjurens dag",
+    "generator": "same_date",
+    "description": "02 oktober varje \u00e5r",
+    "month": 10,
+    "day": 2
+  },
+  {
+    "theme": "Gr\u00e4ddt\u00e5rtans dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta s\u00f6ndag i oktober",
+    "xth": 1,
+    "weekday": 7,
+    "month": 10
+  },
+  {
+    "theme": "Alla pojkv\u00e4nners dag",
+    "generator": "same_date",
+    "description": "03 oktober varje \u00e5r",
+    "month": 10,
+    "day": 3
+  },
+  {
+    "theme": "Den helige Mikaels dag",
+    "generator": "holy_mikael",
+    "description": ""
+  },
+  {
+    "theme": "Djurens dag",
+    "generator": "same_date",
+    "description": "04 oktober varje \u00e5r",
+    "month": 10,
+    "day": 4
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r boende- och bebyggelsefr\u00e5gor",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta m\u00e5ndag i oktober",
+    "xth": 1,
+    "weekday": 1,
+    "month": 10
+  },
+  {
+    "theme": "Internationella vodkadagen",
+    "generator": "same_date",
+    "description": "04 oktober varje \u00e5r",
+    "month": 10,
+    "day": 4
+  },
+  {
+    "theme": "Kanelbullens dag",
+    "generator": "same_date",
+    "description": "04 oktober varje \u00e5r",
+    "month": 10,
+    "day": 4
+  },
+  {
+    "theme": "Skolfotografiets dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta m\u00e5ndag i oktober",
+    "xth": 1,
+    "weekday": 1,
+    "month": 10
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r l\u00e4rare",
+    "generator": "same_date",
+    "description": "05 oktober varje \u00e5r",
+    "month": 10,
+    "day": 5
+  },
+  {
+    "theme": "Nationella anh\u00f6rigdagen",
+    "generator": "same_date",
+    "description": "06 oktober varje \u00e5r",
+    "month": 10,
+    "day": 6
+  },
+  {
+    "theme": "Elmotorns dag",
+    "generator": "same_date",
+    "description": "07 oktober varje \u00e5r",
+    "month": 10,
+    "day": 7
+  },
+  {
+    "theme": "V\u00e4gledningens dag",
+    "generator": "same_date",
+    "description": "08 oktober varje \u00e5r",
+    "month": 10,
+    "day": 8
+  },
+  {
+    "theme": "\u00c4ggets dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra fredag i oktober",
+    "xth": 2,
+    "weekday": 5,
+    "month": 10
+  },
+  {
+    "theme": "V\u00e4rldspostunionens dag",
+    "generator": "same_date",
+    "description": "09 oktober varje \u00e5r",
+    "month": 10,
+    "day": 9
+  },
+  {
+    "theme": "Musikens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i oktober",
+    "xth": 2,
+    "weekday": 6,
+    "month": 10
+  },
+  {
+    "theme": "Minnesdag f\u00f6r avskaffandet av Sveriges transatlantiska slavhandel",
+    "generator": "same_date",
+    "description": "09 oktober varje \u00e5r",
+    "month": 10,
+    "day": 9
+  },
+  {
+    "theme": "PANDAS/PANS Awareness Day",
+    "generator": "same_date",
+    "description": "09 oktober varje \u00e5r",
+    "month": 10,
+    "day": 9
+  },
+  {
+    "theme": "Finlandssvenska matkulturdagen",
+    "generator": "same_date",
+    "description": "09 oktober varje \u00e5r",
+    "month": 10,
+    "day": 9
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r mental h\u00e4lsa",
+    "generator": "same_date",
+    "description": "10 oktober varje \u00e5r",
+    "month": 10,
+    "day": 10
+  },
+  {
+    "theme": "Gr\u00f6tens dag",
+    "generator": "same_date",
+    "description": "10 oktober varje \u00e5r",
+    "month": 10,
+    "day": 10
+  },
+  {
+    "theme": "Internationella dagen mot d\u00f6dsstraff",
+    "generator": "same_date",
+    "description": "10 oktober varje \u00e5r",
+    "month": 10,
+    "day": 10
+  },
+  {
+    "theme": "Nordiska afasidagen",
+    "generator": "same_date",
+    "description": "10 oktober varje \u00e5r",
+    "month": 10,
+    "day": 10
+  },
+  {
+    "theme": "Tacks\u00e4gelsedagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra s\u00f6ndag i oktober",
+    "xth": 2,
+    "weekday": 7,
+    "month": 10
+  },
+  {
+    "theme": "\u00c4pplemustens Dag",
+    "generator": "same_date",
+    "description": "11 oktober varje \u00e5r",
+    "month": 10,
+    "day": 11
+  },
+  {
+    "theme": "Internationella flickdagen",
+    "generator": "same_date",
+    "description": "11 oktober varje \u00e5r",
+    "month": 10,
+    "day": 11
+  },
+  {
+    "theme": "Internationella komma-ut-dagen",
+    "generator": "same_date",
+    "description": "11 oktober varje \u00e5r",
+    "month": 10,
+    "day": 11
+  },
+  {
+    "theme": "Civilkuragets dag",
+    "generator": "same_date",
+    "description": "12 oktober varje \u00e5r",
+    "month": 10,
+    "day": 12
+  },
+  {
+    "theme": "Internationella reumatikerdagen",
+    "generator": "same_date",
+    "description": "12 oktober varje \u00e5r",
+    "month": 10,
+    "day": 12
+  },
+  {
+    "theme": "Ada Lovelace-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra tisdag i oktober",
+    "xth": 2,
+    "weekday": 2,
+    "month": 10
+  },
+  {
+    "theme": "Sockerfria dagen",
+    "generator": "same_date",
+    "description": "12 oktober varje \u00e5r",
+    "month": 10,
+    "day": 12
+  },
+  {
+    "theme": "International Suit Up Day",
+    "generator": "same_date",
+    "description": "13 oktober varje \u00e5r",
+    "month": 10,
+    "day": 13
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r begr\u00e4nsning av naturkatastrofer",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra onsdag i oktober",
+    "xth": 2,
+    "weekday": 3,
+    "month": 10
+  },
+  {
+    "theme": "V\u00e4rldstrombosdagen",
+    "generator": "same_date",
+    "description": "13 oktober varje \u00e5r",
+    "month": 10,
+    "day": 13
+  },
+  {
+    "theme": "Internationella klarspr\u00e5ksdagen",
+    "generator": "same_date",
+    "description": "13 oktober varje \u00e5r",
+    "month": 10,
+    "day": 13
+  },
+  {
+    "theme": "No Bra Day",
+    "generator": "same_date",
+    "description": "13 oktober varje \u00e5r",
+    "month": 10,
+    "day": 13
+  },
+  {
+    "theme": "R\u00e4kmackans dag",
+    "generator": "same_date",
+    "description": "14 oktober varje \u00e5r",
+    "month": 10,
+    "day": 14
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r synskadade",
+    "generator": "same_date",
+    "description": "14 oktober varje \u00e5r",
+    "month": 10,
+    "day": 14
+  },
+  {
+    "theme": "V\u00e4rldssyndagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra torsdag i oktober",
+    "xth": 2,
+    "weekday": 4,
+    "month": 10
+  },
+  {
+    "theme": "Fetaostens dag",
+    "generator": "same_date",
+    "description": "15 oktober varje \u00e5r",
+    "month": 10,
+    "day": 15
+  },
+  {
+    "theme": "Internationella ber\u00f6ringsdagen",
+    "generator": "same_date",
+    "description": "15 oktober varje \u00e5r",
+    "month": 10,
+    "day": 15
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r att tv\u00e4tta h\u00e4nderna",
+    "generator": "same_date",
+    "description": "15 oktober varje \u00e5r",
+    "month": 10,
+    "day": 15
+  },
+  {
+    "theme": "Vita k\u00e4ppens dag",
+    "generator": "same_date",
+    "description": "15 oktober varje \u00e5r",
+    "month": 10,
+    "day": 15
+  },
+  {
+    "theme": "Alla chefers dag",
+    "generator": "all_bosses",
+    "description": ""
+  },
+  {
+    "theme": "Internationella landsbygdskvinnors dag",
+    "generator": "same_date",
+    "description": "15 oktober varje \u00e5r",
+    "month": 10,
+    "day": 15
+  },
+  {
+    "theme": "Br\u00f6sth\u00e4lsodagen",
+    "generator": "same_date",
+    "description": "15 oktober varje \u00e5r",
+    "month": 10,
+    "day": 15
+  },
+  {
+    "theme": "Internationella champagnedagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Fj\u00e4rde fredag i oktober",
+    "xth": 4,
+    "weekday": 5,
+    "month": 10
+  },
+  {
+    "theme": "Metoo-dagen",
+    "generator": "same_date",
+    "description": "15 oktober varje \u00e5r",
+    "month": 10,
+    "day": 15
+  },
+  {
+    "theme": "Steve Jobs Day",
+    "generator": "same_date",
+    "description": "16 oktober varje \u00e5r",
+    "month": 10,
+    "day": 16
+  },
+  {
+    "theme": "V\u00e4rldslivsmedelsdagen",
+    "generator": "same_date",
+    "description": "16 oktober varje \u00e5r",
+    "month": 10,
+    "day": 16
+  },
+  {
+    "theme": "Lexikonens dag",
+    "generator": "same_date",
+    "description": "16 oktober varje \u00e5r",
+    "month": 10,
+    "day": 16
+  },
+  {
+    "theme": "Alla broars dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i oktober",
+    "xth": 3,
+    "weekday": 6,
+    "month": 10
+  },
+  {
+    "theme": "V\u00e4rldshungerdagen",
+    "generator": "same_date",
+    "description": "16 oktober varje \u00e5r",
+    "month": 10,
+    "day": 16
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r utrotande av fattigdom",
+    "generator": "same_date",
+    "description": "17 oktober varje \u00e5r",
+    "month": 10,
+    "day": 17
+  },
+  {
+    "theme": "Internationella klimakteriedagen",
+    "generator": "same_date",
+    "description": "18 oktober varje \u00e5r",
+    "month": 10,
+    "day": 18
+  },
+  {
+    "theme": "Chokladmuffins dag",
+    "generator": "same_date",
+    "description": "18 oktober varje \u00e5r",
+    "month": 10,
+    "day": 18
+  },
+  {
+    "theme": "Internationella slipsdagen",
+    "generator": "same_date",
+    "description": "18 oktober varje \u00e5r",
+    "month": 10,
+    "day": 18
+  },
+  {
+    "theme": "Nationella dagen f\u00f6r Str\u00e4vh\u00e5rig foxterrier",
+    "generator": "same_date",
+    "description": "19 oktober varje \u00e5r",
+    "month": 10,
+    "day": 19
+  },
+  {
+    "theme": "Internationella flygledardagen",
+    "generator": "same_date",
+    "description": "20 oktober varje \u00e5r",
+    "month": 10,
+    "day": 20
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r statistik",
+    "generator": "same_date",
+    "description": "20 oktober varje \u00e5r",
+    "month": 10,
+    "day": 20
+  },
+  {
+    "theme": "Internationella osteoporosdagen",
+    "generator": "same_date",
+    "description": "20 oktober varje \u00e5r",
+    "month": 10,
+    "day": 20
+  },
+  {
+    "theme": "Grynkorvens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje torsdag i oktober",
+    "xth": 3,
+    "weekday": 4,
+    "month": 10
+  },
+  {
+    "theme": "M\u00e5ltidens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje torsdag i oktober",
+    "xth": 3,
+    "weekday": 4,
+    "month": 10
+  },
+  {
+    "theme": "INTERNATIONELLA CAPS LOCK-DAGEN",
+    "generator": "same_date",
+    "description": "22 oktober varje \u00e5r",
+    "month": 10,
+    "day": 22
+  },
+  {
+    "theme": "Internationella stamningsdagen",
+    "generator": "same_date",
+    "description": "22 oktober varje \u00e5r",
+    "month": 10,
+    "day": 22
+  },
+  {
+    "theme": "Hackkorvens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Fj\u00e4rde l\u00f6rdag i oktober",
+    "xth": 4,
+    "weekday": 6,
+    "month": 10
+  },
+  {
+    "theme": "Internationella moldagen",
+    "generator": "same_date",
+    "description": "23 oktober varje \u00e5r",
+    "month": 10,
+    "day": 23
+  },
+  {
+    "theme": "FN-dagen",
+    "generator": "same_date",
+    "description": "24 oktober varje \u00e5r",
+    "month": 10,
+    "day": 24
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r information om utvecklingsfr\u00e5gor",
+    "generator": "same_date",
+    "description": "24 oktober varje \u00e5r",
+    "month": 10,
+    "day": 24
+  },
+  {
+    "theme": "Montessoril\u00e4rardagen",
+    "generator": "same_date",
+    "description": "24 oktober varje \u00e5r",
+    "month": 10,
+    "day": 24
+  },
+  {
+    "theme": "Raggsockans dag",
+    "generator": "same_date",
+    "description": "24 oktober varje \u00e5r",
+    "month": 10,
+    "day": 24
+  },
+  {
+    "theme": "Snusets dag",
+    "generator": "same_date",
+    "description": "24 oktober varje \u00e5r",
+    "month": 10,
+    "day": 24
+  },
+  {
+    "theme": "V\u00e4rldspastadagen",
+    "generator": "same_date",
+    "description": "25 oktober varje \u00e5r",
+    "month": 10,
+    "day": 25
+  },
+  {
+    "theme": "Potatisens dag",
+    "generator": "same_date",
+    "description": "26 oktober varje \u00e5r",
+    "month": 10,
+    "day": 26
+  },
+  {
+    "theme": "Hj\u00e4rnskadedagen",
+    "generator": "same_date",
+    "description": "26 oktober varje \u00e5r",
+    "month": 10,
+    "day": 26
+  },
+  {
+    "theme": "Arbetsterapins dag",
+    "generator": "same_date",
+    "description": "27 oktober varje \u00e5r",
+    "month": 10,
+    "day": 27
+  },
+  {
+    "theme": "Internationella nalledagen",
+    "generator": "same_date",
+    "description": "27 oktober varje \u00e5r",
+    "month": 10,
+    "day": 27
+  },
+  {
+    "theme": "Internationella religionsfrihetsdagen",
+    "generator": "same_date",
+    "description": "27 oktober varje \u00e5r",
+    "month": 10,
+    "day": 27
+  },
+  {
+    "theme": "Internationella skolbiblioteksdagen",
+    "generator": "same_date",
+    "description": "27 oktober varje \u00e5r",
+    "month": 10,
+    "day": 27
+  },
+  {
+    "theme": "Alla sv\u00e4rm\u00f6drars dag",
+    "generator": "same_date",
+    "description": "27 oktober varje \u00e5r",
+    "month": 10,
+    "day": 27
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r audiovisuellt kulturarv",
+    "generator": "same_date",
+    "description": "27 oktober varje \u00e5r",
+    "month": 10,
+    "day": 27
+  },
+  {
+    "theme": "Bilens dag",
+    "generator": "same_date",
+    "description": "28 oktober varje \u00e5r",
+    "month": 10,
+    "day": 28
+  },
+  {
+    "theme": "Internationella animationens dag",
+    "generator": "same_date",
+    "description": "28 oktober varje \u00e5r",
+    "month": 10,
+    "day": 28
+  },
+  {
+    "theme": "Internationella psoriasisdagen",
+    "generator": "same_date",
+    "description": "29 oktober varje \u00e5r",
+    "month": 10,
+    "day": 29
+  },
+  {
+    "theme": "Internets dag",
+    "generator": "same_date",
+    "description": "29 oktober varje \u00e5r",
+    "month": 10,
+    "day": 29
+  },
+  {
+    "theme": "Dennis Ritchie-dagen",
+    "generator": "same_date",
+    "description": "30 oktober varje \u00e5r",
+    "month": 10,
+    "day": 30
+  },
+  {
+    "theme": "Unik butik-dagen",
+    "generator": "last_weekday_of_month",
+    "description": "Sista l\u00f6rdag i oktober",
+    "weekday": 6,
+    "month": 10
+  },
+  {
+    "theme": "Grannens dag",
+    "generator": "same_date",
+    "description": "31 oktober varje \u00e5r",
+    "month": 10,
+    "day": 31
+  },
+  {
+    "theme": "Halloween",
+    "generator": "same_date",
+    "description": "31 oktober varje \u00e5r",
+    "month": 10,
+    "day": 31
+  },
+  {
+    "theme": "Lutfiskens dag",
+    "generator": "stockfish",
+    "description": ""
+  },
+  {
+    "theme": "V\u00e4rldsspardagen",
+    "generator": "same_date",
+    "description": "31 oktober varje \u00e5r",
+    "month": 10,
+    "day": 31
+  },
+  {
+    "theme": "Magins dag",
+    "generator": "same_date",
+    "description": "31 oktober varje \u00e5r",
+    "month": 10,
+    "day": 31
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r st\u00e4der",
+    "generator": "same_date",
+    "description": "31 oktober varje \u00e5r",
+    "month": 10,
+    "day": 31
+  },
+  {
+    "theme": "Alla helgons dag",
+    "generator": "all_saints",
+    "description": "F\u00f6rsta dagen i alla helgons dag-helgen",
+    "index": 0
+  },
+  {
+    "theme": "Allhelgonadagen",
+    "generator": "same_date",
+    "description": "01 november varje \u00e5r",
+    "month": 11,
+    "day": 1
+  },
+  {
+    "theme": "Frysr\u00e4ttens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta m\u00e5ndag i november",
+    "xth": 1,
+    "weekday": 1,
+    "month": 11
+  },
+  {
+    "theme": "Internationella vegandagen",
+    "generator": "same_date",
+    "description": "01 november varje \u00e5r",
+    "month": 11,
+    "day": 1
+  },
+  {
+    "theme": "Alla sj\u00e4lars dag",
+    "generator": "all_saints",
+    "description": "Andra dagen i alla helgons dag-helgen",
+    "index": 1
+  },
+  {
+    "theme": "De d\u00f6das dag",
+    "generator": "same_date",
+    "description": "02 november varje \u00e5r",
+    "month": 11,
+    "day": 2
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r att f\u00f6r att upph\u00e4va straffrihet f\u00f6r brott mot journalister",
+    "generator": "same_date",
+    "description": "02 november varje \u00e5r",
+    "month": 11,
+    "day": 2
+  },
+  {
+    "theme": "Internationella stoutdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta torsdag i november",
+    "xth": 1,
+    "weekday": 4,
+    "month": 11
+  },
+  {
+    "theme": "No hate day",
+    "generator": "same_date",
+    "description": "04 november varje \u00e5r",
+    "month": 11,
+    "day": 4
+  },
+  {
+    "theme": "Guy Fawkes Day",
+    "generator": "same_date",
+    "description": "05 november varje \u00e5r",
+    "month": 11,
+    "day": 5
+  },
+  {
+    "theme": "Kanink\u00f6ttets dag",
+    "generator": "same_date",
+    "description": "05 november varje \u00e5r",
+    "month": 11,
+    "day": 5
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r tsunamik\u00e4nnedom",
+    "generator": "same_date",
+    "description": "05 november varje \u00e5r",
+    "month": 11,
+    "day": 5
+  },
+  {
+    "theme": "Gustav Adolfsdagen",
+    "generator": "same_date",
+    "description": "06 november varje \u00e5r",
+    "month": 11,
+    "day": 6
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r att f\u00f6rhindra exploatering av milj\u00f6n i krig och v\u00e4pnade konflikter",
+    "generator": "same_date",
+    "description": "06 november varje \u00e5r",
+    "month": 11,
+    "day": 6
+  },
+  {
+    "theme": "Kladdkakans dag",
+    "generator": "same_date",
+    "description": "07 november varje \u00e5r",
+    "month": 11,
+    "day": 7
+  },
+  {
+    "theme": "Infraservicedagen",
+    "generator": "same_date",
+    "description": "08 november varje \u00e5r",
+    "month": 11,
+    "day": 8
+  },
+  {
+    "theme": "M\u00e5rtensafton",
+    "generator": "same_date",
+    "description": "10 november varje \u00e5r",
+    "month": 11,
+    "day": 10
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r vetenskap f\u00f6r fred och utveckling",
+    "generator": "same_date",
+    "description": "10 november varje \u00e5r",
+    "month": 11,
+    "day": 10
+  },
+  {
+    "theme": "Chokladens dag",
+    "generator": "same_date",
+    "description": "11 november varje \u00e5r",
+    "month": 11,
+    "day": 11
+  },
+  {
+    "theme": "Nordiska klimatdagen",
+    "generator": "same_date",
+    "description": "11 november varje \u00e5r",
+    "month": 11,
+    "day": 11
+  },
+  {
+    "theme": "World Quality Day",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra torsdag i november",
+    "xth": 2,
+    "weekday": 4,
+    "month": 11
+  },
+  {
+    "theme": "Anv\u00e4ndbarhetsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra torsdag i november",
+    "xth": 2,
+    "weekday": 4,
+    "month": 11
+  },
+  {
+    "theme": "H\u00e5gkomstens dag",
+    "generator": "same_date",
+    "description": "11 november varje \u00e5r",
+    "month": 11,
+    "day": 11
+  },
+  {
+    "theme": "Alla singlars dag",
+    "generator": "same_date",
+    "description": "11 november varje \u00e5r",
+    "month": 11,
+    "day": 11
+  },
+  {
+    "theme": "Gr\u00f6n flagg-dagen",
+    "generator": "same_date",
+    "description": "11 november varje \u00e5r",
+    "month": 11,
+    "day": 11
+  },
+  {
+    "theme": "Alla krossade hj\u00e4rtans dag",
+    "generator": "same_date",
+    "description": "12 november varje \u00e5r",
+    "month": 11,
+    "day": 12
+  },
+  {
+    "theme": "Miniatyrr\u00e4vens dag",
+    "generator": "same_date",
+    "description": "12 november varje \u00e5r",
+    "month": 11,
+    "day": 12
+  },
+  {
+    "theme": "Globala lunginflammationsdagen",
+    "generator": "same_date",
+    "description": "12 november varje \u00e5r",
+    "month": 11,
+    "day": 12
+  },
+  {
+    "theme": "Arkivens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i november",
+    "xth": 2,
+    "weekday": 6,
+    "month": 11
+  },
+  {
+    "theme": "Sm\u00f6rg\u00e5st\u00e5rtans dag",
+    "generator": "same_date",
+    "description": "13 november varje \u00e5r",
+    "month": 11,
+    "day": 13
+  },
+  {
+    "theme": "Fars dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra s\u00f6ndag i november",
+    "xth": 2,
+    "weekday": 7,
+    "month": 11
+  },
+  {
+    "theme": "V\u00e4rldsdiabetesdagen",
+    "generator": "same_date",
+    "description": "14 november varje \u00e5r",
+    "month": 11,
+    "day": 14
+  },
+  {
+    "theme": "Ostkakans dag",
+    "generator": "same_date",
+    "description": "14 november varje \u00e5r",
+    "month": 11,
+    "day": 14
+  },
+  {
+    "theme": "F\u00e4ngslade f\u00f6rfattares dag",
+    "generator": "same_date",
+    "description": "15 november varje \u00e5r",
+    "month": 11,
+    "day": 15
+  },
+  {
+    "theme": "Musikterapins dag",
+    "generator": "same_date",
+    "description": "15 november varje \u00e5r",
+    "month": 11,
+    "day": 15
+  },
+  {
+    "theme": "Filantropins dag",
+    "generator": "same_date",
+    "description": "15 november varje \u00e5r",
+    "month": 11,
+    "day": 15
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r tolerans",
+    "generator": "same_date",
+    "description": "16 november varje \u00e5r",
+    "month": 11,
+    "day": 16
+  },
+  {
+    "theme": "M\u00e5ngkulturella matdagen",
+    "generator": "same_date",
+    "description": "16 november varje \u00e5r",
+    "month": 11,
+    "day": 16
+  },
+  {
+    "theme": "Raggmunkens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje tisdag i november",
+    "xth": 3,
+    "weekday": 2,
+    "month": 11
+  },
+  {
+    "theme": "Internationella KOL-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje onsdag i november",
+    "xth": 3,
+    "weekday": 3,
+    "month": 11
+  },
+  {
+    "theme": "Internationella prematurdagen",
+    "generator": "same_date",
+    "description": "17 november varje \u00e5r",
+    "month": 11,
+    "day": 17
+  },
+  {
+    "theme": "Napoleonbakelsens dag",
+    "generator": "same_date",
+    "description": "17 november varje \u00e5r",
+    "month": 11,
+    "day": 17
+  },
+  {
+    "theme": "De prestigel\u00f6sas dag",
+    "generator": "same_date",
+    "description": "17 november varje \u00e5r",
+    "month": 11,
+    "day": 17
+  },
+  {
+    "theme": "Internationella elevdagen",
+    "generator": "same_date",
+    "description": "17 november varje \u00e5r",
+    "month": 11,
+    "day": 17
+  },
+  {
+    "theme": "Internationella GIS-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje onsdag i november",
+    "xth": 3,
+    "weekday": 3,
+    "month": 11
+  },
+  {
+    "theme": "Adoptionernas dag",
+    "generator": "same_date",
+    "description": "18 november varje \u00e5r",
+    "month": 11,
+    "day": 18
+  },
+  {
+    "theme": "Europeiska antibiotikadagen",
+    "generator": "same_date",
+    "description": "18 november varje \u00e5r",
+    "month": 11,
+    "day": 18
+  },
+  {
+    "theme": "V\u00e4rldsfilosofidagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje torsdag i november",
+    "xth": 3,
+    "weekday": 4,
+    "month": 11
+  },
+  {
+    "theme": "Benbuljongens dag",
+    "generator": "same_date",
+    "description": "18 november varje \u00e5r",
+    "month": 11,
+    "day": 18
+  },
+  {
+    "theme": "D\u00f6dsh\u00e4lsningsdagen",
+    "generator": "funeral_greeting",
+    "description": ""
+  },
+  {
+    "theme": "Internationella mansdagen",
+    "generator": "same_date",
+    "description": "19 november varje \u00e5r",
+    "month": 11,
+    "day": 19
+  },
+  {
+    "theme": "Internationella toalettdagen",
+    "generator": "same_date",
+    "description": "19 november varje \u00e5r",
+    "month": 11,
+    "day": 19
+  },
+  {
+    "theme": "V\u00e4rldsdagen mot barnmisshandel",
+    "generator": "same_date",
+    "description": "19 november varje \u00e5r",
+    "month": 11,
+    "day": 19
+  },
+  {
+    "theme": "Amaryllisens dag",
+    "generator": "same_date",
+    "description": "19 november varje \u00e5r",
+    "month": 11,
+    "day": 19
+  },
+  {
+    "theme": "Internationella iktyosdagen",
+    "generator": "same_date",
+    "description": "19 november varje \u00e5r",
+    "month": 11,
+    "day": 19
+  },
+  {
+    "theme": "Womens Entrepreneurship Day",
+    "generator": "same_date",
+    "description": "19 november varje \u00e5r",
+    "month": 11,
+    "day": 19
+  },
+  {
+    "theme": "Barnkonventionsdagen",
+    "generator": "same_date",
+    "description": "20 november varje \u00e5r",
+    "month": 11,
+    "day": 20
+  },
+  {
+    "theme": "Industrialiseringsdagen f\u00f6r Afrika",
+    "generator": "same_date",
+    "description": "20 november varje \u00e5r",
+    "month": 11,
+    "day": 20
+  },
+  {
+    "theme": "Internationella barndagen",
+    "generator": "same_date",
+    "description": "20 november varje \u00e5r",
+    "month": 11,
+    "day": 20
+  },
+  {
+    "theme": "Minnesdag\u00a0f\u00f6r transpersoner",
+    "generator": "same_date",
+    "description": "20 november varje \u00e5r",
+    "month": 11,
+    "day": 20
+  },
+  {
+    "theme": "Musikfri dag",
+    "generator": "same_date",
+    "description": "21 november varje \u00e5r",
+    "month": 11,
+    "day": 21
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r TV",
+    "generator": "same_date",
+    "description": "21 november varje \u00e5r",
+    "month": 11,
+    "day": 21
+  },
+  {
+    "theme": "V\u00e4rldsdagen till minne av trafikoffer",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje s\u00f6ndag i november",
+    "xth": 3,
+    "weekday": 7,
+    "month": 11
+  },
+  {
+    "theme": "V\u00e4rldshejardagen",
+    "generator": "same_date",
+    "description": "21 november varje \u00e5r",
+    "month": 11,
+    "day": 21
+  },
+  {
+    "theme": "Wienerbr\u00f6dets dag",
+    "generator": "same_date",
+    "description": "22 november varje \u00e5r",
+    "month": 11,
+    "day": 22
+  },
+  {
+    "theme": "Sankt Clemens dag",
+    "generator": "same_date",
+    "description": "23 november varje \u00e5r",
+    "month": 11,
+    "day": 23
+  },
+  {
+    "theme": "Internationella hattdagen",
+    "generator": "same_date",
+    "description": "23 november varje \u00e5r",
+    "month": 11,
+    "day": 23
+  },
+  {
+    "theme": "Internationella dagen mot v\u00e5ld mot kvinnor",
+    "generator": "same_date",
+    "description": "25 november varje \u00e5r",
+    "month": 11,
+    "day": 25
+  },
+  {
+    "theme": "Thanksgiving",
+    "generator": "thanksgiving",
+    "description": "F\u00f6rsta dagen i Thanks Giving",
+    "index": 0
+  },
+  {
+    "theme": "En k\u00f6pfri dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista fredag i november",
+    "weekday": 5,
+    "month": 11
+  },
+  {
+    "theme": "P\u00e4lsfria fredagen",
+    "generator": "last_weekday_of_month",
+    "description": "Sista fredag i november",
+    "weekday": 5,
+    "month": 11
+  },
+  {
+    "theme": "E-handelns dag",
+    "generator": "thanksgiving",
+    "description": "Andra dagen i Thanks Giving",
+    "index": 1
+  },
+  {
+    "theme": "Black Friday",
+    "generator": "thanksgiving",
+    "description": "Andra dagen i Thanks Giving",
+    "index": 1
+  },
+  {
+    "theme": "Hudterapeutens dag",
+    "generator": "same_date",
+    "description": "27 november varje \u00e5r",
+    "month": 11,
+    "day": 27
+  },
+  {
+    "theme": "Kattens dag",
+    "generator": "advent",
+    "description": "F\u00f6rsta advent",
+    "index": 0
+  },
+  {
+    "theme": "F\u00f6rsta advent",
+    "generator": "advent",
+    "description": "F\u00f6rsta advent",
+    "index": 0
+  },
+  {
+    "theme": "Flaskmatardagen",
+    "generator": "same_date",
+    "description": "28 november varje \u00e5r",
+    "month": 11,
+    "day": 28
+  },
+  {
+    "theme": "Internationella solidaritetsdagen med det palestinska folket",
+    "generator": "same_date",
+    "description": "29 november varje \u00e5r",
+    "month": 11,
+    "day": 29
+  },
+  {
+    "theme": "Vinylskivans dag",
+    "generator": "same_date",
+    "description": "29 november varje \u00e5r",
+    "month": 11,
+    "day": 29
+  },
+  {
+    "theme": "Cyber Monday",
+    "generator": "thanksgiving",
+    "description": "Tredje dagen i Thanks Giving",
+    "index": 2
+  },
+  {
+    "theme": "Guldsmedens dag",
+    "generator": "same_date",
+    "description": "30 november varje \u00e5r",
+    "month": 11,
+    "day": 30
+  },
+  {
+    "theme": "K\u00e5ldolmens dag",
+    "generator": "same_date",
+    "description": "30 november varje \u00e5r",
+    "month": 11,
+    "day": 30
+  },
+  {
+    "theme": "Andersdagen",
+    "generator": "same_date",
+    "description": "30 november varje \u00e5r",
+    "month": 11,
+    "day": 30
+  },
+  {
+    "theme": "Giving Tuesday",
+    "generator": "thanksgiving",
+    "description": "Fj\u00e4rde dagen i Thanks Giving",
+    "index": 3
+  },
+  {
+    "theme": "Internationella dagen till minnet av offren f\u00f6r kemisk krigsf\u00f6ring",
+    "generator": "same_date",
+    "description": "30 november varje \u00e5r",
+    "month": 11,
+    "day": 30
+  },
+  {
+    "theme": "Brandvarnardagen",
+    "generator": "same_date",
+    "description": "01 december varje \u00e5r",
+    "month": 12,
+    "day": 1
+  },
+  {
+    "theme": "Internationella AIDS-dagen",
+    "generator": "same_date",
+    "description": "01 december varje \u00e5r",
+    "month": 12,
+    "day": 1
+  },
+  {
+    "theme": "Gl\u00f6ggens dag",
+    "generator": "same_date",
+    "description": "01 december varje \u00e5r",
+    "month": 12,
+    "day": 1
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r avskaffande av slaveri",
+    "generator": "same_date",
+    "description": "02 december varje \u00e5r",
+    "month": 12,
+    "day": 2
+  },
+  {
+    "theme": "Drick en \u00f6l-dagen",
+    "generator": "same_date",
+    "description": "03 december varje \u00e5r",
+    "month": 12,
+    "day": 3
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r handikappade",
+    "generator": "same_date",
+    "description": "03 december varje \u00e5r",
+    "month": 12,
+    "day": 3
+  },
+  {
+    "theme": "Armbandsklockans dag",
+    "generator": "same_date",
+    "description": "04 december varje \u00e5r",
+    "month": 12,
+    "day": 4
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r frivilligas arbete f\u00f6r ekonomisk och social utveckling",
+    "generator": "same_date",
+    "description": "05 december varje \u00e5r",
+    "month": 12,
+    "day": 5
+  },
+  {
+    "theme": "Andra advent",
+    "generator": "advent",
+    "description": "Andra advent",
+    "index": 1
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r jordm\u00e5n",
+    "generator": "same_date",
+    "description": "05 december varje \u00e5r",
+    "month": 12,
+    "day": 5
+  },
+  {
+    "theme": "Nikolausdagen",
+    "generator": "same_date",
+    "description": "06 december varje \u00e5r",
+    "month": 12,
+    "day": 6
+  },
+  {
+    "theme": "St\u00e4darnas dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta m\u00e5ndag i december",
+    "xth": 1,
+    "weekday": 1,
+    "month": 12
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r civil luftfart",
+    "generator": "same_date",
+    "description": "07 december varje \u00e5r",
+    "month": 12,
+    "day": 7
+  },
+  {
+    "theme": "Internationella dagen mot korruption",
+    "generator": "same_date",
+    "description": "09 december varje \u00e5r",
+    "month": 12,
+    "day": 9
+  },
+  {
+    "theme": "Pepparkakans dag",
+    "generator": "same_date",
+    "description": "09 december varje \u00e5r",
+    "month": 12,
+    "day": 9
+  },
+  {
+    "theme": "L\u00e4karsekreterarens dag",
+    "generator": "same_date",
+    "description": "09 december varje \u00e5r",
+    "month": 12,
+    "day": 9
+  },
+  {
+    "theme": "Annadagen",
+    "generator": "same_date",
+    "description": "09 december varje \u00e5r",
+    "month": 12,
+    "day": 9
+  },
+  {
+    "theme": "Internationella djurr\u00e4ttsdagen",
+    "generator": "same_date",
+    "description": "10 december varje \u00e5r",
+    "month": 12,
+    "day": 10
+  },
+  {
+    "theme": "M\u00e4nskliga r\u00e4ttigheternas dag",
+    "generator": "same_date",
+    "description": "10 december varje \u00e5r",
+    "month": 12,
+    "day": 10
+  },
+  {
+    "theme": "Nobeldagen",
+    "generator": "same_date",
+    "description": "10 december varje \u00e5r",
+    "month": 12,
+    "day": 10
+  },
+  {
+    "theme": "Terra Madre day",
+    "generator": "same_date",
+    "description": "10 december varje \u00e5r",
+    "month": 12,
+    "day": 10
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r v\u00e4rldens berg",
+    "generator": "same_date",
+    "description": "11 december varje \u00e5r",
+    "month": 12,
+    "day": 11
+  },
+  {
+    "theme": "Tangons dag",
+    "generator": "same_date",
+    "description": "11 december varje \u00e5r",
+    "month": 12,
+    "day": 11
+  },
+  {
+    "theme": "Julstj\u00e4rnans dag",
+    "generator": "same_date",
+    "description": "12 december varje \u00e5r",
+    "month": 12,
+    "day": 12
+  },
+  {
+    "theme": "Tredje advent",
+    "generator": "advent",
+    "description": "Tredje advent",
+    "index": 2
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r neutralitet",
+    "generator": "same_date",
+    "description": "12 december varje \u00e5r",
+    "month": 12,
+    "day": 12
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r universell sjukf\u00f6rs\u00e4kring f\u00f6r alla",
+    "generator": "same_date",
+    "description": "12 december varje \u00e5r",
+    "month": 12,
+    "day": 12
+  },
+  {
+    "theme": "Luciadagen",
+    "generator": "same_date",
+    "description": "13 december varje \u00e5r",
+    "month": 12,
+    "day": 13
+  },
+  {
+    "theme": "Internationella ap-dagen",
+    "generator": "same_date",
+    "description": "14 december varje \u00e5r",
+    "month": 12,
+    "day": 14
+  },
+  {
+    "theme": "Jultr\u00f6jans dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje fredag i december",
+    "xth": 3,
+    "weekday": 5,
+    "month": 12
+  },
+  {
+    "theme": "Internationella migrationsdagen",
+    "generator": "same_date",
+    "description": "18 december varje \u00e5r",
+    "month": 12,
+    "day": 18
+  },
+  {
+    "theme": "Kakans dag",
+    "generator": "same_date",
+    "description": "18 december varje \u00e5r",
+    "month": 12,
+    "day": 18
+  },
+  {
+    "theme": "Fj\u00e4rde advent",
+    "generator": "advent",
+    "description": "Fj\u00e4rde advent",
+    "index": 3
+  },
+  {
+    "theme": "Internationella m\u00e4nskliga solidaritetens dag",
+    "generator": "same_date",
+    "description": "20 december varje \u00e5r",
+    "month": 12,
+    "day": 20
+  },
+  {
+    "theme": "Tomasdagen",
+    "generator": "same_date",
+    "description": "21 december varje \u00e5r",
+    "month": 12,
+    "day": 21
+  },
+  {
+    "theme": "Kortfilmens dag",
+    "generator": "same_date",
+    "description": "21 december varje \u00e5r",
+    "month": 12,
+    "day": 21
+  },
+  {
+    "theme": "Skumtomtens dag ",
+    "generator": "same_date",
+    "description": "21 december varje \u00e5r",
+    "month": 12,
+    "day": 21
+  },
+  {
+    "theme": "Vintersolst\u00e5ndet",
+    "generator": "equinox_solstice",
+    "description": "Vintersolst\u00e5nd",
+    "index": 3
+  },
+  {
+    "theme": "Drottningens f\u00f6delsedag",
+    "generator": "same_date",
+    "description": "23 december varje \u00e5r",
+    "month": 12,
+    "day": 23
+  },
+  {
+    "theme": "Julafton",
+    "generator": "same_date",
+    "description": "24 december varje \u00e5r",
+    "month": 12,
+    "day": 24
+  },
+  {
+    "theme": "Juldagen",
+    "generator": "same_date",
+    "description": "25 december varje \u00e5r",
+    "month": 12,
+    "day": 25
+  },
+  {
+    "theme": "Annandag jul",
+    "generator": "same_date",
+    "description": "26 december varje \u00e5r",
+    "month": 12,
+    "day": 26
+  },
+  {
+    "theme": "Blue Monday",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje m\u00e5ndag i januari",
+    "xth": 3,
+    "weekday": 1,
+    "month": 1
+  },
+  {
+    "theme": "V\u00e4rldssn\u00f6dagen",
+    "generator": "weekday_of_xth_week",
+    "description": "s\u00f6ndag i vecka 3",
+    "week": 3,
+    "weekday": 7
+  },
+  {
+    "theme": "Smoothiens dag",
+    "generator": "same_date",
+    "description": "02 februari varje \u00e5r",
+    "month": 2,
+    "day": 2
+  },
+  {
+    "theme": "Vintercyklingens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra fredag i februari",
+    "xth": 2,
+    "weekday": 5,
+    "month": 2
+  },
+  {
+    "theme": "Serietidningens dag",
+    "generator": "same_date",
+    "description": "02 mars varje \u00e5r",
+    "month": 3,
+    "day": 2
+  },
+  {
+    "theme": "K\u00e4llkritikens dag",
+    "generator": "same_date",
+    "description": "13 mars varje \u00e5r",
+    "month": 3,
+    "day": 13
+  },
+  {
+    "theme": "Folkh\u00f6gskolans dag",
+    "generator": "same_date",
+    "description": "17 april varje \u00e5r",
+    "month": 4,
+    "day": 17
+  },
+  {
+    "theme": "Skottk\u00e4rrans dag",
+    "generator": "same_date",
+    "description": "19 april varje \u00e5r",
+    "month": 4,
+    "day": 19
+  },
+  {
+    "theme": "Svenska gin & tonic-dagen",
+    "generator": "same_date",
+    "description": "20 april varje \u00e5r",
+    "month": 4,
+    "day": 20
+  },
+  {
+    "theme": "Internationella Ragdolldagen",
+    "generator": "same_date",
+    "description": "05 maj varje \u00e5r",
+    "month": 5,
+    "day": 5
+  },
+  {
+    "theme": "R\u00f6da Korsets dag",
+    "generator": "same_date",
+    "description": "08 maj varje \u00e5r",
+    "month": 5,
+    "day": 8
+  },
+  {
+    "theme": "M\u00e5ltidens gemenskapsdag",
+    "generator": "same_date",
+    "description": "23 maj varje \u00e5r",
+    "month": 5,
+    "day": 23
+  },
+  {
+    "theme": "Internationella artrosdagen",
+    "generator": "same_date",
+    "description": "02 juni varje \u00e5r",
+    "month": 6,
+    "day": 2
+  },
+  {
+    "theme": "Internationella dagen mot \u00e4tst\u00f6rningar",
+    "generator": "same_date",
+    "description": "02 juni varje \u00e5r",
+    "month": 6,
+    "day": 2
+  },
+  {
+    "theme": "Cykelns dag",
+    "generator": "same_date",
+    "description": "03 juni varje \u00e5r",
+    "month": 6,
+    "day": 3
+  },
+  {
+    "theme": "M\u00f6rdarsnigelns otursdag",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra l\u00f6rdag i juni",
+    "xth": 2,
+    "weekday": 6,
+    "month": 6
+  },
+  {
+    "theme": "Nationella orgasmdagen",
+    "generator": "national_o",
+    "description": ""
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r ickebin\u00e4ra",
+    "generator": "same_date",
+    "description": "14 juli varje \u00e5r",
+    "month": 7,
+    "day": 14
+  },
+  {
+    "theme": "Mumindagen",
+    "generator": "same_date",
+    "description": "09 augusti varje \u00e5r",
+    "month": 8,
+    "day": 9
+  },
+  {
+    "theme": "Groggens dag",
+    "generator": "same_date",
+    "description": "21 augusti varje \u00e5r",
+    "month": 8,
+    "day": 21
+  },
+  {
+    "theme": "Bartolomeidagen",
+    "generator": "same_date",
+    "description": "24 augusti varje \u00e5r",
+    "month": 8,
+    "day": 24
+  },
+  {
+    "theme": "Tandv\u00e5rdsr\u00e4dslans dag",
+    "generator": "same_date",
+    "description": "24 augusti varje \u00e5r",
+    "month": 8,
+    "day": 24
+  },
+  {
+    "theme": "Hittekattens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta s\u00f6ndag i september",
+    "xth": 1,
+    "weekday": 7,
+    "month": 9
+  },
+  {
+    "theme": "Valdagen",
+    "generator": "swedish_parliamentary_election",
+    "description": "Andra s\u00f6ndagen efter 1e september, vart fj\u00e4rde \u00e5r efter 1994"
+  },
+  {
+    "theme": "Naprapatins dag",
+    "generator": "same_date",
+    "description": "30 september varje \u00e5r",
+    "month": 9,
+    "day": 30
+  },
+  {
+    "theme": "Intelligensens dag",
+    "generator": "same_date",
+    "description": "01 oktober varje \u00e5r",
+    "month": 10,
+    "day": 1
+  },
+  {
+    "theme": "Skyddsombudens dag",
+    "generator": "weekday_of_xth_week",
+    "description": "onsdag i vecka 43",
+    "week": 43,
+    "weekday": 3
+  },
+  {
+    "theme": "Internationella refluxdagen",
+    "generator": "same_date",
+    "description": "09 november varje \u00e5r",
+    "month": 11,
+    "day": 9
+  },
+  {
+    "theme": "Internationella volont\u00e4rdagen",
+    "generator": "same_date",
+    "description": "05 december varje \u00e5r",
+    "month": 12,
+    "day": 5
+  },
+  {
+    "theme": "Earth hour",
+    "generator": "xth_weekday_of_month",
+    "description": "Fj\u00e4rde l\u00f6rdag i mars",
+    "xth": 4,
+    "weekday": 6,
+    "month": 3
+  },
+  {
+    "theme": "V\u00e4rldsdagen f\u00f6r kreativitet och innovation",
+    "generator": "same_date",
+    "description": "21 april varje \u00e5r",
+    "month": 4,
+    "day": 21
+  },
+  {
+    "theme": "Internationella tillg\u00e4nglighetsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje torsdag i maj",
+    "xth": 3,
+    "weekday": 4,
+    "month": 5
+  },
+  {
+    "theme": "Internationella br\u00e4dspelsdagen",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i juni",
+    "xth": 1,
+    "weekday": 6,
+    "month": 6
+  },
+  {
+    "theme": "Internationella dagen f\u00f6r parlamentarism",
+    "generator": "same_date",
+    "description": "30 juni varje \u00e5r",
+    "month": 6,
+    "day": 30
+  },
+  {
+    "theme": "Internationella schackdagen",
+    "generator": "same_date",
+    "description": "20 juli varje \u00e5r",
+    "month": 7,
+    "day": 20
+  },
+  {
+    "theme": "Surstr\u00f6mmingens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje torsdag i augusti",
+    "xth": 3,
+    "weekday": 4,
+    "month": 8
+  },
+  {
+    "theme": "Kolonitr\u00e4dg\u00e5rdens dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista l\u00f6rdag i augusti",
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Internationella Batman-dagen",
+    "generator": "xth_weekday_of_month",
+    "description": "Tredje l\u00f6rdag i september",
+    "xth": 3,
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "E-bokens dag",
+    "generator": "same_date",
+    "description": "18 september varje \u00e5r",
+    "month": 9,
+    "day": 18
+  },
+  {
+    "theme": "Internationella CP-dagen",
+    "generator": "same_date",
+    "description": "06 oktober varje \u00e5r",
+    "month": 10,
+    "day": 6
+  },
+  {
+    "theme": "Veckopengens dag",
+    "generator": "same_date",
+    "description": "28 oktober varje \u00e5r",
+    "month": 10,
+    "day": 28
+  },
+  {
+    "theme": "L\u00e4romedlets dag",
+    "generator": "same_date",
+    "description": "08 november varje \u00e5r",
+    "month": 11,
+    "day": 8
+  },
+  {
+    "theme": "Minnesdag f\u00f6r transpersoner",
+    "generator": "same_date",
+    "description": "20 november varje \u00e5r",
+    "month": 11,
+    "day": 20
+  },
+  {
+    "theme": "Modellj\u00e4rnv\u00e4gens dag",
+    "generator": "same_date",
+    "description": "02 december varje \u00e5r",
+    "month": 12,
+    "day": 2
+  },
+  {
+    "theme": "Pandemidagen",
+    "generator": "same_date",
+    "description": "31 januari varje \u00e5r",
+    "month": 1,
+    "day": 31
+  },
+  {
+    "theme": "L\u00f6nekonsultens dag",
+    "generator": "same_date",
+    "description": "31 januari varje \u00e5r",
+    "month": 1,
+    "day": 31
+  },
+  {
+    "theme": "Upp och hoppa-dagen",
+    "generator": "same_date",
+    "description": "31 januari varje \u00e5r",
+    "month": 1,
+    "day": 31
+  },
+  {
+    "theme": "Kyndelsm\u00e4ssodagen",
+    "generator": "same_date",
+    "description": "02 februari varje \u00e5r",
+    "month": 2,
+    "day": 2
+  },
+  {
+    "theme": "Int. dagen f\u00f6r nolltolerans mot kvinnlig k\u00f6nsstympning",
+    "generator": "same_date",
+    "description": "06 februari varje \u00e5r",
+    "month": 2,
+    "day": 6
+  },
+  {
+    "theme": "Safer internet day",
+    "generator": "safer_internet",
+    "description": ""
+  },
+  {
+    "theme": "Skogens dag",
+    "generator": "same_date",
+    "description": "08 februari varje \u00e5r",
+    "month": 2,
+    "day": 8
+  },
+  {
+    "theme": "Int. dagen f\u00f6r kvinnor och flickor inom vetenskap",
+    "generator": "same_date",
+    "description": "11 februari varje \u00e5r",
+    "month": 2,
+    "day": 11
+  },
+  {
+    "theme": "Kakelplattans dag",
+    "generator": "same_date",
+    "description": "23 februari varje \u00e5r",
+    "month": 2,
+    "day": 23
+  },
+  {
+    "theme": "K\u00e4lk\u00e5kningens dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista s\u00f6ndag i februari",
+    "weekday": 7,
+    "month": 2
+  },
+  {
+    "theme": "Kv\u00e4nfolkets dag",
+    "generator": "same_date",
+    "description": "16 mars varje \u00e5r",
+    "month": 3,
+    "day": 16
+  },
+  {
+    "theme": "Hallongrottans dag",
+    "generator": "same_date",
+    "description": "17 mars varje \u00e5r",
+    "month": 3,
+    "day": 17
+  },
+  {
+    "theme": "Internationella barnreumatikerdagen",
+    "generator": "same_date",
+    "description": "18 mars varje \u00e5r",
+    "month": 3,
+    "day": 18
+  },
+  {
+    "theme": "Supporterns dag",
+    "generator": "same_date",
+    "description": "19 mars varje \u00e5r",
+    "month": 3,
+    "day": 19
+  },
+  {
+    "theme": "Internationella munh\u00e4lsodagen",
+    "generator": "same_date",
+    "description": "20 mars varje \u00e5r",
+    "month": 3,
+    "day": 20
+  },
+  {
+    "theme": "Int. dagen f\u00f6r avskaffande av rasdiskriminering",
+    "generator": "same_date",
+    "description": "21 mars varje \u00e5r",
+    "month": 3,
+    "day": 21
+  },
+  {
+    "theme": "Int. dagen f\u00f6r r\u00e4tt till sanning om grova kr\u00e4nkningar av de m\u00e4nskliga r\u00e4ttigheterna...",
+    "generator": "same_date",
+    "description": "24 mars varje \u00e5r",
+    "month": 3,
+    "day": 24
+  },
+  {
+    "theme": "Int. solidaritetsdagen f\u00f6r frihetsber\u00f6vad eller f\u00f6rsvunnen personal",
+    "generator": "same_date",
+    "description": "25 mars varje \u00e5r",
+    "month": 3,
+    "day": 25
+  },
+  {
+    "theme": "Arbetsplatsombudens dag",
+    "generator": "same_date",
+    "description": "26 mars varje \u00e5r",
+    "month": 3,
+    "day": 26
+  },
+  {
+    "theme": "Int. dagen f\u00f6r synligg\u00f6rande av transpersoner",
+    "generator": "same_date",
+    "description": "31 mars varje \u00e5r",
+    "month": 3,
+    "day": 31
+  },
+  {
+    "theme": "Int. dagen f\u00f6r reflektion av folkmordet i Rwanda",
+    "generator": "same_date",
+    "description": "07 april varje \u00e5r",
+    "month": 4,
+    "day": 7
+  },
+  {
+    "theme": "Uniform p\u00e5 jobbet-dagen",
+    "generator": "weekday_of_xth_week",
+    "description": "onsdag i vecka 16",
+    "week": 16,
+    "weekday": 3
+  },
+  {
+    "theme": "Int. dagen f\u00f6r multilateralism och diplomati f\u00f6r fred",
+    "generator": "same_date",
+    "description": "24 april varje \u00e5r",
+    "month": 4,
+    "day": 24
+  },
+  {
+    "theme": "Lekens dag",
+    "generator": "same_date",
+    "description": "25 april varje \u00e5r",
+    "month": 4,
+    "day": 25
+  },
+  {
+    "theme": "Regnb\u00e5gsfamiljers dag",
+    "generator": "same_date",
+    "description": "06 maj varje \u00e5r",
+    "month": 5,
+    "day": 6
+  },
+  {
+    "theme": "N\u00e4mndem\u00e4nnens dag",
+    "generator": "same_date",
+    "description": "11 maj varje \u00e5r",
+    "month": 5,
+    "day": 11
+  },
+  {
+    "theme": "Internationella museidagen",
+    "generator": "same_date",
+    "description": "18 maj varje \u00e5r",
+    "month": 5,
+    "day": 18
+  },
+  {
+    "theme": "Halloumiostens dag",
+    "generator": "same_date",
+    "description": "19 maj varje \u00e5r",
+    "month": 5,
+    "day": 19
+  },
+  {
+    "theme": "Kulturskolans dag",
+    "generator": "same_date",
+    "description": "20 maj varje \u00e5r",
+    "month": 5,
+    "day": 20
+  },
+  {
+    "theme": "Int. dagen f\u00f6r barn som blivit offer f\u00f6r aggression",
+    "generator": "same_date",
+    "description": "04 juni varje \u00e5r",
+    "month": 6,
+    "day": 4
+  },
+  {
+    "theme": "Int. dagen f\u00f6r kampen mot illegalt, orapporterat och oreglerat fiske",
+    "generator": "same_date",
+    "description": "05 juni varje \u00e5r",
+    "month": 6,
+    "day": 5
+  },
+  {
+    "theme": "Redovisningskonsultens dag",
+    "generator": "same_date",
+    "description": "16 juni varje \u00e5r",
+    "month": 6,
+    "day": 16
+  },
+  {
+    "theme": "Int. dagen mot missbruk av och olaglig handel med narkotika",
+    "generator": "same_date",
+    "description": "26 juni varje \u00e5r",
+    "month": 6,
+    "day": 26
+  },
+  {
+    "theme": "Silikonbr\u00f6stens dag",
+    "generator": "same_date",
+    "description": "01 juli varje \u00e5r",
+    "month": 7,
+    "day": 1
+  },
+  {
+    "theme": "Int. dagen f\u00f6r oskadligg\u00f6rande av handeldvapen",
+    "generator": "same_date",
+    "description": "09 juli varje \u00e5r",
+    "month": 7,
+    "day": 9
+  },
+  {
+    "theme": "\u00c4ngens dag",
+    "generator": "xth_weekday_of_month",
+    "description": "F\u00f6rsta l\u00f6rdag i augusti",
+    "xth": 1,
+    "weekday": 6,
+    "month": 8
+  },
+  {
+    "theme": "Int. minnesdagen f\u00f6r m\u00e4nniskor som fallit offer f\u00f6r v\u00e5ldsd\u00e5d relaterade till religion...",
+    "generator": "same_date",
+    "description": "22 augusti varje \u00e5r",
+    "month": 8,
+    "day": 22
+  },
+  {
+    "theme": "Int. dagen till minne av slaveriet och dess avskaffande",
+    "generator": "same_date",
+    "description": "23 augusti varje \u00e5r",
+    "month": 8,
+    "day": 23
+  },
+  {
+    "theme": "World day of Turner Syndrome",
+    "generator": "same_date",
+    "description": "28 augusti varje \u00e5r",
+    "month": 8,
+    "day": 28
+  },
+  {
+    "theme": "\u00d6stersj\u00f6dagen",
+    "generator": "last_weekday_of_month",
+    "description": "Sista torsdag i augusti",
+    "weekday": 4,
+    "month": 8
+  },
+  {
+    "theme": "Int. dagen f\u00f6r offren f\u00f6r p\u00e5tvingade f\u00f6rsvinnanden",
+    "generator": "same_date",
+    "description": "30 augusti varje \u00e5r",
+    "month": 8,
+    "day": 30
+  },
+  {
+    "theme": "D\u00e4ckcheckdagen",
+    "generator": "same_date",
+    "description": "01 september varje \u00e5r",
+    "month": 9,
+    "day": 1
+  },
+  {
+    "theme": "Allemansr\u00e4ttens dag",
+    "generator": "same_date",
+    "description": "20 september varje \u00e5r",
+    "month": 9,
+    "day": 20
+  },
+  {
+    "theme": "L\u00f6sgodisets dag",
+    "generator": "last_weekday_of_month",
+    "description": "Sista l\u00f6rdag i september",
+    "weekday": 6,
+    "month": 9
+  },
+  {
+    "theme": "Int. dagen f\u00f6r universell tillg\u00e5ng till information",
+    "generator": "same_date",
+    "description": "28 september varje \u00e5r",
+    "month": 9,
+    "day": 28
+  },
+  {
+    "theme": "Alla djurhelgons dag",
+    "generator": "same_date",
+    "description": "04 oktober varje \u00e5r",
+    "month": 10,
+    "day": 4
+  },
+  {
+    "theme": "V\u00e4rldsdyslexidagen",
+    "generator": "same_date",
+    "description": "08 oktober varje \u00e5r",
+    "month": 10,
+    "day": 8
+  },
+  {
+    "theme": "Int. dagen f\u00f6r begr\u00e4nsning av naturkatastrofer",
+    "generator": "xth_weekday_of_month",
+    "description": "Andra onsdag i oktober",
+    "xth": 2,
+    "weekday": 3,
+    "month": 10
+  },
+  {
+    "theme": "Tidningsbudens dag",
+    "generator": "news_deliverer",
+    "description": ""
+  },
+  {
+    "theme": "No Bra day",
+    "generator": "same_date",
+    "description": "13 oktober varje \u00e5r",
+    "month": 10,
+    "day": 13
+  },
+  {
+    "theme": "Alla kan r\u00e4dda liv-dagen",
+    "generator": "same_date",
+    "description": "16 oktober varje \u00e5r",
+    "month": 10,
+    "day": 16
+  },
+  {
+    "theme": "Polyneuropatidagen",
+    "generator": "same_date",
+    "description": "16 oktober varje \u00e5r",
+    "month": 10,
+    "day": 16
+  },
+  {
+    "theme": "Parisarens dag",
+    "generator": "same_date",
+    "description": "17 oktober varje \u00e5r",
+    "month": 10,
+    "day": 17
+  },
+  {
+    "theme": "Internationella Dysautonomi-dagen",
+    "generator": "same_date",
+    "description": "25 oktober varje \u00e5r",
+    "month": 10,
+    "day": 25
+  },
+  {
+    "theme": "Int. dagen f\u00f6r att f\u00f6r att upph\u00e4va straffrihet f\u00f6r brott mot journalister",
+    "generator": "same_date",
+    "description": "02 november varje \u00e5r",
+    "month": 11,
+    "day": 2
+  },
+  {
+    "theme": "Int. dagen f\u00f6r att f\u00f6rhindra exploatering av milj\u00f6n i krig och v\u00e4pnade konflikter",
+    "generator": "same_date",
+    "description": "06 november varje \u00e5r",
+    "month": 11,
+    "day": 6
+  },
+  {
+    "theme": "Internationella undersk\u00f6terskedagen",
+    "generator": "same_date",
+    "description": "26 november varje \u00e5r",
+    "month": 11,
+    "day": 26
+  },
+  {
+    "theme": "Int. solidaritetsdagen med det palestinska folket",
+    "generator": "same_date",
+    "description": "29 november varje \u00e5r",
+    "month": 11,
+    "day": 29
+  },
+  {
+    "theme": "Int. dagen till minnet av offren f\u00f6r kemisk krigsf\u00f6ring",
+    "generator": "same_date",
+    "description": "30 november varje \u00e5r",
+    "month": 11,
+    "day": 30
+  },
+  {
+    "theme": "Int. dagen f\u00f6r frivilligas arbete f\u00f6r ekonomisk och social utveckling",
+    "generator": "same_date",
+    "description": "05 december varje \u00e5r",
+    "month": 12,
+    "day": 5
+  },
+  {
+    "theme": "Skumtomtens dag",
+    "generator": "same_date",
+    "description": "21 december varje \u00e5r",
+    "month": 12,
+    "day": 21
+  }
+]
