@@ -110,6 +110,7 @@ class ApiData:
     def __str__(self):
         return json.dumps(self.__dict__)
 
+
 class ThemeData:
     def __init__(self, date: str, themes: list[str]):
         self.date: str = date
