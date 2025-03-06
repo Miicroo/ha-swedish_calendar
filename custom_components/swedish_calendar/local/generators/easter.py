@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 import math
 
-from generators import ThemeDateGenerator, count_descriptors
+from . import ThemeDateGenerator, count_descriptors
 
 
 def gauss_easter(year: int) -> date:

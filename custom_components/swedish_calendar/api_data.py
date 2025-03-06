@@ -98,7 +98,7 @@ class ApiDataProvider:
 
     @staticmethod
     def _to_api_data(json_response: dict[str, Any], start: date, end: date) -> list[ApiData]:
-        all_data = [ApiData(data_per_date) for data_per_date in json_response["dagar"]]
+        all_data = [ApiData.from_json(data_per_date) for data_per_date in json_response["dagar"]]
         wanted_data = list(filter(lambda api_data: DateUtils.in_range(api_data.date, start, end), all_data))
         return wanted_data
 

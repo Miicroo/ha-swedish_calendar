@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import datetime
 from datetime import timedelta
+import json
 from typing import Any
 
 
@@ -50,18 +52,45 @@ class SwedishCalendar:
 
 
 class ApiData:
-    def __init__(self, json_data: dict[str, Any]):
-        self.date: str = json_data["datum"]
-        self.weekday: str = json_data["veckodag"]
-        self.work_free_day: bool = self._to_bool(json_data["arbetsfri dag"])
-        self.red_day: bool = self._to_bool(json_data["röd dag"])
-        self.week: int = int(json_data["vecka"])
-        self.day_of_week_index: int = int(json_data["dag i vecka"])
-        self.name_day: list[str] = json_data["namnsdag"]
-        self.reason_for_flagging: str | None = self._to_optional(json_data, "flaggdag")
-        self.eve: str | None = self._to_optional(json_data, 'helgdagsafton')
-        self.holiday: str | None = self._to_optional(json_data, 'helgdag')
-        self.day_before_work_free_holiday: bool = self._to_optional_bool(json_data, "dag före arbetsfri helgdag")
+    def __init__(self,
+                 date: str,
+                 weekday: str,
+                 work_free_day: bool,
+                 red_day: bool,
+                 week: int,
+                 day_of_week_index: int,
+                 name_day: list[str],
+                 reason_for_flagging: str | None,
+                 eve: str | None,
+                 holiday: str | None,
+                 day_before_work_free_holiday: bool):
+        self.date: str = date
+        self.weekday: str = weekday
+        self.work_free_day: bool = work_free_day
+        self.red_day: bool = red_day
+        self.week: int = week
+        self.day_of_week_index: int = day_of_week_index
+        self.name_day: list[str] = name_day
+        self.reason_for_flagging: str | None = reason_for_flagging
+        self.eve: str | None = eve
+        self.holiday: str | None = holiday
+        self.day_before_work_free_holiday: bool = day_before_work_free_holiday
+
+    @staticmethod
+    def from_json(json_data: dict[str, Any]) -> ApiData:
+        return ApiData(
+            date=json_data["datum"],
+            weekday=json_data["veckodag"],
+            work_free_day=ApiData._to_bool(json_data["arbetsfri dag"]),
+            red_day=ApiData._to_bool(json_data["röd dag"]),
+            week=int(json_data["vecka"]),
+            day_of_week_index=int(json_data["dag i vecka"]),
+            name_day=json_data["namnsdag"],
+            reason_for_flagging=ApiData._to_optional(json_data, "flaggdag"),
+            eve=ApiData._to_optional(json_data, 'helgdagsafton'),
+            holiday=ApiData._to_optional(json_data, 'helgdag'),
+            day_before_work_free_holiday=ApiData._to_optional_bool(json_data, "dag före arbetsfri helgdag")
+        )
 
     @staticmethod
     def _to_bool(value: str) -> bool:
@@ -75,6 +104,11 @@ class ApiData:
     def _to_optional(json_value: dict[str, Any], key: str) -> Any | None:
         return json_value[key] if key in json_value else None
 
+    def __repr__(self):
+        return str(self)
+
+    def __str__(self):
+        return json.dumps(self.__dict__)
 
 class ThemeData:
     def __init__(self, date: str, themes: list[str]):

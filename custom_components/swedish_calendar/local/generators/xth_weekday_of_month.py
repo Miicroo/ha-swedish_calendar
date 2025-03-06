@@ -1,6 +1,6 @@
 from datetime import date, timedelta
 
-from generators import ThemeDateGenerator, count_descriptors
+from . import ThemeDateGenerator, count_descriptors
 
 
 class XthWeekdayOfMonthGenerator(ThemeDateGenerator):

@@ -1,16 +1,16 @@
 from datetime import date
 
-from generators import ThemeDateGenerator
-from generators.all_saints import AllSaintsGenerator
-from generators.holy_mikael import HolyMikaelGenerator
-from generators.last_weekday_of_month import LastWeekdayOfMonthGenerator
-from generators.news_deliverer import NewsDelivererGenerator
-from generators.safer_internet import SaferInternetGenerator
-from generators.same_date import SameDateGenerator
-from generators.stockfish import StockfishGenerator
-from generators.weekday_of_xth_week import WeekdayOfXthWeekGenerator
-from generators.xth_day_of_year import XthDayOfYearGenerator
-from generators.xth_weekday_of_month import XthWeekdayOfMonthGenerator
+from . import ThemeDateGenerator
+from .all_saints import AllSaintsGenerator
+from .holy_mikael import HolyMikaelGenerator
+from .last_weekday_of_month import LastWeekdayOfMonthGenerator
+from .news_deliverer import NewsDelivererGenerator
+from .safer_internet import SaferInternetGenerator
+from .same_date import SameDateGenerator
+from .stockfish import StockfishGenerator
+from .weekday_of_xth_week import WeekdayOfXthWeekGenerator
+from .xth_day_of_year import XthDayOfYearGenerator
+from .xth_weekday_of_month import XthWeekdayOfMonthGenerator
 
 
 class DelegatingGenerator(ThemeDateGenerator):

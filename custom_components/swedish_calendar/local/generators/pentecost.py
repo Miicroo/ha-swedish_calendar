@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
-from generators import ThemeDateGenerator, count_descriptors
-from generators.easter import gauss_easter
+from . import ThemeDateGenerator, count_descriptors
+from .easter import gauss_easter
 
 
 class PentecostGenerator(ThemeDateGenerator):
@@ -9,7 +9,7 @@ class PentecostGenerator(ThemeDateGenerator):
     @staticmethod
     def __get_pentecost_dates(year: int) -> [date]:
         easter_sun = gauss_easter(year)
-        return [easter_sun + timedelta(i) for i in range(48, 50)]
+        return [easter_sun + timedelta(i) for i in range(48, 51)]
 
     @staticmethod
     def __is_pentecost_day(date_in_month: date) -> bool:

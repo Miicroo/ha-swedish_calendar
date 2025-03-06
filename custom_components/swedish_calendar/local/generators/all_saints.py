@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
-from generators import ThemeDateGenerator, count_descriptors
-from generators.weekday_after_date import WeekdayAfterDateGenerator
+from . import ThemeDateGenerator, count_descriptors
+from .weekday_after_date import WeekdayAfterDateGenerator
 
 
 class AllSaintsGenerator(WeekdayAfterDateGenerator):

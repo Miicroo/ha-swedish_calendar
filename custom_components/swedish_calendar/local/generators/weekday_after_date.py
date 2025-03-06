@@ -1,6 +1,6 @@
 from datetime import date, timedelta
 
-from generators import ThemeDateGenerator
+from . import ThemeDateGenerator
 
 
 class WeekdayAfterDateGenerator(ThemeDateGenerator):

@@ -1,6 +1,6 @@
 from datetime import date
 
-from generators import ThemeDateGenerator
+from . import ThemeDateGenerator
 
 
 class SameDateGenerator(ThemeDateGenerator):

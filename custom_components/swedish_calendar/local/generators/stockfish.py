@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
-from generators import ThemeDateGenerator
-from generators.all_saints import AllSaintsGenerator
+from . import ThemeDateGenerator
+from .all_saints import AllSaintsGenerator
 
 
 class StockfishGenerator(ThemeDateGenerator):

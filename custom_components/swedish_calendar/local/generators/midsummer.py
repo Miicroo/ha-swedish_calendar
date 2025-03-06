@@ -1,6 +1,6 @@
 from datetime import date, timedelta
 
-from generators.weekday_after_date import WeekdayAfterDateGenerator
+from .weekday_after_date import WeekdayAfterDateGenerator
 
 
 class MidsummerGenerator(WeekdayAfterDateGenerator):

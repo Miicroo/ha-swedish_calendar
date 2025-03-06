@@ -1,8 +1,9 @@
 from datetime import date, timedelta
 
 import ephem
-from generators import ThemeDateGenerator
-from generators.midsummer import MidsummerGenerator
+
+from . import ThemeDateGenerator
+from .midsummer import MidsummerGenerator
 
 
 class CaravanGenerator(ThemeDateGenerator):

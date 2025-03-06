@@ -1,6 +1,6 @@
 from datetime import date
 
-from generators.weekday_after_date import WeekdayAfterDateGenerator
+from .weekday_after_date import WeekdayAfterDateGenerator
 
 
 class GrandparentsGenerator(WeekdayAfterDateGenerator):

@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
-from generators import ThemeDateGenerator, count_descriptors
-from generators.easter import gauss_easter
+from . import ThemeDateGenerator, count_descriptors
+from .easter import gauss_easter
 
 
 class FastDaysGenerator(ThemeDateGenerator):

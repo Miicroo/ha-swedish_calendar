@@ -3,6 +3,7 @@ import os
 from typing import Any
 
 import voluptuous as vol
+from voluptuous import Optional
 
 from homeassistant.components import persistent_notification
 from homeassistant.config_entries import ConfigEntry, ConfigFlow
@@ -21,6 +22,7 @@ from .const import (
     CONF_ENABLED,
     CONF_EXCLUDE,
     CONF_INCLUDE,
+    CONF_LOCAL_MODE,
     CONF_RETENTION,
     CONF_SPECIAL_THEMES,
     CONF_SPECIAL_THEMES_DIR,
@@ -62,13 +64,24 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         )
 
     def _get_themes_schema(self) -> vol.Schema:
-        entry_data = self.config_entry.data[CONF_SPECIAL_THEMES] if self.config_entry else {}
+        entry_data = (self.config_entry.data.get(CONF_SPECIAL_THEMES) or {}) if self.config_entry else {}
         return vol.Schema(
             {
                 vol.Optional(CONF_DIR, default=entry_data.get(CONF_DIR) or os.path.dirname(__file__)): cv.string,
                 vol.Optional(CONF_AUTO_UPDATE, default=entry_data.get(CONF_AUTO_UPDATE) or False): cv.boolean,
             },
         )
+
+    def _get_local_mode_schema(self) -> vol.Schema:
+        entry_data = self.config_entry.data if self.config_entry else {}
+        return vol.Schema(
+            {
+                vol.Optional(CONF_LOCAL_MODE, default=entry_data.get(CONF_LOCAL_MODE) or False): cv.boolean
+            },
+        )
+
+    def _is_local_mode(self) -> bool:
+        return self.data.get(CONF_LOCAL_MODE) or False
 
     @staticmethod
     def _get_not_excluded_sensors(data_map: dict[str, Any]):
@@ -92,7 +105,8 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
                         "multiple": True
                     }
                 }),
-                vol.Optional(CONF_DAYS_BEFORE_TODAY, default=entry_data.get(CONF_DAYS_BEFORE_TODAY) or 0): cv.positive_int,
+                vol.Optional(CONF_DAYS_BEFORE_TODAY,
+                             default=entry_data.get(CONF_DAYS_BEFORE_TODAY) or 0): cv.positive_int,
                 vol.Optional(CONF_DAYS_AFTER_TODAY, default=entry_data.get(CONF_DAYS_AFTER_TODAY) or 0): cv.positive_int
             }
         )
@@ -116,13 +130,20 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             excludes = [key for key in SENSOR_TYPES if SENSOR_TYPES[key].friendly_name not in user_input[CONF_INCLUDE]]
             self.data[CONF_EXCLUDE] = excludes
-            return await self.async_step_special_themes()
+            return await self.async_step_local_mode()
 
         self.data = {}  # Reset data object
         return self.async_show_form(step_id="user", data_schema=self._get_include_sensor_schema())
 
+    async def async_step_local_mode(self, user_input: dict[str, Any] | None = None):
+        if user_input is not None:
+            self.data[CONF_LOCAL_MODE] = user_input[CONF_LOCAL_MODE]
+            return await self.async_step_special_themes()
+
+        return self.async_show_form(step_id="local_mode", data_schema=self._get_local_mode_schema())
+
     async def async_step_special_themes(self, user_input: dict[str, Any] | None = None):
-        if THEME_DAY in self.data[CONF_EXCLUDE]:
+        if THEME_DAY in self.data[CONF_EXCLUDE] or self._is_local_mode():
             return await self.async_step_calendar()
 
         if user_input is not None:
@@ -142,6 +163,14 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         return self.async_show_form(step_id="calendar", data_schema=self._get_calendar_schema())
 
     async def async_step_cache(self, user_input: dict[str, Any] | None = None):
+        if self._is_local_mode():
+            user_input = {}
+            for key, rule in self._get_cache_schema().schema.items():
+                if isinstance(key, Optional) and key.default is not None:
+                    user_input[key.schema] = key.default() if callable(key.default) else key.default
+
+            user_input[CONF_ENABLED] = False
+
         if user_input is not None:
             self.data[CONF_CACHE] = user_input
 

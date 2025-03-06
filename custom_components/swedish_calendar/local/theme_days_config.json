@@ -2098,6 +2098,12 @@
     "index": 1
   },
   {
+    "theme": "Annandag pingst",
+    "generator": "pentecost",
+    "description": "Tredje dagen i pingst",
+    "index": 2
+  },
+  {
     "theme": "Internationella sk\u00f6ldpaddsdagen",
     "generator": "same_date",
     "description": "23 maj varje \u00e5r",

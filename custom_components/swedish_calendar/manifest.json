@@ -6,6 +6,6 @@
     "dependencies": [],
     "documentation": "https://github.com/Miicroo/ha-swedish_calendar",
     "iot_class": "cloud_polling",
-    "requirements": [],
+    "requirements": ["ephem==4.2"],
     "version": "3.0.0-beta"
 }

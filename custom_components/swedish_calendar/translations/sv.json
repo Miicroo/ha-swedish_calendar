@@ -6,6 +6,12 @@
           "include": "Sensorer som ska inkluderas"
         }
       },
+      "local_mode": {
+        "data": {
+          "local_mode": "Använd lokalt läge, där all data beräknas istället för att hämtas online"
+        },
+        "title": "Lokalt läge"
+      },
       "special_themes": {
         "data": {
           "dir": "Mapp med specialThemes.json",

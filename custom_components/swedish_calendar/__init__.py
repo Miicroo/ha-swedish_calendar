@@ -17,6 +17,7 @@ from .const import (
     CONF_ENABLED,
     CONF_EXCLUDE,
     CONF_INCLUDE,
+    CONF_LOCAL_MODE,
     CONF_RETENTION,
     CONF_SPECIAL_THEMES,
     CONF_SPECIAL_THEMES_DIR,
@@ -40,11 +41,13 @@ async def async_setup_entry(hass: HomeAssistant, entry: config_entries.ConfigEnt
     """Set up platform from a ConfigEntry."""
     conf = dict(entry.data)
 
-    special_themes_config = get_special_themes_config(conf)
+    is_local_mode = conf.get(CONF_LOCAL_MODE) or False
+    special_themes_config = get_special_themes_config(conf, is_local_mode=is_local_mode)
     calendar_config = get_calendar_config(conf)
     cache_config = get_cache_config(conf)
 
-    data_coordinator = CalendarDataCoordinator(hass, special_themes_config, calendar_config, cache_config)
+    data_coordinator = CalendarDataCoordinator(hass, special_themes_config, calendar_config, cache_config,
+                                               is_local_mode, conf)
 
     # Fetch initial data so we have data when entities subscribe
     await data_coordinator.async_refresh()
@@ -71,9 +74,10 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     return True
 
 
-def get_special_themes_config(config: dict) -> SpecialThemesConfig:
+def get_special_themes_config(config: dict, is_local_mode: bool = False) -> SpecialThemesConfig:
     special_themes_path = None
-    themes_are_excluded = THEME_DAY in config[CONF_EXCLUDE]
+    auto_update = False
+    themes_are_excluded = THEME_DAY in config[CONF_EXCLUDE] or is_local_mode
 
     if not themes_are_excluded:
         user_defined_dir = config[CONF_SPECIAL_THEMES][CONF_DIR]
@@ -92,7 +96,7 @@ def get_special_themes_config(config: dict) -> SpecialThemesConfig:
                             'exclude %s, or add a config entry pointing to a directory containing specialThemes.json',
                             THEME_DAY)
 
-    auto_update = config[CONF_SPECIAL_THEMES][CONF_AUTO_UPDATE]
+        auto_update = config[CONF_SPECIAL_THEMES][CONF_AUTO_UPDATE]
 
     return SpecialThemesConfig(special_themes_path, auto_update)
 

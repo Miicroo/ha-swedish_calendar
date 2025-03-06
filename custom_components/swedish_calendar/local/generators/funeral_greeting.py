@@ -1,7 +1,8 @@
 from datetime import date
 
 import ephem
-from generators import ThemeDateGenerator
+
+from . import ThemeDateGenerator
 
 
 class FuneralGreetingGenerator(ThemeDateGenerator):

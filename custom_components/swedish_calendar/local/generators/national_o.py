@@ -1,8 +1,9 @@
 from datetime import date
 
 import ephem
-from generators import ThemeDateGenerator
-from generators.midsummer import MidsummerGenerator
+
+from . import ThemeDateGenerator
+from .midsummer import MidsummerGenerator
 
 
 class NationalOGenerator(ThemeDateGenerator):
