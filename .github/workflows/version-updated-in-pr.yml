@@ -13,11 +13,11 @@ jobs:
         with:
           fetch-depth: 2  # Ensure we fetch the previous commit
 
-      - name: Get previous version
+      - name: Get previous version from master
         id: old_version
-        run: echo "OLD_VERSION=$(jq -r '.version' custom_components/swedish_calendar/manifest.json)" >> $GITHUB_ENV
+        run: echo "OLD_VERSION=$(git show origin/master:custom_components/swedish_calendar/manifest.json | jq -r '.version')" >> $GITHUB_ENV
 
-      - name: Get new version
+      - name: Get new version from branch
         id: new_version
         run: echo "NEW_VERSION=$(jq -r '.version' custom_components/swedish_calendar/manifest.json)" >> $GITHUB_ENV
 
