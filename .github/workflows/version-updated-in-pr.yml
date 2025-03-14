@@ -15,7 +15,7 @@ jobs:
 
       - name: Get previous version
         id: old_version
-        run: echo "OLD_VERSION=$(jq -r '.version' custom_components/swedish_calendar/manifest.json^)" >> $GITHUB_ENV
+        run: echo "OLD_VERSION=$(jq -r '.version' custom_components/swedish_calendar/manifest.json)" >> $GITHUB_ENV
 
       - name: Get new version
         id: new_version
