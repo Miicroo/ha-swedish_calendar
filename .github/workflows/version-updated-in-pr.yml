@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 2  # Ensure we fetch the previous commit
 
-      - name: Fetch latest master
+      - name: Fetch latest master from origin
         run: git fetch origin master --depth=1
 
       - name: Get previous version from master
