@@ -21,6 +21,7 @@ from custom_components.swedish_calendar import (
 from custom_components.swedish_calendar.config_flow import SwedishCalendarConfigFlow
 from custom_components.swedish_calendar.const import (
     CONF_DEFAULT_CACHE_DIR,
+    CONF_LOCAL_MODE,
     DOMAIN_FRIENDLY_NAME,
 )
 from homeassistant.config_entries import SOURCE_USER, ConfigEntry
@@ -47,7 +48,7 @@ async def test_flow_included_sensors(hass):
     )
 
     assert result["type"] is FlowResultType.FORM
-    assert result["step_id"] == "special_themes"
+    assert result["step_id"] == "local_mode"
 
     handler = hass.config_entries.flow._progress[result["flow_id"]]
     assert handler.data[CONF_EXCLUDE] == excludes
@@ -66,10 +67,33 @@ async def _set_up_sensor_inclusion(hass, sensor_type_keys: list[str]) -> FlowRes
     )
 
 
+async def test_flow_local_mode(hass):
+    """Test flow: local mode."""
+    result = await _set_up_sensor_inclusion(hass, [THEME_DAY])
+    result = await hass.config_entries.flow.async_configure(result["flow_id"])
+
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "local_mode"
+
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], user_input={CONF_LOCAL_MODE: False}
+    )
+
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "special_themes"
+
+    flow_handler = hass.config_entries.flow._progress[result["flow_id"]]
+    local_mode_value = flow_handler.data[CONF_LOCAL_MODE]
+    assert not local_mode_value
+
+
 async def test_flow_special_themes(hass):
     """Test flow: special themes."""
     result = await _set_up_sensor_inclusion(hass, [THEME_DAY])
     result = await hass.config_entries.flow.async_configure(result["flow_id"])
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], user_input={CONF_LOCAL_MODE: False}
+    )
 
     assert result["type"] is FlowResultType.FORM
     assert result["step_id"] == "special_themes"
@@ -96,6 +120,9 @@ async def test_flow_calendar(hass):
     ]
     result = await _set_up_sensor_inclusion(hass, included_sensors)
     result = await hass.config_entries.flow.async_configure(result["flow_id"])
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], user_input={CONF_LOCAL_MODE: False}
+    )
 
     assert result["type"] is FlowResultType.FORM
     assert result["step_id"] == "calendar"
@@ -158,6 +185,14 @@ async def test_full_flow(hass):
         result["flow_id"], user_input={CONF_INCLUDE: included_sensors_friendly_names}
     )
 
+    # Local mode step
+    result = await hass.config_entries.flow.async_configure(result["flow_id"])
+    assert result["step_id"] == "local_mode"
+
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], user_input={CONF_LOCAL_MODE: False}
+    )
+
     # Special themes step
     result = await hass.config_entries.flow.async_configure(result["flow_id"])
     assert result["step_id"] == "special_themes"
@@ -214,8 +249,25 @@ async def test_flow_special_themes_dont_configure_special_themes_if_theme_day_is
     hass,
 ):
     """Test special themes form is ignored if theme day sensor is excluded."""
-    # Dont include theme day, go straight to calendar set up
+    # Don't include theme day, go straight to calendar set up
     result = await _set_up_sensor_inclusion(hass, [])
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], user_input={CONF_LOCAL_MODE: False}
+    )
+
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "calendar"
+
+
+async def test_flow_special_themes_dont_configure_special_themes_if_local_mode(
+    hass,
+):
+    """Test special themes form is ignored if theme day sensor is excluded."""
+    # Don't include theme day, go straight to calendar set up
+    result = await _set_up_sensor_inclusion(hass, [THEME_DAY])
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], user_input={CONF_LOCAL_MODE: True}
+    )
 
     assert result["type"] is FlowResultType.FORM
     assert result["step_id"] == "calendar"
@@ -239,6 +291,16 @@ async def test_get_include_sensor_schema_defaults_to_all_sensors():
     all_sensors = [SENSOR_TYPES[key].friendly_name for key in SENSOR_TYPES]
 
     assert default_schema[CONF_INCLUDE] == all_sensors
+
+
+async def test_get_local_mode_schema_defaults():
+    """Test default schema for special themes."""
+    handler = SwedishCalendarConfigFlow()
+    schema = handler._get_local_mode_schema()
+
+    default_schema = schema({})
+
+    assert not default_schema[CONF_LOCAL_MODE]
 
 
 async def test_get_special_themes_schema_defaults():
