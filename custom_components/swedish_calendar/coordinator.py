@@ -1,4 +1,5 @@
 from datetime import date, datetime, timedelta
+from functools import partial
 import logging
 
 from homeassistant.core import HomeAssistant, callback
@@ -6,7 +7,9 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
 from .api_data import ApiDataProvider
-from .const import DOMAIN_FRIENDLY_NAME
+from .const import CONF_EXCLUDE, DOMAIN_FRIENDLY_NAME, THEME_DAY
+from .local.api_data_local import LocalApiDataProvider
+from .local.theme_data_local import LocalThemeDataProvider, LocalThemeDataUpdater
 from .theme_data import ThemeDataProvider, ThemeDataUpdater
 from .types import (
     ApiData,
@@ -27,19 +30,26 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
                  hass: HomeAssistant,
                  special_themes_config: SpecialThemesConfig,
                  calendar_config: CalendarConfig,
-                 cache_config: CacheConfig):
+                 cache_config: CacheConfig,
+                 is_local_mode: bool,
+                 conf: dict):
         """Initialize the data object."""
         self.hass = hass
-        self._themes_path: str = special_themes_config.path
+        self._themes_enabled: str = THEME_DAY not in (conf[CONF_EXCLUDE] or [])
         self._cache: dict[date, SwedishCalendar] = {}
         self._fetch_days_before_today = calendar_config.days_before_today
         self._fetch_days_after_today = calendar_config.days_after_today
         self._first_update = True  # Keep track of first update so that we keep boot times down
 
-        session = async_get_clientsession(hass)
-        self._api_data_provider = ApiDataProvider(hass=hass, session=session, cache_config=cache_config)
-        self._theme_data_updater = ThemeDataUpdater(hass=hass, config=special_themes_config, session=session)
-        self._theme_provider = ThemeDataProvider(hass=hass, theme_path=special_themes_config.path)
+        if is_local_mode:
+            self._api_data_provider = LocalApiDataProvider(hass=hass)
+            self._theme_data_updater = LocalThemeDataUpdater()
+            self._theme_provider = LocalThemeDataProvider(hass=hass)
+        else:
+            session = async_get_clientsession(hass)
+            self._api_data_provider = ApiDataProvider(hass=hass, session=session, cache_config=cache_config)
+            self._theme_data_updater = ThemeDataUpdater(hass=hass, config=special_themes_config, session=session)
+            self._theme_provider = ThemeDataProvider(hass=hass, theme_path=special_themes_config.path)
 
         super().__init__(
             hass,
@@ -83,7 +93,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         end_date = self._get_end()
 
         themes = []
-        if self._themes_path:
+        if self._themes_enabled:
             themes = await self._theme_provider.fetch_data(start_date, end_date)
         swedish_dates = await self._api_data_provider.fetch_data(start_date, end_date)
 

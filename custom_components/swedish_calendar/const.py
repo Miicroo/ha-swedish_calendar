@@ -2,7 +2,6 @@ from .types import SensorConfig
 
 DOMAIN = 'swedish_calendar'
 DOMAIN_FRIENDLY_NAME = 'Swedish calendar'
-VERSION = '3.0.0-beta'
 
 CONF_CALENDAR = 'calendar_config'
 CONF_SPECIAL_THEMES = 'special_themes'
@@ -21,6 +20,7 @@ CONF_ATTRIBUTION_SPECIAL_THEMES = 'Data provided by https://temadagar.se. For fu
                                   'see https://temadagar.se/kop-temadagar-kalender/'
 CONF_EXCLUDE = 'exclude'
 CONF_INCLUDE = 'include'
+CONF_LOCAL_MODE = 'local_mode'
 
 CONF_DAYS_BEFORE_TODAY = 'days_before_today'
 CONF_DAYS_AFTER_TODAY = 'days_after_today'

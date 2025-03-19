@@ -1,0 +1,36 @@
+name: Check JSON Version Update
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Ensure we fetch the previous commit
+
+      - name: Fetch latest master from origin
+        run: git fetch origin master --depth=1
+
+      - name: Get previous version from master
+        id: old_version
+        run: echo "OLD_VERSION=$(git show origin/master:custom_components/swedish_calendar/manifest.json | jq -r '.version')" >> $GITHUB_ENV
+
+      - name: Get new version from branch
+        id: new_version
+        run: echo "NEW_VERSION=$(jq -r '.version' custom_components/swedish_calendar/manifest.json)" >> $GITHUB_ENV
+
+      - name: Compare versions
+        run: |
+          echo "Old version: $OLD_VERSION"
+          echo "New version: $NEW_VERSION"
+          if [ "$OLD_VERSION" == "$NEW_VERSION" ]; then
+            echo "❌ Version has not changed. Please update the 'version' key in your JSON file."
+            exit 1
+          else
+            echo "✅ Version has been updated."
+          fi

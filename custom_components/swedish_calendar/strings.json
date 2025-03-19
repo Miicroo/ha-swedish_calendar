@@ -6,6 +6,12 @@
           "include": "Sensors to include"
         }
       },
+      "local_mode": {
+        "data": {
+          "local_mode": "Use local mode, where all values are calculated instead of retrieved"
+        },
+        "title": "Local mode"
+      },
       "special_themes": {
         "data": {
           "dir": "Directory to find specialThemes.json",
