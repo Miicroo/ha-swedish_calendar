@@ -48,6 +48,7 @@ If you ever want to update the configuration, you have 2 options.
 | Name           | Default        | Description                                                                                                                                                                                                 |
 |----------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | includes       | *all sensors*  | All sensor types are tracked by default, this config lets you specify which sensor types that you **don't** want to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| local mode     | False          | Use local mode, where all values are calculated locally. By default, values are fetched from an online API.                                                                                                 |
 | special themes | *empty object* | The special themes config, see [Special themes config](#special-themes).                                                                                                                                    |
 | calendar       | *empty object* | The calendar config, if you want sensors to be shown in the HomeAssistant Calendar. See [Calendar configuration](#calendar).                                                                                |
 | cache          | *empty object* | The cache config, if you want to store data locally for instance when running on a slow connection. See [Cache configuration](#cache).                                                                      |
@@ -97,6 +98,11 @@ Example showing `eve` and `holiday` for Dec 2022 (7 days before today, 31 days a
 | dir       | *installation_dir*/.cache | Full path to directory where cached data should be stored |
 | retention | 7 days                    | Time until cache is renewed, in number of days            |
 
+### Local mode
+Local mode allows all values to be calculated locally, eliminating the need for an online API. This offers advantages such as faster calculation times and no risk of the API going offline, which would otherwise cause all sensor values to be displayed as unknown.
+The main disadvantage is that any bugs require a new version with the fix installed before they can be resolved.
+
+Currently, local mode is disabled by default, but this may change in the future.
 
 ## Example UI
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
