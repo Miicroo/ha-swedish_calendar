@@ -1,7 +1,10 @@
 from datetime import date, datetime, timedelta
-from functools import partial
 import logging
 
+from custom_components.swedish_calendar.local.themes.theme_data_local import (
+    LocalThemeDataProvider,
+    LocalThemeDataUpdater,
+)
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
@@ -9,7 +12,6 @@ from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from .api_data import ApiDataProvider
 from .const import CONF_EXCLUDE, DOMAIN_FRIENDLY_NAME, THEME_DAY
 from .local.api_data_local import LocalApiDataProvider
-from .local.theme_data_local import LocalThemeDataProvider, LocalThemeDataUpdater
 from .theme_data import ThemeDataProvider, ThemeDataUpdater
 from .types import (
     ApiData,

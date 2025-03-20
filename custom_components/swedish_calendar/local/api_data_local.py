@@ -6,7 +6,7 @@ from custom_components.swedish_calendar.local import StaticHolidayConfig
 from custom_components.swedish_calendar.local.flag_days import get_flag_days
 from custom_components.swedish_calendar.local.holidays import get_holidays
 from custom_components.swedish_calendar.local.name_days import NameDayProvider
-from custom_components.swedish_calendar.local.theme_data_local import (
+from custom_components.swedish_calendar.local.themes.theme_data_local import (
     LocalThemeDataProvider,
 )
 from custom_components.swedish_calendar.types import ApiData, ThemeData
