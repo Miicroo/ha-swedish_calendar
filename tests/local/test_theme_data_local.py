@@ -1,7 +1,7 @@
 """Test local theme data provider."""
 from datetime import date
 
-from custom_components.swedish_calendar.local.theme_data_local import (
+from custom_components.swedish_calendar.local.themes.theme_data_local import (
     LocalThemeDataProvider,
 )
 

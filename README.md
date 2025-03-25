@@ -69,9 +69,14 @@ If you ever want to update the configuration, you have 2 options.
 | flag_day                    | Flaggdag                   | unknown       |
 | theme_day                   | Temadag                    | Julafton      |
 
+### Local mode
+Local mode allows all values to be calculated locally, eliminating the need for an online API. This offers advantages such as faster calculation times and no risk of the API going offline, which would otherwise cause all sensor values to be displayed as unknown.
+The main disadvantage is that any bugs require a new version with the fix installed before they can be resolved.
+
+Currently, local mode is disabled by default, but this may change in the future.
 
 ### Special themes
-Special themes include data about common celebrations in Sweden, like 🍪 Kanelbullens dag or 🦢 Mårtensafton.
+Special themes include data about common celebrations in Sweden, like 🍪 Kanelbullens dag or 🦢 Mårtensafton. If you are using `local mode`, no configuration is needed. Local mode also supports your own custom themes, [read more here how theme generation works](themes.md).
 
 | Name        | Default                          | Description                                                                                                                                        |
 |-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -97,12 +102,6 @@ Example showing `eve` and `holiday` for Dec 2022 (7 days before today, 31 days a
 | enabled   | False                     | Enable/disable the cache                                  |
 | dir       | *installation_dir*/.cache | Full path to directory where cached data should be stored |
 | retention | 7 days                    | Time until cache is renewed, in number of days            |
-
-### Local mode
-Local mode allows all values to be calculated locally, eliminating the need for an online API. This offers advantages such as faster calculation times and no risk of the API going offline, which would otherwise cause all sensor values to be displayed as unknown.
-The main disadvantage is that any bugs require a new version with the fix installed before they can be resolved.
-
-Currently, local mode is disabled by default, but this may change in the future.
 
 ## Example UI
 I currently use the sensors in a grid spanning 5 rows, top 2 rows are 3 columns and bottom 2 rows are 2 columns. The bottom columns are conditional cards for showing holidays, which are only displayed if there is a value.
