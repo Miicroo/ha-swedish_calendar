@@ -2,6 +2,7 @@ import json
 import logging
 import os
 
+from homeassistant.components import persistent_notification
 from homeassistant.core import HomeAssistant
 
 _LOGGER = logging.getLogger(__name__)
@@ -26,9 +27,8 @@ class ThemeConfigLoader:
 
         return configs
 
-    @staticmethod
-    def _load_static_configs() -> list:
-        return ThemeConfigLoader._load_json(os.path.join(os.path.dirname(__file__), 'theme_days_config.json'))
+    def _load_static_configs(self) -> list:
+        return self._load_json(os.path.join(os.path.dirname(__file__), 'theme_days_config.json'))
 
     def _load_custom_configs(self) -> list:
         configs = []
@@ -41,20 +41,27 @@ class ThemeConfigLoader:
                 for file_name in files:
                     if file_name.endswith('.json'):
                         custom_themes_path = os.path.join(root, file_name)
-                        custom_themes = self._load_json(custom_themes_path)
+                        custom_themes = self._load_json(custom_themes_path, notify_user_on_error=True)
 
                         _LOGGER.info(f'Loaded {len(custom_themes)} custom themes from {custom_themes_path}')
 
                         configs.extend(custom_themes)
         return configs
 
-    @staticmethod
-    def _load_json(path: str) -> list:
+    def _load_json(self, path: str, notify_user_on_error=False) -> list:
         configs = []
         try:
             with open(path, encoding='iso-8859-1') as f:
                 configs = json.load(f)
         except json.JSONDecodeError as err:
-            _LOGGER.error("Invalid json in special themes config, %s", err)
+            _LOGGER.error(f'Invalid json in special themes config {path}, {err}')
+            if notify_user_on_error:
+                persistent_notification.create(
+                    self.hass,
+                    'Failed to load custom theme due to incorrect format. See [the logs](/config/logs) for more '
+                    'information.',
+                    title='Failed to load custom theme(s)',
+                    notification_id='swedish_calendar_custom_theme_error',
+                )
 
         return configs
