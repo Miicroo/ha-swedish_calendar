@@ -4,17 +4,22 @@ Swedish calendar supports themes, or common celebrations in Sweden, like 🍪 Ka
 
 The themes are calculated using `theme day generators`. There are currently 29 generators, which given a configuration, can tell which date each year a specific theme occurs.
 
+> NOTE:
+>
+> Swedish Calendar is always showing today's calendar, and there is no way of being notified about a theme being X days away.
+> Events like birthdays and other anniversaries where one might want to be notified in advance, might thus not be suitable as a custom theme.
+
 ## Theme configuration format
 
 Each theme day is generated based on a configuration, which is a json object. Each configuration should include the
 following:
 
-| Name                              | Description                         | Example                 | Required                                    |
-|-----------------------------------|-------------------------------------|-------------------------|---------------------------------------------|
-| theme                             | The name of the theme day           | Arbetsplatsombudens dag | Yes                                         |
-| generator                         | The generator, see                  | same_date               | Yes                                         |
-| description                       | Textual description of the date     | 26 mars varje år        | No                                          |
-| ...additional generator config... | Dependent on the selected generator |                         | See [generator configs](#generator-configs) |
+| Name                              | Description                                                                | Example                 | Required                                    |
+|-----------------------------------|----------------------------------------------------------------------------|-------------------------|---------------------------------------------|
+| theme                             | The name of the theme day                                                  | Arbetsplatsombudens dag | Yes                                         |
+| generator                         | The generator, see [the list of available generators](#List-of-generators) | same_date               | Yes                                         |
+| description                       | Textual description of the date                                            | 26 mars varje år        | No                                          |
+| ...additional generator config... | Dependent on the selected generator                                        |                         | See [generator configs](#generator-configs) |
 
 Here is an example:
 
@@ -22,7 +27,7 @@ Here is an example:
 {
   "theme": "Arbetsplatsombudens dag",
   "generator": "same_date",
-  "description": "26 mars varje \u00e5r",
+  "description": "26 mars varje år",
   "month": 3,
   "day": 26
 }
@@ -72,7 +77,7 @@ Here is an example:
 | [swedish_parliamentary_election](#swedish_parliamentary_election) | Andra söndagen efter 1e september, vart fjärde år (`Riksdagsvalet`)           |
 
 ## Generator configs
-Here are the additional configs for the generators, along with a full json example.
+Here are the additional configs for the generators, along with a full json example for each generator.
 
 ### advent
 | Name  | Description                                      | Example | Required |
@@ -505,15 +510,10 @@ The file must contain an array of theme generator configs, for example:
     }
 ]
 ```
+You can add as many json files as you want, as long as they all follow the correct format. Splitting custom themes into more than 1 file can be useful if you want to group certain themes together.
 
 ### Common problems and debugging
-If you run into problems, here are some common ones:
+If you run into problems with a json file, here are some common ones:
 * There is **no** `,` after the `}` (for any entry except the last one)
 * There **is** a `,` after the `}` for the last config
 * Missing/unclosed `"`, `:` or `,`
-
-
-> NOTE:
->
-> Swedish Calendar is always showing today's calendar, and there is no way of being notified about a theme being X days away.
-> Events like birthdays and other anniversaries where one might want to be notified in advance, might thus not be suitable as a custom theme.
