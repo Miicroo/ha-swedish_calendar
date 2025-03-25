@@ -7,5 +7,5 @@
     "documentation": "https://github.com/Miicroo/ha-swedish_calendar",
     "iot_class": "cloud_polling",
     "requirements": ["ephem==4.2"],
-    "version": "3.2.0"
+    "version": "3.3.0"
 }
