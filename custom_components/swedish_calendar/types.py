@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import datetime
 from datetime import timedelta
 import json
+import re
 from typing import Any
 
 
@@ -114,7 +114,31 @@ class ApiData:
 class ThemeData:
     def __init__(self, date: str, themes: list[str]):
         self.date: str = date
-        self.themes: list[str] = themes
+        self.themes: list[str] = self._normalize_themes(themes)
+
+    @staticmethod
+    def _normalize_themes(themes: list[str]) -> list[str]:
+        total_length = sum(len(t) for t in themes)
+
+        if total_length <= 255:
+            return themes
+
+        def replace(match: re.Match) -> str:
+            word = match.group(0)
+            if word.islower():
+                return "int."
+            elif word.isupper():
+                return "INT."
+            elif word[0].isupper():
+                return "Int."
+            return "int."  # fallback
+
+        pattern = re.compile(r"internationella", re.IGNORECASE)
+
+        return [
+            pattern.sub(replace, theme)
+            for theme in themes
+        ]
 
 
 class SpecialThemesConfig:
