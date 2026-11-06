@@ -61,6 +61,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: config_entries.ConfigEnt
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
 
+async def async_unload_entry(hass: HomeAssistant, entry: config_entries.ConfigEntry,) -> bool:
+    """Unload the integration."""
+
+    return await hass.config_entries.async_unload_platforms(
+        entry, PLATFORMS
+    )
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     # No config entry exists and configuration.yaml config exists, trigger the import flow.
