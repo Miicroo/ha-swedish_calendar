@@ -142,7 +142,7 @@ class ThemeData:
 
 
 class SpecialThemesConfig:
-    def __init__(self, path: str, auto_update: False):
+    def __init__(self, path: str, auto_update: bool = False):
         self.path = path
         self.auto_update = auto_update
 
