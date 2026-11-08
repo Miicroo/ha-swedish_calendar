@@ -22,7 +22,7 @@ class MockHomeAssistant:
             partial(target, *args, **kwargs)
         )
 
-OUTPUT = Path("../public/api")
+OUTPUT = Path("../docs/api")
 data_provider = LocalApiDataProvider(MockHomeAssistant())
 
 async def generate_day(day: date):
