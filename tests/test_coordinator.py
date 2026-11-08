@@ -1,6 +1,6 @@
 """sTest coordinator."""
 from datetime import date, timedelta
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, MagicMock, patch
 
 from freezegun import freeze_time
 
@@ -41,7 +41,7 @@ async def test_update_data_refetches_when_cache_has_themes_only(hass):
     )
 
     cache_config = CacheConfig(
-        enabled=True,
+        enabled=False,
         cache_dir="",
         retention=timedelta(days=7),
     )
@@ -51,10 +51,27 @@ async def test_update_data_refetches_when_cache_has_themes_only(hass):
         auto_update=False,
     )
 
+    api_provider = MagicMock()
+    theme_provider = MagicMock()
+    theme_updater = MagicMock()
+
+    theme_updater.can_update.return_value = False
+
     with (
         patch(
-            "custom_components.swedish_calendar.coordinator."
-            "DateUtils.seconds_until_midnight",
+            "custom_components.swedish_calendar.coordinator.LocalApiDataProvider",
+            return_value=api_provider,
+        ),
+        patch(
+            "custom_components.swedish_calendar.coordinator.LocalThemeDataProvider",
+            return_value=theme_provider,
+        ),
+        patch(
+            "custom_components.swedish_calendar.coordinator.LocalThemeDataUpdater",
+            return_value=theme_updater,
+        ),
+        patch(
+            "custom_components.swedish_calendar.coordinator.DateUtils.seconds_until_midnight",
             return_value=86400,
         ),
     ):
