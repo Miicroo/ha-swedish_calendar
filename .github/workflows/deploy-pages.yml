@@ -4,7 +4,7 @@ name: Deploy API to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - "public/**"
       - ".github/workflows/deploy-pages.yml"
