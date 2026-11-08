@@ -27,7 +27,7 @@ jobs:
           python-version: "3.12"
 
       - name: Run generator
-        run: PYTHONPATH=. python scripts/generate.py
+        run: PYTHONPATH=. python scripts/data_generator.py
 
       - name: Commit generated data
         run: |
