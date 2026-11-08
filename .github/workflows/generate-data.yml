@@ -1,0 +1,41 @@
+
+name: Generate daily API data
+
+on:
+  schedule:
+    # Midnight UTC every day
+    - cron: "0 0 * * *"
+      timezone: "Europe/Stockholm"
+
+  # Allow manual execution from GitHub
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run generator
+        run: PYTHONPATH=. python scripts/generate.py
+
+      - name: Commit generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public/
+          git diff --cached --quiet || (
+            git commit -m "Update generated API data"
+            git push
+          )
