@@ -72,7 +72,7 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         if self._theme_data_updater.can_update() and not self._first_update:
             await self._theme_data_updater.update()
 
-        if self._get_start() not in self._cache or self._get_end() not in self._cache:
+        if not self._is_cached(self._get_start()) or not self._is_cached(self._get_end()):
             try:
                 self._cache = await self._get_calendars()
             except Exception as err:
@@ -89,6 +89,11 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
 
     def _get_end(self):
         return date.today() + timedelta(days=self._fetch_days_after_today)
+
+    def _is_cached(self, day: date) -> bool:
+        # Theme data covers whole years, so a date can be in the cache without its api data
+        calendar = self._cache.get(day)
+        return calendar is not None and calendar.get_value_by_attribute('date') is not None
 
     async def _get_calendars(self) -> dict[date, SwedishCalendar]:
         start_date = self._get_start()

@@ -7,7 +7,7 @@ from custom_components.swedish_calendar.local.themes.theme_data_local import (
 
 
 async def test_fetch_data(hass):
-    """Disabled cache -> has_data_for returns False."""
+    """Verify that local theme data contains Christmas Eve for every year."""
     provider = LocalThemeDataProvider(hass=hass)
 
     start_year = 1970

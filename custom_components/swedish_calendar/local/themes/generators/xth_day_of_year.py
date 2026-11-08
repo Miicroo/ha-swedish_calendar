@@ -14,7 +14,7 @@ class XthDayOfYearGenerator(ThemeDateGenerator):
             return False
 
         day_of_year = self.__days_since_jan_1(dates[0])
-        print([self.__days_since_jan_1(d) for d in dates])
+        #print([self.__days_since_jan_1(d) for d in dates])
 
         return all([self.__days_since_jan_1(d) == day_of_year for d in dates])
 
