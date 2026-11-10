@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-11-08",
+  "slutdatum": "2029-11-08",
+  "dagar": [
+    {
+      "datum": "2029-11-08",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Vendela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

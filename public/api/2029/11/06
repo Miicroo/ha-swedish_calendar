@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-11-06",
+  "slutdatum": "2029-11-06",
+  "dagar": [
+    {
+      "datum": "2029-11-06",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Gustav Adolf"
+      ],
+      "flaggdag": "Gustav Adolfsdagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

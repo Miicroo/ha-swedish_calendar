@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-04-03",
+  "slutdatum": "2027-04-03",
+  "dagar": [
+    {
+      "datum": "2027-04-03",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "13",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Ferdinand",
+        "Nanna"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

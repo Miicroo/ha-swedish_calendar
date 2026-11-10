@@ -1,0 +1,20 @@
+{
+  "startdatum": "2029-05-22",
+  "slutdatum": "2029-05-22",
+  "dagar": [
+    {
+      "datum": "2029-05-22",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "21",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Hemming",
+        "Henning"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

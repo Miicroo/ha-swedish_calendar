@@ -1,0 +1,20 @@
+{
+  "startdatum": "2030-02-01",
+  "slutdatum": "2030-02-01",
+  "dagar": [
+    {
+      "datum": "2030-02-01",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "5",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Max",
+        "Maximilian"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

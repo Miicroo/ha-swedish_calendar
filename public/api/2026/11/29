@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-11-29",
+  "slutdatum": "2026-11-29",
+  "dagar": [
+    {
+      "datum": "2026-11-29",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "48",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Sune"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

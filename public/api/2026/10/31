@@ -1,0 +1,21 @@
+{
+  "startdatum": "2026-10-31",
+  "slutdatum": "2026-10-31",
+  "dagar": [
+    {
+      "datum": "2026-10-31",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "44",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Edit",
+        "Edgar"
+      ],
+      "flaggdag": "",
+      "helgdag": "Alla helgons dag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

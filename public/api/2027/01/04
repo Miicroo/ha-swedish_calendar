@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-01-04",
+  "slutdatum": "2027-01-04",
+  "dagar": [
+    {
+      "datum": "2027-01-04",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "1",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Rut"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

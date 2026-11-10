@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-10-14",
+  "slutdatum": "2029-10-14",
+  "dagar": [
+    {
+      "datum": "2029-10-14",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "41",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Stellan"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-08-22",
+  "slutdatum": "2027-08-22",
+  "dagar": [
+    {
+      "datum": "2027-08-22",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "33",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Henrietta",
+        "Henrika"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

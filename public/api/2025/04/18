@@ -1,0 +1,21 @@
+{
+  "startdatum": "2025-04-18",
+  "slutdatum": "2025-04-18",
+  "dagar": [
+    {
+      "datum": "2025-04-18",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "16",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Valdemar",
+        "Volmar"
+      ],
+      "flaggdag": "",
+      "helgdag": "Långfredagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

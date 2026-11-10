@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-04-27",
+  "slutdatum": "2027-04-27",
+  "dagar": [
+    {
+      "datum": "2027-04-27",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "17",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Engelbrekt"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

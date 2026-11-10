@@ -1,0 +1,20 @@
+{
+  "startdatum": "2030-09-08",
+  "slutdatum": "2030-09-08",
+  "dagar": [
+    {
+      "datum": "2030-09-08",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "36",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Alma",
+        "Hulda"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

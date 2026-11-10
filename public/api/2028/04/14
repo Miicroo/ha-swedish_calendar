@@ -1,0 +1,20 @@
+{
+  "startdatum": "2028-04-14",
+  "slutdatum": "2028-04-14",
+  "dagar": [
+    {
+      "datum": "2028-04-14",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "15",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Tiburtius"
+      ],
+      "flaggdag": "",
+      "helgdag": "Långfredagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

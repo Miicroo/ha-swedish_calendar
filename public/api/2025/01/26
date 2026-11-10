@@ -1,0 +1,20 @@
+{
+  "startdatum": "2025-01-26",
+  "slutdatum": "2025-01-26",
+  "dagar": [
+    {
+      "datum": "2025-01-26",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "4",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Bodil",
+        "Boel"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

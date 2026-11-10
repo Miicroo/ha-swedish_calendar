@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-07-08",
+  "slutdatum": "2025-07-08",
+  "dagar": [
+    {
+      "datum": "2025-07-08",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "28",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Kjell"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

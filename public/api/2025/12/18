@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-12-18",
+  "slutdatum": "2025-12-18",
+  "dagar": [
+    {
+      "datum": "2025-12-18",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Abraham"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

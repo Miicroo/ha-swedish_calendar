@@ -1,0 +1,21 @@
+{
+  "startdatum": "2028-06-04",
+  "slutdatum": "2028-06-04",
+  "dagar": [
+    {
+      "datum": "2028-06-04",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "22",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Solbritt",
+        "Solveig"
+      ],
+      "flaggdag": "Pingstdagen",
+      "helgdag": "Pingstdagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

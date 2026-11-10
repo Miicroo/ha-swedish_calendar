@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-01-30",
+  "slutdatum": "2027-01-30",
+  "dagar": [
+    {
+      "datum": "2027-01-30",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "4",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Gunilla",
+        "Gunhild"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

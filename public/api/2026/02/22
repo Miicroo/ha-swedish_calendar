@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-02-22",
+  "slutdatum": "2026-02-22",
+  "dagar": [
+    {
+      "datum": "2026-02-22",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "8",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Pia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

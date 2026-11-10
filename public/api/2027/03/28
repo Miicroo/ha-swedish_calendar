@@ -1,0 +1,21 @@
+{
+  "startdatum": "2027-03-28",
+  "slutdatum": "2027-03-28",
+  "dagar": [
+    {
+      "datum": "2027-03-28",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "12",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Malkolm",
+        "Morgan"
+      ],
+      "flaggdag": "Påskdagen",
+      "helgdag": "Påskdagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "startdatum": "2028-09-08",
+  "slutdatum": "2028-09-08",
+  "dagar": [
+    {
+      "datum": "2028-09-08",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "36",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Alma",
+        "Hulda"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

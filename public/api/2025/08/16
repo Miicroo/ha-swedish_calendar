@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-08-16",
+  "slutdatum": "2025-08-16",
+  "dagar": [
+    {
+      "datum": "2025-08-16",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "33",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Brynolf"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

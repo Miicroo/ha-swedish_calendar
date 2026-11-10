@@ -1,0 +1,21 @@
+{
+  "startdatum": "2026-04-04",
+  "slutdatum": "2026-04-04",
+  "dagar": [
+    {
+      "datum": "2026-04-04",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "14",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Marianne",
+        "Marlene"
+      ],
+      "flaggdag": "",
+      "helgdag": "Påskafton",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

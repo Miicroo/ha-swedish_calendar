@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-11-20",
+  "slutdatum": "2027-11-20",
+  "dagar": [
+    {
+      "datum": "2027-11-20",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Pontus",
+        "Marina"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-12-08",
+  "slutdatum": "2029-12-08",
+  "dagar": [
+    {
+      "datum": "2029-12-08",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Virginia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

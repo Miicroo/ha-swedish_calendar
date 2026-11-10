@@ -1,0 +1,19 @@
+{
+  "startdatum": "2024-12-18",
+  "slutdatum": "2024-12-18",
+  "dagar": [
+    {
+      "datum": "2024-12-18",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Abraham"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

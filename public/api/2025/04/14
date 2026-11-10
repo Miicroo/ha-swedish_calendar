@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-04-14",
+  "slutdatum": "2025-04-14",
+  "dagar": [
+    {
+      "datum": "2025-04-14",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "16",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Tiburtius"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

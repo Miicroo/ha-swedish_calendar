@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-12-03",
+  "slutdatum": "2025-12-03",
+  "dagar": [
+    {
+      "datum": "2025-12-03",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Lydia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

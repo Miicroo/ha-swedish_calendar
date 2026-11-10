@@ -1,0 +1,19 @@
+{
+  "startdatum": "2028-08-09",
+  "slutdatum": "2028-08-09",
+  "dagar": [
+    {
+      "datum": "2028-08-09",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "32",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Roland"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "startdatum": "2030-06-10",
+  "slutdatum": "2030-06-10",
+  "dagar": [
+    {
+      "datum": "2030-06-10",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Svante",
+        "Boris"
+      ],
+      "flaggdag": "",
+      "helgdag": "Annandag pingst",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

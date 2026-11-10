@@ -1,0 +1,20 @@
+{
+  "startdatum": "2024-12-06",
+  "slutdatum": "2024-12-06",
+  "dagar": [
+    {
+      "datum": "2024-12-06",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Nikolaus",
+        "Niklas"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

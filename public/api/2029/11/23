@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-11-23",
+  "slutdatum": "2029-11-23",
+  "dagar": [
+    {
+      "datum": "2029-11-23",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Klemens"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

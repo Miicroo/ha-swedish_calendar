@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-11-08",
+  "slutdatum": "2027-11-08",
+  "dagar": [
+    {
+      "datum": "2027-11-08",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Vendela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

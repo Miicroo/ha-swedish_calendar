@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-09-14",
+  "slutdatum": "2025-09-14",
+  "dagar": [
+    {
+      "datum": "2025-09-14",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "37",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Ida"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-05-18",
+  "slutdatum": "2026-05-18",
+  "dagar": [
+    {
+      "datum": "2026-05-18",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "21",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Erik"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

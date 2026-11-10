@@ -1,0 +1,20 @@
+{
+  "startdatum": "2028-01-28",
+  "slutdatum": "2028-01-28",
+  "dagar": [
+    {
+      "datum": "2028-01-28",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "4",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Karl",
+        "Karla"
+      ],
+      "flaggdag": "Kung Carl XVI Gustafs namnsdag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

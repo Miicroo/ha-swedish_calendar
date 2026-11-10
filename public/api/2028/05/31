@@ -1,0 +1,20 @@
+{
+  "startdatum": "2028-05-31",
+  "slutdatum": "2028-05-31",
+  "dagar": [
+    {
+      "datum": "2028-05-31",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "22",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Petronella",
+        "Pernilla"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "startdatum": "2026-12-25",
+  "slutdatum": "2026-12-25",
+  "dagar": [
+    {
+      "datum": "2026-12-25",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "52",
+      "dag i vecka": "5",
+      "namnsdag": [],
+      "flaggdag": "Juldagen",
+      "helgdag": "Juldagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

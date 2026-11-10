@@ -1,0 +1,21 @@
+{
+  "startdatum": "2028-04-17",
+  "slutdatum": "2028-04-17",
+  "dagar": [
+    {
+      "datum": "2028-04-17",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "16",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Elias",
+        "Elis"
+      ],
+      "flaggdag": "",
+      "helgdag": "Annandag påsk",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

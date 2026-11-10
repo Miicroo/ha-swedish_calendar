@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-12-23",
+  "slutdatum": "2029-12-23",
+  "dagar": [
+    {
+      "datum": "2029-12-23",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "51",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Adam"
+      ],
+      "flaggdag": "Drottning Silvias födelsedag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2028-03-12",
+  "slutdatum": "2028-03-12",
+  "dagar": [
+    {
+      "datum": "2028-03-12",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "10",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Viktoria"
+      ],
+      "flaggdag": "Kronprinsessan Victorias namnsdag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

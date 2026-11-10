@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-10-14",
+  "slutdatum": "2025-10-14",
+  "dagar": [
+    {
+      "datum": "2025-10-14",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "42",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Stellan"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

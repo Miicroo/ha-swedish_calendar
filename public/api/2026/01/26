@@ -1,0 +1,20 @@
+{
+  "startdatum": "2026-01-26",
+  "slutdatum": "2026-01-26",
+  "dagar": [
+    {
+      "datum": "2026-01-26",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "5",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Bodil",
+        "Boel"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

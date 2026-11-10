@@ -1,0 +1,19 @@
+{
+  "startdatum": "2030-08-16",
+  "slutdatum": "2030-08-16",
+  "dagar": [
+    {
+      "datum": "2030-08-16",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "33",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Brynolf"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}
