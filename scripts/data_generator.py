@@ -114,11 +114,7 @@ async def main():
     end: date  = start + timedelta(days=6 * 365)
     print(f'Generating data between {start} and {end}')
 
-    current = start
-
-    while current <= end:
-        await generate_day(current)
-        current += timedelta(days=1)
+    await generate_day(start, end)
 
 if __name__ == "__main__":
     asyncio.run(main())
