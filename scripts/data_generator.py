@@ -22,7 +22,7 @@ class MockHomeAssistant:
             partial(target, *args, **kwargs)
         )
 
-OUTPUT = Path("../public/api")
+OUTPUT = Path("./public/api")
 data_provider = LocalApiDataProvider(MockHomeAssistant())
 
 async def generate_day(day: date):
@@ -65,6 +65,7 @@ async def generate_day(day: date):
 async def main():
     start: date = date.today() - timedelta(days=2 * 365)
     end: date  = start + timedelta(days=6 * 365)
+    print(f'Generating data between {start} and {end}')
 
     current = start
 
