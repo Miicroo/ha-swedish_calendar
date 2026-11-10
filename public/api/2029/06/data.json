@@ -1,0 +1,422 @@
+{
+  "startdatum": "2029-06-01",
+  "slutdatum": "2029-06-30",
+  "dagar": [
+    {
+      "datum": "2029-06-01",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "22",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Gun",
+        "Gunnel"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-02",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "22",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Rutger",
+        "Roger"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-03",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "22",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Ingemar",
+        "Gudmar"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-04",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "23",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Solbritt",
+        "Solveig"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-05",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "23",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Bo"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Ja"
+    },
+    {
+      "datum": "2029-06-06",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "23",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Gustav",
+        "Gösta"
+      ],
+      "flaggdag": "Sveriges nationaldag",
+      "helgdag": "Sveriges nationaldag",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-07",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "23",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Robert",
+        "Robin"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-08",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "23",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Eivor",
+        "Majvor"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-09",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "23",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Börje",
+        "Birger"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-10",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "23",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Svante",
+        "Boris"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-11",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Bertil",
+        "Berthold"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-12",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Eskil"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-13",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Aina",
+        "Aino"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-14",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Håkan",
+        "Hakon"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-15",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Margit",
+        "Margot"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-16",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Axel",
+        "Axelina"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-17",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "24",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Torborg",
+        "Torvald"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-18",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "25",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Björn",
+        "Bjarne"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-19",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "25",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Germund",
+        "Görel"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-20",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "25",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Linda"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-21",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "25",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Alf",
+        "Alvar"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Ja"
+    },
+    {
+      "datum": "2029-06-22",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "25",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Paulina",
+        "Paula"
+      ],
+      "flaggdag": "",
+      "helgdag": "Midsommarafton",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-23",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "25",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Adolf",
+        "Alice"
+      ],
+      "flaggdag": "Midsommardagen",
+      "helgdag": "Midsommardagen",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-24",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "25",
+      "dag i vecka": "7",
+      "namnsdag": [],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-25",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "26",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "David",
+        "Salomon"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-26",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "26",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Rakel",
+        "Lea"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-27",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "26",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Selma",
+        "Fingal"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-28",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "26",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Leo"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-29",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "26",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Peter",
+        "Petra"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2029-06-30",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "26",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Elof",
+        "Leif"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-10-31",
+  "slutdatum": "2027-10-31",
+  "dagar": [
+    {
+      "datum": "2027-10-31",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "43",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Edit",
+        "Edgar"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

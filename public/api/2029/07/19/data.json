@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-07-19",
+  "slutdatum": "2029-07-19",
+  "dagar": [
+    {
+      "datum": "2029-07-19",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "29",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Sara"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

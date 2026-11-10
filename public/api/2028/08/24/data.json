@@ -1,0 +1,19 @@
+{
+  "startdatum": "2028-08-24",
+  "slutdatum": "2028-08-24",
+  "dagar": [
+    {
+      "datum": "2028-08-24",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "34",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Bartolomeus"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

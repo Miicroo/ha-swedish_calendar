@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-07-28",
+  "slutdatum": "2027-07-28",
+  "dagar": [
+    {
+      "datum": "2027-07-28",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "30",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Botvid",
+        "Seved"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-02-20",
+  "slutdatum": "2025-02-20",
+  "dagar": [
+    {
+      "datum": "2025-02-20",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "8",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Vivianne"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

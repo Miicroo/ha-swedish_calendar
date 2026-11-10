@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-12-23",
+  "slutdatum": "2025-12-23",
+  "dagar": [
+    {
+      "datum": "2025-12-23",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "52",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Adam"
+      ],
+      "flaggdag": "Drottning Silvias födelsedag",
+      "dag före arbetsfri helgdag": "Ja"
+    }
+  ]
+}

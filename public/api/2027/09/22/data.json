@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-09-22",
+  "slutdatum": "2027-09-22",
+  "dagar": [
+    {
+      "datum": "2027-09-22",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "38",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Maurits",
+        "Moritz"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

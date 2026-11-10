@@ -1,0 +1,19 @@
+{
+  "startdatum": "2030-05-25",
+  "slutdatum": "2030-05-25",
+  "dagar": [
+    {
+      "datum": "2030-05-25",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "21",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Urban"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2028-06-12",
+  "slutdatum": "2028-06-12",
+  "dagar": [
+    {
+      "datum": "2028-06-12",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "24",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Eskil"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

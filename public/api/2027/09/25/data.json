@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-09-25",
+  "slutdatum": "2027-09-25",
+  "dagar": [
+    {
+      "datum": "2027-09-25",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "38",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Tryggve"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

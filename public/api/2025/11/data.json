@@ -1,0 +1,414 @@
+{
+  "startdatum": "2025-11-01",
+  "slutdatum": "2025-11-30",
+  "dagar": [
+    {
+      "datum": "2025-11-01",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "44",
+      "dag i vecka": "6",
+      "namnsdag": [],
+      "flaggdag": "",
+      "helgdag": "Alla helgons dag",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-02",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "44",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Tobias"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-03",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Hubert",
+        "Hugo"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-04",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Sverker"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-05",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Eugen",
+        "Eugenia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-06",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Gustav Adolf"
+      ],
+      "flaggdag": "Gustav Adolfsdagen",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-07",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Ingegerd",
+        "Ingela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-08",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Vendela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-09",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "45",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Teodor",
+        "Teodora"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-10",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Martin",
+        "Martina"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-11",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Mårten"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-12",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Konrad",
+        "Kurt"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-13",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Kristian",
+        "Krister"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-14",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Emil",
+        "Emilia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-15",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Leopold"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-16",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "46",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Vibeke",
+        "Viveka"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-17",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Naemi",
+        "Naima"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-18",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Lillemor",
+        "Moa"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-19",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Elisabet",
+        "Lisbet"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-20",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Pontus",
+        "Marina"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-21",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Helga",
+        "Olga"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-22",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Cecilia",
+        "Sissela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-23",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "47",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Klemens"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-24",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "48",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Gudrun",
+        "Rune"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-25",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "48",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Katarina",
+        "Katja"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-26",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "48",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Linus"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-27",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "48",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Astrid",
+        "Asta"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-28",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "48",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Malte"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-29",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "48",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Sune"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2025-11-30",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "48",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Andreas",
+        "Anders"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-05-01",
+  "slutdatum": "2027-05-01",
+  "dagar": [
+    {
+      "datum": "2027-05-01",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "17",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Valborg"
+      ],
+      "flaggdag": "Första maj",
+      "helgdag": "Första maj",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

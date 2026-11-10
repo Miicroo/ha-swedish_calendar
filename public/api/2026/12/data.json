@@ -1,0 +1,426 @@
+{
+  "startdatum": "2026-12-01",
+  "slutdatum": "2026-12-31",
+  "dagar": [
+    {
+      "datum": "2026-12-01",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Oskar",
+        "Ossian"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-02",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Beata",
+        "Beatrice"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-03",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Lydia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-04",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Barbara",
+        "Barbro"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-05",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Sven"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-06",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "49",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Nikolaus",
+        "Niklas"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-07",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "50",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Angela",
+        "Angelika"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-08",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "50",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Virginia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-09",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "50",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Anna"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-10",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "50",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Malin",
+        "Malena"
+      ],
+      "flaggdag": "Nobeldagen",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-11",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "50",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Daniel",
+        "Daniela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-12",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "50",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Alexander",
+        "Alexis"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-13",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "50",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Lucia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-14",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Sten",
+        "Sixten"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-15",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Gottfrid"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-16",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Assar"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-17",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Stig"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-18",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Abraham"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-19",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "51",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Isak"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-20",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "51",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Israel",
+        "Moses"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-21",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "52",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Tomas"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-22",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "52",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Natanael",
+        "Jonatan"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-23",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "52",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Adam"
+      ],
+      "flaggdag": "Drottning Silvias födelsedag",
+      "dag före arbetsfri helgdag": "Ja"
+    },
+    {
+      "datum": "2026-12-24",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "52",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Eva"
+      ],
+      "flaggdag": "",
+      "helgdag": "Julafton",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-25",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "52",
+      "dag i vecka": "5",
+      "namnsdag": [],
+      "flaggdag": "Juldagen",
+      "helgdag": "Juldagen",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-26",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "52",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Stefan",
+        "Staffan"
+      ],
+      "flaggdag": "",
+      "helgdag": "Annandag jul",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-27",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "52",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Johannes",
+        "Johan"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-28",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "53",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Benjamin"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-29",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "53",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Natalia",
+        "Natalie"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2026-12-30",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "53",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Abel",
+        "Set"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Ja"
+    },
+    {
+      "datum": "2026-12-31",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "53",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Sylvester"
+      ],
+      "flaggdag": "",
+      "helgdag": "Nyårsafton",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

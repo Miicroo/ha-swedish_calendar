@@ -1,0 +1,21 @@
+{
+  "startdatum": "2028-06-06",
+  "slutdatum": "2028-06-06",
+  "dagar": [
+    {
+      "datum": "2028-06-06",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "23",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Gustav",
+        "Gösta"
+      ],
+      "flaggdag": "Sveriges nationaldag",
+      "helgdag": "Sveriges nationaldag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

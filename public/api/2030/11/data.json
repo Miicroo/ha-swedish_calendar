@@ -1,0 +1,126 @@
+{
+  "startdatum": "2030-11-01",
+  "slutdatum": "2030-11-30",
+  "dagar": [
+    {
+      "datum": "2030-11-01",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "44",
+      "dag i vecka": "5",
+      "namnsdag": [],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Ja"
+    },
+    {
+      "datum": "2030-11-02",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "44",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Tobias"
+      ],
+      "flaggdag": "",
+      "helgdag": "Alla helgons dag",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-03",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "44",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Hubert",
+        "Hugo"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-04",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Sverker"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-05",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Eugen",
+        "Eugenia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-06",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Gustav Adolf"
+      ],
+      "flaggdag": "Gustav Adolfsdagen",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-07",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Ingegerd",
+        "Ingela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-08",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Vendela"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-09",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "45",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Teodor",
+        "Teodora"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-03-17",
+  "slutdatum": "2026-03-17",
+  "dagar": [
+    {
+      "datum": "2026-03-17",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "12",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Gertrud"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

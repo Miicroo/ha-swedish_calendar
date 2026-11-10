@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-10-05",
+  "slutdatum": "2029-10-05",
+  "dagar": [
+    {
+      "datum": "2029-10-05",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "40",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Bror"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

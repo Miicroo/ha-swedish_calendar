@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-08-16",
+  "slutdatum": "2029-08-16",
+  "dagar": [
+    {
+      "datum": "2029-08-16",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "33",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Brynolf"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "startdatum": "2025-03-23",
+  "slutdatum": "2025-03-23",
+  "dagar": [
+    {
+      "datum": "2025-03-23",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "12",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Gerda",
+        "Gerd"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

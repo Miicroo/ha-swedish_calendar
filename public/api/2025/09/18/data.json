@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-09-18",
+  "slutdatum": "2025-09-18",
+  "dagar": [
+    {
+      "datum": "2025-09-18",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "38",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Orvar"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

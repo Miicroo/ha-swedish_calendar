@@ -1,0 +1,21 @@
+{
+  "startdatum": "2025-06-07",
+  "slutdatum": "2025-06-07",
+  "dagar": [
+    {
+      "datum": "2025-06-07",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "23",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Robert",
+        "Robin"
+      ],
+      "flaggdag": "",
+      "helgdagsafton": "Pingstafton",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

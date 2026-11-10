@@ -1,0 +1,19 @@
+{
+  "startdatum": "2030-03-07",
+  "slutdatum": "2030-03-07",
+  "dagar": [
+    {
+      "datum": "2030-03-07",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "10",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Camilla"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

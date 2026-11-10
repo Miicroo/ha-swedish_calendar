@@ -1,0 +1,19 @@
+{
+  "startdatum": "2025-03-12",
+  "slutdatum": "2025-03-12",
+  "dagar": [
+    {
+      "datum": "2025-03-12",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "11",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Viktoria"
+      ],
+      "flaggdag": "Kronprinsessan Victorias namnsdag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2030-02-14",
+  "slutdatum": "2030-02-14",
+  "dagar": [
+    {
+      "datum": "2030-02-14",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "7",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Valentin"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "startdatum": "2029-05-28",
+  "slutdatum": "2029-05-28",
+  "dagar": [
+    {
+      "datum": "2029-05-28",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "22",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Ingeborg",
+        "Borghild"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

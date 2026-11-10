@@ -1,0 +1,20 @@
+{
+  "startdatum": "2029-08-08",
+  "slutdatum": "2029-08-08",
+  "dagar": [
+    {
+      "datum": "2029-08-08",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "32",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Silvia",
+        "Sylvia"
+      ],
+      "flaggdag": "Drottning Silvias namnsdag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

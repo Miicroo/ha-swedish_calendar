@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-09-13",
+  "slutdatum": "2026-09-13",
+  "dagar": [
+    {
+      "datum": "2026-09-13",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "37",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Sture"
+      ],
+      "flaggdag": "Valdagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

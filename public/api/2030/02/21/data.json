@@ -1,0 +1,19 @@
+{
+  "startdatum": "2030-02-21",
+  "slutdatum": "2030-02-21",
+  "dagar": [
+    {
+      "datum": "2030-02-21",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "8",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Hilding"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

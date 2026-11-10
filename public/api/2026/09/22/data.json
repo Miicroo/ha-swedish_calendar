@@ -1,0 +1,20 @@
+{
+  "startdatum": "2026-09-22",
+  "slutdatum": "2026-09-22",
+  "dagar": [
+    {
+      "datum": "2026-09-22",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "39",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Maurits",
+        "Moritz"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

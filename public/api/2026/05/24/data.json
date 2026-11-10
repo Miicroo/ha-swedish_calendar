@@ -1,0 +1,21 @@
+{
+  "startdatum": "2026-05-24",
+  "slutdatum": "2026-05-24",
+  "dagar": [
+    {
+      "datum": "2026-05-24",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "21",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Ivan",
+        "Vanja"
+      ],
+      "flaggdag": "Pingstdagen",
+      "helgdag": "Pingstdagen",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

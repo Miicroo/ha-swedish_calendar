@@ -1,0 +1,20 @@
+{
+  "startdatum": "2026-11-17",
+  "slutdatum": "2026-11-17",
+  "dagar": [
+    {
+      "datum": "2026-11-17",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "47",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Naemi",
+        "Naima"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

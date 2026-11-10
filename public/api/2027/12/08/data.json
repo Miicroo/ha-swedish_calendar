@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-12-08",
+  "slutdatum": "2027-12-08",
+  "dagar": [
+    {
+      "datum": "2027-12-08",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "49",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Virginia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

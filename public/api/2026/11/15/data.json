@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-11-15",
+  "slutdatum": "2026-11-15",
+  "dagar": [
+    {
+      "datum": "2026-11-15",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "46",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Leopold"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

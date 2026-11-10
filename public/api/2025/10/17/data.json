@@ -1,0 +1,20 @@
+{
+  "startdatum": "2025-10-17",
+  "slutdatum": "2025-10-17",
+  "dagar": [
+    {
+      "datum": "2025-10-17",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "42",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Antonia",
+        "Toini"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

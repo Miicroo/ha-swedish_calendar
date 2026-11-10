@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-09-11",
+  "slutdatum": "2027-09-11",
+  "dagar": [
+    {
+      "datum": "2027-09-11",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "36",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Dagny",
+        "Helny"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

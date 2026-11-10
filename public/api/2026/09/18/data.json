@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-09-18",
+  "slutdatum": "2026-09-18",
+  "dagar": [
+    {
+      "datum": "2026-09-18",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "38",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Orvar"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

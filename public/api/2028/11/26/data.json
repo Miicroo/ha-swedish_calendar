@@ -1,0 +1,19 @@
+{
+  "startdatum": "2028-11-26",
+  "slutdatum": "2028-11-26",
+  "dagar": [
+    {
+      "datum": "2028-11-26",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "47",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Linus"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

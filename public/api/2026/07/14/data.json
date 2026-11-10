@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-07-14",
+  "slutdatum": "2026-07-14",
+  "dagar": [
+    {
+      "datum": "2026-07-14",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "29",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Folke"
+      ],
+      "flaggdag": "Kronprinsessan Victorias födelsedag",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2030-03-21",
+  "slutdatum": "2030-03-21",
+  "dagar": [
+    {
+      "datum": "2030-03-21",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "12",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Bengt"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

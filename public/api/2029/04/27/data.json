@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-04-27",
+  "slutdatum": "2029-04-27",
+  "dagar": [
+    {
+      "datum": "2029-04-27",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "17",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Engelbrekt"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

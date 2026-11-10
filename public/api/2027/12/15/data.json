@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-12-15",
+  "slutdatum": "2027-12-15",
+  "dagar": [
+    {
+      "datum": "2027-12-15",
+      "veckodag": "Onsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "50",
+      "dag i vecka": "3",
+      "namnsdag": [
+        "Gottfrid"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

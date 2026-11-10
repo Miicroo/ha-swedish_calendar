@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-09-21",
+  "slutdatum": "2027-09-21",
+  "dagar": [
+    {
+      "datum": "2027-09-21",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "38",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Matteus"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

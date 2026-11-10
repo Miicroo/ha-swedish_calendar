@@ -1,0 +1,20 @@
+{
+  "startdatum": "2026-09-10",
+  "slutdatum": "2026-09-10",
+  "dagar": [
+    {
+      "datum": "2026-09-10",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "37",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Tord",
+        "Turid"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-10-17",
+  "slutdatum": "2027-10-17",
+  "dagar": [
+    {
+      "datum": "2027-10-17",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "41",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Antonia",
+        "Toini"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

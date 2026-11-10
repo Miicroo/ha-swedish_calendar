@@ -1,0 +1,20 @@
+{
+  "startdatum": "2027-08-30",
+  "slutdatum": "2027-08-30",
+  "dagar": [
+    {
+      "datum": "2027-08-30",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "35",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Albert",
+        "Albertina"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "startdatum": "2026-10-20",
+  "slutdatum": "2026-10-20",
+  "dagar": [
+    {
+      "datum": "2026-10-20",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "43",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Sibylla"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

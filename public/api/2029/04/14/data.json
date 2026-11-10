@@ -1,0 +1,19 @@
+{
+  "startdatum": "2029-04-14",
+  "slutdatum": "2029-04-14",
+  "dagar": [
+    {
+      "datum": "2029-04-14",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "15",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Tiburtius"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

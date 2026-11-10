@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-11-15",
+  "slutdatum": "2027-11-15",
+  "dagar": [
+    {
+      "datum": "2027-11-15",
+      "veckodag": "Måndag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "1",
+      "namnsdag": [
+        "Leopold"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}

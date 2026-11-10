@@ -1,0 +1,19 @@
+{
+  "startdatum": "2027-08-24",
+  "slutdatum": "2027-08-24",
+  "dagar": [
+    {
+      "datum": "2027-08-24",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "34",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Bartolomeus"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
+    }
+  ]
+}
