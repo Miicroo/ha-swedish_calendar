@@ -29,6 +29,7 @@ OUTPUT = Path("./public/api")
 data_provider = LocalApiDataProvider(MockHomeAssistant())
 
 def write_json(path: Path, start: date, end: date, dagar: list[dict]) -> None:
+    path = OUTPUT / path
     path.parent.mkdir(parents=True, exist_ok=True)
 
     data = {
