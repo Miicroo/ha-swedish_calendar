@@ -24,12 +24,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.test.txt
+          pip install -r requirements.generator.txt
 
       - name: Run generator
         run: PYTHONPATH=. python scripts/data_generator.py
