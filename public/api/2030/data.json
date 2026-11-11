@@ -4309,6 +4309,20 @@
       ],
       "flaggdag": "",
       "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-10",
+      "veckodag": "Söndag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Ja",
+      "vecka": "45",
+      "dag i vecka": "7",
+      "namnsdag": [
+        "Martin",
+        "Martina"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
     }
   ]
 }
