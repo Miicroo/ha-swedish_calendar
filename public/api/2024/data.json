@@ -3,19 +3,6 @@
   "slutdatum": "2024-12-31",
   "dagar": [
     {
-      "datum": "2024-11-11",
-      "veckodag": "Måndag",
-      "arbetsfri dag": "Nej",
-      "röd dag": "Nej",
-      "vecka": "46",
-      "dag i vecka": "1",
-      "namnsdag": [
-        "Mårten"
-      ],
-      "flaggdag": "",
-      "dag före arbetsfri helgdag": "Nej"
-    },
-    {
       "datum": "2024-11-12",
       "veckodag": "Tisdag",
       "arbetsfri dag": "Nej",
