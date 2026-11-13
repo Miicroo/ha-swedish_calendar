@@ -4336,6 +4336,20 @@
       ],
       "flaggdag": "",
       "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-12",
+      "veckodag": "Tisdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "2",
+      "namnsdag": [
+        "Konrad",
+        "Kurt"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
     }
   ]
 }
