@@ -176,6 +176,20 @@
       ],
       "flaggdag": "",
       "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-14",
+      "veckodag": "Torsdag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "4",
+      "namnsdag": [
+        "Emil",
+        "Emilia"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
     }
   ]
 }
