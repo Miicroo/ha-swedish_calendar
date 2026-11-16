@@ -4378,6 +4378,19 @@
       ],
       "flaggdag": "",
       "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-15",
+      "veckodag": "Fredag",
+      "arbetsfri dag": "Nej",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "5",
+      "namnsdag": [
+        "Leopold"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
     }
   ]
 }
