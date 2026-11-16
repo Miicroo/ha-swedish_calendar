@@ -8,7 +8,8 @@ from datetime import date
 import logging
 
 from homeassistant import config_entries
-from homeassistant.const import ATTR_ATTRIBUTION
+from homeassistant.components.sensor import SensorDeviceClass, SensorEntity
+from homeassistant.const import ATTR_ATTRIBUTION, STATE_UNKNOWN
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.util import slugify
@@ -39,13 +40,19 @@ async def async_setup_entry(
     async_add_entities(devices, update_before_add=True)
 
 
-class SwedishCalendarSensor(CoordinatorEntity):
+class SwedishCalendarSensor(CoordinatorEntity, SensorEntity):
 
     def __init__(self, sensor_type: str, sensor_config: SensorConfig, coordinator: CalendarDataCoordinator):
         super().__init__(coordinator)
         self.entity_id = f'sensor.swedish_calendar_{sensor_type}'
         self._sensor_config = sensor_config
         self._state = None
+        self._attr_device_class = sensor_config.device_class
+        if sensor_config.options is not None:
+            # Older supported HA versions predate enum sensors.
+            self._attr_device_class = getattr(SensorDeviceClass, 'ENUM', None)
+            if self._attr_device_class is not None:
+                self._attr_options = list(sensor_config.options)
 
     @property
     def name(self):
@@ -56,8 +63,14 @@ class SwedishCalendarSensor(CoordinatorEntity):
         return f'sensor.{slugify(self._sensor_config.friendly_name)}'
 
     @property
-    def state(self):
-        return self._state if self._state else self._sensor_config.default_value
+    def native_value(self) -> str | int | date | None:
+        """Return a typed value while preserving the existing public states."""
+        value = self._state if self._state else self._sensor_config.default_value
+        if value == STATE_UNKNOWN:
+            return None
+        if self.device_class == SensorDeviceClass.DATE:
+            return date.fromisoformat(value) if value is not None else None
+        return value
 
     @property
     def should_poll(self):

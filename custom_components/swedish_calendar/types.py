@@ -5,6 +5,8 @@ import json
 import re
 from typing import Any
 
+from homeassistant.components.sensor import SensorDeviceClass
+
 
 class SensorConfig:
     def __init__(self,
@@ -12,12 +14,16 @@ class SensorConfig:
                  swedish_calendar_attribute: str,
                  default_value: Any,
                  icon: str | None = None,
-                 attribution: str | None = None):
+                 attribution: str | None = None,
+                 device_class: SensorDeviceClass | None = None,
+                 options: tuple[str, ...] | None = None):
         self.friendly_name = friendly_name
         self.icon = icon
         self.swedish_calendar_attribute = swedish_calendar_attribute
         self.default_value = default_value
         self.attribution = attribution
+        self.device_class = device_class
+        self.options = options
 
     def get_value_from_calendar(self, calendar: SwedishCalendar) -> Any:
         return calendar.get_value_by_attribute(self.swedish_calendar_attribute)
