@@ -39,5 +39,42 @@
     "abort": {
       "already_configured": "Swedish calendar är redan konfigurerad"
     }
+  },
+  "conditions": {
+    "is_holiday": {
+      "name": "Idag är en helgdag",
+      "description": "Kontrollerar dagens helgdagsnamn från kalenderns datakälla.",
+      "fields": {
+        "day": {
+          "name": "Helgdag",
+          "description": "Låt filtret vara avstängt för valfri helgdag. Aktivera det för att välja ett specifikt namn."
+        }
+      }
+    },
+    "is_holiday_eve": {
+      "name": "Idag är en helgdagsafton",
+      "description": "Kontrollerar om idag är en helgdagsafton, inklusive aftnar som datakällan rapporterar som helgdagar.",
+      "fields": {
+        "day": {
+          "name": "Helgdagsafton",
+          "description": "Låt filtret vara avstängt för valfri helgdagsafton. Aktivera det för att välja ett specifikt namn."
+        }
+      }
+    },
+    "is_flag_day": {
+      "name": "Idag är en flaggdag",
+      "description": "Kontrollerar dagens flaggdagsnamn från kalenderns datakälla.",
+      "fields": {
+        "day": {
+          "name": "Flaggdag",
+          "description": "Låt filtret vara avstängt för valfri flaggdag. Aktivera det för att välja ett specifikt namn."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "calendar_data_unavailable": {
+      "message": "Dagens kalenderdata är inte tillgängliga. Vänta tills nästa uppdatering lyckas och försök igen."
+    }
   }
 }
