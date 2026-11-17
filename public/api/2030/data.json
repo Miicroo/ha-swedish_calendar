@@ -4391,6 +4391,20 @@
       ],
       "flaggdag": "",
       "dag före arbetsfri helgdag": "Nej"
+    },
+    {
+      "datum": "2030-11-16",
+      "veckodag": "Lördag",
+      "arbetsfri dag": "Ja",
+      "röd dag": "Nej",
+      "vecka": "46",
+      "dag i vecka": "6",
+      "namnsdag": [
+        "Vibeke",
+        "Viveka"
+      ],
+      "flaggdag": "",
+      "dag före arbetsfri helgdag": "Nej"
     }
   ]
 }
