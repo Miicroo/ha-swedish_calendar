@@ -3,20 +3,6 @@
   "slutdatum": "2024-12-31",
   "dagar": [
     {
-      "datum": "2024-11-18",
-      "veckodag": "Måndag",
-      "arbetsfri dag": "Nej",
-      "röd dag": "Nej",
-      "vecka": "47",
-      "dag i vecka": "1",
-      "namnsdag": [
-        "Lillemor",
-        "Moa"
-      ],
-      "flaggdag": "",
-      "dag före arbetsfri helgdag": "Nej"
-    },
-    {
       "datum": "2024-11-19",
       "veckodag": "Tisdag",
       "arbetsfri dag": "Nej",
