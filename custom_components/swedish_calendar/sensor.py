@@ -65,7 +65,10 @@ class SwedishCalendarSensor(CoordinatorEntity, SensorEntity):
     @property
     def native_value(self) -> str | int | date | None:
         """Return a typed value while preserving the existing public states."""
-        value = self._state if self._state else self._sensor_config.default_value
+        value = self._state
+        # Keep the existing fallback for missing or empty calendar text.
+        if value is None or value == '':
+            value = self._sensor_config.default_value
         if value == STATE_UNKNOWN:
             return None
         if self.device_class == SensorDeviceClass.DATE:

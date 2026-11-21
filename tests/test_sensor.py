@@ -191,14 +191,19 @@ async def test_boolean_sensor_values_remain_swedish(
         assert_enum_metadata(state, ["Ja", "Nej"])
 
 
-@pytest.mark.parametrize("payload_kind", ["empty_optional", "themes_only", "no_data"])
+@pytest.mark.parametrize(
+    "payload_kind", ["empty_optional", "blank_optional", "themes_only", "no_data"]
+)
 async def test_blank_and_missing_data_preserve_existing_fallbacks(
     hass, api_payload, calendar_data, fetch_calendar, payload_kind
 ):
     """Metadata must not turn existing empty values into invalid enum states."""
-    if payload_kind == "empty_optional":
+    if payload_kind in ("empty_optional", "blank_optional"):
         api_payload["namnsdag"] = []
         api_payload.pop("helgdagsafton")
+        if payload_kind == "blank_optional":
+            for field in ("helgdag", "helgdagsafton", "flaggdag"):
+                api_payload[field] = ""
         calendar_data[TODAY] = SwedishCalendar.from_api_data(
             ApiData.from_json(api_payload)
         ).with_themes(ThemeData(TODAY.isoformat(), []))
@@ -213,7 +218,7 @@ async def test_blank_and_missing_data_preserve_existing_fallbacks(
     for key in ("eve", "holiday", "name_day", "flag_day"):
         assert hass.states.get(f"sensor.swedish_calendar_{key}").state == "unknown"
     assert hass.states.get("sensor.swedish_calendar_theme_day").state == ""
-    if payload_kind != "empty_optional":
+    if payload_kind in ("themes_only", "no_data"):
         for key in ("date", "weekday", "week", "day_of_week"):
             assert hass.states.get(f"sensor.swedish_calendar_{key}").state == "unknown"
         for key in BOOLEAN_SENSORS:
