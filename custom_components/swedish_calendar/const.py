@@ -1,3 +1,5 @@
+from homeassistant.components.sensor import SensorDeviceClass
+
 from .types import SensorConfig
 
 DOMAIN = 'swedish_calendar'
@@ -33,28 +35,32 @@ SENSOR_TYPES = {
         icon='mdi:calendar-today',
         swedish_calendar_attribute='date',
         default_value='unknown',
-        attribution=CONF_ATTRIBUTION
+        attribution=CONF_ATTRIBUTION,
+        device_class=SensorDeviceClass.DATE
     ),
     'weekday': SensorConfig(
         friendly_name='Week day',
         icon='mdi:calendar-today',
         swedish_calendar_attribute='weekday',
         default_value='unknown',
-        attribution=CONF_ATTRIBUTION
+        attribution=CONF_ATTRIBUTION,
+        options=('Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag')
     ),
     'workfree_day': SensorConfig(
         friendly_name='Workfree day',
         icon='mdi:beach',
         swedish_calendar_attribute='work_free_day',
         default_value='Nej',
-        attribution=CONF_ATTRIBUTION
+        attribution=CONF_ATTRIBUTION,
+        options=('Ja', 'Nej')
     ),
     'red_day': SensorConfig(
         friendly_name='Red Day',
         icon='mdi:pine-tree',
         swedish_calendar_attribute='red_day',
         default_value='Nej',
-        attribution=CONF_ATTRIBUTION
+        attribution=CONF_ATTRIBUTION,
+        options=('Ja', 'Nej')
     ),
     'week': SensorConfig(
         friendly_name='Week',
@@ -89,7 +95,8 @@ SENSOR_TYPES = {
         icon='mdi:clock-fast',
         swedish_calendar_attribute='day_before_work_free_holiday',
         default_value='Nej',
-        attribution=CONF_ATTRIBUTION
+        attribution=CONF_ATTRIBUTION,
+        options=('Ja', 'Nej')
     ),
     'name_day': SensorConfig(
         friendly_name='Names celebrated',
