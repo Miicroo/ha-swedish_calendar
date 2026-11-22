@@ -1,0 +1,13 @@
+{
+  "conditions": {
+    "is_holiday": {
+      "condition": "mdi:calendar-star"
+    },
+    "is_holiday_eve": {
+      "condition": "mdi:calendar-clock"
+    },
+    "is_flag_day": {
+      "condition": "mdi:flag"
+    }
+  }
+}

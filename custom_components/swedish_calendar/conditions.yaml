@@ -1,0 +1,78 @@
+is_holiday:
+  fields:
+    day:
+      required: false
+      selector:
+        select:
+          mode: dropdown
+          custom_value: false
+          options:
+            - Midsommarafton
+            - Midsommardagen
+            - Skärtorsdagen
+            - Långfredagen
+            - Påskafton
+            - Påskdagen
+            - Annandag påsk
+            - Kristi himmelsfärdsdag
+            - Valborgsmässoafton
+            - Pingstafton
+            - Pingstdagen
+            - Allhelgonaafton
+            - Alla helgons dag
+            - Trettondagsafton
+            - Trettondagen
+            - Första maj
+            - Julafton
+            - Juldagen
+            - Annandag jul
+            - Nyårsafton
+            - Nyårsdagen
+            - Svenska flaggans dag
+            - Sveriges nationaldag
+            - Annandag pingst
+is_holiday_eve:
+  fields:
+    day:
+      required: false
+      selector:
+        select:
+          mode: dropdown
+          custom_value: false
+          options:
+            - Skärtorsdagen
+            - Valborgsmässoafton
+            - Pingstafton
+            - Allhelgonaafton
+            - Trettondagsafton
+            - Julafton
+            - Midsommarafton
+            - Påskafton
+            - Nyårsafton
+is_flag_day:
+  fields:
+    day:
+      required: false
+      selector:
+        select:
+          mode: dropdown
+          custom_value: false
+          options:
+            - Nyårsdagen
+            - Första maj
+            - Veterandagen
+            - Sveriges nationaldag
+            - FN-dagen
+            - Gustav Adolfsdagen
+            - Nobeldagen
+            - Juldagen
+            - Påskdagen
+            - Pingstdagen
+            - Midsommardagen
+            - Valdagen
+            - Kung Carl XVI Gustafs namnsdag
+            - Kung Carl XVI Gustafs födelsedag
+            - Kronprinsessan Victorias namnsdag
+            - Kronprinsessan Victorias födelsedag
+            - Drottning Silvias namnsdag
+            - Drottning Silvias födelsedag

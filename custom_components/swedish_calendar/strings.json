@@ -39,5 +39,42 @@
     "abort": {
       "already_configured": "Swedish calendar is already configured"
     }
+  },
+  "conditions": {
+    "is_holiday": {
+      "name": "Today is a holiday",
+      "description": "Tests today's holiday names supplied by the calendar data source.",
+      "fields": {
+        "day": {
+          "name": "Holiday",
+          "description": "Leave this filter disabled to match any holiday. Enable it to select a specific name."
+        }
+      }
+    },
+    "is_holiday_eve": {
+      "name": "Today is a holiday eve",
+      "description": "Tests whether today is a holiday eve, including eves that the data source reports as holidays.",
+      "fields": {
+        "day": {
+          "name": "Holiday eve",
+          "description": "Leave this filter disabled to match any holiday eve. Enable it to select a specific name."
+        }
+      }
+    },
+    "is_flag_day": {
+      "name": "Today is a flag day",
+      "description": "Tests today's flag day names supplied by the calendar data source.",
+      "fields": {
+        "day": {
+          "name": "Flag day",
+          "description": "Leave this filter disabled to match any flag day. Enable it to select a specific name."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "calendar_data_unavailable": {
+      "message": "Today's calendar data is unavailable. Wait for the next successful update and try again."
+    }
   }
 }
