@@ -1,7 +1,9 @@
 """Config flow that sets up the integration through the HomeAssistant UI."""
 import os
 from typing import Any
+from unittest.mock import patch
 
+import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from custom_components.swedish_calendar import (
@@ -22,12 +24,15 @@ from custom_components.swedish_calendar import (
 )
 from custom_components.swedish_calendar.config_flow import SwedishCalendarConfigFlow
 from custom_components.swedish_calendar.const import (
+    BRIDGE_DAY,
+    BRIDGE_DAY_NAME,
     CONF_DEFAULT_CACHE_DIR,
     CONF_LOCAL_MODE,
     DOMAIN_FRIENDLY_NAME,
 )
 from homeassistant.config_entries import SOURCE_USER, ConfigEntry
 from homeassistant.data_entry_flow import FlowResult, FlowResultType
+from homeassistant.helpers import entity_registry as er
 
 
 async def test_flow_included_sensors(hass):
@@ -129,10 +134,13 @@ async def test_flow_calendar(hass):
     assert result["type"] is FlowResultType.FORM
     assert result["step_id"] == "calendar"
 
+    schema = result["data_schema"]
+    assert schema({})[CONF_INCLUDE] == friendly_names_included
+    # Opting out of the binary sensor still allows a user to select its events.
     result = await hass.config_entries.flow.async_configure(
         result["flow_id"],
         user_input={
-            CONF_INCLUDE: friendly_names_included,
+            CONF_INCLUDE: [*friendly_names_included, BRIDGE_DAY_NAME],
             CONF_DAYS_BEFORE_TODAY: 7,
             CONF_DAYS_AFTER_TODAY: 14,
         },
@@ -143,7 +151,8 @@ async def test_flow_calendar(hass):
 
     flow_handler = hass.config_entries.flow._progress[result["flow_id"]]
     calendar_configuration = flow_handler.data[CONF_CALENDAR]
-    assert calendar_configuration[CONF_INCLUDE] == included_sensors
+    assert BRIDGE_DAY in flow_handler.data[CONF_EXCLUDE]
+    assert calendar_configuration[CONF_INCLUDE] == [*included_sensors, BRIDGE_DAY]
     assert calendar_configuration[CONF_DAYS_BEFORE_TODAY] == 7
     assert calendar_configuration[CONF_DAYS_AFTER_TODAY] == 14
 
@@ -433,3 +442,78 @@ async def test_get_cache_schema_entry_present():
     assert actual_schema[CONF_ENABLED]
     assert actual_schema[CONF_DIR] == "/my_dir"
     assert actual_schema[CONF_RETENTION] == 10
+
+
+@pytest.mark.parametrize("calendar_includes", [[], [BRIDGE_DAY]])
+async def test_yaml_import_bridge_day(hass, calendar_includes):
+    """Import calendar selections independently of sensor exclusions."""
+    with patch(
+        "custom_components.swedish_calendar.async_setup_entry", return_value=True
+    ):
+        result = await hass.config_entries.flow.async_init(
+            DOMAIN,
+            context={"source": "import"},
+            data={
+                DOMAIN: {
+                    CONF_EXCLUDE: [BRIDGE_DAY],
+                    CONF_CALENDAR: {CONF_INCLUDE: calendar_includes},
+                }
+            },
+        )
+        await hass.async_block_till_done()
+    assert result["type"] is FlowResultType.CREATE_ENTRY
+    assert result["data"][CONF_CALENDAR][CONF_INCLUDE] == calendar_includes
+    assert result["data"][CONF_EXCLUDE] == [BRIDGE_DAY]
+
+
+@pytest.mark.skipif(
+    not hasattr(SwedishCalendarConfigFlow, "async_update_reload_and_abort"),
+    reason="This Home Assistant version predates config entry reconfiguration",
+)
+async def test_reconfigure_calendar_preserves_entry_and_custom_entity(hass):
+    """Keep the same entry and registry ID when changing a calendar's contents."""
+    excluded = [key for key in SENSOR_TYPES if key != "date"] + [BRIDGE_DAY]
+    entry = _entry(
+        {
+            CONF_EXCLUDE: excluded,
+            CONF_LOCAL_MODE: True,
+            CONF_CALENDAR: {
+                CONF_INCLUDE: ["date"],
+                CONF_DAYS_BEFORE_TODAY: 0,
+                CONF_DAYS_AFTER_TODAY: 7,
+            },
+            CONF_CACHE: {CONF_ENABLED: False, CONF_DIR: "", CONF_RETENTION: 7},
+        }
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+    registry = er.async_get(hass)
+    entity_id = "calendar.my_swedish_calendar"
+    registry.async_update_entity("calendar.swedish_calendar", new_entity_id=entity_id)
+    await hass.async_block_till_done()
+    registry_id = registry.async_get(entity_id).id
+
+    for current, selection, stored in [
+        (["Date"], [BRIDGE_DAY_NAME], [BRIDGE_DAY]),
+        ([BRIDGE_DAY_NAME], [], []),
+        ([], ["Date"], ["date"]),
+    ]:
+        result = await hass.config_entries.flow.async_init(
+            DOMAIN, context={"source": "reconfigure", "entry_id": entry.entry_id}
+        )
+        flow_id = result["flow_id"]
+        await hass.config_entries.flow.async_configure(flow_id, user_input={})
+        result = await hass.config_entries.flow.async_configure(flow_id, user_input={})
+        assert result["step_id"] == "calendar"
+        assert result["data_schema"]({})[CONF_INCLUDE] == current
+        result = await hass.config_entries.flow.async_configure(
+            flow_id, user_input={CONF_INCLUDE: selection}
+        )
+        assert result["type"] is FlowResultType.ABORT
+        await hass.async_block_till_done()
+        assert hass.config_entries.async_get_entry(entry.entry_id) is entry
+        assert entry.data[CONF_CALENDAR][CONF_INCLUDE] == stored
+        if selection:
+            assert registry.async_get(entity_id).id == registry_id
+            assert hass.states.get(entity_id) is not None

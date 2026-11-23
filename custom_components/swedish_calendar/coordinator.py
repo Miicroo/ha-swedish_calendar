@@ -40,7 +40,8 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         self.hass = hass
         self._themes_enabled: str = THEME_DAY not in (conf[CONF_EXCLUDE] or [])
         self._bridge_day_enabled = BRIDGE_DAY not in (conf[CONF_EXCLUDE] or [])
-        self._work_free_days: dict[date, bool | None] = {}
+        self._calendar_bridge_days = BRIDGE_DAY in calendar_config.includes
+        self._bridge_days: dict[date, bool | None] = {}
         self._cache: dict[date, SwedishCalendar] = {}
         self._fetch_days_before_today = calendar_config.days_before_today
         self._fetch_days_after_today = calendar_config.days_after_today
@@ -71,15 +72,23 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
 
     @property
     def bridge_day(self) -> bool | None:
+        """Return the status for today's binary sensor."""
+        return self.is_bridge_day(dt_util.now().date())
+
+    def is_bridge_day(self, day: date) -> bool | None:
+        """Return the cached status for a requested date, excluding support dates."""
+        return self._bridge_days.get(day)
+
+    @staticmethod
+    def _classify_bridge_day(day: date, work_free_days: dict[date, bool | None]) -> bool | None:
         """A working day immediately between two work-free calendar days."""
-        today = dt_util.now().date()
-        work_free = self._work_free_days.get(today)
+        work_free = work_free_days.get(day)
         if work_free is None:
             return None
         if work_free:
             return False
-        yesterday = self._work_free_days.get(today - timedelta(days=1))
-        tomorrow = self._work_free_days.get(today + timedelta(days=1))
+        yesterday = work_free_days.get(day - timedelta(days=1))
+        tomorrow = work_free_days.get(day + timedelta(days=1))
         if yesterday is None or tomorrow is None:
             return None
         return yesterday and tomorrow
@@ -93,12 +102,17 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         today = dt_util.now().date()
         start = today - timedelta(days=self._fetch_days_before_today)
         end = today + timedelta(days=self._fetch_days_after_today)
+        bridge_dates = []
+        if self._calendar_bridge_days:
+            bridge_dates = list(DateUtils.range(start, end))
+        elif self._bridge_day_enabled:
+            bridge_dates = [today]
         if (not self._is_cached(start) or not self._is_cached(end)
-                or (self._bridge_day_enabled and self.bridge_day is None)):
+                or any(self.is_bridge_day(day) is None for day in bridge_dates)):
             try:
-                self._cache = await self._get_calendars(start, end, today)
+                self._cache = await self._get_calendars(start, end, bridge_dates)
             except Exception as err:
-                self._work_free_days.clear()
+                self._bridge_days.clear()
                 _LOGGER.warning("Failed to fetch swedish calendar: %s", err)
 
         # Recalculate update interval in case of restart
@@ -112,19 +126,20 @@ class CalendarDataCoordinator(DataUpdateCoordinator):
         calendar = self._cache.get(day)
         return calendar is not None and calendar.get_value_by_attribute('date') is not None
 
-    async def _get_calendars(self, start: date, end: date, today: date) -> dict[date, SwedishCalendar]:
+    async def _get_calendars(self, start: date, end: date, bridge_dates: list[date]) -> dict[date, SwedishCalendar]:
         themes = []
         if self._themes_enabled:
             themes = await self._theme_provider.fetch_data(start, end)
         api_start, api_end = start, end
-        if self._bridge_day_enabled:
-            api_start = min(start, today - timedelta(days=1))
-            api_end = max(end, today + timedelta(days=1))
+        if bridge_dates:
+            api_start = min(start, bridge_dates[0] - timedelta(days=1))
+            api_end = max(end, bridge_dates[-1] + timedelta(days=1))
 
         swedish_dates = await self._api_data_provider.fetch_data(api_start, api_end)
-        if self._bridge_day_enabled:
-            self._work_free_days = {date.fromisoformat(row.date): row.work_free_day for row in swedish_dates}
-            # The extra dates supply the sensor, not additional calendar events.
+        if bridge_dates:
+            work_free_days = {date.fromisoformat(row.date): row.work_free_day for row in swedish_dates}
+            self._bridge_days = {day: self._classify_bridge_day(day, work_free_days) for day in bridge_dates}
+            # Neighbouring rows support the calculation; only requested API dates appear in the calendar.
             swedish_dates = [row for row in swedish_dates if DateUtils.in_range(row.date, start, end)]
 
         return CalendarDataCoordinator._merge(swedish_dates, themes)

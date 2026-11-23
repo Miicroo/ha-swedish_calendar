@@ -1,7 +1,17 @@
 from collections.abc import Generator
 from datetime import date, datetime, timedelta, timezone
 
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.translation import async_get_translations
 from homeassistant.util import dt as dt_util
+
+from .const import BRIDGE_DAY, BRIDGE_DAY_NAME, DOMAIN
+
+
+async def async_bridge_day_name(hass: HomeAssistant) -> str:
+    """Return the calendar label in Home Assistant's configured language."""
+    translations = await async_get_translations(hass, getattr(hass.config, 'language', 'en'), 'entity', {DOMAIN})
+    return translations.get(f'component.{DOMAIN}.entity.binary_sensor.{BRIDGE_DAY}.name', BRIDGE_DAY_NAME)
 
 
 class DateUtils:

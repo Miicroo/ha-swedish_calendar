@@ -92,9 +92,11 @@ Special themes include data about common celebrations in Sweden, like 🍪 Kanel
 ### Calendar
 | Name              | Default                               | Description                                                                                                                   |
 |-------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| include           | *all eligible sensors not previously excluded* | Choose which [sensor types](#supported-sensor-types) appear as calendar events. All listed types except `bridge_day` are eligible. |
+| include           | *selected sensors, with Bridge day off by default* | Choose which [sensor types](#supported-sensor-types) appear as calendar events. |
 | days before today | 0                                     | Number of days prior to today that you want to show in calendar                                                               |
 | days after today  | 0                                     | Number of days after today that you want to show in calendar                                                                  |
+
+To show bridge days in `calendar.swedish_calendar`, reconfigure the integration and select **Bridge day** under **Calendar → Sensors to show in calendar**. Set **Show events x days after today** to how far ahead you want to look. Each matching date appears as an all-day event. You can use these events even if you have excluded the Bridge day binary sensor.
 
 Example showing `eve` and `holiday` for Dec 2022 (7 days before today, 31 days after today):
 <p>

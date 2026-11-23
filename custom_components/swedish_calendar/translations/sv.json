@@ -37,6 +37,7 @@
       }
     },
     "abort": {
+      "reconfigure_successful": "Kalenderinställningarna har uppdaterats.",
       "already_configured": "Swedish calendar är redan konfigurerad"
     }
   },

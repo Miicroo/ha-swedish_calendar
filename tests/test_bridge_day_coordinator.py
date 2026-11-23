@@ -19,12 +19,14 @@ from custom_components.swedish_calendar.types import (
 from custom_components.swedish_calendar.utils import DateUtils
 
 
-def coordinator_for(hass, *, local=True, exclude=(), before=0, after=0):
+def coordinator_for(hass, *, local=True, exclude=(), before=0, after=0, includes=()):
     """Use the same coordinator and providers as config-entry setup."""
     return CalendarDataCoordinator(
         hass,
         SpecialThemesConfig(path="", auto_update=False),
-        CalendarConfig(includes=[], days_before_today=before, days_after_today=after),
+        CalendarConfig(
+            includes=list(includes), days_before_today=before, days_after_today=after
+        ),
         CacheConfig(enabled=False, cache_dir="", retention=timedelta()),
         local,
         {"exclude": list(exclude)},
@@ -63,6 +65,62 @@ def api_day(day, work_free):
         "dag i vecka": "1",
         "namnsdag": [],
     }
+
+
+async def test_calendar_bridge_days_on_both_edges_and_window_rollover(hass):
+    """Include both edge dates even when the standalone binary sensor is excluded."""
+    with freeze_time("2026-01-03 12:00:00") as clock:
+        coordinator = coordinator_for(
+            hass,
+            includes=[BRIDGE_DAY],
+            exclude=[BRIDGE_DAY, THEME_DAY],
+            before=1,
+            after=2,
+        )
+        days = await coordinator.update_data()
+        assert set(days) == {date(2026, 1, day) for day in (2, 3, 4, 5)}
+        assert {day for day in days if coordinator.is_bridge_day(day)} == {
+            date(2026, 1, 2),
+            date(2026, 1, 5),
+        }
+        assert coordinator.is_bridge_day(date(2026, 1, 1)) is None
+        assert coordinator.is_bridge_day(date(2026, 1, 6)) is None
+
+        clock.move_to("2026-01-04 12:00:00")
+        days = await coordinator.update_data()
+        assert set(days) == {date(2026, 1, day) for day in (3, 4, 5, 6)}
+        assert coordinator.is_bridge_day(date(2026, 1, 2)) is None
+        assert coordinator.is_bridge_day(date(2026, 1, 5)) is True
+
+
+async def test_partial_calendar_window_retries_without_losing_known_bridge_days(hass):
+    """Refetch when only a future calendar event's supporting row is missing."""
+    with freeze_time("2026-01-03 12:00:00"):
+        coordinator = coordinator_for(
+            hass,
+            local=False,
+            includes=[BRIDGE_DAY],
+            exclude=[THEME_DAY],
+            before=1,
+            after=2,
+        )
+        jan = [
+            api_day(date(2026, 1, day).isoformat(), work_free)
+            for day, work_free in enumerate(
+                ("Ja", "Nej", "Ja", "Ja", "Nej", "Ja"), start=1
+            )
+        ]
+        get_json = AsyncMock(side_effect=[{"dagar": jan[:-1]}, {"dagar": jan}])
+        coordinator._api_data_provider._get_json_from_url = get_json
+        await coordinator.update_data()
+        assert coordinator.bridge_day is False
+        assert coordinator.is_bridge_day(date(2026, 1, 2)) is True
+        assert coordinator.is_bridge_day(date(2026, 1, 5)) is None
+
+        await coordinator.update_data()
+        assert coordinator.is_bridge_day(date(2026, 1, 5)) is True
+        await coordinator.update_data()
+        assert get_json.await_count == 2
 
 
 async def test_online_bridge_day_midnight_and_missing_neighbor(hass):
