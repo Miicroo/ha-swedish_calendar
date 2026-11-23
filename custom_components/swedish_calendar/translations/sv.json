@@ -40,6 +40,13 @@
       "already_configured": "Swedish calendar är redan konfigurerad"
     }
   },
+  "entity": {
+    "binary_sensor": {
+      "bridge_day": {
+        "name": "Klämdag"
+      }
+    }
+  },
   "conditions": {
     "is_holiday": {
       "name": "Idag är en helgdag",

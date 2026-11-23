@@ -44,7 +44,6 @@ class LocalApiDataProvider:
 
             work_free_today = self._is_work_free_day(day, holidays_today)
 
-            #  TODO: Klämdag -> igår och imorgon är arbetsfri
             all_api_data.append(
                 ApiData(
                     date=iso_date,

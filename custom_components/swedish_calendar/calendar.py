@@ -8,6 +8,7 @@ from homeassistant import config_entries
 from homeassistant.components.calendar import CalendarEntity, CalendarEvent
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
+from homeassistant.util import dt as dt_util
 
 from .const import (
     CONF_CALENDAR,
@@ -139,4 +140,4 @@ class SwedishCalendarEvent:
         return CalendarEvent(start=self.date, end=end, summary=str(self.description), description=str(self.description))
 
     def has_passed(self) -> bool:
-        return self.date < date.today()
+        return self.date < dt_util.now().date()

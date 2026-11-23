@@ -1,5 +1,7 @@
 from collections.abc import Generator
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
+
+from homeassistant.util import dt as dt_util
 
 
 class DateUtils:
@@ -14,9 +16,13 @@ class DateUtils:
 
     @staticmethod
     def seconds_until_midnight(from_time: datetime = None) -> int:
-        from_time = from_time or datetime.now()  # Use now() if no time provided
+        from_time = from_time or dt_util.now()
         tomorrow = from_time + timedelta(days=1)
-        midnight = datetime.combine(tomorrow, datetime.min.time())
+        midnight = datetime.combine(tomorrow, datetime.min.time(), tzinfo=from_time.tzinfo)
+        if from_time.tzinfo is not None:
+            # The next local midnight may be 23 or 25 hours away.
+            midnight = midnight.astimezone(timezone.utc)
+            from_time = from_time.astimezone(timezone.utc)
         diff = midnight - from_time
 
         return diff.days*86400 + diff.seconds + 1

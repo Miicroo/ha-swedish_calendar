@@ -12,6 +12,7 @@ from custom_components.swedish_calendar.types import (
     SpecialThemesConfig,
     ThemeData,
 )
+from homeassistant.util import dt as dt_util
 
 
 def make_api_data(day: date, names: list[str]) -> ApiData:
@@ -106,7 +107,7 @@ async def test_update_data_refetches_when_cache_has_themes_only(hass):
     coordinator._theme_provider.fetch_data = AsyncMock(return_value=themes)
 
     # First day: initial API data is fetched.
-    with freeze_time("2026-10-15"):
+    with freeze_time(dt_util.start_of_local_day(day1)):
         result = await coordinator.update_data()
 
         assert result[day1].get_value_by_attribute("name_day") == [
@@ -115,7 +116,7 @@ async def test_update_data_refetches_when_cache_has_themes_only(hass):
         ]
 
     # Second day: date is already cached because of themes.
-    with freeze_time("2026-10-16"):
+    with freeze_time(dt_util.start_of_local_day(day2)):
         result = await coordinator.update_data()
 
         assert result[day2].get_value_by_attribute("name_day") == [

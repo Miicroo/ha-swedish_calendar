@@ -40,6 +40,13 @@
       "already_configured": "Swedish calendar is already configured"
     }
   },
+  "entity": {
+    "binary_sensor": {
+      "bridge_day": {
+        "name": "Bridge day"
+      }
+    }
+  },
   "conditions": {
     "is_holiday": {
       "name": "Today is a holiday",

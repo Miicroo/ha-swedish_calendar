@@ -1,17 +1,20 @@
 """Test sensor metadata and compatibility through config entry setup."""
 
-from datetime import date
+from datetime import date, timedelta
 from unittest.mock import AsyncMock, patch
+from zoneinfo import ZoneInfo
 
 from freezegun import freeze_time
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
+from custom_components.swedish_calendar.calendar import SwedishCalendarEvent
 from custom_components.swedish_calendar.const import DOMAIN
 from custom_components.swedish_calendar.types import ApiData, SwedishCalendar, ThemeData
 from homeassistant.components.sensor import SensorDeviceClass, SensorEntity
 from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers.update_coordinator import UpdateFailed
+from homeassistant.util import dt as dt_util
 
 TODAY = date(2026, 12, 24)
 WEEKDAYS = [
@@ -113,6 +116,24 @@ def sensor_entity(hass, entity_id):
     return hass.data["entity_components"]["sensor"].get_entity(entity_id)
 
 
+async def test_entities_share_the_local_calendar_date(
+    hass, fetch_calendar, frozen_date
+):
+    """At Stockholm midnight, display the same date that the coordinator used."""
+    previous_zone = dt_util.DEFAULT_TIME_ZONE
+    dt_util.set_default_time_zone(ZoneInfo("Europe/Stockholm"))
+    try:
+        frozen_date.move_to("2026-12-23 23:01:00+00:00")
+        await setup_entry(hass)
+        assert (
+            hass.states.get("sensor.swedish_calendar_date").state == TODAY.isoformat()
+        )
+        assert SwedishCalendarEvent(TODAY - timedelta(days=1), "Yesterday").has_passed()
+        assert not SwedishCalendarEvent(TODAY, "Today").has_passed()
+    finally:
+        dt_util.set_default_time_zone(previous_zone)
+
+
 def assert_enum_metadata(state, options):
     """Check enum support, preserving compatibility with older Home Assistant."""
     if hasattr(SensorDeviceClass, "ENUM"):
@@ -131,7 +152,7 @@ async def test_all_sensor_states_identities_and_metadata(
     entry = await setup_entry(hass, local_mode=local_mode)
     registry = er.async_get(hass)
     registered = er.async_entries_for_config_entry(registry, entry.entry_id)
-    assert {item.entity_id for item in registered} == {
+    assert {item.entity_id for item in registered if item.domain == "sensor"} == {
         f"sensor.swedish_calendar_{key}" for key in EXPECTED_SENSORS
     }
 
@@ -279,7 +300,7 @@ async def test_date_and_numbers_across_iso_year_boundary(
     day_of_week,
 ):
     """Keep the ISO week number intact when the calendar year changes."""
-    frozen_date.move_to(f"{day.isoformat()} 12:00:00")
+    frozen_date.move_to(day.isoformat() + " 12:00:00")
     api_payload.update(
         {"datum": day.isoformat(), "vecka": str(week), "dag i vecka": str(day_of_week)}
     )

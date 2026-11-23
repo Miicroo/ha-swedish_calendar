@@ -61,6 +61,10 @@ class ApiDataProvider:
 
     @staticmethod
     def _get_url_patterns_for_date_range(start: date, end: date) -> list[str]:
+        if end.year == start.year + 1 and start.month == 12 and end.month == 1:
+            # A few adjacent dates around New Year do not need two entire years.
+            return (ApiDataProvider._get_url_patterns_for_date_range(start, date(start.year, 12, 31))
+                    + ApiDataProvider._get_url_patterns_for_date_range(date(end.year, 1, 1), end))
         if start.year != end.year:
             # Different years -> get all days for each year
             return [str(year) for year in range(start.year, end.year + 1)]

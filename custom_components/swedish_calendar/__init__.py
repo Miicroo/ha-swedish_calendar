@@ -30,6 +30,7 @@ from .coordinator import CalendarDataCoordinator
 from .types import CacheConfig, CalendarConfig, SpecialThemesConfig
 
 PLATFORMS = [
+    Platform.BINARY_SENSOR,
     Platform.CALENDAR,
     Platform.SENSOR
 ]

@@ -2,6 +2,8 @@
 import os
 from typing import Any
 
+from pytest_homeassistant_custom_component.common import MockConfigEntry
+
 from custom_components.swedish_calendar import (
     CONF_AUTO_UPDATE,
     CONF_CACHE,
@@ -51,7 +53,7 @@ async def test_flow_included_sensors(hass):
     assert result["step_id"] == "local_mode"
 
     handler = hass.config_entries.flow._progress[result["flow_id"]]
-    assert handler.data[CONF_EXCLUDE] == excludes
+    assert handler.data[CONF_EXCLUDE] == [*excludes, "bridge_day"]
 
 
 async def _set_up_sensor_inclusion(hass, sensor_type_keys: list[str]) -> FlowResult:
@@ -182,7 +184,8 @@ async def test_full_flow(hass):
         SENSOR_TYPES[key].friendly_name for key in included_sensors
     ]
     result = await hass.config_entries.flow.async_configure(
-        result["flow_id"], user_input={CONF_INCLUDE: included_sensors_friendly_names}
+        result["flow_id"],
+        user_input={CONF_INCLUDE: [*included_sensors_friendly_names, "Bridge day"]},
     )
 
     # Local mode step
@@ -290,7 +293,7 @@ async def test_get_include_sensor_schema_defaults_to_all_sensors():
     default_schema = schema({})
     all_sensors = [SENSOR_TYPES[key].friendly_name for key in SENSOR_TYPES]
 
-    assert default_schema[CONF_INCLUDE] == all_sensors
+    assert default_schema[CONF_INCLUDE] == [*all_sensors, "Bridge day"]
 
 
 async def test_get_local_mode_schema_defaults():
@@ -344,10 +347,8 @@ async def test_get_cache_schema_defaults():
     assert default_schema[CONF_RETENTION] == 7
 
 
-def _entry(data: dict[str:Any]) -> ConfigEntry:
-    return ConfigEntry(
-        domain=DOMAIN, source="unittest", title=DOMAIN, version=1, data=data
-    )
+def _entry(data: dict[str, Any]) -> ConfigEntry:
+    return MockConfigEntry(domain=DOMAIN, data=data)
 
 
 async def test_get_include_sensor_schema_entry_present():
@@ -360,7 +361,7 @@ async def test_get_include_sensor_schema_entry_present():
     all_sensors_except_theme_day = [
         SENSOR_TYPES[key].friendly_name for key in SENSOR_TYPES if key != THEME_DAY
     ]
-    assert actual_schema[CONF_INCLUDE] == all_sensors_except_theme_day
+    assert actual_schema[CONF_INCLUDE] == [*all_sensors_except_theme_day, "Bridge day"]
 
 
 async def test_get_special_themes_schema_entry_present():
