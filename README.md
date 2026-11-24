@@ -59,6 +59,7 @@ If you ever want to update the configuration, you have 2 options.
 | date                        | Datum                      | 2022-12-24    |
 | weekday                     | Veckodag                   | Lördag        |
 | workfree_day                | Arbetsfri dag              | Ja            |
+| bridge_day                  | Klämdag                    | `off`         |
 | red_day                     | Röd dag                    | Nej           |
 | week                        | Vecka                      | 51            |
 | day_of_week                 | Dag i vecka                | 6             |
@@ -68,6 +69,10 @@ If you ever want to update the configuration, you have 2 options.
 | name_day                    | Namnsdag                   | Eva           |
 | flag_day                    | Flaggdag                   | unknown       |
 | theme_day                   | Temadag                    | Julafton      |
+
+**Bridge day** (`binary_sensor.swedish_calendar_bridge_day`) is `on` when today is a working day and both yesterday and tomorrow are work-free in the Swedish calendar. For example, Monday 23 December 2024 was a bridge day between Sunday and Christmas Eve.
+
+In the automation editor, select **Bridge day** in a state trigger and choose **Off** → **On** to run an automation when a bridge day starts. In an automation or script, use a state condition set to **On** to check whether today is a bridge day.
 
 ### Local mode
 Local mode allows all values to be calculated locally, eliminating the need for an online API. This offers advantages such as faster calculation times and no risk of the API going offline, which would otherwise cause all sensor values to be displayed as unknown.
@@ -87,9 +92,11 @@ Special themes include data about common celebrations in Sweden, like 🍪 Kanel
 ### Calendar
 | Name              | Default                               | Description                                                                                                                   |
 |-------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| include           | *all sensors not previously excluded* | All sensor types that you **want** to track. For full list of options, see [Supported sensor types](#supported-sensor-types). |
+| include           | *selected sensors, with Bridge day off by default* | Choose which [sensor types](#supported-sensor-types) appear as calendar events. |
 | days before today | 0                                     | Number of days prior to today that you want to show in calendar                                                               |
 | days after today  | 0                                     | Number of days after today that you want to show in calendar                                                                  |
+
+To show bridge days in `calendar.swedish_calendar`, reconfigure the integration and select **Bridge day** under **Calendar → Sensors to show in calendar**. Set **Show events x days after today** to how far ahead you want to look. Each matching date appears as an all-day event. You can use these events even if you have excluded the Bridge day binary sensor.
 
 Example showing `eve` and `holiday` for Dec 2022 (7 days before today, 31 days after today):
 <p>

@@ -12,6 +12,8 @@ from homeassistant.helpers.selector import selector
 from homeassistant.helpers.typing import ConfigType
 
 from .const import (
+    BRIDGE_DAY,
+    BRIDGE_DAY_NAME,
     CONF_AUTO_UPDATE,
     CONF_CACHE,
     CONF_CALENDAR,
@@ -32,8 +34,11 @@ from .const import (
     SPECIAL_THEMES_FILE_NAME,
     THEME_DAY,
 )
+from .utils import async_bridge_day_name
 
 _LOGGER = logging.getLogger(__name__)
+
+_ENTITY_NAMES = {key: config.friendly_name for key, config in SENSOR_TYPES.items()} | {BRIDGE_DAY: BRIDGE_DAY_NAME}
 
 
 class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
@@ -50,13 +55,13 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         if self.config_entry:
             default_includes = self._get_not_excluded_sensors(self.config_entry.data)
         else:
-            default_includes = self._get_friendly_name_of_sensors()
+            default_includes = list(_ENTITY_NAMES.values())
 
         return vol.Schema(
             {
                 vol.Optional(CONF_INCLUDE, default=default_includes): selector({
                     "select": {
-                        "options": self._get_friendly_name_of_sensors(),
+                        "options": list(_ENTITY_NAMES.values()),
                         "multiple": True
                     }
                 })
@@ -85,23 +90,27 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
 
     @staticmethod
     def _get_not_excluded_sensors(data_map: dict[str, Any]):
-        return [SENSOR_TYPES[key].friendly_name for key in SENSOR_TYPES
-                if key not in data_map[CONF_EXCLUDE]]
+        return [name for key, name in _ENTITY_NAMES.items() if key not in data_map[CONF_EXCLUDE]]
 
-    def _get_calendar_schema(self) -> vol.Schema:
-        all_sensors = SwedishCalendarConfigFlow._get_friendly_name_of_sensors()
+    def _get_calendar_schema(self, bridge_day_name: str = BRIDGE_DAY_NAME) -> vol.Schema:
         entry_data = self.config_entry.data[CONF_CALENDAR] if self.config_entry else {}
         already_included_sensors = [
             SENSOR_TYPES[key].friendly_name
             for key in SENSOR_TYPES
-            if key not in self.data[CONF_EXCLUDE] and (self.config_entry is None or key in entry_data.get(CONF_INCLUDE))
+            if key not in self.data[CONF_EXCLUDE] and (self.config_entry is None or key in entry_data.get(CONF_INCLUDE, []))
         ]
+        # Bridge day events are opt-in and independent of the binary sensor.
+        if BRIDGE_DAY in entry_data.get(CONF_INCLUDE, []):
+            already_included_sensors.append(BRIDGE_DAY_NAME)
 
         return vol.Schema(
             {
                 vol.Optional(CONF_INCLUDE, default=already_included_sensors): selector({
                     "select": {
-                        "options": all_sensors,
+                        "options": [
+                            {"value": name, "label": bridge_day_name if key == BRIDGE_DAY else name}
+                            for key, name in _ENTITY_NAMES.items()
+                        ],
                         "multiple": True
                     }
                 }),
@@ -128,7 +137,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
             self._async_abort_entries_match(match_dict={})
 
         if user_input is not None:
-            excludes = [key for key in SENSOR_TYPES if SENSOR_TYPES[key].friendly_name not in user_input[CONF_INCLUDE]]
+            excludes = [key for key, name in _ENTITY_NAMES.items() if name not in user_input[CONF_INCLUDE]]
             self.data[CONF_EXCLUDE] = excludes
             return await self.async_step_local_mode()
 
@@ -154,13 +163,14 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
 
     async def async_step_calendar(self, user_input: dict[str, Any] | None = None):
         if user_input is not None:
-            user_input[CONF_INCLUDE] = [key for key in SENSOR_TYPES
-                                        if SENSOR_TYPES[key].friendly_name in user_input[CONF_INCLUDE]]
+            user_input[CONF_INCLUDE] = [key for key, name in _ENTITY_NAMES.items() if name in user_input[CONF_INCLUDE]]
             self.data[CONF_CALENDAR] = user_input
 
             return await self.async_step_cache()
 
-        return self.async_show_form(step_id="calendar", data_schema=self._get_calendar_schema())
+        return self.async_show_form(step_id="calendar", data_schema=self._get_calendar_schema(
+            await async_bridge_day_name(self.hass)
+        ))
 
     async def async_step_cache(self, user_input: dict[str, Any] | None = None):
         if self._is_local_mode():
@@ -175,7 +185,9 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
             self.data[CONF_CACHE] = user_input
 
             if self.config_entry:
-                await self.hass.config_entries.async_remove(self.config_entry.entry_id)
+                return self.async_update_reload_and_abort(
+                    self.config_entry, data={**self.config_entry.data, **self.data}, reason="reconfigure_successful"
+                )
 
             return self.async_create_entry(title=DOMAIN_FRIENDLY_NAME, data=self.data)
 
@@ -199,7 +211,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
         import_data = import_data.get(DOMAIN) or {}
 
         self.data = {
-            CONF_EXCLUDE: [key for key in SENSOR_TYPES
+            CONF_EXCLUDE: [key for key in _ENTITY_NAMES
                            if key in (import_data.get(CONF_EXCLUDE) or [])
                            ]
         }
@@ -215,7 +227,7 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
 
         imported_calendar_config = import_data.get(CONF_CALENDAR) or {}
         self.data[CONF_CALENDAR] = {
-            CONF_INCLUDE: [key for key in SENSOR_TYPES
+            CONF_INCLUDE: [key for key in _ENTITY_NAMES
                            if key in (imported_calendar_config.get(CONF_INCLUDE) or [])],
             CONF_DAYS_BEFORE_TODAY: imported_calendar_config.get(CONF_DAYS_BEFORE_TODAY) or 0,
             CONF_DAYS_AFTER_TODAY: imported_calendar_config.get(CONF_DAYS_AFTER_TODAY) or 0
@@ -271,8 +283,3 @@ class SwedishCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
             if not new_themes_path:
                 new_themes_path = deprecated_themes_path
         return new_themes_path
-
-    @staticmethod
-    def _get_friendly_name_of_sensors():
-        return [SENSOR_TYPES[key].friendly_name
-                for key in SENSOR_TYPES]

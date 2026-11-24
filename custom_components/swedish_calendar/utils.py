@@ -1,5 +1,17 @@
 from collections.abc import Generator
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
+
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.translation import async_get_translations
+from homeassistant.util import dt as dt_util
+
+from .const import BRIDGE_DAY, BRIDGE_DAY_NAME, DOMAIN
+
+
+async def async_bridge_day_name(hass: HomeAssistant) -> str:
+    """Return the calendar label in Home Assistant's configured language."""
+    translations = await async_get_translations(hass, getattr(hass.config, 'language', 'en'), 'entity', {DOMAIN})
+    return translations.get(f'component.{DOMAIN}.entity.binary_sensor.{BRIDGE_DAY}.name', BRIDGE_DAY_NAME)
 
 
 class DateUtils:
@@ -14,9 +26,13 @@ class DateUtils:
 
     @staticmethod
     def seconds_until_midnight(from_time: datetime = None) -> int:
-        from_time = from_time or datetime.now()  # Use now() if no time provided
+        from_time = from_time or dt_util.now()
         tomorrow = from_time + timedelta(days=1)
-        midnight = datetime.combine(tomorrow, datetime.min.time())
+        midnight = datetime.combine(tomorrow, datetime.min.time(), tzinfo=from_time.tzinfo)
+        if from_time.tzinfo is not None:
+            # The next local midnight may be 23 or 25 hours away.
+            midnight = midnight.astimezone(timezone.utc)
+            from_time = from_time.astimezone(timezone.utc)
         diff = midnight - from_time
 
         return diff.days*86400 + diff.seconds + 1

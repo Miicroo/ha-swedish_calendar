@@ -27,6 +27,8 @@ CONF_LOCAL_MODE = 'local_mode'
 CONF_DAYS_BEFORE_TODAY = 'days_before_today'
 CONF_DAYS_AFTER_TODAY = 'days_after_today'
 
+BRIDGE_DAY = 'bridge_day'
+BRIDGE_DAY_NAME = 'Bridge day'
 THEME_DAY = 'theme_day'
 
 SENSOR_TYPES = {

@@ -61,7 +61,7 @@ class ApiData:
     def __init__(self,
                  date: str,
                  weekday: str,
-                 work_free_day: bool,
+                 work_free_day: bool | None,
                  red_day: bool,
                  week: int,
                  day_of_week_index: int,
@@ -72,7 +72,7 @@ class ApiData:
                  day_before_work_free_holiday: bool):
         self.date: str = date
         self.weekday: str = weekday
-        self.work_free_day: bool = work_free_day
+        self.work_free_day: bool | None = work_free_day
         self.red_day: bool = red_day
         self.week: int = week
         self.day_of_week_index: int = day_of_week_index
@@ -87,7 +87,7 @@ class ApiData:
         return ApiData(
             date=json_data["datum"],
             weekday=json_data["veckodag"],
-            work_free_day=ApiData._to_bool(json_data["arbetsfri dag"]),
+            work_free_day={"Ja": True, "Nej": False}.get(json_data.get("arbetsfri dag")),
             red_day=ApiData._to_bool(json_data["röd dag"]),
             week=int(json_data["vecka"]),
             day_of_week_index=int(json_data["dag i vecka"]),

@@ -12,7 +12,7 @@ from homeassistant.components.sensor import SensorDeviceClass, SensorEntity
 from homeassistant.const import ATTR_ATTRIBUTION, STATE_UNKNOWN
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from homeassistant.util import slugify
+from homeassistant.util import dt as dt_util, slugify
 
 from .const import CONF_EXCLUDE, DOMAIN, SENSOR_TYPES
 from .coordinator import CalendarDataCoordinator
@@ -107,7 +107,7 @@ class SwedishCalendarSensor(CoordinatorEntity, SensorEntity):
     def _handle_coordinator_update(self) -> None:
         """Handle updated data from the coordinator."""
         swedish_calendars: dict[date, SwedishCalendar] = self.coordinator.data
-        today = date.today()
+        today = dt_util.now().date()
         if today in swedish_calendars:
             swedish_calendar = swedish_calendars[today]
             state = self._sensor_config.get_value_from_calendar(swedish_calendar)

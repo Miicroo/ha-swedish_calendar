@@ -37,7 +37,15 @@
       }
     },
     "abort": {
+      "reconfigure_successful": "Calendar settings updated.",
       "already_configured": "Swedish calendar is already configured"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "bridge_day": {
+        "name": "Bridge day"
+      }
     }
   },
   "conditions": {

@@ -37,7 +37,15 @@
       }
     },
     "abort": {
+      "reconfigure_successful": "Kalenderinställningarna har uppdaterats.",
       "already_configured": "Swedish calendar är redan konfigurerad"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "bridge_day": {
+        "name": "Klämdag"
+      }
     }
   },
   "conditions": {
